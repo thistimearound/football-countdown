@@ -6,18 +6,51 @@ body {
     text-align: center;
 }
 
-h1 {
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #333;
     color: white;
     padding: 20px 0;
     margin: 0;
 }
 
-#teams-container, #schedule-container {
+h1 {
+    margin: 10px 0 0 0;
+}
+
+.nfl-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin: 20px 0 10px;
+    font-size: 1.5em;
+}
+
+h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.conference, .division {
+    width: 100%;
+    margin: 20px 0;
+}
+
+#teams-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.teams {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 20px;
 }
 
 .team, .game {
@@ -38,6 +71,7 @@ h1 {
     font-size: 1.5em;
 }
 
+/* Team-specific styles */
 .arizona-cardinals { background-color: #97233F; }
 .atlanta-falcons { background-color: #A71930; }
 .baltimore-ravens { background-color: #241773; }

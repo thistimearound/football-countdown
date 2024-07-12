@@ -1,66 +1,126 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const teams = [
-        { name: "Arizona Cardinals", class: "arizona-cardinals" },
-        { name: "Atlanta Falcons", class: "atlanta-falcons" },
-        { name: "Baltimore Ravens", class: "baltimore-ravens" },
-        { name: "Buffalo Bills", class: "buffalo-bills" },
-        { name: "Carolina Panthers", class: "carolina-panthers" },
-        { name: "Chicago Bears", class: "chicago-bears" },
-        { name: "Cincinnati Bengals", class: "cincinnati-bengals" },
-        { name: "Cleveland Browns", class: "cleveland-browns" },
-        { name: "Dallas Cowboys", class: "dallas-cowboys" },
-        { name: "Denver Broncos", class: "denver-broncos" },
-        { name: "Detroit Lions", class: "detroit-lions" },
-        { name: "Green Bay Packers", class: "green-bay-packers" },
-        { name: "Houston Texans", class: "houston-texans" },
-        { name: "Indianapolis Colts", class: "indianapolis-colts" },
-        { name: "Jacksonville Jaguars", class: "jacksonville-jaguars" },
-        { name: "Kansas City Chiefs", class: "kansas-city-chiefs" },
-        { name: "Las Vegas Raiders", class: "las-vegas-raiders" },
-        { name: "Los Angeles Chargers", class: "los-angeles-chargers" },
-        { name: "Los Angeles Rams", class: "los-angeles-rams" },
-        { name: "Miami Dolphins", class: "miami-dolphins" },
-        { name: "Minnesota Vikings", class: "minnesota-vikings" },
-        { name: "New England Patriots", class: "new-england-patriots" },
-        { name: "New Orleans Saints", class: "new-orleans-saints" },
-        { name: "New York Giants", class: "new-york-giants" },
-        { name: "New York Jets", class: "new-york-jets" },
-        { name: "Philadelphia Eagles", class: "philadelphia-eagles" },
-        { name: "Pittsburgh Steelers", class: "pittsburgh-steelers" },
-        { name: "San Francisco 49ers", class: "san-francisco-49ers" },
-        { name: "Seattle Seahawks", class: "seattle-seahawks" },
-        { name: "Tampa Bay Buccaneers", class: "tampa-bay-buccaneers" },
-        { name: "Tennessee Titans", class: "tennessee-titans" },
-        { name: "Washington Commanders", class: "washington-commanders" }
-    ];
+    const teams = {
+        "AFC": {
+            "East": [
+                { name: "Buffalo Bills", class: "buffalo-bills" },
+                { name: "Miami Dolphins", class: "miami-dolphins" },
+                { name: "New England Patriots", class: "new-england-patriots" },
+                { name: "New York Jets", class: "new-york-jets" }
+            ],
+            "North": [
+                { name: "Baltimore Ravens", class: "baltimore-ravens" },
+                { name: "Cincinnati Bengals", class: "cincinnati-bengals" },
+                { name: "Cleveland Browns", class: "cleveland-browns" },
+                { name: "Pittsburgh Steelers", class: "pittsburgh-steelers" }
+            ],
+            "South": [
+                { name: "Houston Texans", class: "houston-texans" },
+                { name: "Indianapolis Colts", class: "indianapolis-colts" },
+                { name: "Jacksonville Jaguars", class: "jacksonville-jaguars" },
+                { name: "Tennessee Titans", class: "tennessee-titans" }
+            ],
+            "West": [
+                { name: "Denver Broncos", class: "denver-broncos" },
+                { name: "Kansas City Chiefs", class: "kansas-city-chiefs" },
+                { name: "Las Vegas Raiders", class: "las-vegas-raiders" },
+                { name: "Los Angeles Chargers", class: "los-angeles-chargers" }
+            ]
+        },
+        "NFC": {
+            "East": [
+                { name: "Dallas Cowboys", class: "dallas-cowboys" },
+                { name: "New York Giants", class: "new-york-giants" },
+                { name: "Philadelphia Eagles", class: "philadelphia-eagles" },
+                { name: "Washington Commanders", class: "washington-commanders" }
+            ],
+            "North": [
+                { name: "Chicago Bears", class: "chicago-bears" },
+                { name: "Detroit Lions", class: "detroit-lions" },
+                { name: "Green Bay Packers", class: "green-bay-packers" },
+                { name: "Minnesota Vikings", class: "minnesota-vikings" }
+            ],
+            "South": [
+                { name: "Atlanta Falcons", class: "atlanta-falcons" },
+                { name: "Carolina Panthers", class: "carolina-panthers" },
+                { name: "New Orleans Saints", class: "new-orleans-saints" },
+                { name: "Tampa Bay Buccaneers", class: "tampa-bay-buccaneers" }
+            ],
+            "West": [
+                { name: "Arizona Cardinals", class: "arizona-cardinals" },
+                { name: "Los Angeles Rams", class: "los-angeles-rams" },
+                { name: "San Francisco 49ers", class: "san-francisco-49ers" },
+                { name: "Seattle Seahawks", class: "seattle-seahawks" }
+            ]
+        }
+    };
 
     const teamsContainer = document.getElementById('teams-container');
 
-    teams.forEach(team => {
-        const teamDiv = document.createElement('div');
-        teamDiv.className = `team ${team.class}`;
+    for (const [conference, divisions] of Object.entries(teams)) {
+        const conferenceDiv = document.createElement('div');
+        conferenceDiv.className = 'conference';
         
-        const teamLink = document.createElement('a');
-        teamLink.href = `team.html?team=${encodeURIComponent(team.name)}`;
-        teamLink.textContent = team.name;
+        const conferenceHeader = document.createElement('h2');
+        conferenceHeader.textContent = conference;
+        conferenceDiv.appendChild(conferenceHeader);
 
-        const countdownDiv = document.createElement('div');
-        countdownDiv.className = 'countdown';
-        // Placeholder countdown, replace with actual date
-        const nextGameDate = new Date('2024-08-01T00:00:00'); 
-        countdownDiv.textContent = getCountdown(nextGameDate);
+        for (const [division, teamList] of Object.entries(divisions)) {
+            const divisionDiv = document.createElement('div');
+            divisionDiv.className = 'division';
+            
+            const divisionHeader = document.createElement('h3');
+            divisionHeader.textContent = division;
+            divisionDiv.appendChild(divisionHeader);
 
-        teamDiv.appendChild(teamLink);
-        teamDiv.appendChild(countdownDiv);
+            const teamsDiv = document.createElement('div');
+            teamsDiv.className = 'teams';
 
-        teamsContainer.appendChild(teamDiv);
+            teamList.forEach(team => {
+                const teamDiv = document.createElement('div');
+                teamDiv.className = `team ${team.class}`;
+                
+                const teamLink = document.createElement('a');
+                teamLink.href = `team.html?team=${encodeURIComponent(team.name)}`;
+                teamLink.textContent = team.name;
 
-        setInterval(() => {
-            countdownDiv.textContent = getCountdown(nextGameDate);
-        }, 1000);
-    });
+                const countdownDiv = document.createElement('div');
+                countdownDiv.className = 'countdown';
+
+                const nextGameDate = getNextGameDate(team.class);
+                countdownDiv.textContent = getCountdown(nextGameDate);
+
+                teamDiv.appendChild(teamLink);
+                teamDiv.appendChild(countdownDiv);
+
+                teamsDiv.appendChild(teamDiv);
+
+                setInterval(() => {
+                    countdownDiv.textContent = getCountdown(nextGameDate);
+                }, 1000);
+            });
+
+            divisionDiv.appendChild(teamsDiv);
+            conferenceDiv.appendChild(divisionDiv);
+        }
+
+        teamsContainer.appendChild(conferenceDiv);
+    }
+
+    function getNextGameDate(teamClass) {
+        const schedule = schedules[teamClass];
+        const now = new Date();
+        for (const game of schedule) {
+            const gameDate = new Date(game.date);
+            if (gameDate > now) {
+                return gameDate;
+            }
+        }
+        return null;
+    }
 
     function getCountdown(targetDate) {
+        if (!targetDate) return 'No upcoming games';
+
         const now = new Date();
         const diff = targetDate - now;
 
