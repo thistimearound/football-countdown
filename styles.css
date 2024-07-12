@@ -20,9 +20,21 @@ h1 {
     margin: 10px 0 0 0;
 }
 
+/* Centers the logo using Firefox. */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
 .nfl-logo {
-    width: 100px;
+    max-width: 100%;
+    width: 100%;
+    /* To ensure the logo takes up a full width */
     height: auto;
+    /* max-height: 150px; Adjust max-height to fit your design needs while maintaining aspect ratio. */
+    object-fit: contain; /* Ensures the logo scales proportionally */
     margin-bottom: 10px;
 }
 

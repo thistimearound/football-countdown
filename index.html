@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NFL Team Countdowns</title>
+    <title>NFL Schedule Countdown</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="schedules.js" defer></script>
-    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
-        <img src="nfl-logo.webp" alt="NFL Logo" class="nfl-logo">
-        <h1>NFL Team Countdowns</h1>
+        <div class="logo-container">
+            <img src="nfl-logo.webp" alt="NFL Logo" class="nfl-logo">
+        </div>
     </header>
-    <div id="teams-container">
-        <!-- Teams will be dynamically inserted here -->
-    </div>
+    <main>
+        <!-- Main content here -->
+        <div id="nfl-teams-list"></div>
+    </main>
+    <script src="schedules.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
