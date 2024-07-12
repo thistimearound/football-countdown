@@ -103,7 +103,12 @@ document.addEventListener('DOMContentLoaded', () => {
             conferenceDiv.appendChild(divisionDiv);
         }
 
-        nflTeamsContainereamsContainer.appendChild(conferenceDiv);
+        const existingConferenceDiv = document.querySelector('.conference');
+        if (existingConferenceDiv) {
+            existingConferenceDiv.replaceWith(conferenceDiv);
+        } else {
+            nflTeamsContainer.appendChild(conferenceDiv);
+        }
     }
 
     function getNextGameDate(teamClass) {
