@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function getNextGameDate(teamClass) {
-        const schedule = schedules[teamClass];
+        const schedule = nflschedules[teamClass];
         const now = new Date();
         for (const game of schedule) {
             const gameDate = new Date(game.date);

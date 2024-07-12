@@ -1,4 +1,4 @@
-const schedules = {
+const nflschedules = {
     "arizona-cardinals": [
         { opponent: "San Francisco 49ers", date: "2024-09-08T16:25:00Z" },
         { opponent: "Dallas Cowboys", date: "2024-09-15T20:20:00Z" },
