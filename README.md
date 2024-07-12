@@ -16,8 +16,14 @@ v0.3 Visual Improvement and Dataset Structuring
 * Organized teams by Conference and Division
 * Uploaded NFL logo banner for index.html header.
 * Created and uploaded generic dataset for all 32 teams season-long schedule.
-</details>
 
 v0.4 Added Linter & Updated Styling
 * Added axe-linter.yml for basic VSCode support
 * Updated index.html and styles.css to better display NFL logo
+</details>
+
+v.05 NFL Separation for Scaling Support
+* Renamed scripts.js to nfl-scripts.js
+* Renamed styles.css to nfl-styles.css
+* Updated index.html and team.html with corrected .js filepaths
+* Deprecated team-scripts.js and removed
