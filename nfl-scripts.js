@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    const teamsContainer = document.getElementById('teams-container');
+    const nflTeamsContainer = document.getElementById('nfl-teams-container');
 
     for (const [conference, divisions] of Object.entries(teams)) {
         const conferenceDiv = document.createElement('div');
@@ -103,11 +103,11 @@ document.addEventListener('DOMContentLoaded', () => {
             conferenceDiv.appendChild(divisionDiv);
         }
 
-        teamsContainer.appendChild(conferenceDiv);
+        nflTeamsContainereamsContainer.appendChild(conferenceDiv);
     }
 
     function getNextGameDate(teamClass) {
-        const schedule = nflschedules[teamClass]; // Ensure nflschedules is defined and accessible
+        const schedule = nflschedules[teamClass]; // nflschedules is defined and accessible via nfl-schedules.js
         const now = new Date();
         for (const game of schedule) {
             const gameDate = new Date(game.date);
@@ -130,5 +130,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
         return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+   
+    var element = document.getElementById('yourElementId'); // Replace 'yourElementId' with the actual ID
+    if (element) {
+        // Safe to proceed with appendChild or other operations
+        var child = document.createElement('div');
+        // Configure your child element as needed
+        element.appendChild(child);
+    } else {
+        console.error('Element not found!');
     }
 });
