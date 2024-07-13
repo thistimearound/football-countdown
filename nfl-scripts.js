@@ -51,34 +51,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name: "San Francisco 49ers", class: "san-francisco-49ers" },
                 { name: "Seattle Seahawks", class: "seattle-seahawks" }
             ]]
-        ]
+        ],
     };
 
-    const nflTeamsContainer = document.getElementById('nfl-teams-container');
-
-    for (const [conference, divisions] of Object.entries(teams)) {
-        const conferenceDiv = document.createElement('div');
-        conferenceDiv.className = 'conference';
-        
-        const conferenceHeader = document.createElement('h2');
-        conferenceHeader.textContent = conference;
-        conferenceDiv.appendChild(conferenceHeader);
-
-        for (const [division, teamList] of Object.entries(divisions)) {
-            const divisionDiv = document.createElement('div');
-            divisionDiv.className = 'division';
-            
-            const divisionHeader = document.createElement('h3');
-            divisionHeader.textContent = division;
-            divisionDiv.appendChild(divisionHeader);
-
-            const teamsDiv = document.createElement('div');
-            teamsDiv.className = 'teams';
-
+    const populateTeams = (conference, division, teamList) => {
+        const divisionContainer = document.getElementById(`${conference.toLowerCase()}-${division.toLowerCase().replace(/\s+/g, '-')}`);
+        if (divisionContainer) {
             teamList.forEach(team => {
                 const teamDiv = document.createElement('div');
                 teamDiv.className = `team ${team.class}`;
-                
+
                 const teamLink = document.createElement('a');
                 teamLink.href = `team.html?team=${encodeURIComponent(team.name)}`;
                 teamLink.textContent = team.name;
@@ -92,23 +74,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 teamDiv.appendChild(teamLink);
                 teamDiv.appendChild(countdownDiv);
 
-                teamsDiv.appendChild(teamDiv);
+                divisionContainer.appendChild(teamDiv);
 
                 setInterval(() => {
                     countdownDiv.textContent = getCountdown(nextGameDate);
                 }, 1000);
             });
-
-            divisionDiv.appendChild(teamsDiv);
-            conferenceDiv.appendChild(divisionDiv);
         }
+    };
 
-        const existingConferenceDiv = document.querySelector('.conference');
-        if (existingConferenceDiv) {
-            existingConferenceDiv.replaceWith(conferenceDiv);
-        } else {
-            nflTeamsContainer.appendChild(conferenceDiv);
-        }
+    for (const [conference, divisions] of Object.entries(teams)) {
+        divisions.forEach(([division, teamList]) => {
+            populateTeams(conference, division, teamList);
+        });
     }
 
     function getNextGameDate(teamClass) {
@@ -136,8 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
-
-   
+    /*
     var element = document.getElementById('yourElementId'); // Replace 'yourElementId' with the actual ID
     if (element) {
         // Safe to proceed with appendChild or other operations
@@ -147,4 +124,5 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.error('Element not found!');
     }
+    */
 });
