@@ -87,7 +87,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 countdownDiv.className = 'countdown';
 
                 const nextGame = getNextGameDate(team.class);
-                countdownDiv.textContent = `${getCountdown(nextGame.date)} vs ${nextGame.opponent}`;
+                if (nextGame) {
+                    countdownDiv.textContent = `${getCountdown(nextGame.date)} vs ${nextGame.opponent}`;
+                } else {
+                    countdownDiv.textContent = 'No upcoming games';
+                }
 
                 teamDiv.appendChild(teamLink);
                 teamDiv.appendChild(countdownDiv);
@@ -95,7 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 teamsDiv.appendChild(teamDiv);
 
                 setInterval(() => {
-                    countdownDiv.textContent = `${getCountdown(nextGame.date)} vs ${nextGame.opponent}`;
+                    if (nextGame) {
+                        countdownDiv.textContent = `${getCountdown(nextGame.date)} vs ${nextGame.opponent}`;
+                    } else {
+                        countdownDiv.textContent = 'No upcoming games';
+                    }
                 }, 1000);
             });
 
@@ -112,7 +120,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function getNextGameDate(teamClass) {
+        console.log(`Fetching schedule for team class: ${teamClass}`);
         const schedule = nflschedules[teamClass]; // nflschedules is defined and accessible via nfl-schedules.js
+
+        if (!schedule) {
+            console.error(`Schedule not found for team class: ${teamClass}`);
+            return { date: null, opponent: 'Unknown' };
+        }
+
         const now = new Date();
         for (const game of schedule) {
             const gameDate = new Date(game.date);
@@ -120,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return { date: gameDate, opponent: game.opponent };
             }
         }
-        return null;
+        return { date: null, opponent: 'No upcoming games' };
     }
 
     function getCountdown(targetDate) {

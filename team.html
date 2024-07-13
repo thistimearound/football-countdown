@@ -32,7 +32,7 @@
 
             const schedule = nflschedules[teamClass];
 
-            if (schedule && schedule.length) {
+            if (Array.isArray(schedule) && schedule.length) {
                 schedule.forEach(game => {
                     const gameDiv = document.createElement('div');
                     gameDiv.className = 'game';
