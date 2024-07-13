@@ -91,6 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getNextGameDate(teamClass) {
         const schedule = nflschedules[teamClass]; // nflschedules is defined and accessible via nfl-schedules.js
+        if (!Array.isArray(schedule)) {
+            console.error(`Schedule for ${teamClass} is not an array or is missing.`);
+            return null;
+        }
         const now = new Date();
         for (const game of schedule) {
             const gameDate = new Date(game.date);
@@ -114,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
+    
     /*
     var element = document.getElementById('yourElementId'); // Replace 'yourElementId' with the actual ID
     if (element) {
