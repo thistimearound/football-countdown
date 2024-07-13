@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NFL Schedule Countdown</title>
     <link rel="stylesheet" href="nfl-styles.css">
 </head>
@@ -14,44 +15,48 @@
     <main>
         <div id="nfc-teams-list" class="conference">
             <h2>NFC Teams</h2>
-            <div id="nfc-north" class="division">
-                <h3>NFC North</h3>
-                <!-- NFC North teams will be listed here -->
-            </div>
-            <div id="nfc-east" class="division">
-                <h3>NFC East</h3>
-                <!-- NFC East teams will be listed here -->
-            </div>
-            <div id="nfc-south" class="division">
-                <h3>NFC South</h3>
-                <!-- NFC South teams will be listed here -->
-            </div>
-            <div id="nfc-west" class="division">
-                <h3>NFC West</h3>
-                <!-- NFC West teams will be listed here -->
+            <div class="division-container">
+                <div id="nfc-north" class="division">
+                    <h3>NFC North</h3>
+                    <!-- NFC North teams will be listed here -->
+                </div>
+                <div id="nfc-east" class="division">
+                    <h3>NFC East</h3>
+                    <!-- NFC East teams will be listed here -->
+                </div>
+                <div id="nfc-south" class="division">
+                    <h3>NFC South</h3>
+                    <!-- NFC South teams will be listed here -->
+                </div>
+                <div id="nfc-west" class="division">
+                    <h3>NFC West</h3>
+                    <!-- NFC West teams will be listed here -->
+                </div>
             </div>
         </div>
         <div id="afc-teams-list" class="conference">
             <h2>AFC Teams</h2>
-            <div id="afc-north" class="division">
-                <h3>AFC North</h3>
-                <!-- AFC North teams will be listed here -->
-            </div>
-            <div id="afc-east" class="division">
-                <h3>AFC East</h3>
-                <!-- AFC East teams will be listed here -->
-            </div>
-            <div id="afc-south" class="division">
-                <h3>AFC South</h3>
-                <!-- AFC South teams will be listed here -->
-            </div>
-            <div id="afc-west" class="division">
-                <h3>AFC West</h3>
-                <!-- AFC West teams will be listed here -->
+            <div class="division-container">
+                <div id="afc-north" class="division">
+                    <h3>AFC North</h3>
+                    <!-- AFC North teams will be listed here -->
+                </div>
+                <div id="afc-east" class="division">
+                    <h3>AFC East</h3>
+                    <!-- AFC East teams will be listed here -->
+                </div>
+                <div id="afc-south" class="division">
+                    <h3>AFC South</h3>
+                    <!-- AFC South teams will be listed here -->
+                </div>
+                <div id="afc-west" class="division">
+                    <h3>AFC West</h3>
+                    <!-- AFC West teams will be listed here -->
+                </div>
             </div>
         </div>
-        <script src="nfl-schedules.js"></script>
-        <script src="nfl-scripts.js"></script>
     </main>
+    <script src="nfl-schedules.js"></script>
+    <script src="nfl-scripts.js"></script>
 </body>
 </html>
