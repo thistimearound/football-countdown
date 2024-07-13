@@ -71,6 +71,7 @@ h3 {
     flex: 1;
     margin: 10px;
     min-width: 200px;
+    align-items: center;
 }
 
 #teams-container {

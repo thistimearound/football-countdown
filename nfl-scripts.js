@@ -51,16 +51,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name: "San Francisco 49ers", class: "san-francisco-49ers" },
                 { name: "Seattle Seahawks", class: "seattle-seahawks" }
             ]]
-        ],
+        ]
     };
 
-    const populateTeams = (conference, division, teamList) => {
-        const divisionContainer = document.getElementById(`${conference.toLowerCase()}-${division.toLowerCase().replace(/\s+/g, '-')}`);
-        if (divisionContainer) {
+    const nflTeamsContainer = document.getElementById('nfl-teams-container');
+
+    for (const [conference, divisions] of Object.entries(teams)) {
+        const conferenceDiv = document.createElement('div');
+        conferenceDiv.className = 'conference';
+        
+        const conferenceHeader = document.createElement('h2');
+        conferenceHeader.textContent = conference;
+        conferenceDiv.appendChild(conferenceHeader);
+
+        for (const [division, teamList] of Object.entries(divisions)) {
+            const divisionDiv = document.createElement('div');
+            divisionDiv.className = 'division';
+            
+            const divisionHeader = document.createElement('h3');
+            divisionHeader.textContent = division;
+            divisionDiv.appendChild(divisionHeader);
+
+            const teamsDiv = document.createElement('div');
+            teamsDiv.className = 'teams';
+
             teamList.forEach(team => {
                 const teamDiv = document.createElement('div');
                 teamDiv.className = `team ${team.class}`;
-
+                
                 const teamLink = document.createElement('a');
                 teamLink.href = `team.html?team=${encodeURIComponent(team.name)}`;
                 teamLink.textContent = team.name;
@@ -68,38 +86,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 const countdownDiv = document.createElement('div');
                 countdownDiv.className = 'countdown';
 
-                const nextGameDate = getNextGameDate(team.class);
-                countdownDiv.textContent = getCountdown(nextGameDate);
+                const nextGame = getNextGameDate(team.class);
+                countdownDiv.textContent = `${getCountdown(nextGame.date)} vs ${nextGame.opponent}`;
 
                 teamDiv.appendChild(teamLink);
                 teamDiv.appendChild(countdownDiv);
 
-                divisionContainer.appendChild(teamDiv);
+                teamsDiv.appendChild(teamDiv);
 
                 setInterval(() => {
-                    countdownDiv.textContent = getCountdown(nextGameDate);
+                    countdownDiv.textContent = `${getCountdown(nextGame.date)} vs ${nextGame.opponent}`;
                 }, 1000);
             });
-        }
-    };
 
-    for (const [conference, divisions] of Object.entries(teams)) {
-        divisions.forEach(([division, teamList]) => {
-            populateTeams(conference, division, teamList);
-        });
+            divisionDiv.appendChild(teamsDiv);
+            conferenceDiv.appendChild(divisionDiv);
+        }
+
+        const existingConferenceDiv = document.querySelector('.conference');
+        if (existingConferenceDiv) {
+            existingConferenceDiv.replaceWith(conferenceDiv);
+        } else {
+            nflTeamsContainer.appendChild(conferenceDiv);
+        }
     }
 
     function getNextGameDate(teamClass) {
         const schedule = nflschedules[teamClass]; // nflschedules is defined and accessible via nfl-schedules.js
-        if (!Array.isArray(schedule)) {
-            console.error(`Schedule for ${teamClass} is not an array or is missing.`);
-            return null;
-        }
         const now = new Date();
         for (const game of schedule) {
             const gameDate = new Date(game.date);
             if (gameDate > now) {
-                return gameDate;
+                return { date: gameDate, opponent: game.opponent };
             }
         }
         return null;
@@ -118,16 +136,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
-    
-    /*
-    var element = document.getElementById('yourElementId'); // Replace 'yourElementId' with the actual ID
-    if (element) {
-        // Safe to proceed with appendChild or other operations
-        var child = document.createElement('div');
-        // Configure your child element as needed
-        element.appendChild(child);
-    } else {
-        console.error('Element not found!');
-    }
-    */
 });
