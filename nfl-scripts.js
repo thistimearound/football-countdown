@@ -1,57 +1,57 @@
 document.addEventListener('DOMContentLoaded', () => {
     const teams = {
-        "AFC": {
-            "East": [
-                { name: "Buffalo Bills", class: "buffalo-bills" },
-                { name: "Miami Dolphins", class: "miami-dolphins" },
-                { name: "New England Patriots", class: "new-england-patriots" },
-                { name: "New York Jets", class: "new-york-jets" }
-            ],
-            "North": [
+        "AFC": [
+            ["North", [
                 { name: "Baltimore Ravens", class: "baltimore-ravens" },
                 { name: "Cincinnati Bengals", class: "cincinnati-bengals" },
                 { name: "Cleveland Browns", class: "cleveland-browns" },
                 { name: "Pittsburgh Steelers", class: "pittsburgh-steelers" }
-            ],
-            "South": [
+            ]],
+            ["East", [
+                { name: "Buffalo Bills", class: "buffalo-bills" },
+                { name: "Miami Dolphins", class: "miami-dolphins" },
+                { name: "New England Patriots", class: "new-england-patriots" },
+                { name: "New York Jets", class: "new-york-jets" }
+            ]],
+            ["South", [
                 { name: "Houston Texans", class: "houston-texans" },
                 { name: "Indianapolis Colts", class: "indianapolis-colts" },
                 { name: "Jacksonville Jaguars", class: "jacksonville-jaguars" },
                 { name: "Tennessee Titans", class: "tennessee-titans" }
-            ],
-            "West": [
+            ]],
+            ["West", [
                 { name: "Denver Broncos", class: "denver-broncos" },
                 { name: "Kansas City Chiefs", class: "kansas-city-chiefs" },
                 { name: "Las Vegas Raiders", class: "las-vegas-raiders" },
                 { name: "Los Angeles Chargers", class: "los-angeles-chargers" }
-            ]
-        },
-        "NFC": {
-            "East": [
-                { name: "Dallas Cowboys", class: "dallas-cowboys" },
-                { name: "New York Giants", class: "new-york-giants" },
-                { name: "Philadelphia Eagles", class: "philadelphia-eagles" },
-                { name: "Washington Commanders", class: "washington-commanders" }
-            ],
-            "North": [
+            ]]
+        ],
+        "NFC": [
+            ["North", [
                 { name: "Chicago Bears", class: "chicago-bears" },
                 { name: "Detroit Lions", class: "detroit-lions" },
                 { name: "Green Bay Packers", class: "green-bay-packers" },
                 { name: "Minnesota Vikings", class: "minnesota-vikings" }
-            ],
-            "South": [
+            ]],
+            ["East", [
+                { name: "Dallas Cowboys", class: "dallas-cowboys" },
+                { name: "New York Giants", class: "new-york-giants" },
+                { name: "Philadelphia Eagles", class: "philadelphia-eagles" },
+                { name: "Washington Commanders", class: "washington-commanders" }
+            ]],
+            ["South", [
                 { name: "Atlanta Falcons", class: "atlanta-falcons" },
                 { name: "Carolina Panthers", class: "carolina-panthers" },
                 { name: "New Orleans Saints", class: "new-orleans-saints" },
                 { name: "Tampa Bay Buccaneers", class: "tampa-bay-buccaneers" }
-            ],
-            "West": [
+            ]],
+            ["West", [
                 { name: "Arizona Cardinals", class: "arizona-cardinals" },
                 { name: "Los Angeles Rams", class: "los-angeles-rams" },
                 { name: "San Francisco 49ers", class: "san-francisco-49ers" },
                 { name: "Seattle Seahawks", class: "seattle-seahawks" }
-            ]
-        }
+            ]]
+        ]
     };
 
     const nflTeamsContainer = document.getElementById('nfl-teams-container');

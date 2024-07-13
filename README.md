@@ -22,8 +22,10 @@ v0.4 Added Linter & Updated Styling
 * Updated index.html and styles.css to better display NFL logo
 </details>
 
-v.05 NFL Separation for Scaling Support
+v0.5 NFL Separation for Scaling Support
 * Renamed scripts.js to nfl-scripts.js
 * Renamed styles.css to nfl-styles.css
 * Updated index.html and team.html with corrected .js filepaths
 * Deprecated team-scripts.js and removed
+* Corrected Team Arrays for Conference and Division
+* Various Typos
