@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const teams = {
+    const nflTeams = {
         "AFC": [
             ["North", [
                 { name: "Baltimore Ravens", class: "baltimore-ravens" },
@@ -53,7 +53,26 @@ document.addEventListener('DOMContentLoaded', () => {
             ]]
         ]
     };
+    
+    /** Appends team elements to the division container.
+     * @param {string} conference - The conference name.
+     * @param {string} division - The division name.
+     * @param {Array} teams - The list of teams. **/
+    const appendTeams = (conference, division, teams) => {
+        const divisionContainer = document.getElementById(`${conference.toLowerCase()}-${division.toLowerCase()}`);
+        if (!divisionContainer) {
+            console.error(`Division container not found for ${conference} ${division}`);
+            return;
+        }
+        teams.forEach(team => {
+            const teamElement = document.createElement('div');
+            teamElement.className = team.class;
+            teamElement.textContent = team.name;
+            divisionContainer.appendChild(teamElement);
+        });
+    };
 
+    /* 
     const nflTeamsContainer = document.getElementById('nfl-teams-container');
 
     for (const [conference, divisions] of Object.entries(teams)) {
@@ -151,4 +170,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
+    */
 });
