@@ -1,25 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const nflTeams = {
+    const DIVISION_NAMES = new Map([
+        [0, "North"],
+        [1, "East"],
+        [2, "South"],
+        [3, "West"]
+    ]);
+    
+    const nflTeamsContainer = {
         "AFC": [
-            ["North", [
+            [DIVISION_NAMES.get(0), [
                 { name: "Baltimore Ravens", class: "baltimore-ravens" },
                 { name: "Cincinnati Bengals", class: "cincinnati-bengals" },
                 { name: "Cleveland Browns", class: "cleveland-browns" },
                 { name: "Pittsburgh Steelers", class: "pittsburgh-steelers" }
             ]],
-            ["East", [
+            [DIVISION_NAMES.get(1), [
                 { name: "Buffalo Bills", class: "buffalo-bills" },
                 { name: "Miami Dolphins", class: "miami-dolphins" },
                 { name: "New England Patriots", class: "new-england-patriots" },
                 { name: "New York Jets", class: "new-york-jets" }
             ]],
-            ["South", [
+            [DIVISION_NAMES.get(2), [
                 { name: "Houston Texans", class: "houston-texans" },
                 { name: "Indianapolis Colts", class: "indianapolis-colts" },
                 { name: "Jacksonville Jaguars", class: "jacksonville-jaguars" },
                 { name: "Tennessee Titans", class: "tennessee-titans" }
             ]],
-            ["West", [
+            [DIVISION_NAMES.get(3), [
                 { name: "Denver Broncos", class: "denver-broncos" },
                 { name: "Kansas City Chiefs", class: "kansas-city-chiefs" },
                 { name: "Las Vegas Raiders", class: "las-vegas-raiders" },
@@ -27,25 +34,25 @@ document.addEventListener('DOMContentLoaded', () => {
             ]]
         ],
         "NFC": [
-            ["North", [
+            [DIVISION_NAMES.get(0), [
                 { name: "Chicago Bears", class: "chicago-bears" },
                 { name: "Detroit Lions", class: "detroit-lions" },
                 { name: "Green Bay Packers", class: "green-bay-packers" },
                 { name: "Minnesota Vikings", class: "minnesota-vikings" }
             ]],
-            ["East", [
+            [DIVISION_NAMES.get(1), [
                 { name: "Dallas Cowboys", class: "dallas-cowboys" },
                 { name: "New York Giants", class: "new-york-giants" },
                 { name: "Philadelphia Eagles", class: "philadelphia-eagles" },
                 { name: "Washington Commanders", class: "washington-commanders" }
             ]],
-            ["South", [
+            [DIVISION_NAMES.get(2), [
                 { name: "Atlanta Falcons", class: "atlanta-falcons" },
                 { name: "Carolina Panthers", class: "carolina-panthers" },
                 { name: "New Orleans Saints", class: "new-orleans-saints" },
                 { name: "Tampa Bay Buccaneers", class: "tampa-bay-buccaneers" }
             ]],
-            ["West", [
+            [DIVISION_NAMES.get(3), [
                 { name: "Arizona Cardinals", class: "arizona-cardinals" },
                 { name: "Los Angeles Rams", class: "los-angeles-rams" },
                 { name: "San Francisco 49ers", class: "san-francisco-49ers" },
@@ -54,10 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
     };
     
-    /** Appends team elements to the division container.
-     * @param {string} conference - The conference name.
-     * @param {string} division - The division name.
-     * @param {Array} teams - The list of teams. **/
     const appendTeams = (conference, division, teams) => {
         const divisionContainer = document.getElementById(`${conference.toLowerCase()}-${division.toLowerCase()}`);
         if (!divisionContainer) {
@@ -66,81 +69,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         teams.forEach(team => {
             const teamElement = document.createElement('div');
-            teamElement.className = team.class;
-            teamElement.textContent = team.name;
+            teamElement.className = `team ${team.class}`;
+            const teamLink = document.createElement('a');
+            teamLink.href = `team.html?team=${encodeURIComponent(team.name)}`;
+            teamLink.textContent = team.name;
+            teamElement.appendChild(teamLink);
+
+            const countdownDiv = document.createElement('div');
+            countdownDiv.className = 'countdown';
+
+            const nextGame = getNextGameDate(team.class);
+            if (nextGame) {
+                countdownDiv.textContent = `${getCountdown(nextGame.date)} vs ${nextGame.opponent}`;
+            } else {
+                countdownDiv.textContent = 'No upcoming games';
+            }
+
+            teamElement.appendChild(countdownDiv);
             divisionContainer.appendChild(teamElement);
-        });
-    };
 
-    /* 
-    const nflTeamsContainer = document.getElementById('nfl-teams-container');
-
-    for (const [conference, divisions] of Object.entries(teams)) {
-        const conferenceDiv = document.createElement('div');
-        conferenceDiv.className = 'conference';
-        
-        const conferenceHeader = document.createElement('h2');
-        conferenceHeader.textContent = conference;
-        conferenceDiv.appendChild(conferenceHeader);
-
-        for (const [division, teamList] of Object.entries(divisions)) {
-            const divisionDiv = document.createElement('div');
-            divisionDiv.className = 'division';
-            
-            const divisionHeader = document.createElement('h3');
-            divisionHeader.textContent = division;
-            divisionDiv.appendChild(divisionHeader);
-
-            const teamsDiv = document.createElement('div');
-            teamsDiv.className = 'teams';
-
-            teamList.forEach(team => {
-                const teamDiv = document.createElement('div');
-                teamDiv.className = `team ${team.class}`;
-                
-                const teamLink = document.createElement('a');
-                teamLink.href = `team.html?team=${encodeURIComponent(team.name)}`;
-                teamLink.textContent = team.name;
-
-                const countdownDiv = document.createElement('div');
-                countdownDiv.className = 'countdown';
-
-                const nextGame = getNextGameDate(team.class);
+            setInterval(() => {
                 if (nextGame) {
                     countdownDiv.textContent = `${getCountdown(nextGame.date)} vs ${nextGame.opponent}`;
                 } else {
                     countdownDiv.textContent = 'No upcoming games';
                 }
+            }, 1000);
+        });
+    };
 
-                teamDiv.appendChild(teamLink);
-                teamDiv.appendChild(countdownDiv);
-
-                teamsDiv.appendChild(teamDiv);
-
-                setInterval(() => {
-                    if (nextGame) {
-                        countdownDiv.textContent = `${getCountdown(nextGame.date)} vs ${nextGame.opponent}`;
-                    } else {
-                        countdownDiv.textContent = 'No upcoming games';
-                    }
-                }, 1000);
-            });
-
-            divisionDiv.appendChild(teamsDiv);
-            conferenceDiv.appendChild(divisionDiv);
-        }
-
-        const existingConferenceDiv = document.querySelector('.conference');
-        if (existingConferenceDiv) {
-            existingConferenceDiv.replaceWith(conferenceDiv);
-        } else {
-            nflTeamsContainer.appendChild(conferenceDiv);
-        }
+    for (const [conference, divisions] of Object.entries(nflTeamsContainer)) {
+        divisions.forEach(([division, teamList]) => {
+            appendTeams(conference, division, teamList);
+        });
     }
 
     function getNextGameDate(teamClass) {
         console.log(`Fetching schedule for team class: ${teamClass}`);
-        const schedule = nflschedules[teamClass]; // nflschedules is defined and accessible via nfl-schedules.js
+        const schedule = nflschedules[teamClass];
 
         if (!schedule) {
             console.error(`Schedule not found for team class: ${teamClass}`);
@@ -170,5 +136,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
-    */
 });
