@@ -32,9 +32,9 @@ h1 {
 
 .nfl-logo {
     max-width: 100%;
-    width: 100%; /* To ensure the logo takes up a full width */
+    width: 100%;
     height: auto;
-    max-height: 150px; /* Adjust max-height to fit your design needs while maintaining aspect ratio. */
+    max-height: 150px; /* Maintain aspect ratio with max-height */
     object-fit: contain; /* Ensures the logo scales proportionally */
     margin-bottom: 10px;
 }
@@ -86,7 +86,16 @@ h3 {
     justify-content: center;
 }
 
-.team, .game {
+.team {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    color: white;
+}
+
+.game {
     border: 1px solid #ccc;
     margin: 10px;
     padding: 20px;
