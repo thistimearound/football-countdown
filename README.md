@@ -29,7 +29,6 @@ v0.5 NFL Separation for Future Scaling
 * Corrected Team Arrays for Conference and Division
 * Refined team array population
 * Various Typos and Comments
-</details>
 
 v0.6 Support for full NFL Team Schedules
 * Updated nfl-scripts to show opponent next to countdown `getNextGameDate`
@@ -38,3 +37,9 @@ v0.6 Support for full NFL Team Schedules
 * Populated the schedule with opponents and game times.
 * Aligned styling for index.html to center division names
 * updated array nesting for teams in divisions and conferences
+</details>
+
+v0.7 Authentic Scheduling Support
+* Draft initial Jupyter Notebook for python scraping and csv conversion
+* Build initial nflfastR schedule query with home & away indicators
+* Align styles division centering with scripts teams classes

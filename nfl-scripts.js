@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         [2, "South"],
         [3, "West"]
     ]);
-    
+
     const nflTeamsContainer = {
         "AFC": [
             [DIVISION_NAMES.get(0), [
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ]]
         ]
     };
-    
+
     const appendTeams = (conference, division, teams) => {
         const divisionContainer = document.getElementById(`${conference.toLowerCase()}-${division.toLowerCase()}`);
         if (!divisionContainer) {
