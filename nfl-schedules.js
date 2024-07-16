@@ -1,7 +1,12 @@
+/**
+ * NFL Schedules object containing the schedules for various teams.
+ * @type {Object}
+ */
+
 const nflschedules = {
     "arizona-cardinals": [
-        { opponent: "San Francisco 49ers", date: "2024-09-08T16:25:00Z" },
-        { opponent: "Dallas Cowboys", date: "2024-09-15T20:20:00Z" },
+        { opponent: "San Francisco 49ers", date: "2024-09-08T16:25:00Z", isHomeGame: true },
+        { opponent: "Dallas Cowboys", date: "2024-09-15T20:20:00Z", isHomeGame: false },
         { opponent: "Chicago Bears", date: "2024-09-22T16:05:00Z" },
         { opponent: "Cleveland Browns", date: "2024-09-29T16:25:00Z" },
         { opponent: "Washington Commanders", date: "2024-10-06T16:25:00Z" },

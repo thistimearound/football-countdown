@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const countdownDiv = document.createElement('div');
             countdownDiv.className = 'countdown';
 
-            const nextGame = getNextGameDate(team.class);
+            const nextGame = nflschedules ? getNextGameDate(team.class) : null;
             if (nextGame) {
                 countdownDiv.textContent = `${getCountdown(nextGame.date)} vs ${nextGame.opponent}`;
             } else {
@@ -89,14 +89,26 @@ document.addEventListener('DOMContentLoaded', () => {
             divisionContainer.appendChild(teamElement);
 
             setInterval(() => {
+                const countdownDivs = divisionContainer.getElementsByClassName('countdown');
+                for (let i = 0; i < countdownDivs.length; i++) {
+                    const countdownDiv = countdownDivs[i];
+                    const teamClass = countdownDiv.parentNode.classList[1];
+                    const nextGame = nflschedules ? getNextGameDate(teamClass) : null;
+                    if (nextGame) {
+                        countdownDiv.textContent = `${getCountdown(nextGame.date)} vs ${nextGame.opponent}`;
+                    } else {
+                        countdownDiv.textContent = 'No upcoming games';
+                    }
+                }
+            }, 1000);
                 if (nextGame) {
                     countdownDiv.textContent = `${getCountdown(nextGame.date)} vs ${nextGame.opponent}`;
                 } else {
                     countdownDiv.textContent = 'No upcoming games';
                 }
             }, 1000);
-        });
-    };
+        }
+    ;
 
     for (const [conference, divisions] of Object.entries(nflTeamsContainer)) {
         divisions.forEach(([division, teamList]) => {
@@ -124,16 +136,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function getCountdown(targetDate) {
-        if (!targetDate) return 'No upcoming games';
-
         const now = new Date();
         const diff = targetDate - now;
-
+    
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
+    
         return `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
 });

@@ -16,18 +16,13 @@ schedule_data <- load_schedules(2024)
 schedule_cleaned <- schedule_data %>%
   dplyr::select(week, gameday, gametime, home_team, away_team) %>%
   dplyr::mutate(
-    # datetime = paste(gameday, gametime, sep = "T"),
-    # datetime = suppressWarnings(ymd_hms(paste(gameday, gametime, sep = "T"), tz = "UTC")),
     opponent = away_team,
     home_or_away = "vs"
   ) %>%
-  # dplyr::mutate(datetime = if_else(is.na(datetime), ymd_hms("1970-01-01 00:00:00", tz = "UTC"), datetime)) %>%
   dplyr::bind_rows(
     schedule_data %>%
       dplyr::select(week, gameday, gametime, away_team, home_team) %>%
       dplyr::mutate(
-        # datetime = paste(gameday, gametime, sep = "T"),
-        #datetime = suppressWarnings(ymd_hms(paste(gameday, gametime, sep = "T"), tz = "UTC")),
         opponent = home_team,
         home_or_away = "@"
       )

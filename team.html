@@ -8,48 +8,55 @@
 </head>
 <body>
     <header id="team-header">
+        <h1 id="team-name">Team Name</h1>
         <div class="logo-container">
             <img src="nfl-logo.webp" alt="NFL Logo" class="nfl-logo">
         </div>
     </header>
     <main>
-        <h2 id="team-name"></h2>
-        <div id="team-schedule"></div>
-    </main>
-    <script src="nfl-schedules.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const params = new URLSearchParams(window.location.search);
-            const teamName = params.get('team');
+        <section id="schedule">
+            <h2 id="team-schedule-heading"></h2>
+            <div id="team-schedule"></div>
+            <script src="nfl-scripts.js"></script>
+            <script src="nfl-schedules.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const params = new URLSearchParams(window.location.search);
+                    const teamName = params.get('team');
 
-            if (!teamName) {
-                document.getElementById('team-name').textContent = 'Team not found';
-                document.getElementById('team-schedule').textContent = 'No schedule available';
-                return;
-            }
+                    if (!teamName) {
+                        document.getElementById('team-name').textContent = 'Team not found';
+                        document.getElementById('team-schedule').textContent = 'No schedule available';
+                        return;
+                    }
 
-            const teamClass = teamName.toLowerCase().replace(/ /g, '-');
+                    const teamClass = teamName.toLowerCase().replace(/[^a-zA-Z0-9]/g, '-');
 
-            const header = document.getElementById('team-header');
-            const teamNameElem = document.getElementById('team-name');
-            const scheduleContainer = document.getElementById('team-schedule');
+                    const header = document.getElementById('team-header');
+                    const teamNameElem = document.getElementById('team-name');
+                    const scheduleContainer = document.getElementById('team-schedule');
 
-            teamNameElem.textContent = teamName;
-            header.className = `team-header ${teamClass}`; // Apply team-specific background color
-            
-            const schedule = nflschedules[teamClass];
-            
-            if (Array.isArray(schedule) && schedule.length) {
-                schedule.forEach(game => {
-                    const gameDiv = document.createElement('div');
-                    gameDiv.className = 'game';
-                    gameDiv.textContent = `${game.date}: vs ${game.opponent}`;
-                    scheduleContainer.appendChild(gameDiv);
+                    teamNameElem.textContent = teamName;
+                    header.className = `team-header ${teamClass}`;
+
+                    const schedule = nflschedules[teamClass];
+
+                    if (Array.isArray(schedule) && schedule.length) {
+                        schedule.forEach(game => {
+                            const gameDiv = document.createElement('div');
+                            gameDiv.className = 'game';
+                            gameDiv.textContent = `${new Date(game.date).toLocaleString()}: vs. ${game.opponent}`;
+                            const opponentClass = game.opponent.toLowerCase().replace(/[^a-zA-Z0-9]/g, '-');
+                            const homeClass = game.home ? teamClass : opponentClass;
+                            gameDiv.classList.add(homeClass);
+                            scheduleContainer.appendChild(gameDiv);
+                        });
+                    } else {
+                        scheduleContainer.textContent = 'No upcoming games';
+                    }
                 });
-            } else {
-                scheduleContainer.textContent = 'No upcoming games';
-            }
-        });
-    </script>
+            </script>
+        </section>
+    </main>
 </body>
 </html>
