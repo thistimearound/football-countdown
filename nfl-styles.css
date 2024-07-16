@@ -1,12 +1,61 @@
-/* Adjusted to target specific divisions */
-#nfc-north,
-#nfc-east,
-#nfc-south,
-#nfc-west,
-#afc-north,
-#afc-east,
-#afc-south,
-#afc-west {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 10px 0 0 0;
+}
+/* Centers the logo using Firefox. */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.nfl-logo {
+    max-width: 100%;
+    width: 100%; /* To ensure the logo takes up a full width */
+    width: 100%;
+    height: auto;
+    max-height: 150px; /* Adjust max-height to fit your design needs while maintaining aspect ratio. */
+    max-height: 150px; /* Maintain aspect ratio with max-height */
+    object-fit: contain; /* Ensures the logo scales proportionally */
+    margin-bottom: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    margin: 20px 0 10px;
+    font-size: 1.5em;
+}
+
+h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.conference {
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,17 +65,40 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 
 .division {
+    flex: 1;
     margin: 10px;
-    width: 100%;
-    max-width: 1200px;
+    min-width: 200px;
+    align-items: center;
+    text-align: center
+}
+
+#teams-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.teams {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .team {
     border: 1px solid #ccc;
-    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    color: white;
+}
+
+.game {
+    border: 1px solid #ccc;
     margin: 10px;
     padding: 20px;
     width: 200px;
@@ -39,10 +111,7 @@
     color: white;
 }
 
-.countdown {
-    font-size: 1.2em;
-}
-
+/* Team-specific styles */
 .arizona-cardinals { background-color: #97233F; }
 .atlanta-falcons { background-color: #A71930; }
 .baltimore-ravens { background-color: #241773; }

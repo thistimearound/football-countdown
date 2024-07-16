@@ -1,3 +1,6 @@
+# https://www.nflfastr.com/articles/nflfastR.html
+# https://nflreadr.nflverse.com/index.html
+
 # Load necessary libraries
 library(tidyverse)
 library(ggrepel)
