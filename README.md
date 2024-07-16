@@ -37,3 +37,4 @@ v0.6 Support for full NFL Team Schedules
 * Added script to team.html to dynamically change header and color based on selected team
 * Populated the schedule with opponents and game times.
 * Aligned styling for index.html to center division names
+* updated array nesting for teams in divisions and conferences
