@@ -15,7 +15,7 @@
     </header>
     <main>
         <section id="schedule">
-            <h2 id="team-schedule-heading"></h2>
+            <h2 id="team-schedule-heading">Schedule</h2>
             <div id="team-schedule"></div>
             <script src="nfl-scripts.js"></script>
             <script src="nfl-schedules.js"></script>
@@ -45,16 +45,40 @@
                         schedule.forEach(game => {
                             const gameDiv = document.createElement('div');
                             gameDiv.className = 'game';
-                            gameDiv.textContent = `${new Date(game.date).toLocaleString()}: vs. ${game.opponent}`;
                             const opponentClass = game.opponent.toLowerCase().replace(/[^a-zA-Z0-9]/g, '-');
                             const homeClass = game.home ? teamClass : opponentClass;
                             gameDiv.classList.add(homeClass);
+                            const gameDate = new Date(game.date);
+                            gameDiv.innerHTML = `
+                                ${gameDate.toLocaleString()}: vs. ${game.opponent}
+                                <div class="countdown" id="countdown-${gameDate.getTime()}"></div>
+                            `;
                             scheduleContainer.appendChild(gameDiv);
+
+                            updateCountdown(gameDate, `countdown-${gameDate.getTime()}`);
+                            setInterval(() => updateCountdown(gameDate, `countdown-${gameDate.getTime()}`), 1000);
                         });
                     } else {
                         scheduleContainer.textContent = 'No upcoming games';
                     }
                 });
+
+                function updateCountdown(targetDate, countdownId) {
+                    const now = new Date();
+                    const diff = targetDate - now;
+
+                    if (diff <= 0) {
+                        document.getElementById(countdownId).textContent = 'Game in progress or completed';
+                        return;
+                    }
+
+                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                    document.getElementById(countdownId).textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                }
             </script>
         </section>
     </main>
