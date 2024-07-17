@@ -137,10 +137,10 @@ team_schedules <- all_games %>%
 view(team_schedules)
 
 # Convert to JSON-like structure
-team_schedules_json <- jsonlite::toJSON(team_schedules, pretty = TRUE, auto_unbox = TRUE, )
+team_schedules_json <- jsonlite::toJSON(team_schedules, pretty = TRUE, auto_unbox = TRUE, ) # nolint: line_length_linter.
 
 # Write to file
-writeLines(paste("const nflschedules = ", team_schedules_json, ";"), "nfl-schedules.js")
+writeLines(paste("const nflschedules = ", team_schedules_json, ";"), "nfl-schedules.js") # nolint: line_length_linter.
 
 # View the resulting JavaScript
 cat(paste("const nflschedules = ", team_schedules_json, ";"))

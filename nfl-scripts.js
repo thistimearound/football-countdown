@@ -80,70 +80,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const nextGame = nflschedules ? getNextGameDate(team.class) : null;
             if (nextGame) {
-                countdownDiv.textContent = `${getCountdown(nextGame.date)} vs ${nextGame.opponent}`;
+                countdownDiv.dataset.nextGameDate = nextGame.date;
+                countdownDiv.dataset.nextGameOpponent = nextGame.opponent;
+                countdownDiv.textContent = `${getCountdown(new Date(nextGame.date))} vs ${nextGame.opponent}`;
             } else {
                 countdownDiv.textContent = 'No upcoming games';
             }
 
             teamElement.appendChild(countdownDiv);
             divisionContainer.appendChild(teamElement);
+        });
 
-            setInterval(() => {
-                const countdownDivs = divisionContainer.getElementsByClassName('countdown');
-                for (let i = 0; i < countdownDivs.length; i++) {
-                    const countdownDiv = countdownDivs[i];
-                    const teamClass = countdownDiv.parentNode.classList[1];
-                    const nextGame = nflschedules ? getNextGameDate(teamClass) : null;
-                    if (nextGame) {
-                        countdownDiv.textContent = `${getCountdown(nextGame.date)} vs ${nextGame.opponent}`;
-                    } else {
-                        countdownDiv.textContent = 'No upcoming games';
-                    }
-                }
-            }, 1000);
-                if (nextGame) {
-                    countdownDiv.textContent = `${getCountdown(nextGame.date)} vs ${nextGame.opponent}`;
+        setInterval(() => {
+            const countdownDivs = divisionContainer.getElementsByClassName('countdown');
+            for (let i = 0; i < countdownDivs.length; i++) {
+                const countdownDiv = countdownDivs[i];
+                const nextGameDate = new Date(countdownDiv.dataset.nextGameDate);
+                const nextGameOpponent = countdownDiv.dataset.nextGameOpponent;
+                if (nextGameDate) {
+                    countdownDiv.textContent = `${getCountdown(nextGameDate)} vs ${nextGameOpponent}`;
                 } else {
                     countdownDiv.textContent = 'No upcoming games';
                 }
-            }, 1000);
-        }
-    ;
+            }
+        }, 1000);
+    };
 
     for (const [conference, divisions] of Object.entries(nflTeamsContainer)) {
         divisions.forEach(([division, teamList]) => {
             appendTeams(conference, division, teamList);
         });
-    }
-
-    function getNextGameDate(teamClass) {
-        console.log(`Fetching schedule for team class: ${teamClass}`);
-        const schedule = nflschedules[teamClass];
-
-        if (!schedule) {
-            console.error(`Schedule not found for team class: ${teamClass}`);
-            return { date: null, opponent: 'Unknown' };
-        }
-
-        const now = new Date();
-        for (const game of schedule) {
-            const gameDate = new Date(game.date);
-            if (gameDate > now) {
-                return { date: gameDate, opponent: game.opponent };
-            }
-        }
-        return { date: null, opponent: 'No upcoming games' };
-    }
-
-    function getCountdown(targetDate) {
-        const now = new Date();
-        const diff = targetDate - now;
-    
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-    
-        return `${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
 });
