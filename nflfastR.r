@@ -76,9 +76,11 @@ schedule_cleaned <- schedule_data %>%
     spread_line
   ) %>%
   mutate(
+    home_or_away = "vs",
+    matchup = paste(home_team, "vs", away_team),
     datetime = paste(gameday, gametime) %>% ymd_hm(tz = "UTC")
   ) %>%
-  select(-gameday, -gametime)
+  select(-gameday, -gametime) # Remove gameday and gametime columns
 
 # Create a function to format team names
 format_team_name <- function(team) {
@@ -94,23 +96,26 @@ home_games <- schedule_cleaned %>%
   mutate(
     team = sapply(home_team, format_team_name),
     opponent = sapply(away_team, format_team_name),
-    isHomeGame = TRUE
+    isHomeGame = TRUE,
+    home_or_away = "vs"
   ) %>%
-  select(team, opponent, datetime, isHomeGame)
+  select(team, opponent, datetime, isHomeGame, home_or_away)
 
 away_games <- schedule_cleaned %>%
   mutate(
     team = sapply(away_team, format_team_name),
     opponent = sapply(home_team, format_team_name),
-    isHomeGame = FALSE
+    isHomeGame = FALSE,
+    home_or_away = "@"
   ) %>%
-  select(team, opponent, datetime, isHomeGame)
+  select(team, opponent, datetime, isHomeGame, home_or_away)
 
 # Combine home and away games
 all_games <- bind_rows(home_games, away_games)
 
 # Group by team and create the final structure
 team_schedules <- all_games %>%
+  arrange(datetime) %>%  # Sort by datetime
   mutate(
     date = format(datetime, "%Y-%m-%dT%H:%M:%SZ"),
     opponent = reverse_team_name_mapping[opponent]
@@ -121,12 +126,15 @@ team_schedules <- all_games %>%
       tibble(
         opponent = opponent,
         date = date,
-        isHomeGame = isHomeGame
+        isHomeGame = isHomeGame,
+        home_or_away = home_or_away
       )
     ),
-    .groups = 'drop'
+    .groups = "drop"
   ) %>%
   deframe()
+
+view(team_schedules)
 
 # Convert to JSON-like structure
 team_schedules_json <- jsonlite::toJSON(team_schedules, pretty = TRUE, auto_unbox = TRUE, )
