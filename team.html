@@ -4,46 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Schedule</title>
-    <link rel="stylesheet" href="nfl-styles.css" />
+    <link rel="stylesheet" href="nfl-styles.css">
     <script src="nfl-scripts.js" defer></script>
     <script src="nfl-schedules.js" defer></script>
 </head>
 <body>
-    <div id="team-schedule"></div>
+    <header id="team-header">
+        <h1 id="team-name">Team Name</h1>
+        <div class="logo-container">
+            <img src="nfl-logo.webp" alt="NFL League Shield Logo" class="nfl-logo">
+        </div>
+    </header>
+    <main>
+        <section id="schedule">
+            <h2 id="team-schedule-heading">Schedule</h2>
+            <div id="team-schedule"></div>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const params = new URLSearchParams(window.location.search);
+                    const teamName = params.get('team');
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const params = new URLSearchParams(window.location.search);
-            const teamName = params.get('team');
+                    const teamScheduleContainer = document.getElementById('team-schedule');
+                    if (!teamName) {
+                        teamScheduleContainer.innerHTML = `<h1>Team not found</h1>`;
+                        return;
+                    }
 
-            const teamScheduleContainer = document.getElementById('team-schedule');
-            if (!teamName) {
-                teamScheduleContainer.innerHTML = `<h1>Team not found</h1>`;
-                return;
-            }
+                    const teamClass = Object.keys(nflschedules).find(key => key === teamName.toLowerCase().replace(' ', '-'));
+                    if (!teamClass) {
+                        teamScheduleContainer.innerHTML = `<h1>Schedule not found for ${teamName}</h1>`;
+                        return;
+                    }
 
-            const teamClass = Object.keys(nflschedules).find(key => key === teamName.toLowerCase().replace(' ', '-'));
-            if (!teamClass) {
-                teamScheduleContainer.innerHTML = `<h1>Schedule not found for ${teamName}</h1>`;
-                return;
-            }
+                    const teamSchedule = nflschedules[teamClass];
+                    teamScheduleContainer.innerHTML = `<h1>${teamName} Schedule</h1>`;
 
-            const teamSchedule = nflschedules[teamClass];
-            teamScheduleContainer.innerHTML = `<h1>${teamName} Schedule</h1>`;
+                    teamSchedule.forEach(game => {
+                        const gameElement = document.createElement('div');
+                        gameElement.className = 'game';
 
-            teamSchedule.forEach(game => {
-                const gameElement = document.createElement('div');
-                gameElement.className = 'game';
+                        const gameDate = new Date(game.date).toISOString().split('T')[0];
+                        const formattedOpponent = game.opponent.replace(/-./g, match => match.charAt(1).toUpperCase());
+                        const homeOrAway = game.isHomeGame ? 'vs' : '@';
 
-                const gameDate = new Date(game.date).toLocaleDateString();
-                const formattedOpponent = game.opponent.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-                const homeOrAway = game.isHomeGame ? 'vs' : '@';
+                        gameElement.textContent = `${gameDate}: ${homeOrAway} ${formattedOpponent}`;
 
-                gameElement.textContent = `${gameDate}: ${homeOrAway} ${formattedOpponent}`;
-
-                teamScheduleContainer.appendChild(gameElement);
-            });
-        });
-    </script>
+                        teamScheduleContainer.appendChild(gameElement);
+                    });
+                });
+            </script>
+        </section>
+    </main>
 </body>
 </html>
