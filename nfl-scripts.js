@@ -117,21 +117,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
             teamElement.appendChild(countdownDiv);
             divisionContainer.appendChild(teamElement);
-
-            setInterval(() => {
-                const countdownDivs = divisionContainer.getElementsByClassName('countdown');
-                for (let i = 0; i < countdownDivs.length; i++) {
-                    const countdownDiv = countdownDivs[i];
-                    const teamClass = countdownDiv.parentNode.classList[1];
-                    const nextGame = nflschedules ? getNextGameDate(teamClass) : null;
-                    if (nextGame) {
-                        countdownDiv.textContent = `${getCountdown(nextGame.date)} ${nextGame.home_or_away} ${nextGame.opponent}`;
-                    } else {
-                        countdownDiv.textContent = 'No upcoming games';
-                    }
-                }
-            }, 1000);
         });
+
+        setInterval(() => {
+            const countdownDivs = divisionContainer.getElementsByClassName('countdown');
+            for (let i = 0; i < countdownDivs.length; i++) {
+                const countdownDiv = countdownDivs[i];
+                const teamClass = countdownDiv.parentNode.classList[1];
+                const nextGame = nflschedules ? getNextGameDate(teamClass) : null;
+                if (nextGame) {
+                    countdownDiv.textContent = `${getCountdown(nextGame.date)} ${nextGame.home_or_away} ${nextGame.opponent}`;
+                } else {
+                    countdownDiv.textContent = 'No upcoming games';
+                }
+            }
+        }, 1000);
     };
 
     for (const [conference, divisions] of Object.entries(nflTeamsContainer)) {
