@@ -73,7 +73,9 @@ schedule_cleaned <- schedule_data %>%
     home_team,
     away_team,
     location,
-    spread_line
+    spread_line,
+    home_spread_odds,
+    away_spread_odds
   ) %>%
   mutate(
     home_or_away = "vs",
@@ -99,7 +101,7 @@ home_games <- schedule_cleaned %>%
     isHomeGame = TRUE,
     home_or_away = "vs"
   ) %>%
-  select(team, opponent, datetime, isHomeGame, home_or_away)
+  select(team, opponent, datetime, isHomeGame, home_or_away, week, spread_line, home_spread_odds, away_spread_odds)
 
 away_games <- schedule_cleaned %>%
   mutate(
@@ -108,7 +110,7 @@ away_games <- schedule_cleaned %>%
     isHomeGame = FALSE,
     home_or_away = "@"
   ) %>%
-  select(team, opponent, datetime, isHomeGame, home_or_away)
+  select(team, opponent, datetime, isHomeGame, home_or_away, week, spread_line, home_spread_odds, away_spread_odds)
 
 # Combine home and away games
 all_games <- bind_rows(home_games, away_games)
@@ -127,20 +129,25 @@ team_schedules <- all_games %>%
         opponent = opponent,
         date = date,
         isHomeGame = isHomeGame,
-        home_or_away = home_or_away
+        home_or_away = home_or_away,
+        week = week,
+        spread_line = spread_line,
+        home_spread = home_spread_odds,
+        away_spread = away_spread_odds
       )
     ),
     .groups = "drop"
   ) %>%
   deframe()
 
+# View the resulting structure
 view(team_schedules)
 
 # Convert to JSON-like structure
-team_schedules_json <- jsonlite::toJSON(team_schedules, pretty = TRUE, auto_unbox = TRUE, ) # nolint: line_length_linter.
+team_schedules_json <- jsonlite::toJSON(team_schedules, pretty = TRUE, auto_unbox = TRUE) # nolint: line_length_linter
 
 # Write to file
-writeLines(paste("const nflschedules = ", team_schedules_json, ";"), "nfl-schedules.js") # nolint: line_length_linter.
+writeLines(paste("const nflschedules = ", team_schedules_json, ";"), "nfl-schedules.js") # nolint: line_length_linter
 
 # View the resulting JavaScript
 cat(paste("const nflschedules = ", team_schedules_json, ";"))

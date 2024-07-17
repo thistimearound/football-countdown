@@ -35,8 +35,7 @@ v0.6 Support for full NFL Team Schedules
 * Added script to team.html to dynamically change header and color based on selected team
 * Populated the schedule with opponents and game times.
 * Aligned styling for index.html to center division names
-* updated array nesting for teams in divisions and conferences
-</details>
+* Refined array nesting for teams in divisions and conferences
 
 v0.7 Authentic Scheduling Support
 * Draft initial Jupyter Notebook for python scraping and csv conversion
@@ -44,3 +43,8 @@ v0.7 Authentic Scheduling Support
 * Exporting NFL data from nflfastR.r to JSON in nfl-schedules.js
 * Align styles division centering with scripts teams classes
 * Code refinement and adding color support for team schedules
+* Displaying home and away for all teams
+</details>
+
+v0.8 Betting Support
+* Add game spreads and home or away team odds to all schedules
