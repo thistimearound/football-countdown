@@ -40,6 +40,7 @@ v0.6 Support for full NFL Team Schedules
 
 v0.7 Authentic Scheduling Support
 * Draft initial Jupyter Notebook for python scraping and csv conversion
-* Build initial nflfastR schedule query with home & away indicators
+* Build nflfastR.r schedule query with home & away indicators
+* Exporting NFL data from nflfastR.r to JSON in nfl-schedules.js
 * Align styles division centering with scripts teams classes
 * Code refinement and adding color support for team schedules

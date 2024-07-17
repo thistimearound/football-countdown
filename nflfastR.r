@@ -1,12 +1,10 @@
-# https://www.nflfastr.com/articles/nflfastR.html
-# https://nflreadr.nflverse.com/index.html
-
 # Load necessary libraries
 library(tidyverse)
 library(ggrepel)
 library(nflreadr)
 library(nflplotR)
 library(lubridate)
+library(jsonlite)
 
 # Load NFL schedule data for 2024
 schedule_data <- tryCatch(
@@ -24,49 +22,117 @@ if (!is.null(schedule_data)) {
   stop("Schedule data is not available for 2024.")
 }
 
-# Proceed with data cleaning and processing
+# Define the mapping between team abbreviations and full names
+team_name_mapping <- list(
+  ari = "arizona-cardinals",
+  atl = "atlanta-falcons",
+  bal = "baltimore-ravens",
+  buf = "buffalo-bills",
+  car = "carolina-panthers",
+  chi = "chicago-bears",
+  cin = "cincinnati-bengals",
+  cle = "cleveland-browns",
+  dal = "dallas-cowboys",
+  den = "denver-broncos",
+  det = "detroit-lions",
+  gb = "green-bay-packers",
+  hou = "houston-texans",
+  ind = "indianapolis-colts",
+  jax = "jacksonville-jaguars",
+  kc = "kansas-city-chiefs",
+  lv = "las-vegas-raiders",
+  lac = "los-angeles-chargers",
+  la = "los-angeles-rams",
+  mia = "miami-dolphins",
+  min = "minnesota-vikings",
+  ne = "new-england-patriots",
+  no = "new-orleans-saints",
+  nyg = "new-york-giants",
+  nyj = "new-york-jets",
+  phi = "philadelphia-eagles",
+  pit = "pittsburgh-steelers",
+  sf = "san-francisco-49ers",
+  sea = "seattle-seahawks",
+  tb = "tampa-bay-buccaneers",
+  ten = "tennessee-titans",
+  was = "washington-commanders"
+)
+
+# Create a reverse mapping for team names
+reverse_team_name_mapping <- setNames(
+  gsub("-", " ", sapply(team_name_mapping, function(x) tools::toTitleCase(x))),
+  team_name_mapping
+)
+
+# Clean and process the data
 schedule_cleaned <- schedule_data %>%
   select(
     week,
-    gameday,   # Correct column for game day
-    gametime,  # Correct column for game time
+    gameday,
+    gametime,
     home_team,
     away_team,
     location,
     spread_line
   ) %>%
   mutate(
-    home_or_away = "vs",
-    matchup = paste(home_team, "vs", away_team),
-    datetime = paste(gameday, gametime) %>% ymd_hm(tz = "UTC")  # Correctly parse date and time
+    datetime = paste(gameday, gametime) %>% ymd_hm(tz = "UTC")
   ) %>%
-  select(-gameday, -gametime) %>%  # Remove gameday and gametime columns
-  bind_rows(
-    schedule_data %>%
-      select(
-        week,
-        gameday,
-        gametime,
-        home_team,
-        away_team,
-        location,
-        spread_line
-      ) %>%
-      mutate(
-        home_or_away = "@",
-        matchup = paste(away_team, "@", home_team),
-        datetime = paste(gameday, gametime) %>% ymd_hm(tz = "UTC")  # Correctly parse date and time
-      ) %>%
-      select(-gameday, -gametime) %>%  # Remove gameday and gametime columns
-      rename(
-        home_team = away_team,
-        away_team = home_team
+  select(-gameday, -gametime)
+
+# Create a function to format team names
+format_team_name <- function(team) {
+  team_formatted <- team_name_mapping[[tolower(team)]]
+  if (is.null(team_formatted)) {
+    stop(paste("Team abbreviation not found in mapping:", team))
+  }
+  return(team_formatted)
+}
+
+# Transform the data into the desired format
+home_games <- schedule_cleaned %>%
+  mutate(
+    team = sapply(home_team, format_team_name),
+    opponent = sapply(away_team, format_team_name),
+    isHomeGame = TRUE
+  ) %>%
+  select(team, opponent, datetime, isHomeGame)
+
+away_games <- schedule_cleaned %>%
+  mutate(
+    team = sapply(away_team, format_team_name),
+    opponent = sapply(home_team, format_team_name),
+    isHomeGame = FALSE
+  ) %>%
+  select(team, opponent, datetime, isHomeGame)
+
+# Combine home and away games
+all_games <- bind_rows(home_games, away_games)
+
+# Group by team and create the final structure
+team_schedules <- all_games %>%
+  mutate(
+    date = format(datetime, "%Y-%m-%dT%H:%M:%SZ"),
+    opponent = reverse_team_name_mapping[opponent]
+  ) %>%
+  group_by(team) %>%
+  summarise(
+    games = list(
+      tibble(
+        opponent = opponent,
+        date = date,
+        isHomeGame = isHomeGame
       )
-  )
+    ),
+    .groups = 'drop'
+  ) %>%
+  deframe()
 
-# Sort the data
-schedule_sorted <- schedule_cleaned %>%
-  arrange(week, datetime, home_team, location, away_team, spread_line)
+# Convert to JSON-like structure
+team_schedules_json <- jsonlite::toJSON(team_schedules, pretty = TRUE, auto_unbox = TRUE, )
 
-# View the cleaned and sorted data
-View(schedule_sorted)
+# Write to file
+writeLines(paste("const nflschedules = ", team_schedules_json, ";"), "nfl-schedules.js")
+
+# View the resulting JavaScript
+cat(paste("const nflschedules = ", team_schedules_json, ";"))
