@@ -3,17 +3,17 @@ function getNextGameDate(teamClass) {
 
     if (!schedule) {
         console.error(`Schedule not found for team class: ${teamClass}`);
-        return { date: null, opponent: 'Unknown' };
+        return { date: null, opponent: 'Unknown', home_or_away: '' };
     }
 
     const now = new Date();
     for (const game of schedule) {
         const gameDate = new Date(game.date);
         if (gameDate > now) {
-            return { date: gameDate, opponent: game.opponent };
+            return { date: gameDate, opponent: game.opponent, home_or_away: game.home_or_away };
         }
     }
-    return { date: null, opponent: 'No upcoming games' };
+    return { date: null, opponent: 'No upcoming games', home_or_away: '' };
 }
 
 function getCountdown(targetDate) {
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let nextGame = nflschedules ? getNextGameDate(team.class) : null;
             if (nextGame) {
-                countdownDiv.textContent = `${getCountdown(nextGame.date)} vs ${nextGame.opponent}`;
+                countdownDiv.textContent = `${getCountdown(nextGame.date)} ${nextGame.home_or_away} ${nextGame.opponent}`;
             } else {
                 countdownDiv.textContent = 'No upcoming games';
             }
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const teamClass = countdownDiv.parentNode.classList[1];
                     const nextGame = nflschedules ? getNextGameDate(teamClass) : null;
                     if (nextGame) {
-                        countdownDiv.textContent = `${getCountdown(nextGame.date)} vs ${nextGame.opponent}`;
+                        countdownDiv.textContent = `${getCountdown(nextGame.date)} ${nextGame.home_or_away} ${nextGame.opponent}`;
                     } else {
                         countdownDiv.textContent = 'No upcoming games';
                     }
