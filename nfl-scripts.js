@@ -1,5 +1,4 @@
 function getNextGameDate(teamClass) {
-    console.log(`Fetching schedule for team class: ${teamClass}`);
     const schedule = nflschedules[teamClass];
 
     if (!schedule) {
