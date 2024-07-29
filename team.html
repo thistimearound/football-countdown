@@ -10,8 +10,10 @@
 </head>
 <body>
     <header id="team-header">
+        <!-- The team name will be dynamically updated -->
         <h1 id="team-name">Team Name</h1>
         <div class="logo-container">
+            <!-- The NFL league shield logo -->
             <img src="nfl-logo.webp" alt="NFL League Shield Logo" class="nfl-logo">
         </div>
     </header>
@@ -21,27 +23,34 @@
             <div id="team-schedule"></div>
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
-                    const params = new URLSearchParams(window.location.search);
+                    // Get the team name from the URL parameters
+                    // Example URL: team.html?team=New%20England%20Patriots
+                    const params = new URLSearchParams(window.location.search || window.location.href.split('?')[1]);
                     const teamName = params.get('team');
 
                     if (!teamName) {
+                        // If team name is not provided, display error messages
                         document.getElementById('team-name').textContent = 'Team not found';
+                        // If schedule is not available, display a message
                         document.getElementById('team-schedule').textContent = 'No schedule available';
                         return;
                     }
 
+                    // Convert team name to a class name format
                     const teamClass = teamName.toLowerCase().replace(/[^a-zA-Z0-9]/g, '-');
 
                     const header = document.getElementById('team-header');
                     const teamNameElem = document.getElementById('team-name');
                     const scheduleContainer = document.getElementById('team-schedule');
 
+                    // Update the team name and header class
                     teamNameElem.textContent = teamName;
                     header.className = `team-header ${teamClass}`;
 
                     const schedule = nflschedules[teamClass];
 
                     if (Array.isArray(schedule) && schedule.length) {
+                        // If there are upcoming games, iterate through the schedule and display each game
                         schedule.forEach(game => {
                             const gameDiv = document.createElement('div');
                             gameDiv.className = 'game';
@@ -55,30 +64,35 @@
                             `;
                             scheduleContainer.appendChild(gameDiv);
 
+                            // Update the countdown timer for each game
                             updateCountdown(gameDate, `countdown-${gameDate.getTime()}`);
                             setInterval(() => updateCountdown(gameDate, `countdown-${gameDate.getTime()}`), 1000);
                         });
                     } else {
+                        // If there are no upcoming games, display a message
                         scheduleContainer.textContent = 'No upcoming games';
                     }
-                });
 
-                function updateCountdown(targetDate, countdownId) {
-                    const now = new Date();
-                    const diff = targetDate - now;
+                    function updateCountdown(targetDate, countdownId) {
+                        // Update the countdown timer based on the target date
+                        const now = new Date();
+                        const diff = targetDate - now;
 
-                    if (diff <= 0) {
-                        document.getElementById(countdownId).textContent = 'Game in progress or completed';
-                        return;
+                        if (diff <= 0) {
+                            // If the game has started or completed, display a message
+                            document.getElementById(countdownId).textContent = 'Game in progress or completed';
+                            return;
+                        }
+
+                        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                        // Display the countdown timer in days, hours, minutes, and seconds
+                        document.getElementById(countdownId).textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
                     }
-
-                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-                    document.getElementById(countdownId).textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-                }
+                });
             </script>
         </section>
     </main>

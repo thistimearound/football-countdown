@@ -1,3 +1,9 @@
+<!--
+    This HTML file represents a web page for displaying the NFL schedule countdown.
+    It includes the necessary HTML structure, CSS styles, and JavaScript scripts.
+    The page consists of a header with the NFL logo, followed by two main sections for displaying NFC and AFC teams.
+    Each section contains divisions with their respective teams listed.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,11 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NFL Schedule Countdown</title>
     <link rel="stylesheet" href="nfl-styles.css" type="text/css">
+    <script src="nfl-schedules.js" defer></script>
+    <script src="nfl-scripts.js" defer></script>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <img src="nfl-logo.webp" alt="National Football League Logo" class="nfl-logo" loading="lazy">
+            <img src="nfl-logo.webp" alt="National Football League Logo" class="nfl-logo" loading="lazy" width="200" height="100">
         </div>
     </header>
     <main>
@@ -56,7 +64,5 @@
             </div>
         </div>
     </main>
-    <script src="nfl-schedules.js" defer></script>
-    <script src="nfl-scripts.js" defer></script>
 </body>
 </html>
