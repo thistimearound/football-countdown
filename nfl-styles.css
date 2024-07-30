@@ -13,7 +13,7 @@ header {
     align-items: center;
     background-color: #333;
     color: white;
-    padding: 20px 0;
+    padding: 0px 0;
     margin: 0;
     text-align: center;
 }
@@ -23,65 +23,28 @@ h1 {
 }
 /* Centers the logo using Firefox. */
 .logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    max-width: 100%;
+    width: 100%; /* To ensure the logo takes up a full width */
+    height: auto;
+    max-height: 262px; /* Adjust max-height to fit your design needs while maintaining aspect ratio. */
+    max-width: 1920px; /* Maintain aspect ratio with max-height */
+    object-fit: contain; /* Ensures the logo scales proportionally */
+    margin-bottom: 0px;
 }
 
 .nfl-logo {
     max-width: 100%;
     width: 100%; /* To ensure the logo takes up a full width */
-    width: 100%;
     height: auto;
-    max-height: 150px; /* Adjust max-height to fit your design needs while maintaining aspect ratio. */
-    max-height: 150px; /* Maintain aspect ratio with max-height */
+    max-height: 262px; /* Adjust max-height to fit your design needs while maintaining aspect ratio. */
+    max-width: 1920px; /* Maintain aspect ratio with max-height */
     object-fit: contain; /* Ensures the logo scales proportionally */
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 main {
     padding: 20px;
 }
-
-/* Apply team-specific background color */
-.team-header {
-    padding: 20px;
-    color: #fff; /* Text color to ensure contrast with the background */
-}
-
-.team-header.arizona-cardinals { background-color: #97233F; }
-.team-header.atlanta-falcons { background-color: #A71930; }
-.team-header.baltimore-ravens { background-color: #241773; }
-.team-header.buffalo-bills { background-color: #00338D; }
-.team-header.carolina-panthers { background-color: #0085CA; }
-.team-header.chicago-bears { background-color: #0B162A; }
-.team-header.cincinnati-bengals { background-color: #FB4F14; }
-.team-header.cleveland-browns { background-color: #311D00; }
-.team-header.dallas-cowboys { background-color: #041E42; }
-.team-header.denver-broncos { background-color: #FB4F14; }
-.team-header.detroit-lions { background-color: #0076B6; }
-.team-header.green-bay-packers { background-color: #203731; }
-.team-header.houston-texans { background-color: #03202F; }
-.team-header.indianapolis-colts { background-color: #002C5F; }
-.team-header.jacksonville-jaguars { background-color: #006778; }
-.team-header.kansas-city-chiefs { background-color: #E31837; }
-.team-header.las-vegas-raiders { background-color: #000000; }
-.team-header.los-angeles-chargers { background-color: #0080C6; }
-.team-header.los-angeles-rams { background-color: #003594; }
-.team-header.miami-dolphins { background-color: #008E97; }
-.team-header.minnesota-vikings { background-color: #4F2683; }
-.team-header.new-england-patriots { background-color: #002244; }
-.team-header.new-orleans-saints { background-color: #D3BC8D; }
-.team-header.new-york-giants { background-color: #0B2265; }
-.team-header.new-york-jets { background-color: #125740; }
-.team-header.philadelphia-eagles { background-color: #004C54; }
-.team-header.pittsburgh-steelers { background-color: #FFB612; }
-.team-header.san-francisco-49ers { background-color: #AA0000; }
-.team-header.seattle-seahawks { background-color: #002244; }
-.team-header.tampa-bay-buccaneers { background-color: #D50A0A; }
-.team-header.tennessee-titans { background-color: #4B92DB; }
-.team-header.washington-commanders { background-color: #773141; }
 
 h2 {
     margin: 20px 0 10px;
@@ -93,32 +56,53 @@ h3 {
     font-size: 1.2em;
 }
 
+.teams-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .conference {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1;
+    min-width: 300px;
+    padding: 10px; /* Add padding to each conference */
+}
+
+.conference-divider {
+    width: 2px;
+    height: 100%;
+    color: black;
+    background-color: #333;
+    margin: 10px 0; /* Add margin to create space between conferences */
 }
 
 .division-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
+    align-items: center;
+    text-align: center;
 }
 
 .division {
     flex: 1;
     margin: 10px;
-    min-width: 200px;
+    min-width: 180px;
     align-items: center;
-    text-align: center
+    text-align: center;
 }
 
-#teams-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.week-number {
+    font-weight: bold;
+    font-size: 1.5em; /* Adjust the size as needed */
+}
+
+.game-date {
+    font-weight: bold;
+    font-size: 1.0em; /* Adjust the size as needed */
 }
 
 .teams {
@@ -129,17 +113,20 @@ h3 {
 
 .team {
     border: 1px solid #ccc;
-    margin: 10px;
-    padding: 20px;
+    margin: 5px;
+    padding: 5px;
     width: 200px;
+    min-width: 200px;
+    min-height: 100px;
     text-align: center;
     color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for smooth effect */
 }
 
 .game {
     border: 1px solid #ccc;
     margin: 10px;
-    padding: 20px;
+    padding: 10px;
     width: 200px;
     text-align: center;
     color: white;
@@ -149,6 +136,128 @@ h3 {
     text-decoration: none;
     color: white;
 }
+/* Define CSS variables for team colors */
+:root {
+    --arizona-cardinals-color: #97233F;
+    --atlanta-falcons-color: #A71930;
+    --baltimore-ravens-color: #241773;
+    --buffalo-bills-color: #00338D;
+    --carolina-panthers-color: #0085CA;
+    --chicago-bears-color: #0B162A;
+    --cincinnati-bengals-color: #FB4F14;
+    --cleveland-browns-color: #311D00;
+    --dallas-cowboys-color: #041E42;
+    --denver-broncos-color: #FB4F14;
+    --detroit-lions-color: #0076B6;
+    --green-bay-packers-color: #203731;
+    --houston-texans-color: #03202F;
+    --indianapolis-colts-color: #002C5F;
+    --jacksonville-jaguars-color: #006778;
+    --kansas-city-chiefs-color: #E31837;
+    --las-vegas-raiders-color: #000000;
+    --los-angeles-chargers-color: #0080C6;
+    --los-angeles-rams-color: #003594;
+    --miami-dolphins-color: #008E97;
+    --minnesota-vikings-color: #4F2683;
+    --new-england-patriots-color: #002244;
+    --new-orleans-saints-color: #D3BC8D;
+    --new-york-giants-color: #0B2265;
+    --new-york-jets-color: #125740;
+    --philadelphia-eagles-color: #004C54;
+    --pittsburgh-steelers-color: #FFB612;
+    --san-francisco-49ers-color: #AA0000;
+    --seattle-seahawks-color: #002244;
+    --tampa-bay-buccaneers-color: #D50A0A;
+    --tennessee-titans-color: #4B92DB;
+    --washington-commanders-color: #773141;
+}
+
+/* Apply team-specific background color */
+.team-header {
+    padding: 10px;
+    color: #fff; /* Text color to ensure contrast with the background */
+}
+
+.team-header.arizona-cardinals { background-color: var(--arizona-cardinals-color); }
+.team-header.atlanta-falcons { background-color: var(--atlanta-falcons-color); }
+.team-header.baltimore-ravens { background-color: var(--baltimore-ravens-color); }
+.team-header.buffalo-bills { background-color: var(--buffalo-bills-color); }
+.team-header.carolina-panthers { background-color: var(--carolina-panthers-color); }
+.team-header.chicago-bears { background-color: var(--chicago-bears-color); }
+.team-header.cincinnati-bengals { background-color: var(--cincinnati-bengals-color); }
+.team-header.cleveland-browns { background-color: var(--cleveland-browns-color); }
+.team-header.dallas-cowboys { background-color: var(--dallas-cowboys-color); }
+.team-header.denver-broncos { background-color: var(--denver-broncos-color); }
+.team-header.detroit-lions { background-color: var(--detroit-lions-color); }
+.team-header.green-bay-packers { background-color: var(--green-bay-packers-color); }
+.team-header.houston-texans { background-color: var(--houston-texans-color); }
+.team-header.indianapolis-colts { background-color: var(--indianapolis-colts-color); }
+.team-header.jacksonville-jaguars { background-color: var(--jacksonville-jaguars-color); }
+.team-header.kansas-city-chiefs { background-color: var(--kansas-city-chiefs-color); }
+.team-header.las-vegas-raiders { background-color: var(--las-vegas-raiders-color); }
+.team-header.los-angeles-chargers { background-color: var(--los-angeles-chargers-color); }
+.team-header.los-angeles-rams { background-color: var(--los-angeles-rams-color); }
+.team-header.miami-dolphins { background-color: var(--miami-dolphins-color); }
+.team-header.minnesota-vikings { background-color: var(--minnesota-vikings-color); }
+.team-header.new-england-patriots { background-color: var(--new-england-patriots-color); }
+.team-header.new-orleans-saints { background-color: var(--new-orleans-saints-color); }
+.team-header.new-york-giants { background-color: var(--new-york-giants-color); }
+.team-header.new-york-jets { background-color: var(--new-york-jets-color); }
+.team-header.philadelphia-eagles { background-color: var(--philadelphia-eagles-color); }
+.team-header.pittsburgh-steelers { background-color: var(--pittsburgh-steelers-color); }
+.team-header.san-francisco-49ers { background-color: var(--san-francisco-49ers-color); }
+.team-header.seattle-seahawks { background-color: var(--seattle-seahawks-color); }
+.team-header.tampa-bay-buccaneers { background-color: var(--tampa-bay-buccaneers-color); }
+.team-header.tennessee-titans { background-color: var(--tennessee-titans-color); }
+.team-header.washington-commanders { background-color: var(--washington-commanders-color); }
+
+/* Change text color on hover to the team color */
+.team:hover {
+    color: var(--team-color);
+    font-weight: bold;
+    background-color: #f0f0f0; /* Change background color on hover */
+    transform: scale(1.05); /* Slightly scale up the container */
+}
+
+/* Change the teamLink class to bold and black on hover */
+.team:hover .team-link {
+    color: black; /* Change text color to black on hover */
+    font-weight: bold; /* Make text bold on hover */
+}
+
+/* Apply team-specific text color on hover */
+.arizona-cardinals:hover { --team-color: var(--arizona-cardinals-color); }
+.atlanta-falcons:hover { --team-color: var(--atlanta-falcons-color); }
+.baltimore-ravens:hover { --team-color: var(--baltimore-ravens-color); }
+.buffalo-bills:hover { --team-color: var(--buffalo-bills-color); }
+.carolina-panthers:hover { --team-color: var(--carolina-panthers-color); }
+.chicago-bears:hover { --team-color: var(--chicago-bears-color); }
+.cincinnati-bengals:hover { --team-color: var(--cincinnati-bengals-color); }
+.cleveland-browns:hover { --team-color: var(--cleveland-browns-color); }
+.dallas-cowboys:hover { --team-color: var(--dallas-cowboys-color); }
+.denver-broncos:hover { --team-color: var(--denver-broncos-color); }
+.detroit-lions:hover { --team-color: var(--detroit-lions-color); }
+.green-bay-packers:hover { --team-color: var(--green-bay-packers-color); }
+.houston-texans:hover { --team-color: var(--houston-texans-color); }
+.indianapolis-colts:hover { --team-color: var(--indianapolis-colts-color); }
+.jacksonville-jaguars:hover { --team-color: var(--jacksonville-jaguars-color); }
+.kansas-city-chiefs:hover { --team-color: var(--kansas-city-chiefs-color); }
+.las-vegas-raiders:hover { --team-color: var(--las-vegas-raiders-color); }
+.los-angeles-chargers:hover { --team-color: var(--los-angeles-chargers-color); }
+.los-angeles-rams:hover { --team-color: var(--los-angeles-rams-color); }
+.miami-dolphins:hover { --team-color: var(--miami-dolphins-color); }
+.minnesota-vikings:hover { --team-color: var(--minnesota-vikings-color); }
+.new-england-patriots:hover { --team-color: var(--new-england-patriots-color); }
+.new-orleans-saints:hover { --team-color: var(--new-orleans-saints-color); }
+.new-york-giants:hover { --team-color: var(--new-york-giants-color); }
+.new-york-jets:hover { --team-color: var(--new-york-jets-color); }
+.philadelphia-eagles:hover { --team-color: var(--philadelphia-eagles-color); }
+.pittsburgh-steelers:hover { --team-color: var(--pittsburgh-steelers-color); }
+.san-francisco-49ers:hover { --team-color: var(--san-francisco-49ers-color); }
+.seattle-seahawks:hover { --team-color: var(--seattle-seahawks-color); }
+.tampa-bay-buccaneers:hover { --team-color: var(--tampa-bay-buccaneers-color); }
+.tennessee-titans:hover { --team-color: var(--tennessee-titans-color); }
+.washington-commanders:hover { --team-color: var(--washington-commanders-color); }
 
 /* Team-specific styles */
 .arizona-cardinals { background-color: #97233F; }

@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const teamLink = document.createElement('a');
             teamLink.href = `team.html?team=${encodeURIComponent(team.name)}`;
             teamLink.textContent = team.name;
+            teamLink.className = 'team-link';
             teamElement.appendChild(teamLink);
 
             let countdownDiv = document.createElement('div');
@@ -111,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let nextGame = nflschedules ? getNextGameDate(team.class) : null;
             if (nextGame) {
-                countdownDiv.textContent = `${getCountdown(nextGame.date)} ${nextGame.home_or_away} ${nextGame.opponent} Spread: ${nextGame.spread_line} (${nextGame.spread})`;
+                countdownDiv.innerHTML = `${nextGame.spread_line} (${nextGame.juice}) <br> ${nextGame.home_or_away} <br> ${nextGame.opponent} (${nextGame.juice}) <br> ${getCountdown(nextGame.date)}`;
             } else {
                 countdownDiv.textContent = 'No upcoming games';
             }
@@ -127,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const teamClass = countdownDiv.parentNode.classList[1];
                 const nextGame = nflschedules ? getNextGameDate(teamClass) : null;
                 if (nextGame) {
-                    countdownDiv.textContent = `${getCountdown(nextGame.date)} ${nextGame.home_or_away} ${nextGame.opponent} Spread: ${nextGame.spread_line} (${nextGame.spread})`;
+                    countdownDiv.innerHTML = `${nextGame.spread_line} (${nextGame.juice}) <br> ${nextGame.home_or_away} <br> ${nextGame.opponent} (${nextGame.juice}) <br>${getCountdown(nextGame.date)}`;
                 } else {
                     countdownDiv.textContent = 'No upcoming games';
                 }

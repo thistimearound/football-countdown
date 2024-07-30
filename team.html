@@ -59,7 +59,11 @@
                             gameDiv.classList.add(homeClass);
                             const gameDate = new Date(game.date);
                             gameDiv.innerHTML = `
-                                ${gameDate.toLocaleString()}: vs. ${game.opponent}
+                                <span class="week-number">Week ${game.week}</span>
+                                <br>
+                                <span class="game-date">${gameDate.toLocaleString()}</span>
+                                <br>
+                                ${game.home_or_away} ${game.opponent}
                                 <div class="countdown" id="countdown-${gameDate.getTime()}"></div>
                             `;
                             scheduleContainer.appendChild(gameDiv);
