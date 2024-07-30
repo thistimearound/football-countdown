@@ -101,7 +101,7 @@ home_games <- schedule_cleaned %>%
     isHomeGame = TRUE,
     home_or_away = "vs"
   ) %>%
-  select(team, opponent, datetime, isHomeGame, home_or_away, week, spread_line, home_spread_odds, away_spread_odds)
+  select(team, opponent, datetime, isHomeGame, home_or_away, week, spread_line, home_spread_odds, away_spread_odds) # nolint: line_length_linter.
 
 away_games <- schedule_cleaned %>%
   mutate(
@@ -110,7 +110,7 @@ away_games <- schedule_cleaned %>%
     isHomeGame = FALSE,
     home_or_away = "@"
   ) %>%
-  select(team, opponent, datetime, isHomeGame, home_or_away, week, spread_line, home_spread_odds, away_spread_odds)
+  select(team, opponent, datetime, isHomeGame, home_or_away, week, spread_line, home_spread_odds, away_spread_odds) # nolint: line_length_linter.
 
 # Combine home and away games
 all_games <- bind_rows(home_games, away_games)

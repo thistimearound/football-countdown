@@ -1,0 +1,227 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 10px 0 0 0;
+}
+
+/* Centers the logo using Firefox. */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Apply team-specific background color */
+.team-header {
+    padding: 20px;
+    color: #fff; /* Text color to ensure contrast with the background */
+}
+
+h2 {
+    margin: 20px 0 10px;
+    font-size: 1.5em;
+}
+
+h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.conference {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.division-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.division {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+    align-items: center;
+    text-align: center;
+}
+
+#teams-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.teams {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    color: white;
+}
+
+.game {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    color: white;
+}
+
+.team a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Team-specific styles */
+.air-force-falcons { background-color: #0033A0; }
+.akron-zips { background-color: #041E42; }
+.alabama-crimson-tide { background-color: #9E1B32; }
+.appalachian-state-mountaineers { background-color: #000000; }
+.arizona-wildcats { background-color: #0C2340; }
+.arkansas-razorbacks { background-color: #9D2235; }
+.arkansas-state-red-wolves { background-color: #D00000; }
+.auburn-tigers { background-color: #0C2340; }
+.ball-state-cardinals { background-color: #BA0C2F; }
+.baylor-bears { background-color: #003015; }
+.boise-state-broncos { background-color: #09347A; }
+.boston-college-eagles { background-color: #88001A; }
+.bowling-green-falcons { background-color: #D74108; }
+.buffalo-bulls { background-color: #005BBB; }
+.central-michigan-chippewas { background-color: #6A0032; }
+.charlotte-49ers { background-color: #00703C; }
+.cincinnati-bearcats { background-color: #E00122; }
+.clemson-tigers { background-color: #F66733; }
+.coastal-carolina-chanticleers { background-color: #006B54; }
+.colorado-buffaloes { background-color: #CFB87C; }
+.colorado-state-rams { background-color: #004F30; }
+.duke-blue-devils { background-color: #003087; }
+.eastern-michigan-eagles { background-color: #006633; }
+.ecu-pirates { background-color: #592A8A; }
+.fau-owls { background-color: #00205B; }
+.fiu-panthers { background-color: #041E42; }
+.florida-gators { background-color: #0021A5; }
+.florida-state-seminoles { background-color: #782F40; }
+.fresno-state-bulldogs { background-color: #E71C24; }
+.georgia-bulldogs { background-color: #BA0C2F; }
+.georgia-southern-eagles { background-color: #041E42; }
+.georgia-state-panthers { background-color: #0033A0; }
+.georgia-tech-yellow-jackets { background-color: #B3A369; }
+.hawaii-rainbow-warriors { background-color: #024731; }
+.houston-cougars { background-color: #C8102E; }
+.illinois-fighting-illini { background-color: #E84A27; }
+.indiana-hoosiers { background-color: #990000; }
+.iowa-hawkeyes { background-color: #000000; }
+.iowa-state-cyclones { background-color: #C8102E; }
+.kansas-jayhawks { background-color: #0051BA; }
+.kansas-state-wildcats { background-color: #512888; }
+.kent-state-golden-flashes { background-color: #002C77; }
+.kentucky-wildcats { background-color: #0033A0; }
+.la-tech-bulldogs { background-color: #005EB8; }
+.louisiana-lafayette-ragin-cajuns { background-color: #E32636; }
+.louisiana-monroe-warhawks { background-color: #6A0026; }
+.louisville-cardinals { background-color: #AD0000; }
+.lsu-tigers { background-color: #461D7C; }
+.maryland-terrapins { background-color: #E03A3E; }
+.memphis-tigers { background-color: #003087; }
+.miami-hurricanes { background-color: #005030; }
+.miami-oh-redhawks { background-color: #CE1126; }
+.michigan-state-spartans { background-color: #18453B; }
+.michigan-wolverines { background-color: #00274C; }
+.middle-tennessee-blue-raiders { background-color: #0066CC; }
+.minnesota-golden-gophers { background-color: #7A0019; }
+.mississippi-state-bulldogs { background-color: #5E0029; }
+.missouri-tigers { background-color: #F1B82D; }
+.navy-midshipmen { background-color: #00205B; }
+.nebraska-cornhuskers { background-color: #E41C38; }
+.nevada-wolf-pack { background-color: #003366; }
+.new-mexico-lobos { background-color: #BA0C2F; }
+.north-carolina-tar-heels { background-color: #7BAFD4; }
+.north-texas-mean-green { background-color: #00853E; }
+.northwestern-wildcats { background-color: #4E2A84; }
+.notre-dame-fighting-irish { background-color: #0C2340; }
+.ohio-bobcats { background-color: #006A4D; }
+.ohio-state-buckeyes { background-color: #BB0000; }
+.oklahoma-sooners { background-color: #841617; }
+.oklahoma-state-cowboys { background-color: #FF7300; }
+.old-dominion-monarchs { background-color: #041E42; }
+.ole-miss-rebels { background-color: #CE1126; }
+.oregon-ducks { background-color: #004F39; }
+.oregon-state-beavers { background-color: #DC4405; }
+.penn-state-nittany-lions { background-color: #041E42; }
+.pittsburgh-panthers { background-color: #003594; }
+.purdue-boilermakers { background-color: #CEB888; }
+.rice-owls { background-color: #002D72; }
+.rutgers-scarlet-knights { background-color: #CC0033; }
+.san-diego-state-aztecs { background-color: #A80532; }
+.san-jose-state-spartans { background-color: #003A65; }
+.smu-mustangs { background-color: #D81E05; }
+.south-alabama-jaguars { background-color: #003F87; }
+.south-carolina-gamecocks { background-color: #73000A; }
+.southern-miss-golden-eagles { background-color: #FFD100; }
+.stanford-cardinal { background-color: #990000; }
+.syracuse-orange { background-color: #D44500; }
+.tc-horned-frogs { background-color: #4D1979; }
+.temple-owls { background-color: #A80532; }
+.tennessee-volunteers { background-color: #FF8200; }
+.texas-am-aggies { background-color: #500000; }
+.texas-longhorns { background-color: #BF5700; }
+.texas-state-bobcats { background-color: #800000; }
+.texas-tech-red-raiders { background-color: #CC0000; }
+.toledo-rockets { background-color: #003C71; }
+.troy-trojans { background-color: #8C2633; }
+.tulane-green-wave { background-color: #003A53; }
+.tulsa-golden-hurricane { background-color: #002D72; }
+.ucla-bruins { background-color: #536895; }
+.uca-knights { background-color: #BA0C2F; }
+.usc-trojans { background-color: #990000; }
+.usf-bulls { background-color: #006747; }
+.utah-state-aggies { background-color: #0F2439; }
+.utah-utes { background-color: #CC0000; }
+.utep-miners { background-color: #041E42; }
+.utsa-roadrunners { background-color: #F15A22; }
+.vanderbilt-commodores { background-color: #866D4B; }
+.virginia-cavaliers { background-color: #232D4B; }
+.virginia-tech-hokies { background-color: #630031; }
+.wake-forest-demon-deacons { background-color: #1C1C1C; }
+.washington-huskies { background-color: #4B2E83; }
+.washington-state-cougars { background-color: #981E32; }
+.west-virginia-mountaineers { background-color: #002855; }
+.western-kentucky-hilltoppers { background-color: #A80532; }
+.western-michigan-broncos { background-color: #492A1E; }
+.wisconsin-badgers { background-color: #C5050C; }
+.wyoming-cowboys { background-color: #533117; }
