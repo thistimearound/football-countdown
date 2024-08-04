@@ -43,6 +43,6 @@ v0.8 Betting Data, Bye Weeks, and Project Support
 * Add game spreads and home or away team odds to all schedules
 * Add support for College Football teams in cfbfastR.r, cfb-styles.css
 * Add static HTML .yml for GHA deploy config
-* Add todo list for backlog work
+* Add todo list for backlog
 * Add updated styling on hover for index.html
 * Add bye weeks to schedule data and display
