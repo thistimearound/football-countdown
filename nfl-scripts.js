@@ -108,26 +108,33 @@ document.addEventListener('DOMContentLoaded', () => {
         teams.forEach(team => {
             const teamElement = document.createElement('div');
             teamElement.className = `team ${team.class}`;
+            
             const teamLink = document.createElement('a');
             teamLink.href = `team.html?team=${encodeURIComponent(team.name)}`;
-            teamLink.textContent = team.name;
             teamLink.className = 'team-link';
+        
+            let nextGame = nflschedules ? getNextGameDate(team.class) : null;
+            if (nextGame && nextGame.opponent !== 'BYE') {
+                teamLink.innerHTML = `<strong>${team.name}</strong> <strong>${nextGame.home_or_away}</strong>`;
+            } else {
+                teamLink.innerHTML = `<strong>${team.name}</strong>`;
+            }
+        
             teamElement.appendChild(teamLink);
-
+        
             let countdownDiv = document.createElement('div');
             countdownDiv.className = 'countdown';
-
-            let nextGame = nflschedules ? getNextGameDate(team.class) : null;
+        
             if (nextGame) {
                 if (nextGame.opponent === 'BYE') {
                     countdownDiv.innerHTML = `Week ${nextGame.week}: BYE`;
                 } else {
-                    countdownDiv.innerHTML = `${nextGame.spread_line} (${nextGame.adj_spread_odds}) <br> ${nextGame.home_or_away} <br> ${nextGame.opponent} (${nextGame.adj_spread_odds}) <br> ${getCountdown(nextGame.date)}`;
+                    countdownDiv.innerHTML = `${nextGame.spread_line} ${nextGame.opponent} <br> ${getCountdown(nextGame.date)}`;
                 }
             } else {
                 countdownDiv.textContent = 'No upcoming games';
             }
-
+        
             teamElement.appendChild(countdownDiv);
             divisionContainer.appendChild(teamElement);
         });
@@ -142,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (nextGame.opponent === 'BYE') {
                         countdownDiv.innerHTML = `Week ${nextGame.week}: BYE`;
                     } else {
-                        countdownDiv.innerHTML = `${nextGame.spread_line} (${nextGame.adj_spread_odds}) <br> ${nextGame.home_or_away} <br> ${nextGame.opponent} (${nextGame.adj_spread_odds}) <br>${getCountdown(nextGame.date)}`;
+                        countdownDiv.innerHTML = `${nextGame.spread_line} ${nextGame.opponent} <br>${getCountdown(nextGame.date)}`;
                     }
                 } else {
                     countdownDiv.textContent = 'No upcoming games';

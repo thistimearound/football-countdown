@@ -80,7 +80,9 @@ h3 {
 
 .conference-divider {
     width: 2px;
-    height: 100%;
+    vertical-align: center;
+    height: 650px;
+    max-height: 100%;
     color: black;
     background-color: #333;
     margin: 10px 0;
@@ -97,7 +99,6 @@ h3 {
 .division {
     display: flex;
     flex-direction: column;
-    align-items: center;
     flex: 1;
     min-width: 200px;
     padding: 10px;
@@ -175,18 +176,19 @@ h3 {
 }
 
 .team {
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     margin: 5px;
     padding: 5px;
-    width: 200px;
-    min-width: 200px;
-    min-height: 100px;
+    min-width: 190px;
+    min-height: 80px;
     text-align: center;
     color: white;
+    line-height: 18px; /* Set a consistent line height */
+    font-size: 0.8em; /* Adjust the size as needed */
 }
 
 .transition-effect {
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.4s ease, transform 0.4s ease;
 }
 
 /* Styling for the BYE weeks */
@@ -284,7 +286,7 @@ h3 {
     color: var(--team-color);
     font-weight: bold;
     background-color: #f0f0f0; /* Change background color on hover */
-    transform: scale(1.05); /* Slightly scale up the container */
+    transform: scale(1.10); /* Slightly scale up the container */
 }
 
 /* Change the teamLink class to bold and black on hover */

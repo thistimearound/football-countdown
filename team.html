@@ -19,7 +19,6 @@
     </header>
     <main>
         <section id="schedule">
-            <h2 id="team-schedule-heading">Schedule</h2>
             <div id="team-schedule"></div>
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
@@ -42,7 +41,7 @@
 
                     const header = document.getElementById('team-header');
                     const teamNameElem = document.getElementById('team-name');
-                    const scheduleHeadingElem = document.getElementById('team-schedule-heading');
+                    const scheduleHeadingElem = document.getElementById('team-name');
                     const scheduleContainer = document.getElementById('team-schedule');
 
                     // Update the team name, header class, and document title
@@ -71,9 +70,9 @@
                                 gameDiv.classList.add(homeClass);
                                 const gameDate = new Date(game.date);
                                 gameDiv.innerHTML = `
-                                    <span class="game-date">${gameDate.toLocaleString()}</span>
+                                    <span class="game-date">${game.home_or_away} ${game.opponent}</span>
                                     <br>
-                                    ${game.home_or_away} ${game.opponent}
+                                    ${gameDate.toLocaleString()}
                                     <div class="countdown" id="countdown-${gameDate.getTime()}"></div>
                                 `;
                                 updateCountdown(gameDate, `countdown-${gameDate.getTime()}`);
