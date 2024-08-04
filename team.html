@@ -42,12 +42,16 @@
 
                     const header = document.getElementById('team-header');
                     const teamNameElem = document.getElementById('team-name');
+                    const scheduleHeadingElem = document.getElementById('team-schedule-heading');
                     const scheduleContainer = document.getElementById('team-schedule');
 
                     // Update the team name, header class, and document title
                     teamNameElem.textContent = teamName;
                     header.classList.add('team-header', teamClass);
                     document.title = `${teamName} Schedule`;
+
+                    // Update the schedule heading to include the team name
+                    scheduleHeadingElem.textContent = `${teamName} Schedule`;
 
                     const schedule = nflschedules[teamClass];
 
@@ -78,10 +82,18 @@
                             const weekDiv = document.createElement('div');
                             weekDiv.className = 'week-number';
                             weekDiv.textContent = `Week ${game.week}`;
+                            const weatherDiv = document.createElement('div');
+                            weatherDiv.className = 'weather-info';
+                            weatherDiv.textContent = 'Weather Info';
+                            const bettingDiv = document.createElement('div');
+                            bettingDiv.className = 'betting-analysis';
+                            bettingDiv.textContent = 'Betting Analysis';
                             const containerDiv = document.createElement('div');
                             containerDiv.className = 'game-container';
                             containerDiv.appendChild(weekDiv);
                             containerDiv.appendChild(gameDiv);
+                            containerDiv.appendChild(weatherDiv);
+                            containerDiv.appendChild(bettingDiv);
                             scheduleContainer.appendChild(containerDiv);
                         });
                     } else {

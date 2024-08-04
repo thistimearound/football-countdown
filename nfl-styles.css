@@ -69,7 +69,13 @@ h3 {
     align-items: center;
     flex: 1;
     min-width: 300px;
-    padding: 10px; /* Add padding to each conference */
+    padding: 10px;
+    box-sizing: border-box;
+    min-height: 120px; /* Adjust this value based on the line height and desired number of lines */
+    line-height: 20px; /* Set a consistent line height */
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
 }
 
 .conference-divider {
@@ -77,22 +83,30 @@ h3 {
     height: 100%;
     color: black;
     background-color: #333;
-    margin: 10px 0; /* Add margin to create space between conferences */
+    margin: 10px 0;
 }
 
 .division-container {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    text-align: center;
+    justify-content: space-between; /* Distribute space evenly between divisions */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .division {
-    flex: 1;
-    margin: 10px;
-    min-width: 180px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    min-height: 120px; /* Adjust this value based on the line height and desired number of lines */
+    line-height: 20px; /* Set a consistent line height */
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
 }
 
 /* Styling for the game container */
@@ -106,8 +120,47 @@ h3 {
 .week-number {
     font-weight: bold;
     margin-right: 10px;
-    width: 60px; /* Adjust width as needed */
+    width: 65px; /* Adjust width as needed */
     text-align: right;
+}
+
+/* Styling for the game box */
+.game {
+    color: white;
+    margin: 10px; /* Increased margin */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    min-height: 80px; /* Adjust this value based on the line height and desired number of lines */
+    line-height: 20px; /* Set a consistent line height */
+}
+
+/* Styling for the weather info box */
+.weather-info {
+    margin-left: 5px;
+    padding: 15px; /* Increased padding */
+    border: 2px dashed #007BFF; /* Different border style and color */
+    border-radius: 10px; /* Different border radius */
+    background-color: #e0f7fa; /* Different background color */
+    width: 160px; /* Adjusted width */
+    text-align: center;
+    font-style: italic; /* Different font style */
+    color: #007BFF; /* Different font color */
+}
+
+/* Styling for the betting analysis box */
+.betting-analysis {
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 500px; /* Adjust width as needed */
+    text-align: center;
 }
 
 .game-date {
@@ -136,20 +189,13 @@ h3 {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.game {
-    border: 1px solid #ccc;
-    margin: 10px;
-    padding: 10px;
-    width: 200px;
-    text-align: center;
-    color: white;
-}
-
 /* Styling for the BYE weeks */
 .bye-week {
     background-color: white; /* White background */
     color: var(--team-color); /* Team-specific text color */
     font-weight: bold; /* Make text bold */
+    align-items: center;
+    justify-content: center;
 }
 
 .team a {
