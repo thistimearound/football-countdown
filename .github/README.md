@@ -1,6 +1,3 @@
-# fantasy-countdown
-The docs, data and config for fantasy-countdown website files for NFL, NCAA football game countdowns, betting lines, links, and monetized ads.
-
 # Changelog
 <details>
 <summary>Previous Versions</summary>
