@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Schedule</title>
+    <title>Team Schedule - Team Name</title>
     <link rel="stylesheet" href="nfl-styles.css">
     <script src="nfl-scripts.js"></script>
     <script src="nfl-schedules.js"></script>
@@ -31,6 +31,7 @@
                     if (!teamName) {
                         // If team name is not provided, display error messages
                         document.getElementById('team-name').textContent = 'Team not found';
+                        document.title = 'Team Schedule - Team not found';
                         // If schedule is not available, display a message
                         document.getElementById('team-schedule').textContent = 'No schedule available';
                         return;
@@ -43,9 +44,10 @@
                     const teamNameElem = document.getElementById('team-name');
                     const scheduleContainer = document.getElementById('team-schedule');
 
-                    // Update the team name and header class
+                    // Update the team name, header class, and document title
                     teamNameElem.textContent = teamName;
                     header.classList.add('team-header', teamClass);
+                    document.title = `${teamName} Schedule`;
 
                     const schedule = nflschedules[teamClass];
 
@@ -57,8 +59,6 @@
                             if (game.opponent === "BYE") {
                                 gameDiv.classList.add('bye-week', teamClass); // Add teamClass to inherit team colors
                                 gameDiv.innerHTML = `
-                                    <span class="week-number">Week ${game.week}</span>
-                                    <br>
                                     <span class="bye-text">BYE</span>
                                 `;
                             } else {
@@ -67,8 +67,6 @@
                                 gameDiv.classList.add(homeClass);
                                 const gameDate = new Date(game.date);
                                 gameDiv.innerHTML = `
-                                    <span class="week-number">Week ${game.week}</span>
-                                    <br>
                                     <span class="game-date">${gameDate.toLocaleString()}</span>
                                     <br>
                                     ${game.home_or_away} ${game.opponent}
@@ -77,7 +75,14 @@
                                 updateCountdown(gameDate, `countdown-${gameDate.getTime()}`);
                                 const intervalId = setInterval(() => updateCountdown(gameDate, `countdown-${gameDate.getTime()}`), 1000);
                             }
-                            scheduleContainer.appendChild(gameDiv);
+                            const weekDiv = document.createElement('div');
+                            weekDiv.className = 'week-number';
+                            weekDiv.textContent = `Week ${game.week}`;
+                            const containerDiv = document.createElement('div');
+                            containerDiv.className = 'game-container';
+                            containerDiv.appendChild(weekDiv);
+                            containerDiv.appendChild(gameDiv);
+                            scheduleContainer.appendChild(containerDiv);
                         });
                     } else {
                         // If there are no upcoming games, display a message
@@ -85,7 +90,7 @@
                     }
 
                     function updateCountdown(targetDate, countdownId) {
-                        countdownElem = document.getElementById(countdownId);
+                        const countdownElem = document.getElementById(countdownId);
                         if (!countdownElem) return;
 
                         // Update the countdown timer based on the target date
@@ -94,7 +99,6 @@
 
                         if (diff <= 0) {
                             // If the game has started or completed, display a message
-                            const countdownElem = document.getElementById(countdownId);
                             countdownElem.textContent = 'Game in progress or completed';
                             return;
                         }
