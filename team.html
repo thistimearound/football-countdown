@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Schedule</title>
     <link rel="stylesheet" href="nfl-styles.css">
-    <script src="nfl-scripts.js"></script>
-    <script src="nfl-schedules.js"></script>
+    <script src="nfl-scripts.js" defer></script>
+    <script src="nfl-schedules.js" defer></script>
 </head>
 <body>
     <header id="team-header">
@@ -25,7 +25,7 @@
                 document.addEventListener('DOMContentLoaded', () => {
                     // Get the team name from the URL parameters
                     // Example URL: team.html?team=New%20England%20Patriots
-                    const params = new URLSearchParams(window.location.search || window.location.href.split('?')[1]);
+                    const params = new URLSearchParams(window.location.search);
                     const teamName = params.get('team');
 
                     if (!teamName) {
@@ -45,7 +45,7 @@
 
                     // Update the team name and header class
                     teamNameElem.textContent = teamName;
-                    header.className = `team-header ${teamClass}`;
+                    header.classList.add('team-header', teamClass);
 
                     const schedule = nflschedules[teamClass];
 
@@ -54,23 +54,30 @@
                         schedule.forEach(game => {
                             const gameDiv = document.createElement('div');
                             gameDiv.className = 'game';
-                            const opponentClass = game.opponent.toLowerCase().replace(/[^a-zA-Z0-9]/g, '-');
-                            const homeClass = game.home ? teamClass : opponentClass;
-                            gameDiv.classList.add(homeClass);
-                            const gameDate = new Date(game.date);
-                            gameDiv.innerHTML = `
-                                <span class="week-number">Week ${game.week}</span>
-                                <br>
-                                <span class="game-date">${gameDate.toLocaleString()}</span>
-                                <br>
-                                ${game.home_or_away} ${game.opponent}
-                                <div class="countdown" id="countdown-${gameDate.getTime()}"></div>
-                            `;
+                            if (game.opponent === "BYE") {
+                                gameDiv.classList.add('bye-week', teamClass); // Add teamClass to inherit team colors
+                                gameDiv.innerHTML = `
+                                    <span class="week-number">Week ${game.week}</span>
+                                    <br>
+                                    <span class="bye-text">BYE</span>
+                                `;
+                            } else {
+                                const opponentClass = game.opponent.toLowerCase().replace(/[^a-zA-Z0-9]/g, '-');
+                                const homeClass = game.home ? teamClass : opponentClass;
+                                gameDiv.classList.add(homeClass);
+                                const gameDate = new Date(game.date);
+                                gameDiv.innerHTML = `
+                                    <span class="week-number">Week ${game.week}</span>
+                                    <br>
+                                    <span class="game-date">${gameDate.toLocaleString()}</span>
+                                    <br>
+                                    ${game.home_or_away} ${game.opponent}
+                                    <div class="countdown" id="countdown-${gameDate.getTime()}"></div>
+                                `;
+                                updateCountdown(gameDate, `countdown-${gameDate.getTime()}`);
+                                const intervalId = setInterval(() => updateCountdown(gameDate, `countdown-${gameDate.getTime()}`), 1000);
+                            }
                             scheduleContainer.appendChild(gameDiv);
-
-                            // Update the countdown timer for each game
-                            updateCountdown(gameDate, `countdown-${gameDate.getTime()}`);
-                            setInterval(() => updateCountdown(gameDate, `countdown-${gameDate.getTime()}`), 1000);
                         });
                     } else {
                         // If there are no upcoming games, display a message
@@ -78,13 +85,17 @@
                     }
 
                     function updateCountdown(targetDate, countdownId) {
+                        countdownElem = document.getElementById(countdownId);
+                        if (!countdownElem) return;
+
                         // Update the countdown timer based on the target date
                         const now = new Date();
                         const diff = targetDate - now;
 
                         if (diff <= 0) {
                             // If the game has started or completed, display a message
-                            document.getElementById(countdownId).textContent = 'Game in progress or completed';
+                            const countdownElem = document.getElementById(countdownId);
+                            countdownElem.textContent = 'Game in progress or completed';
                             return;
                         }
 
@@ -94,7 +105,7 @@
                         const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
                         // Display the countdown timer in days, hours, minutes, and seconds
-                        document.getElementById(countdownId).textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                        countdownElem.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
                     }
                 });
             </script>

@@ -16,25 +16,24 @@ v0.3 Visual Improvement and Dataset Structuring
 * Created and uploaded generic dataset for all 32 teams season-long schedule.
 
 v0.4 Added Linter & Updated Styling
-* Added axe-linter.yml for basic VSCode support
-* Updated index.html and styles.css to better display NFL logo
+* Added axe-linter.yml for VSCode support
+* Updated index.html and styles.css to better display NFL banner logo
 
 v0.5 NFL Separation for Future Scaling
 * Renamed scripts.js and styles.css to nfl-scripts.js and nfl-styles.css
 * Updated index.html and team.html with corrected .js filepaths
 * Corrected Team Arrays for Conference and Division
 * Refined team array population
-* Various Typos and Comments
 
 v0.6 Support for full NFL Team Schedules
 * Updated nfl-scripts to show opponent next to countdown `getNextGameDate`
 * Updated team.html to dynamically load team's full schedule from nfl-schedules.js
 * Added script to team.html to dynamically change header and color based on selected team
-* Populated the schedule with opponents and game times.
+* Populated the schedule with opponent and game times
 * Aligned styling for index.html to center division names
 * Refined array nesting for teams in divisions and conferences
 
-v0.7 Authentic Scheduling Support
+v0.7 Authentic Scheduling
 * Draft initial Jupyter Notebook for python scraping and csv conversion
 * Build nflfastR.r schedule query with home & away indicators
 * Exporting NFL data from nflfastR.r to JSON in nfl-schedules.js
@@ -43,7 +42,10 @@ v0.7 Authentic Scheduling Support
 * Displaying home and away for all teams
 </details>
 
-v0.8 Betting Support
+v0.8 Betting Data, Bye Weeks, and Project Support
 * Add game spreads and home or away team odds to all schedules
 * Add support for College Football teams in cfbfastR.r, cfb-styles.css
 * Add static HTML .yml for GHA deploy config
+* Add todo list for backlog work
+* Add updated styling on hover for index.html
+* Add bye weeks to schedule data and display

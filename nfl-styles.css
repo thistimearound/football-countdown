@@ -13,7 +13,7 @@ header {
     align-items: center;
     background-color: #333;
     color: white;
-    padding: 0px 0;
+    padding: 0;
     margin: 0;
     text-align: center;
 }
@@ -120,7 +120,10 @@ h3 {
     min-height: 100px;
     text-align: center;
     color: white;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+.transition-effect {
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .game {
@@ -132,10 +135,18 @@ h3 {
     color: white;
 }
 
+/* Styling for the BYE weeks */
+.bye-week {
+    background-color: white; /* White background */
+    color: var(--team-color); /* Team-specific text color */
+    font-weight: bold; /* Make text bold */
+}
+
 .team a {
     text-decoration: none;
     color: white;
 }
+
 /* Define CSS variables for team colors */
 :root {
     --arizona-cardinals-color: #97233F;
@@ -213,6 +224,7 @@ h3 {
 
 /* Change text color on hover to the team color */
 .team:hover {
+    --team-color: #000000; /* Define the team color for hover */
     color: var(--team-color);
     font-weight: bold;
     background-color: #f0f0f0; /* Change background color on hover */
@@ -221,8 +233,8 @@ h3 {
 
 /* Change the teamLink class to bold and black on hover */
 .team:hover .team-link {
-    color: black; /* Change text color to black on hover */
-    font-weight: bold; /* Make text bold on hover */
+    color: black;
+    font-weight: bold;
 }
 
 /* Apply team-specific text color on hover */
