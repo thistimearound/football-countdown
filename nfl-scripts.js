@@ -36,7 +36,13 @@ function getCountdown(targetDate) {
     return `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
+    const conferenceDivider = document.querySelector(".conference-divider");
+    if (conferenceDivider) {
+        const contentHeight = document.body.scrollHeight;
+        conferenceDivider.style.height = `${contentHeight}px`;
+    };
+
     const DIVISION_NAMES = new Map([
         [0, "North"],
         [1, "East"],
@@ -102,7 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const appendTeams = (conference, division, teams) => {
         const divisionContainer = document.getElementById(`${conference.toLowerCase()}-${division.toLowerCase()}`);
         if (!divisionContainer) {
-            console.error(`Division container not found for ${conference} ${division}`);
+            if (window.location.pathname !== '/team.html') {
+                console.log(`Division container not found for ${conference} ${division}`);
+            }
             return;
         }
         teams.forEach(team => {

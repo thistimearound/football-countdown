@@ -13,6 +13,20 @@
     <link rel="stylesheet" href="nfl-styles.css" type="text/css">
     <script src="nfl-schedules.js" defer></script>
     <script src="nfl-scripts.js" defer></script>
+    <script>
+        window.addEventListener('resize', function() {
+            const conferenceDivider = document.querySelector('.conference-divider');
+            const conferenceContainer = document.querySelector('.conference-container'); // Adjust the selector to match the actual container
+            
+            if (conferenceDivider && conferenceContainer) {
+                const containerHeight = conferenceContainer.scrollHeight;
+                conferenceDivider.style.height = `${containerHeight}px`;
+            }
+        });
+
+        // Initial call to set the height on page load
+        window.dispatchEvent(new Event('resize'));
+    </script>
 </head>
 <body>
     <header>

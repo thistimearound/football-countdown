@@ -1,3 +1,8 @@
 {
-    "recommendations": []
+    "recommendations": [
+        "deque-systems.vscode-axe-linter",
+        "ritwickdey.liveserver",
+        "reditorsupport.r",
+        "mechatroner.rainbow-csv"
+    ]
 }

@@ -46,3 +46,4 @@ v0.8 Betting Data, Bye Weeks, and Project Support
 * Add todo list for backlog
 * Add updated styling on hover for index.html
 * Add bye weeks to schedule data and display
+* Updated view for mobile devices

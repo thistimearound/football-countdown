@@ -80,12 +80,17 @@ h3 {
 
 .conference-divider {
     width: 2px;
-    vertical-align: center;
-    height: 650px;
-    max-height: 100%;
-    color: black;
+    height: 80vh; /* Full viewport height */
     background-color: #333;
     margin: 10px 0;
+    transition: height 0.3s ease; /* Smooth transition for height changes */
+}
+
+/* Hide .conference-divider on smaller screens */
+@media (max-width: 768px) {
+    .conference-divider {
+        display: none;
+    }
 }
 
 .division-container {
@@ -115,10 +120,18 @@ h3 {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Styling for the week number */
 .week-number {
+    display: inline-block;
+    vertical-align: middle;
     font-weight: bold;
     margin-right: 10px;
     width: 65px; /* Adjust width as needed */
@@ -128,20 +141,18 @@ h3 {
 /* Styling for the game box */
 .game {
     color: white;
-    margin: 10px; /* Increased margin */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    width: 200px;
-    height: 20px;
+    flex: 1;
     text-align: center;
     min-height: 80px; /* Adjust this value based on the line height and desired number of lines */
     line-height: 20px; /* Set a consistent line height */
+    min-width: 200px;
+    max-width: 200px;
 }
 
 /* Styling for the weather info box */
 .weather-info {
+    display: inline-block;
+    vertical-align: middle;
     margin-left: 5px;
     padding: 15px; /* Increased padding */
     border: 2px dashed #007BFF; /* Different border style and color */
@@ -169,6 +180,33 @@ h3 {
     font-size: 1.0em; /* Adjust the size as needed */
 }
 
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .game-container {
+        flex-direction: row; /* Ensure elements stay in a row */
+        flex-wrap: nowrap; /* Prevent wrapping */
+        padding: 5px;
+    }
+    .week-number,
+    .weather-info {
+        width: auto; /* Adjust width to fit content */
+        text-align: center;
+        margin-bottom: 0; /* Remove bottom margin */
+    }
+    .game {
+        min-width: 100px;
+        max-width: 100px;
+        font-size: 0.7em; /* Scale down text size */
+        word-wrap: break-word; /* Constrain text within the box */
+    }
+    .bye-week {
+        min-width: 100px;
+        min-height: 80px; /* Keep the height larger */
+        text-align: center;
+        font-size: 0.8em; /* Keep the font size larger */
+    }
+}
+
 .teams {
     display: flex;
     flex-wrap: wrap;
@@ -193,11 +231,15 @@ h3 {
 
 /* Styling for the BYE weeks */
 .bye-week {
-    background-color: white; /* White background */
-    color: var(--team-color); /* Team-specific text color */
+    color: white; /* White text color */
+    background-color: var(--team-color); /* Team color background */
     font-weight: bold; /* Make text bold */
-    align-items: center;
-    justify-content: center;
+    font-size: 1em; /* Keep the font size larger */
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    min-height: 120px; /* Keep the height larger */
+    text-align: center; /* Center text */
 }
 
 .team a {

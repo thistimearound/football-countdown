@@ -2,17 +2,14 @@
 
 ## Football Countdown
 ### v0.8
-- [O] fix kerning on mobile
-- [O] Add in white blocks for bye weeks on team schedule
-- [O] update bye weeks to show "BYE" in team colors
-- [ ] update cfbfastR.r to output bye weeks
-    * output data from cfbfastR.r
 - [ ] on index.html and team.html show spread_line as - for favorite and + for underdog
 - [ ] on team.html show moneyline as - for favorite and + for underdog
 - [ ] on team.html putting betting details into Betting analysis placeholder
     * https://nflreadr.nflverse.com/articles/dictionary_schedules.html
 - [ ] on index.html and team.html show current record
     * [ ] show current record when 0-0
+- [ ] update cfbfastR.r to output bye weeks
+    * output data from cfbfastR.r
 - [ ] create job/DAG to run nflfastR.r and cfbfastR.r on a schedule
 
 ### v0.9
