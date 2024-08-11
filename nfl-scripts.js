@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
             let nextGame = nflschedules ? getNextGameDate(team.class) : null;
             if (nextGame && nextGame.opponent !== 'BYE') {
-                teamLink.innerHTML = `<strong>${team.name}</strong> <strong>${nextGame.home_or_away}</strong>`;
+                teamLink.innerHTML = `<strong>${team.name}</strong> <strong>(${nextGame.spread_line})</strong>`;
             } else {
                 teamLink.innerHTML = `<strong>${team.name}</strong>`;
             }
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (nextGame.opponent === 'BYE') {
                     countdownDiv.innerHTML = `Week ${nextGame.week}: BYE`;
                 } else {
-                    countdownDiv.innerHTML = `${nextGame.spread_line} ${nextGame.opponent} <br> ${getCountdown(nextGame.date)}`;
+                    countdownDiv.innerHTML = `${nextGame.home_or_away} ${nextGame.opponent} <br> ${getCountdown(nextGame.date)}`;
                 }
             } else {
                 countdownDiv.textContent = 'No upcoming games';
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (nextGame.opponent === 'BYE') {
                         countdownDiv.innerHTML = `Week ${nextGame.week}: BYE`;
                     } else {
-                        countdownDiv.innerHTML = `${nextGame.spread_line} ${nextGame.opponent} <br>${getCountdown(nextGame.date)}`;
+                        countdownDiv.innerHTML = `${nextGame.home_or_away} ${nextGame.opponent} <br>${getCountdown(nextGame.date)}`;
                     }
                 } else {
                     countdownDiv.textContent = 'No upcoming games';

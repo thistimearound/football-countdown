@@ -107,8 +107,7 @@ home_games <- schedule_cleaned %>%
     home_or_away = "vs",
     adj_spread_odds = home_spread_odds,
     adj_moneyline = home_moneyline,
-    spread_line = ifelse(spread_line >= 0, paste0("+", spread_line), as.character(spread_line)), # nolint: line_length_linter
-    adj_spread_odds = ifelse(adj_spread_odds >= 0, paste0("+", adj_spread_odds), as.character(adj_spread_odds)), # nolint: line_length_linter
+    spread_line = ifelse(spread_line < 0, paste0("+", abs(spread_line)), paste0("-", abs(spread_line))), # nolint: line_length_linter
     adj_moneyline = ifelse(adj_moneyline >= 0, paste0("+", adj_moneyline), as.character(adj_moneyline)) # nolint: line_length_linter
   ) %>%
   select(team, opponent, datetime, isHomeGame, home_or_away, week, spread_line, adj_spread_odds, adj_moneyline) # nolint: line_length_linter
@@ -121,8 +120,7 @@ away_games <- schedule_cleaned %>%
     home_or_away = "@",
     adj_spread_odds = away_spread_odds,
     adj_moneyline = away_moneyline,
-    spread_line = ifelse(spread_line >= 0, paste0("+", spread_line), as.character(spread_line)), # nolint: line_length_linter
-    adj_spread_odds = ifelse(adj_spread_odds >= 0, paste0("+", adj_spread_odds), as.character(adj_spread_odds)), # nolint: line_length_linter
+    spread_line = ifelse(spread_line < 0, paste0("-", abs(spread_line)), paste0("+", abs(spread_line))), # nolint: line_length_linter
     adj_moneyline = ifelse(adj_moneyline >= 0, paste0("+", adj_moneyline), as.character(adj_moneyline)) # nolint: line_length_linter
   ) %>%
   select(team, opponent, datetime, isHomeGame, home_or_away, week, spread_line, adj_spread_odds, adj_moneyline) # nolint: line_length_linter

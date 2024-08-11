@@ -2,7 +2,7 @@
 
 ## Football Countdown
 ### v0.8
-- [ ] on index.html and team.html show spread_line as - for favorite and + for underdog
+- [X] on index.html and team.html show spread_line as - for favorite and + for underdog
 - [ ] on team.html show moneyline as - for favorite and + for underdog
 - [ ] on team.html putting betting details into Betting analysis placeholder
     * https://nflreadr.nflverse.com/articles/dictionary_schedules.html
