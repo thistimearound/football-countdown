@@ -12,10 +12,15 @@
     <header id="team-header">
         <!-- The team name will be dynamically updated -->
         <h1 id="team-name">Team Name</h1>
-        <div class="logo-container">
-            <!-- The NFL league shield logo -->
-            <img src="nfl-logo.webp" alt="NFL League Shield Logo" class="nfl-logo">
-        </div>
+        <nav>
+            <div class="nav-container">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="logo-container">
+                <img src="nfl-logo.webp" alt="National Football League Logo" class="nfl-logo" loading="lazy" width="200" height="100">
+            </div>
+        </nav>
     </header>
     <main>
         <section id="schedule">
@@ -84,9 +89,10 @@
                             const weatherDiv = document.createElement('div');
                             weatherDiv.className = 'weather-info';
                             weatherDiv.textContent = 'Weather Info';
+                            // Display the betting analysis for the game
                             const bettingDiv = document.createElement('div');
                             bettingDiv.className = 'betting-analysis';
-                            bettingDiv.textContent = `Betting Analysis: In Week ${game.week} the ${teamName} ${game.isHomeGame ? 'host the' : 'travel to'} ${game.opponent} at ${game.stadium}. The current spread is ${game.spread_line} points with ${teamName} ${game.adj_spread_odds} odds to cover.`;
+                            bettingDiv.textContent = `Betting Analysis: In Week ${game.week} the ${teamName} ${game.isHomeGame ? 'host the' : 'travel to the'} ${game.opponent} in ${game.stadium}. The current spread is ${game.spread_line || 'not set yet'} with ${teamName} odds to cover ${game.adj_spread_odds || 'not set yet'}. The point total is ${game.total_line || 'not set yet'}, ${game.over_odds || 'NA'} Over / ${game.under_odds || 'NA'} Under. The moneyline is ${game.adj_moneyline || 'not set yet'} for ${teamName} to win outright.`;
                             const containerDiv = document.createElement('div');
                             containerDiv.className = 'game-container';
                             containerDiv.appendChild(weekDiv);
@@ -126,5 +132,8 @@
             </script>
         </section>
     </main>
+    <footer>
+        <p>&copy; 2024 NextBet</p>
+    </footer>
 </body>
 </html>

@@ -127,6 +127,10 @@ const nflschedules =  {
       "surface": "grass"
     },
     {
+      "opponent": "BYE",
+      "week": 11
+    },
+    {
       "opponent": "Seattle Seahawks",
       "date": "2024-11-24T16:25:00Z",
       "isHomeGame": false,
@@ -349,6 +353,10 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "BYE",
+      "week": 12
     },
     {
       "opponent": "Los Angeles Chargers",
@@ -587,6 +595,10 @@ const nflschedules =  {
       "surface": "grass"
     },
     {
+      "opponent": "BYE",
+      "week": 14
+    },
+    {
       "opponent": "New York Giants",
       "date": "2024-12-15T13:00:00Z",
       "isHomeGame": false,
@@ -773,6 +785,10 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "a_turf"
+    },
+    {
+      "opponent": "BYE",
+      "week": 12
     },
     {
       "opponent": "San Francisco 49ers",
@@ -975,6 +991,10 @@ const nflschedules =  {
       "surface": "grass"
     },
     {
+      "opponent": "BYE",
+      "week": 11
+    },
+    {
       "opponent": "Kansas City Chiefs",
       "date": "2024-11-24T13:00:00Z",
       "isHomeGame": true,
@@ -1137,6 +1157,10 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "BYE",
+      "week": 7
     },
     {
       "opponent": "Washington Commanders",
@@ -1411,6 +1435,10 @@ const nflschedules =  {
       "surface": "matrixturf"
     },
     {
+      "opponent": "BYE",
+      "week": 12
+    },
+    {
       "opponent": "Pittsburgh Steelers",
       "date": "2024-12-01T13:00:00Z",
       "isHomeGame": true,
@@ -1599,6 +1627,10 @@ const nflschedules =  {
       "surface": "grass"
     },
     {
+      "opponent": "BYE",
+      "week": 10
+    },
+    {
       "opponent": "New Orleans Saints",
       "date": "2024-11-17T13:00:00Z",
       "isHomeGame": false,
@@ -1773,6 +1805,10 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "closed",
       "surface": "matrixturf"
+    },
+    {
+      "opponent": "BYE",
+      "week": 7
     },
     {
       "opponent": "San Francisco 49ers",
@@ -2071,6 +2107,10 @@ const nflschedules =  {
       "surface": "grass"
     },
     {
+      "opponent": "BYE",
+      "week": 14
+    },
+    {
       "opponent": "Indianapolis Colts",
       "date": "2024-12-15T16:25:00Z",
       "isHomeGame": true,
@@ -2173,6 +2213,10 @@ const nflschedules =  {
       "weekday": "Monday",
       "roof": "dome",
       "surface": "fieldturf"
+    },
+    {
+      "opponent": "BYE",
+      "week": 5
     },
     {
       "opponent": "Dallas Cowboys",
@@ -2447,6 +2491,10 @@ const nflschedules =  {
       "surface": "grass"
     },
     {
+      "opponent": "BYE",
+      "week": 10
+    },
+    {
       "opponent": "Chicago Bears",
       "date": "2024-11-17T13:00:00Z",
       "isHomeGame": false,
@@ -2707,6 +2755,10 @@ const nflschedules =  {
       "surface": "grass"
     },
     {
+      "opponent": "BYE",
+      "week": 14
+    },
+    {
       "opponent": "Miami Dolphins",
       "date": "2024-12-15T13:00:00Z",
       "isHomeGame": true,
@@ -2919,6 +2971,10 @@ const nflschedules =  {
       "surface": "fieldturf"
     },
     {
+      "opponent": "BYE",
+      "week": 14
+    },
+    {
       "opponent": "Denver Broncos",
       "date": "2024-12-15T16:25:00Z",
       "isHomeGame": false,
@@ -3107,6 +3163,10 @@ const nflschedules =  {
       "surface": "fieldturf"
     },
     {
+      "opponent": "BYE",
+      "week": 12
+    },
+    {
       "opponent": "Houston Texans",
       "date": "2024-12-01T13:00:00Z",
       "isHomeGame": true,
@@ -3245,6 +3305,10 @@ const nflschedules =  {
       "weekday": "Monday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "BYE",
+      "week": 6
     },
     {
       "opponent": "San Francisco 49ers",
@@ -3507,6 +3571,10 @@ const nflschedules =  {
       "surface": "fieldturf"
     },
     {
+      "opponent": "BYE",
+      "week": 10
+    },
+    {
       "opponent": "Miami Dolphins",
       "date": "2024-11-17T13:00:00Z",
       "isHomeGame": false,
@@ -3657,6 +3725,10 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "dome",
       "surface": "matrixturf"
+    },
+    {
+      "opponent": "BYE",
+      "week": 5
     },
     {
       "opponent": "Denver Broncos",
@@ -3883,6 +3955,10 @@ const nflschedules =  {
       "surface": "matrixturf"
     },
     {
+      "opponent": "BYE",
+      "week": 6
+    },
+    {
       "opponent": "Las Vegas Raiders",
       "date": "2024-10-20T16:05:00Z",
       "isHomeGame": true,
@@ -4095,6 +4171,10 @@ const nflschedules =  {
       "surface": "fieldturf"
     },
     {
+      "opponent": "BYE",
+      "week": 6
+    },
+    {
       "opponent": "Indianapolis Colts",
       "date": "2024-10-20T13:00:00Z",
       "isHomeGame": false,
@@ -4305,6 +4385,10 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "dome",
       "surface": "sportturf"
+    },
+    {
+      "opponent": "BYE",
+      "week": 6
     },
     {
       "opponent": "Detroit Lions",
@@ -4615,6 +4699,10 @@ const nflschedules =  {
       "surface": "fieldturf"
     },
     {
+      "opponent": "BYE",
+      "week": 14
+    },
+    {
       "opponent": "Arizona Cardinals",
       "date": "2024-12-15T16:25:00Z",
       "isHomeGame": false,
@@ -4801,6 +4889,10 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "dome",
       "surface": "sportturf"
+    },
+    {
+      "opponent": "BYE",
+      "week": 12
     },
     {
       "opponent": "Los Angeles Rams",
@@ -5001,6 +5093,10 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "BYE",
+      "week": 11
     },
     {
       "opponent": "Tampa Bay Buccaneers",
@@ -5227,6 +5323,10 @@ const nflschedules =  {
       "surface": "fieldturf"
     },
     {
+      "opponent": "BYE",
+      "week": 12
+    },
+    {
       "opponent": "Seattle Seahawks",
       "date": "2024-12-01T13:00:00Z",
       "isHomeGame": true,
@@ -5353,6 +5453,10 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "BYE",
+      "week": 5
     },
     {
       "opponent": "Cleveland Browns",
@@ -5615,6 +5719,10 @@ const nflschedules =  {
       "surface": "grass"
     },
     {
+      "opponent": "BYE",
+      "week": 9
+    },
+    {
       "opponent": "Washington Commanders",
       "date": "2024-11-10T13:00:00Z",
       "isHomeGame": false,
@@ -5825,6 +5933,10 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "BYE",
+      "week": 9
     },
     {
       "opponent": "Tampa Bay Buccaneers",
@@ -6051,6 +6163,10 @@ const nflschedules =  {
       "surface": "fieldturf"
     },
     {
+      "opponent": "BYE",
+      "week": 10
+    },
+    {
       "opponent": "San Francisco 49ers",
       "date": "2024-11-17T16:05:00Z",
       "isHomeGame": false,
@@ -6275,6 +6391,10 @@ const nflschedules =  {
       "surface": "grass"
     },
     {
+      "opponent": "BYE",
+      "week": 11
+    },
+    {
       "opponent": "New York Giants",
       "date": "2024-11-24T13:00:00Z",
       "isHomeGame": false,
@@ -6413,6 +6533,10 @@ const nflschedules =  {
       "weekday": "Monday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "BYE",
+      "week": 5
     },
     {
       "opponent": "Indianapolis Colts",
@@ -6733,6 +6857,10 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "BYE",
+      "week": 14
     },
     {
       "opponent": "New Orleans Saints",

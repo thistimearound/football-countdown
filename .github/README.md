@@ -41,6 +41,7 @@ v0.7 Authentic Scheduling
 
 v0.8 Betting Data, Bye Weeks, and Project Support
 * Massive Expanded Data for Betting Analysis and Schedule Sorting
+* Populate Betting Analysis w/ general mappings
 * Add + and - indicators for favorites and underdogs
 * Show bye weeks in Schedule data
 * Add support for College in cfbfastR.r, cfb-styles.css

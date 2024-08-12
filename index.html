@@ -15,7 +15,6 @@
     <script src="nfl-scripts.js" defer></script>
     <script>
         window.addEventListener('resize', function() {
-            const conferenceDivider = document.querySelector('.conference-divider');
             const conferenceContainer = document.querySelector('.conference-container'); // Adjust the selector to match the actual container
             
             if (conferenceDivider && conferenceContainer) {
@@ -30,9 +29,16 @@
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <img src="nfl-logo.webp" alt="National Football League Logo" class="nfl-logo" loading="lazy" width="200" height="100">
-        </div>
+        <h1>NFL Schedule Countdown</h1>
+        <nav>
+            <div class="nav-container">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="logo-container">
+                <img src="nfl-logo.webp" alt="National Football League Logo" class="nfl-logo" loading="lazy" width="200" height="100">
+            </div>
+        </nav>
     </header>
     <main>
         <div class="teams-container">
@@ -57,10 +63,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Divider between conferences -->
-            <div class="conference-divider"></div>
-
             <div id="nfc-teams-list" class="conference">
                 <h2>NFC Teams</h2>
                 <div class="division-container">
@@ -84,5 +86,8 @@
             </div>
         </div>
     </main>
+    <footer>
+        <p>&copy; 2024 NextBet</p>
+    </footer>
 </body>
 </html>

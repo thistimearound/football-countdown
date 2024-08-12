@@ -21,6 +21,19 @@ header {
 h1 {
     margin: 10px 0 0 0;
 }
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+.nav-container a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
 /* Centers the logo using Firefox. */
 .logo-container {
     max-width: 100%;
@@ -44,6 +57,15 @@ h1 {
 
 main {
     padding: 20px;
+}
+ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+li {
+    margin-left: 0;
+    padding-left: 0;
 }
 
 h2 {

@@ -148,20 +148,16 @@ add_bye_weeks <- function(schedule) {
   played_weeks <- schedule$week
   bye_weeks <- setdiff(all_weeks, played_weeks)
 
-  # Ensure the team column is correctly populated
-  teams <- unique(schedule$team)
-
   bye_schedule <- tibble(
-    team = rep(teams, each = length(bye_weeks)),
+    team = unique(schedule$team),
     opponent = "BYE",
-    datetime = as.POSIXct(NA, tz = "UTC"), # Ensure datetime is of type <datetime<UTC>> # nolint: line_length_linter
+    datetime = NA,
     isHomeGame = NA,
-    location = NA_character_, # Ensure location is character
-    home_or_away = NA_character_, # Ensure home_or_away is character
-    week = rep(bye_weeks, times = length(teams)),
-    spread_line = NA_character_,
-    adj_spread_odds = NA_integer_, # Ensure adj_spread_odds is integer
-    adj_moneyline = NA_character_
+    home_or_away = NA,
+    week = bye_weeks,
+    spread_line = NA,
+    adj_spread_odds = NA,
+    adj_moneyline = NA
   )
 
   bind_rows(schedule, bye_schedule)
