@@ -1,5 +1,6 @@
 # Load necessary libraries
 library(tidyverse)
+library(tidyr)
 library(ggrepel)
 library(nflreadr)
 library(nflplotR)
@@ -23,6 +24,11 @@ if (!is.null(schedule_data)) {
 } else {
   stop("Schedule data is not available for 2024.")
 }
+
+# Replace all instances of "Invalid Number" with "NA"
+team_schedules <- data.frame(lapply(team_schedules, function(x) {
+  gsub("Invalid Number", "NA", x)
+}))
 
 # Define the mapping between team abbreviations and full names
 team_name_mapping <- list(
@@ -69,18 +75,33 @@ reverse_team_name_mapping <- setNames(
 # Clean and process the data
 schedule_cleaned <- schedule_data %>%
   select(
+    game_id,
+    season,
+    game_type,
     week,
     gameday,
+    weekday,
     gametime,
-    home_team,
     away_team,
+    away_score,
+    home_team,
+    home_score,
     location,
-    spread_line,
-    home_spread_odds,
-    away_spread_odds,
+    result, # The number of points the home team scored minus the number of points the visiting team scored. Equals h_score - v_score. Is NA for games which haven't yet been played. Convenient for evaluating against the spread bets. # nolint: line_length_linter
+    total, # The sum of each team's score in the game. Equals h_score + v_score. Is NA for games which haven't yet been played. Convenient for evaluating over/under total bets. # nolint: line_length_linter
     away_moneyline,
     home_moneyline,
-    total_line # not doing anything with this column as of 08-03-2024
+    spread_line,
+    away_spread_odds,
+    home_spread_odds,
+    total_line,
+    over_odds,
+    under_odds,
+    roof,
+    surface,
+    temp,
+    wind,
+    stadium
   ) %>%
   mutate(
     home_or_away = "vs",
@@ -99,31 +120,24 @@ format_team_name <- function(team) {
 }
 
 # Transform the data into the desired format
-home_games <- schedule_cleaned %>%
-  mutate(
-    team = sapply(home_team, format_team_name),
-    opponent = sapply(away_team, format_team_name),
-    isHomeGame = TRUE,
-    home_or_away = "vs",
-    adj_spread_odds = home_spread_odds,
-    adj_moneyline = home_moneyline,
-    spread_line = ifelse(spread_line < 0, paste0("+", abs(spread_line)), paste0("-", abs(spread_line))), # nolint: line_length_linter
-    adj_moneyline = ifelse(adj_moneyline >= 0, paste0("+", adj_moneyline), as.character(adj_moneyline)) # nolint: line_length_linter
-  ) %>%
-  select(team, opponent, datetime, isHomeGame, home_or_away, week, spread_line, adj_spread_odds, adj_moneyline) # nolint: line_length_linter
+process_games <- function(schedule, team_col, opponent_col, score_col, is_home_game, spread_odds_col, moneyline_col, home_or_away_symbol) { # nolint: line_length_linter
+  schedule %>%
+    mutate(
+      team = sapply(!!sym(team_col), format_team_name),
+      opponent = sapply(!!sym(opponent_col), format_team_name),
+      score = !!sym(score_col),
+      isHomeGame = is_home_game,
+      home_or_away = as.character(home_or_away_symbol), # Ensure home_or_away is character # nolint: line_length_linter.
+      adj_spread_odds = as.integer(!!sym(spread_odds_col)), # Ensure adj_spread_odds is integer # nolint: line_length_linter
+      adj_moneyline = !!sym(moneyline_col),
+      spread_line = ifelse(spread_line < 0, paste0(ifelse(is_home_game, "+", "-"), abs(spread_line)), paste0(ifelse(is_home_game, "-", "+"), abs(spread_line))), # nolint: line_length_linter
+      adj_moneyline = ifelse(adj_moneyline >= 0, paste0("+", adj_moneyline), as.character(adj_moneyline)) # nolint: line_length_linter
+    ) %>%
+    select(team, opponent, game_id, season, week, weekday, datetime, isHomeGame, home_or_away, score, stadium, location, spread_line, adj_spread_odds, adj_moneyline, result, total, total_line, over_odds, under_odds, roof, surface, temp, wind) # nolint: line_length_linter
+}
 
-away_games <- schedule_cleaned %>%
-  mutate(
-    team = sapply(away_team, format_team_name),
-    opponent = sapply(home_team, format_team_name),
-    isHomeGame = FALSE,
-    home_or_away = "@",
-    adj_spread_odds = away_spread_odds,
-    adj_moneyline = away_moneyline,
-    spread_line = ifelse(spread_line < 0, paste0("-", abs(spread_line)), paste0("+", abs(spread_line))), # nolint: line_length_linter
-    adj_moneyline = ifelse(adj_moneyline >= 0, paste0("+", adj_moneyline), as.character(adj_moneyline)) # nolint: line_length_linter
-  ) %>%
-  select(team, opponent, datetime, isHomeGame, home_or_away, week, spread_line, adj_spread_odds, adj_moneyline) # nolint: line_length_linter
+home_games <- process_games(schedule_cleaned, "home_team", "away_team", "home_score", TRUE, "home_spread_odds", "home_moneyline", "vs") # nolint: line_length_linter
+away_games <- process_games(schedule_cleaned, "away_team", "home_team", "away_score", FALSE, "away_spread_odds", "away_moneyline", "@") # nolint: line_length_linter
 
 # Combine home and away games
 all_games <- bind_rows(home_games, away_games)
@@ -134,16 +148,20 @@ add_bye_weeks <- function(schedule) {
   played_weeks <- schedule$week
   bye_weeks <- setdiff(all_weeks, played_weeks)
 
+  # Ensure the team column is correctly populated
+  teams <- unique(schedule$team)
+
   bye_schedule <- tibble(
-    team = unique(schedule$team),
+    team = rep(teams, each = length(bye_weeks)),
     opponent = "BYE",
-    datetime = NA,
+    datetime = as.POSIXct(NA, tz = "UTC"), # Ensure datetime is of type <datetime<UTC>> # nolint: line_length_linter
     isHomeGame = NA,
-    home_or_away = NA,
-    week = bye_weeks,
-    spread_line = NA,
-    adj_spread_odds = NA,
-    adj_moneyline = NA
+    location = NA_character_, # Ensure location is character
+    home_or_away = NA_character_, # Ensure home_or_away is character
+    week = rep(bye_weeks, times = length(teams)),
+    spread_line = NA_character_,
+    adj_spread_odds = NA_integer_, # Ensure adj_spread_odds is integer
+    adj_moneyline = NA_character_
   )
 
   bind_rows(schedule, bye_schedule)
@@ -160,7 +178,7 @@ team_schedules <- all_games_with_bye %>%
   arrange(week) %>%
   mutate(
     date = format(datetime, "%Y-%m-%dT%H:%M:%SZ"),
-    opponent = ifelse(opponent == "BYE", opponent, reverse_team_name_mapping[opponent]) # Replace BYE with "BYE" # nolint: line_length_linter.
+    opponent = ifelse(opponent == "BYE", opponent, reverse_team_name_mapping[opponent]) # Replace BYE with "BYE" # nolint: line_length_linter
   ) %>%
   group_by(team) %>%
   summarise(
@@ -170,10 +188,23 @@ team_schedules <- all_games_with_bye %>%
         date = date,
         isHomeGame = isHomeGame,
         home_or_away = home_or_away,
+        stadium = stadium,
+        location = as.character(location), # Ensure location is a character vector # nolint: line_length_linter
         week = week,
+        weekday = weekday,
+        result = result,
+        score = score,
+        total = total,
         spread_line = spread_line,
         adj_spread_odds = adj_spread_odds,
-        adj_moneyline = adj_moneyline
+        adj_moneyline = adj_moneyline,
+        total_line = total_line,
+        over_odds = over_odds,
+        under_odds = under_odds,
+        roof = roof,
+        surface = surface,
+        temp = temp,
+        wind = wind
       )
     ),
     .groups = "drop"

@@ -40,11 +40,11 @@ v0.7 Authentic Scheduling
 </details>
 
 v0.8 Betting Data, Bye Weeks, and Project Support
-* Add game spreads and home or away team odds to all schedules
+* Massive Expanded Data for Betting Analysis and Schedule Sorting
 * Add + and - indicators for favorites and underdogs
-* Add support for College Football teams in cfbfastR.r, cfb-styles.css
+* Show bye weeks in Schedule data
+* Add support for College in cfbfastR.r, cfb-styles.css
 * Add static HTML .yml for GHA deploy config
 * Add todo list for backlog
 * Add updated styling on hover for index.html
-* Add bye weeks to schedule data and display
 * Updated view for mobile devices

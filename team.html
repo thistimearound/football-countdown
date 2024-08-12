@@ -86,7 +86,7 @@
                             weatherDiv.textContent = 'Weather Info';
                             const bettingDiv = document.createElement('div');
                             bettingDiv.className = 'betting-analysis';
-                            bettingDiv.textContent = 'Betting Analysis';
+                            bettingDiv.textContent = `Betting Analysis: In Week ${game.week} the ${teamName} ${game.isHomeGame ? 'host the' : 'travel to'} ${game.opponent} at ${game.stadium}. The current spread is ${game.spread_line} points with ${teamName} ${game.adj_spread_odds} odds to cover.`;
                             const containerDiv = document.createElement('div');
                             containerDiv.className = 'game-container';
                             containerDiv.appendChild(weekDiv);

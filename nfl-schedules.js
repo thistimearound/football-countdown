@@ -5,126 +5,210 @@ const nflschedules =  {
       "date": "2024-09-08T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
+      "stadium": "New Era Field",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "+6.5",
       "adj_spread_odds": -110,
-      "adj_moneyline": "+230"
+      "adj_moneyline": "+225",
+      "total_line": 48,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "outdoors",
+      "surface": "a_turf"
     },
     {
       "opponent": "Los Angeles Rams",
       "date": "2024-09-15T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 2
+      "stadium": "State Farm Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "grass"
     },
     {
       "opponent": "Detroit Lions",
       "date": "2024-09-22T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 3
+      "stadium": "State Farm Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "grass"
     },
     {
       "opponent": "Washington Commanders",
       "date": "2024-09-29T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 4
+      "stadium": "State Farm Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "grass"
     },
     {
       "opponent": "San Francisco 49ers",
       "date": "2024-10-06T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 5
+      "stadium": "Levi's Stadium",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Green Bay Packers",
       "date": "2024-10-13T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 6
+      "stadium": "Lambeau Field",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Los Angeles Chargers",
       "date": "2024-10-21T21:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 7
+      "stadium": "State Farm Stadium",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Monday",
+      "roof": "closed",
+      "surface": "grass"
     },
     {
       "opponent": "Miami Dolphins",
       "date": "2024-10-27T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 8
+      "stadium": "Hard Rock Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Chicago Bears",
       "date": "2024-11-03T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 9
+      "stadium": "State Farm Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "grass"
     },
     {
       "opponent": "New York Jets",
       "date": "2024-11-10T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 10
-    },
-    {
-      "opponent": "BYE",
-      "week": 11
+      "stadium": "State Farm Stadium",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "grass"
     },
     {
       "opponent": "Seattle Seahawks",
       "date": "2024-11-24T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 12
+      "stadium": "Lumen Field",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Minnesota Vikings",
       "date": "2024-12-01T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 13
+      "stadium": "U.S. Bank Stadium",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Seattle Seahawks",
       "date": "2024-12-08T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 14
+      "stadium": "State Farm Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "grass"
     },
     {
       "opponent": "New England Patriots",
       "date": "2024-12-15T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 15
+      "stadium": "State Farm Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "grass"
     },
     {
       "opponent": "Carolina Panthers",
       "date": "2024-12-22T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 16
+      "stadium": "Bank of America Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Los Angeles Rams",
       "date": "2024-12-29T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 17
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "San Francisco 49ers",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 18
+      "stadium": "State Farm Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "grass"
     }
   ],
   "atlanta-falcons": [
@@ -133,126 +217,210 @@ const nflschedules =  {
       "date": "2024-09-08T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
+      "stadium": "Mercedes-Benz Stadium",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "-2",
       "adj_spread_odds": -110,
-      "adj_moneyline": "-130"
+      "adj_moneyline": "-130",
+      "total_line": 42.5,
+      "over_odds": -115,
+      "under_odds": -105,
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Philadelphia Eagles",
       "date": "2024-09-16T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 2
+      "stadium": "Lincoln Financial Field",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Kansas City Chiefs",
       "date": "2024-09-22T20:20:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 3
+      "stadium": "Mercedes-Benz Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "New Orleans Saints",
       "date": "2024-09-29T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 4
+      "stadium": "Mercedes-Benz Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Tampa Bay Buccaneers",
       "date": "2024-10-03T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 5
+      "stadium": "Mercedes-Benz Stadium",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Thursday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Carolina Panthers",
       "date": "2024-10-13T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 6
+      "stadium": "Bank of America Stadium",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Seattle Seahawks",
       "date": "2024-10-20T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 7
+      "stadium": "Mercedes-Benz Stadium",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Tampa Bay Buccaneers",
       "date": "2024-10-27T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 8
+      "stadium": "Raymond James Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Dallas Cowboys",
       "date": "2024-11-03T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 9
+      "stadium": "Mercedes-Benz Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "New Orleans Saints",
       "date": "2024-11-10T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 10
+      "stadium": "Mercedes-Benz Superdome",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Denver Broncos",
       "date": "2024-11-17T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 11
-    },
-    {
-      "opponent": "BYE",
-      "week": 12
+      "stadium": "Empower Field at Mile High",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Los Angeles Chargers",
       "date": "2024-12-01T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 13
+      "stadium": "Mercedes-Benz Stadium",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Minnesota Vikings",
       "date": "2024-12-08T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 14
+      "stadium": "U.S. Bank Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Las Vegas Raiders",
       "date": "2024-12-16T20:30:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 15
+      "stadium": "Allegiant Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Monday",
+      "roof": "dome",
+      "surface": "grass"
     },
     {
       "opponent": "New York Giants",
       "date": "2024-12-22T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 16
+      "stadium": "Mercedes-Benz Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Washington Commanders",
       "date": "2024-12-29T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 17
+      "stadium": "FedExField",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Carolina Panthers",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 18
+      "stadium": "Mercedes-Benz Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     }
   ],
   "baltimore-ravens": [
@@ -261,126 +429,210 @@ const nflschedules =  {
       "date": "2024-09-05T20:20:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "location": "Home",
       "week": 1,
-      "spread_line": "+3",
-      "adj_spread_odds": -118,
-      "adj_moneyline": "+124"
+      "weekday": "Thursday",
+      "spread_line": "+2.5",
+      "adj_spread_odds": -102,
+      "adj_moneyline": "+120",
+      "total_line": 46.5,
+      "over_odds": -108,
+      "under_odds": -112,
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Las Vegas Raiders",
       "date": "2024-09-15T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 2
+      "stadium": "M&T Bank Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Dallas Cowboys",
       "date": "2024-09-22T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 3
+      "stadium": "AT&T Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Buffalo Bills",
       "date": "2024-09-29T20:20:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 4
+      "stadium": "M&T Bank Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Cincinnati Bengals",
       "date": "2024-10-06T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 5
+      "stadium": "Paycor Stadium",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Washington Commanders",
       "date": "2024-10-13T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 6
+      "stadium": "M&T Bank Stadium",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Tampa Bay Buccaneers",
       "date": "2024-10-21T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 7
+      "stadium": "Raymond James Stadium",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Cleveland Browns",
       "date": "2024-10-27T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 8
+      "stadium": "FirstEnergy Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Denver Broncos",
       "date": "2024-11-03T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 9
+      "stadium": "M&T Bank Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Cincinnati Bengals",
       "date": "2024-11-07T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 10
+      "stadium": "M&T Bank Stadium",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Pittsburgh Steelers",
       "date": "2024-11-17T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 11
+      "stadium": "Acrisure Stadium",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Los Angeles Chargers",
       "date": "2024-11-25T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 12
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Monday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Philadelphia Eagles",
       "date": "2024-12-01T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 13
-    },
-    {
-      "opponent": "BYE",
-      "week": 14
+      "stadium": "M&T Bank Stadium",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New York Giants",
       "date": "2024-12-15T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 15
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Pittsburgh Steelers",
       "date": "2024-12-21T16:30:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 16
+      "stadium": "M&T Bank Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Saturday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Houston Texans",
       "date": "2024-12-25T16:30:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 17
+      "stadium": "NRG Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Wednesday",
+      "roof": "closed",
+      "surface": "astroturf"
     },
     {
       "opponent": "Cleveland Browns",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 18
+      "stadium": "M&T Bank Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     }
   ],
   "buffalo-bills": [
@@ -389,126 +641,210 @@ const nflschedules =  {
       "date": "2024-09-08T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
+      "stadium": "New Era Field",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "-6.5",
       "adj_spread_odds": -110,
-      "adj_moneyline": "-285"
+      "adj_moneyline": "-278",
+      "total_line": 48,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "outdoors",
+      "surface": "a_turf"
     },
     {
       "opponent": "Miami Dolphins",
       "date": "2024-09-12T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 2
+      "stadium": "Hard Rock Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Jacksonville Jaguars",
       "date": "2024-09-23T19:30:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 3
+      "stadium": "New Era Field",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "a_turf"
     },
     {
       "opponent": "Baltimore Ravens",
       "date": "2024-09-29T20:20:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 4
+      "stadium": "M&T Bank Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Houston Texans",
       "date": "2024-10-06T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 5
+      "stadium": "NRG Stadium",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "astroturf"
     },
     {
       "opponent": "New York Jets",
       "date": "2024-10-14T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 6
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Tennessee Titans",
       "date": "2024-10-20T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 7
+      "stadium": "New Era Field",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "a_turf"
     },
     {
       "opponent": "Seattle Seahawks",
       "date": "2024-10-27T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 8
+      "stadium": "Lumen Field",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Miami Dolphins",
       "date": "2024-11-03T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 9
+      "stadium": "New Era Field",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "a_turf"
     },
     {
       "opponent": "Indianapolis Colts",
       "date": "2024-11-10T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 10
+      "stadium": "Lucas Oil Stadium",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Kansas City Chiefs",
       "date": "2024-11-17T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 11
-    },
-    {
-      "opponent": "BYE",
-      "week": 12
+      "stadium": "New Era Field",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "a_turf"
     },
     {
       "opponent": "San Francisco 49ers",
       "date": "2024-12-01T20:20:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 13
+      "stadium": "New Era Field",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "a_turf"
     },
     {
       "opponent": "Los Angeles Rams",
       "date": "2024-12-08T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 14
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Detroit Lions",
       "date": "2024-12-15T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 15
+      "stadium": "Ford Field",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "fieldturf"
     },
     {
       "opponent": "New England Patriots",
       "date": "2024-12-22T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 16
+      "stadium": "New Era Field",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "a_turf"
     },
     {
       "opponent": "New York Jets",
       "date": "2024-12-29T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 17
+      "stadium": "New Era Field",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "a_turf"
     },
     {
       "opponent": "New England Patriots",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 18
+      "stadium": "Gillette Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     }
   ],
   "carolina-panthers": [
@@ -517,126 +853,210 @@ const nflschedules =  {
       "date": "2024-09-08T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
+      "stadium": "Mercedes-Benz Superdome",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "+5",
       "adj_spread_odds": -112,
-      "adj_moneyline": "+170"
+      "adj_moneyline": "+180",
+      "total_line": 40.5,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Los Angeles Chargers",
       "date": "2024-09-15T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 2
+      "stadium": "Bank of America Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Las Vegas Raiders",
       "date": "2024-09-22T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 3
+      "stadium": "Allegiant Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "grass"
     },
     {
       "opponent": "Cincinnati Bengals",
       "date": "2024-09-29T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 4
+      "stadium": "Bank of America Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Chicago Bears",
       "date": "2024-10-06T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 5
+      "stadium": "Soldier Field",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Atlanta Falcons",
       "date": "2024-10-13T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 6
+      "stadium": "Bank of America Stadium",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Washington Commanders",
       "date": "2024-10-20T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 7
+      "stadium": "FedExField",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Denver Broncos",
       "date": "2024-10-27T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 8
+      "stadium": "Empower Field at Mile High",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New Orleans Saints",
       "date": "2024-11-03T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 9
+      "stadium": "Bank of America Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New York Giants",
       "date": "2024-11-10T09:30:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 10
-    },
-    {
-      "opponent": "BYE",
-      "week": 11
+      "stadium": "Bank of America Stadium",
+      "location": "Neutral",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Kansas City Chiefs",
       "date": "2024-11-24T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 12
+      "stadium": "Bank of America Stadium",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Tampa Bay Buccaneers",
       "date": "2024-12-01T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 13
+      "stadium": "Bank of America Stadium",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Philadelphia Eagles",
       "date": "2024-12-08T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 14
+      "stadium": "Lincoln Financial Field",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Dallas Cowboys",
       "date": "2024-12-15T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 15
+      "stadium": "Bank of America Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Arizona Cardinals",
       "date": "2024-12-22T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 16
+      "stadium": "Bank of America Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Tampa Bay Buccaneers",
       "date": "2024-12-29T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 17
+      "stadium": "Raymond James Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Atlanta Falcons",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 18
+      "stadium": "Mercedes-Benz Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     }
   ],
   "chicago-bears": [
@@ -645,126 +1065,210 @@ const nflschedules =  {
       "date": "2024-09-08T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
+      "stadium": "Soldier Field",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "-4",
       "adj_spread_odds": -112,
-      "adj_moneyline": "-198"
+      "adj_moneyline": "-198",
+      "total_line": 43,
+      "over_odds": -112,
+      "under_odds": -108,
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Houston Texans",
       "date": "2024-09-15T20:20:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 2
+      "stadium": "NRG Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "astroturf"
     },
     {
       "opponent": "Indianapolis Colts",
       "date": "2024-09-22T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 3
+      "stadium": "Lucas Oil Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Los Angeles Rams",
       "date": "2024-09-29T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 4
+      "stadium": "Soldier Field",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Carolina Panthers",
       "date": "2024-10-06T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 5
+      "stadium": "Soldier Field",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Jacksonville Jaguars",
       "date": "2024-10-13T09:30:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 6
-    },
-    {
-      "opponent": "BYE",
-      "week": 7
+      "stadium": "Soldier Field",
+      "location": "Neutral",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Washington Commanders",
       "date": "2024-10-27T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 8
+      "stadium": "FedExField",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Arizona Cardinals",
       "date": "2024-11-03T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 9
+      "stadium": "State Farm Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "grass"
     },
     {
       "opponent": "New England Patriots",
       "date": "2024-11-10T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 10
+      "stadium": "Soldier Field",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Green Bay Packers",
       "date": "2024-11-17T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 11
+      "stadium": "Soldier Field",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Minnesota Vikings",
       "date": "2024-11-24T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 12
+      "stadium": "Soldier Field",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Detroit Lions",
       "date": "2024-11-28T12:30:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 13
+      "stadium": "Ford Field",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Thursday",
+      "roof": "dome",
+      "surface": "fieldturf"
     },
     {
       "opponent": "San Francisco 49ers",
       "date": "2024-12-08T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 14
+      "stadium": "Levi's Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Minnesota Vikings",
       "date": "2024-12-16T20:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 15
+      "stadium": "U.S. Bank Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Monday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Detroit Lions",
       "date": "2024-12-22T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 16
+      "stadium": "Soldier Field",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Seattle Seahawks",
       "date": "2024-12-26T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 17
+      "stadium": "Soldier Field",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Green Bay Packers",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 18
+      "stadium": "Lambeau Field",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     }
   ],
   "cincinnati-bengals": [
@@ -773,126 +1277,210 @@ const nflschedules =  {
       "date": "2024-09-08T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
+      "stadium": "Paycor Stadium",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "-9",
       "adj_spread_odds": -110,
-      "adj_moneyline": "-455"
+      "adj_moneyline": "-455",
+      "total_line": 43,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Kansas City Chiefs",
       "date": "2024-09-15T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 2
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Washington Commanders",
       "date": "2024-09-23T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 3
+      "stadium": "Paycor Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Carolina Panthers",
       "date": "2024-09-29T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 4
+      "stadium": "Bank of America Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Baltimore Ravens",
       "date": "2024-10-06T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 5
+      "stadium": "Paycor Stadium",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "New York Giants",
       "date": "2024-10-13T20:20:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 6
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Cleveland Browns",
       "date": "2024-10-20T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 7
+      "stadium": "FirstEnergy Stadium",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Philadelphia Eagles",
       "date": "2024-10-27T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 8
+      "stadium": "Paycor Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Las Vegas Raiders",
       "date": "2024-11-03T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 9
+      "stadium": "Paycor Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Baltimore Ravens",
       "date": "2024-11-07T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 10
+      "stadium": "M&T Bank Stadium",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Los Angeles Chargers",
       "date": "2024-11-17T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 11
-    },
-    {
-      "opponent": "BYE",
-      "week": 12
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Pittsburgh Steelers",
       "date": "2024-12-01T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 13
+      "stadium": "Paycor Stadium",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Dallas Cowboys",
       "date": "2024-12-09T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 14
+      "stadium": "AT&T Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Monday",
+      "roof": "closed",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Tennessee Titans",
       "date": "2024-12-15T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 15
+      "stadium": "Nissan Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Cleveland Browns",
       "date": "2024-12-19T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 16
+      "stadium": "Paycor Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Denver Broncos",
       "date": "2024-12-29T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 17
+      "stadium": "Paycor Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Pittsburgh Steelers",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 18
+      "stadium": "Acrisure Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     }
   ],
   "cleveland-browns": [
@@ -901,126 +1489,210 @@ const nflschedules =  {
       "date": "2024-09-08T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
+      "stadium": "FirstEnergy Stadium",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "-2",
       "adj_spread_odds": -110,
-      "adj_moneyline": "-130"
+      "adj_moneyline": "-130",
+      "total_line": 44,
+      "over_odds": -112,
+      "under_odds": -108,
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Jacksonville Jaguars",
       "date": "2024-09-15T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 2
+      "stadium": "TIAA Bank Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New York Giants",
       "date": "2024-09-22T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 3
+      "stadium": "FirstEnergy Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Las Vegas Raiders",
       "date": "2024-09-29T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 4
+      "stadium": "Allegiant Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "grass"
     },
     {
       "opponent": "Washington Commanders",
       "date": "2024-10-06T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 5
+      "stadium": "FedExField",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Philadelphia Eagles",
       "date": "2024-10-13T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 6
+      "stadium": "Lincoln Financial Field",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Cincinnati Bengals",
       "date": "2024-10-20T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 7
+      "stadium": "FirstEnergy Stadium",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Baltimore Ravens",
       "date": "2024-10-27T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 8
+      "stadium": "FirstEnergy Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Los Angeles Chargers",
       "date": "2024-11-03T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 9
-    },
-    {
-      "opponent": "BYE",
-      "week": 10
+      "stadium": "FirstEnergy Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New Orleans Saints",
       "date": "2024-11-17T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 11
+      "stadium": "Mercedes-Benz Superdome",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Pittsburgh Steelers",
       "date": "2024-11-21T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 12
+      "stadium": "FirstEnergy Stadium",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Denver Broncos",
       "date": "2024-12-02T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 13
+      "stadium": "Empower Field at Mile High",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Pittsburgh Steelers",
       "date": "2024-12-08T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 14
+      "stadium": "Acrisure Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Kansas City Chiefs",
       "date": "2024-12-15T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 15
+      "stadium": "FirstEnergy Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Cincinnati Bengals",
       "date": "2024-12-19T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 16
+      "stadium": "Paycor Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Miami Dolphins",
       "date": "2024-12-29T20:20:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 17
+      "stadium": "FirstEnergy Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Baltimore Ravens",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 18
+      "stadium": "M&T Bank Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     }
   ],
   "dallas-cowboys": [
@@ -1029,126 +1701,210 @@ const nflschedules =  {
       "date": "2024-09-08T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
+      "stadium": "FirstEnergy Stadium",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "+2",
       "adj_spread_odds": -110,
-      "adj_moneyline": "+110"
+      "adj_moneyline": "+110",
+      "total_line": 44,
+      "over_odds": -112,
+      "under_odds": -108,
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New Orleans Saints",
       "date": "2024-09-15T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 2
+      "stadium": "AT&T Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Baltimore Ravens",
       "date": "2024-09-22T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 3
+      "stadium": "AT&T Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "matrixturf"
     },
     {
       "opponent": "New York Giants",
       "date": "2024-09-26T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 4
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Pittsburgh Steelers",
       "date": "2024-10-06T20:20:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 5
+      "stadium": "Acrisure Stadium",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Detroit Lions",
       "date": "2024-10-13T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 6
-    },
-    {
-      "opponent": "BYE",
-      "week": 7
+      "stadium": "AT&T Stadium",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "matrixturf"
     },
     {
       "opponent": "San Francisco 49ers",
       "date": "2024-10-27T20:20:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 8
+      "stadium": "Levi's Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Atlanta Falcons",
       "date": "2024-11-03T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 9
+      "stadium": "Mercedes-Benz Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Philadelphia Eagles",
       "date": "2024-11-10T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 10
+      "stadium": "AT&T Stadium",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Houston Texans",
       "date": "2024-11-18T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 11
+      "stadium": "AT&T Stadium",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Monday",
+      "roof": "closed",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Washington Commanders",
       "date": "2024-11-24T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 12
+      "stadium": "FedExField",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New York Giants",
       "date": "2024-11-28T16:30:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 13
+      "stadium": "AT&T Stadium",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Thursday",
+      "roof": "closed",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Cincinnati Bengals",
       "date": "2024-12-09T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 14
+      "stadium": "AT&T Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Monday",
+      "roof": "closed",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Carolina Panthers",
       "date": "2024-12-15T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 15
+      "stadium": "Bank of America Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Tampa Bay Buccaneers",
       "date": "2024-12-22T20:20:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 16
+      "stadium": "AT&T Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Philadelphia Eagles",
       "date": "2024-12-29T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 17
+      "stadium": "Lincoln Financial Field",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Washington Commanders",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 18
+      "stadium": "AT&T Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "matrixturf"
     }
   ],
   "denver-broncos": [
@@ -1157,126 +1913,210 @@ const nflschedules =  {
       "date": "2024-09-08T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
+      "stadium": "Lumen Field",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "+4.5",
       "adj_spread_odds": -105,
-      "adj_moneyline": "+170"
+      "adj_moneyline": "+170",
+      "total_line": 42.5,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Pittsburgh Steelers",
       "date": "2024-09-15T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 2
+      "stadium": "Empower Field at Mile High",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Tampa Bay Buccaneers",
       "date": "2024-09-22T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 3
+      "stadium": "Raymond James Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New York Jets",
       "date": "2024-09-29T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 4
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Las Vegas Raiders",
       "date": "2024-10-06T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 5
+      "stadium": "Empower Field at Mile High",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Los Angeles Chargers",
       "date": "2024-10-13T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 6
+      "stadium": "Empower Field at Mile High",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New Orleans Saints",
       "date": "2024-10-17T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 7
+      "stadium": "Mercedes-Benz Superdome",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Thursday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Carolina Panthers",
       "date": "2024-10-27T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 8
+      "stadium": "Empower Field at Mile High",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Baltimore Ravens",
       "date": "2024-11-03T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 9
+      "stadium": "M&T Bank Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Kansas City Chiefs",
       "date": "2024-11-10T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 10
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Atlanta Falcons",
       "date": "2024-11-17T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 11
+      "stadium": "Empower Field at Mile High",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Las Vegas Raiders",
       "date": "2024-11-24T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 12
+      "stadium": "Allegiant Stadium",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "grass"
     },
     {
       "opponent": "Cleveland Browns",
       "date": "2024-12-02T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 13
-    },
-    {
-      "opponent": "BYE",
-      "week": 14
+      "stadium": "Empower Field at Mile High",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Indianapolis Colts",
       "date": "2024-12-15T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 15
+      "stadium": "Empower Field at Mile High",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Los Angeles Chargers",
       "date": "2024-12-22T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 16
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Cincinnati Bengals",
       "date": "2024-12-29T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 17
+      "stadium": "Paycor Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Kansas City Chiefs",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 18
+      "stadium": "Empower Field at Mile High",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     }
   ],
   "detroit-lions": [
@@ -1285,126 +2125,210 @@ const nflschedules =  {
       "date": "2024-09-08T20:20:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
+      "stadium": "Ford Field",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "-3.5",
       "adj_spread_odds": -108,
-      "adj_moneyline": "-198"
+      "adj_moneyline": "-198",
+      "total_line": 51,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "dome",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Tampa Bay Buccaneers",
       "date": "2024-09-15T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 2
+      "stadium": "Ford Field",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Arizona Cardinals",
       "date": "2024-09-22T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 3
+      "stadium": "State Farm Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "grass"
     },
     {
       "opponent": "Seattle Seahawks",
       "date": "2024-09-30T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 4
-    },
-    {
-      "opponent": "BYE",
-      "week": 5
+      "stadium": "Ford Field",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Monday",
+      "roof": "dome",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Dallas Cowboys",
       "date": "2024-10-13T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 6
+      "stadium": "AT&T Stadium",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Minnesota Vikings",
       "date": "2024-10-20T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 7
+      "stadium": "U.S. Bank Stadium",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Tennessee Titans",
       "date": "2024-10-27T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 8
+      "stadium": "Ford Field",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Green Bay Packers",
       "date": "2024-11-03T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 9
+      "stadium": "Lambeau Field",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Houston Texans",
       "date": "2024-11-10T20:20:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 10
+      "stadium": "NRG Stadium",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "astroturf"
     },
     {
       "opponent": "Jacksonville Jaguars",
       "date": "2024-11-17T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 11
+      "stadium": "Ford Field",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Indianapolis Colts",
       "date": "2024-11-24T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 12
+      "stadium": "Lucas Oil Stadium",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Chicago Bears",
       "date": "2024-11-28T12:30:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 13
+      "stadium": "Ford Field",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Thursday",
+      "roof": "dome",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Green Bay Packers",
       "date": "2024-12-05T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 14
+      "stadium": "Ford Field",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Thursday",
+      "roof": "dome",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Buffalo Bills",
       "date": "2024-12-15T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 15
+      "stadium": "Ford Field",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Chicago Bears",
       "date": "2024-12-22T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 16
+      "stadium": "Soldier Field",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "San Francisco 49ers",
       "date": "2024-12-30T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 17
+      "stadium": "Levi's Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Minnesota Vikings",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 18
+      "stadium": "Ford Field",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "fieldturf"
     }
   ],
   "green-bay-packers": [
@@ -1413,126 +2337,210 @@ const nflschedules =  {
       "date": "2024-09-06T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
+      "stadium": "Lincoln Financial Field",
+      "location": "Neutral",
       "week": 1,
+      "weekday": "Friday",
       "spread_line": "+2",
       "adj_spread_odds": -110,
-      "adj_moneyline": "+105"
+      "adj_moneyline": "+105",
+      "total_line": 48.5,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Indianapolis Colts",
       "date": "2024-09-15T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 2
+      "stadium": "Lambeau Field",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Tennessee Titans",
       "date": "2024-09-22T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 3
+      "stadium": "Nissan Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Minnesota Vikings",
       "date": "2024-09-29T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 4
+      "stadium": "Lambeau Field",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Los Angeles Rams",
       "date": "2024-10-06T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 5
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Arizona Cardinals",
       "date": "2024-10-13T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 6
+      "stadium": "Lambeau Field",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Houston Texans",
       "date": "2024-10-20T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 7
+      "stadium": "Lambeau Field",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Jacksonville Jaguars",
       "date": "2024-10-27T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 8
+      "stadium": "TIAA Bank Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Detroit Lions",
       "date": "2024-11-03T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 9
-    },
-    {
-      "opponent": "BYE",
-      "week": 10
+      "stadium": "Lambeau Field",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Chicago Bears",
       "date": "2024-11-17T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 11
+      "stadium": "Soldier Field",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "San Francisco 49ers",
       "date": "2024-11-24T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 12
+      "stadium": "Lambeau Field",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Miami Dolphins",
       "date": "2024-11-28T20:20:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 13
+      "stadium": "Lambeau Field",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Detroit Lions",
       "date": "2024-12-05T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 14
+      "stadium": "Ford Field",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Thursday",
+      "roof": "dome",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Seattle Seahawks",
       "date": "2024-12-15T20:20:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 15
+      "stadium": "Lumen Field",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "New Orleans Saints",
       "date": "2024-12-23T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 16
+      "stadium": "Lambeau Field",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Minnesota Vikings",
       "date": "2024-12-29T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 17
+      "stadium": "U.S. Bank Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Chicago Bears",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 18
+      "stadium": "Lambeau Field",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     }
   ],
   "houston-texans": [
@@ -1541,126 +2549,210 @@ const nflschedules =  {
       "date": "2024-09-08T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
+      "stadium": "Lucas Oil Stadium",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "-1.5",
       "adj_spread_odds": -110,
-      "adj_moneyline": "-122"
+      "adj_moneyline": "-122",
+      "total_line": 48,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Chicago Bears",
       "date": "2024-09-15T20:20:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 2
+      "stadium": "NRG Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "astroturf"
     },
     {
       "opponent": "Minnesota Vikings",
       "date": "2024-09-22T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 3
+      "stadium": "U.S. Bank Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Jacksonville Jaguars",
       "date": "2024-09-29T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 4
+      "stadium": "NRG Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "astroturf"
     },
     {
       "opponent": "Buffalo Bills",
       "date": "2024-10-06T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 5
+      "stadium": "NRG Stadium",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "astroturf"
     },
     {
       "opponent": "New England Patriots",
       "date": "2024-10-13T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 6
+      "stadium": "Gillette Stadium",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Green Bay Packers",
       "date": "2024-10-20T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 7
+      "stadium": "Lambeau Field",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Indianapolis Colts",
       "date": "2024-10-27T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 8
+      "stadium": "NRG Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "astroturf"
     },
     {
       "opponent": "New York Jets",
       "date": "2024-10-31T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 9
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Detroit Lions",
       "date": "2024-11-10T20:20:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 10
+      "stadium": "NRG Stadium",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "astroturf"
     },
     {
       "opponent": "Dallas Cowboys",
       "date": "2024-11-18T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 11
+      "stadium": "AT&T Stadium",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Monday",
+      "roof": "closed",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Tennessee Titans",
       "date": "2024-11-24T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 12
+      "stadium": "NRG Stadium",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "astroturf"
     },
     {
       "opponent": "Jacksonville Jaguars",
       "date": "2024-12-01T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 13
-    },
-    {
-      "opponent": "BYE",
-      "week": 14
+      "stadium": "TIAA Bank Stadium",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Miami Dolphins",
       "date": "2024-12-15T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 15
+      "stadium": "NRG Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "astroturf"
     },
     {
       "opponent": "Kansas City Chiefs",
       "date": "2024-12-21T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 16
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Saturday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Baltimore Ravens",
       "date": "2024-12-25T16:30:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 17
+      "stadium": "NRG Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Wednesday",
+      "roof": "closed",
+      "surface": "astroturf"
     },
     {
       "opponent": "Tennessee Titans",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 18
+      "stadium": "Nissan Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     }
   ],
   "indianapolis-colts": [
@@ -1669,126 +2761,210 @@ const nflschedules =  {
       "date": "2024-09-08T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
+      "stadium": "Lucas Oil Stadium",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "+1.5",
       "adj_spread_odds": -110,
-      "adj_moneyline": "+102"
+      "adj_moneyline": "+102",
+      "total_line": 48,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Green Bay Packers",
       "date": "2024-09-15T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 2
+      "stadium": "Lambeau Field",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Chicago Bears",
       "date": "2024-09-22T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 3
+      "stadium": "Lucas Oil Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Pittsburgh Steelers",
       "date": "2024-09-29T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 4
+      "stadium": "Lucas Oil Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Jacksonville Jaguars",
       "date": "2024-10-06T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 5
+      "stadium": "TIAA Bank Stadium",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Tennessee Titans",
       "date": "2024-10-13T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 6
+      "stadium": "Nissan Stadium",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Miami Dolphins",
       "date": "2024-10-20T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 7
+      "stadium": "Lucas Oil Stadium",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Houston Texans",
       "date": "2024-10-27T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 8
+      "stadium": "NRG Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "astroturf"
     },
     {
       "opponent": "Minnesota Vikings",
       "date": "2024-11-03T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 9
+      "stadium": "U.S. Bank Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Buffalo Bills",
       "date": "2024-11-10T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 10
+      "stadium": "Lucas Oil Stadium",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "New York Jets",
       "date": "2024-11-17T20:20:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 11
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Detroit Lions",
       "date": "2024-11-24T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 12
+      "stadium": "Lucas Oil Stadium",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "New England Patriots",
       "date": "2024-12-01T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 13
-    },
-    {
-      "opponent": "BYE",
-      "week": 14
+      "stadium": "Gillette Stadium",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Denver Broncos",
       "date": "2024-12-15T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 15
+      "stadium": "Empower Field at Mile High",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Tennessee Titans",
       "date": "2024-12-22T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 16
+      "stadium": "Lucas Oil Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "New York Giants",
       "date": "2024-12-29T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 17
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Jacksonville Jaguars",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 18
+      "stadium": "Lucas Oil Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     }
   ],
   "jacksonville-jaguars": [
@@ -1797,126 +2973,210 @@ const nflschedules =  {
       "date": "2024-09-08T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
+      "stadium": "Hard Rock Stadium",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "+3.5",
       "adj_spread_odds": -110,
-      "adj_moneyline": "+150"
+      "adj_moneyline": "+150",
+      "total_line": 49,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Cleveland Browns",
       "date": "2024-09-15T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 2
+      "stadium": "TIAA Bank Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Buffalo Bills",
       "date": "2024-09-23T19:30:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 3
+      "stadium": "New Era Field",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "a_turf"
     },
     {
       "opponent": "Houston Texans",
       "date": "2024-09-29T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 4
+      "stadium": "NRG Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "astroturf"
     },
     {
       "opponent": "Indianapolis Colts",
       "date": "2024-10-06T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 5
+      "stadium": "TIAA Bank Stadium",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Chicago Bears",
       "date": "2024-10-13T09:30:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 6
+      "stadium": "Soldier Field",
+      "location": "Neutral",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New England Patriots",
       "date": "2024-10-20T09:30:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 7
+      "stadium": "TIAA Bank Stadium",
+      "location": "Neutral",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Green Bay Packers",
       "date": "2024-10-27T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 8
+      "stadium": "TIAA Bank Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Philadelphia Eagles",
       "date": "2024-11-03T20:20:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 9
+      "stadium": "Lincoln Financial Field",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Minnesota Vikings",
       "date": "2024-11-10T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 10
+      "stadium": "TIAA Bank Stadium",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Detroit Lions",
       "date": "2024-11-17T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 11
-    },
-    {
-      "opponent": "BYE",
-      "week": 12
+      "stadium": "Ford Field",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Houston Texans",
       "date": "2024-12-01T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 13
+      "stadium": "TIAA Bank Stadium",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Tennessee Titans",
       "date": "2024-12-08T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 14
+      "stadium": "Nissan Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New York Jets",
       "date": "2024-12-15T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 15
+      "stadium": "TIAA Bank Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Las Vegas Raiders",
       "date": "2024-12-22T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 16
+      "stadium": "Allegiant Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "grass"
     },
     {
       "opponent": "Tennessee Titans",
       "date": "2024-12-29T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 17
+      "stadium": "TIAA Bank Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Indianapolis Colts",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 18
+      "stadium": "Lucas Oil Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     }
   ],
   "kansas-city-chiefs": [
@@ -1925,126 +3185,210 @@ const nflschedules =  {
       "date": "2024-09-05T20:20:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "location": "Home",
       "week": 1,
-      "spread_line": "-3",
-      "adj_spread_odds": -102,
-      "adj_moneyline": "-148"
+      "weekday": "Thursday",
+      "spread_line": "-2.5",
+      "adj_spread_odds": -118,
+      "adj_moneyline": "-142",
+      "total_line": 46.5,
+      "over_odds": -108,
+      "under_odds": -112,
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Cincinnati Bengals",
       "date": "2024-09-15T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 2
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Atlanta Falcons",
       "date": "2024-09-22T20:20:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 3
+      "stadium": "Mercedes-Benz Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Los Angeles Chargers",
       "date": "2024-09-29T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 4
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "New Orleans Saints",
       "date": "2024-10-07T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 5
-    },
-    {
-      "opponent": "BYE",
-      "week": 6
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "San Francisco 49ers",
       "date": "2024-10-20T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 7
+      "stadium": "Levi's Stadium",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Las Vegas Raiders",
       "date": "2024-10-27T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 8
+      "stadium": "Allegiant Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "grass"
     },
     {
       "opponent": "Tampa Bay Buccaneers",
       "date": "2024-11-04T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 9
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Denver Broncos",
       "date": "2024-11-10T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 10
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Buffalo Bills",
       "date": "2024-11-17T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 11
+      "stadium": "New Era Field",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "a_turf"
     },
     {
       "opponent": "Carolina Panthers",
       "date": "2024-11-24T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 12
+      "stadium": "Bank of America Stadium",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Las Vegas Raiders",
       "date": "2024-11-29T15:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 13
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Friday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Los Angeles Chargers",
       "date": "2024-12-08T20:20:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 14
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Cleveland Browns",
       "date": "2024-12-15T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 15
+      "stadium": "FirstEnergy Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Houston Texans",
       "date": "2024-12-21T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 16
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Saturday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Pittsburgh Steelers",
       "date": "2024-12-25T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 17
+      "stadium": "Acrisure Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Wednesday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Denver Broncos",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 18
+      "stadium": "Empower Field at Mile High",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     }
   ],
   "las-vegas-raiders": [
@@ -2053,126 +3397,210 @@ const nflschedules =  {
       "date": "2024-09-08T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
+      "stadium": "SoFi Stadium",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "+3",
       "adj_spread_odds": -110,
-      "adj_moneyline": "+130"
+      "adj_moneyline": "+130",
+      "total_line": 42.5,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Baltimore Ravens",
       "date": "2024-09-15T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 2
+      "stadium": "M&T Bank Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Carolina Panthers",
       "date": "2024-09-22T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 3
+      "stadium": "Allegiant Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "grass"
     },
     {
       "opponent": "Cleveland Browns",
       "date": "2024-09-29T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 4
+      "stadium": "Allegiant Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "grass"
     },
     {
       "opponent": "Denver Broncos",
       "date": "2024-10-06T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 5
+      "stadium": "Empower Field at Mile High",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Pittsburgh Steelers",
       "date": "2024-10-13T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 6
+      "stadium": "Allegiant Stadium",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "grass"
     },
     {
       "opponent": "Los Angeles Rams",
       "date": "2024-10-20T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 7
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Kansas City Chiefs",
       "date": "2024-10-27T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 8
+      "stadium": "Allegiant Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "grass"
     },
     {
       "opponent": "Cincinnati Bengals",
       "date": "2024-11-03T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 9
-    },
-    {
-      "opponent": "BYE",
-      "week": 10
+      "stadium": "Paycor Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Miami Dolphins",
       "date": "2024-11-17T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 11
+      "stadium": "Hard Rock Stadium",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Denver Broncos",
       "date": "2024-11-24T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 12
+      "stadium": "Allegiant Stadium",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "grass"
     },
     {
       "opponent": "Kansas City Chiefs",
       "date": "2024-11-29T15:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 13
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Friday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Tampa Bay Buccaneers",
       "date": "2024-12-08T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 14
+      "stadium": "Raymond James Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Atlanta Falcons",
       "date": "2024-12-16T20:30:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 15
+      "stadium": "Allegiant Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Monday",
+      "roof": "dome",
+      "surface": "grass"
     },
     {
       "opponent": "Jacksonville Jaguars",
       "date": "2024-12-22T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 16
+      "stadium": "Allegiant Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "grass"
     },
     {
       "opponent": "New Orleans Saints",
       "date": "2024-12-29T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 17
+      "stadium": "Mercedes-Benz Superdome",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Los Angeles Chargers",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 18
+      "stadium": "Allegiant Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "grass"
     }
   ],
   "los-angeles-chargers": [
@@ -2181,126 +3609,210 @@ const nflschedules =  {
       "date": "2024-09-08T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
+      "stadium": "SoFi Stadium",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "-3",
       "adj_spread_odds": -110,
-      "adj_moneyline": "-155"
+      "adj_moneyline": "-155",
+      "total_line": 42.5,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Carolina Panthers",
       "date": "2024-09-15T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 2
+      "stadium": "Bank of America Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Pittsburgh Steelers",
       "date": "2024-09-22T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 3
+      "stadium": "Acrisure Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Kansas City Chiefs",
       "date": "2024-09-29T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 4
-    },
-    {
-      "opponent": "BYE",
-      "week": 5
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Denver Broncos",
       "date": "2024-10-13T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 6
+      "stadium": "Empower Field at Mile High",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Arizona Cardinals",
       "date": "2024-10-21T21:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 7
+      "stadium": "State Farm Stadium",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Monday",
+      "roof": "closed",
+      "surface": "grass"
     },
     {
       "opponent": "New Orleans Saints",
       "date": "2024-10-27T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 8
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Cleveland Browns",
       "date": "2024-11-03T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 9
+      "stadium": "FirstEnergy Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Tennessee Titans",
       "date": "2024-11-10T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 10
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Cincinnati Bengals",
       "date": "2024-11-17T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 11
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Baltimore Ravens",
       "date": "2024-11-25T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 12
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Monday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Atlanta Falcons",
       "date": "2024-12-01T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 13
+      "stadium": "Mercedes-Benz Stadium",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Kansas City Chiefs",
       "date": "2024-12-08T20:20:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 14
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Tampa Bay Buccaneers",
       "date": "2024-12-15T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 15
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Denver Broncos",
       "date": "2024-12-22T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 16
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "New England Patriots",
       "date": "2024-12-29T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 17
+      "stadium": "Gillette Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Las Vegas Raiders",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 18
+      "stadium": "Allegiant Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "grass"
     }
   ],
   "los-angeles-rams": [
@@ -2309,126 +3821,210 @@ const nflschedules =  {
       "date": "2024-09-08T20:20:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
+      "stadium": "Ford Field",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "+3.5",
       "adj_spread_odds": -112,
-      "adj_moneyline": "+164"
+      "adj_moneyline": "+164",
+      "total_line": 51,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "dome",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Arizona Cardinals",
       "date": "2024-09-15T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 2
+      "stadium": "State Farm Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "grass"
     },
     {
       "opponent": "San Francisco 49ers",
       "date": "2024-09-22T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 3
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Chicago Bears",
       "date": "2024-09-29T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 4
+      "stadium": "Soldier Field",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Green Bay Packers",
       "date": "2024-10-06T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 5
-    },
-    {
-      "opponent": "BYE",
-      "week": 6
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Las Vegas Raiders",
       "date": "2024-10-20T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 7
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Minnesota Vikings",
       "date": "2024-10-24T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 8
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Thursday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Seattle Seahawks",
       "date": "2024-11-03T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 9
+      "stadium": "Lumen Field",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Miami Dolphins",
       "date": "2024-11-11T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 10
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Monday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "New England Patriots",
       "date": "2024-11-17T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 11
+      "stadium": "Gillette Stadium",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Philadelphia Eagles",
       "date": "2024-11-24T20:20:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 12
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "New Orleans Saints",
       "date": "2024-12-01T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 13
+      "stadium": "Mercedes-Benz Superdome",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Buffalo Bills",
       "date": "2024-12-08T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 14
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "San Francisco 49ers",
       "date": "2024-12-12T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 15
+      "stadium": "Levi's Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New York Jets",
       "date": "2024-12-22T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 16
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Arizona Cardinals",
       "date": "2024-12-29T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 17
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Seattle Seahawks",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 18
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     }
   ],
   "miami-dolphins": [
@@ -2437,126 +4033,210 @@ const nflschedules =  {
       "date": "2024-09-08T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
+      "stadium": "Hard Rock Stadium",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "-3.5",
       "adj_spread_odds": -110,
-      "adj_moneyline": "-180"
+      "adj_moneyline": "-180",
+      "total_line": 49,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Buffalo Bills",
       "date": "2024-09-12T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 2
+      "stadium": "Hard Rock Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Seattle Seahawks",
       "date": "2024-09-22T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 3
+      "stadium": "Lumen Field",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Tennessee Titans",
       "date": "2024-09-30T19:30:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 4
+      "stadium": "Hard Rock Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New England Patriots",
       "date": "2024-10-06T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 5
-    },
-    {
-      "opponent": "BYE",
-      "week": 6
+      "stadium": "Gillette Stadium",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Indianapolis Colts",
       "date": "2024-10-20T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 7
+      "stadium": "Lucas Oil Stadium",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Arizona Cardinals",
       "date": "2024-10-27T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 8
+      "stadium": "Hard Rock Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Buffalo Bills",
       "date": "2024-11-03T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 9
+      "stadium": "New Era Field",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "a_turf"
     },
     {
       "opponent": "Los Angeles Rams",
       "date": "2024-11-11T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 10
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Monday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Las Vegas Raiders",
       "date": "2024-11-17T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 11
+      "stadium": "Hard Rock Stadium",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New England Patriots",
       "date": "2024-11-24T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 12
+      "stadium": "Hard Rock Stadium",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Green Bay Packers",
       "date": "2024-11-28T20:20:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 13
+      "stadium": "Lambeau Field",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New York Jets",
       "date": "2024-12-08T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 14
+      "stadium": "Hard Rock Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Houston Texans",
       "date": "2024-12-15T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 15
+      "stadium": "NRG Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "astroturf"
     },
     {
       "opponent": "San Francisco 49ers",
       "date": "2024-12-22T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 16
+      "stadium": "Hard Rock Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Cleveland Browns",
       "date": "2024-12-29T20:20:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 17
+      "stadium": "FirstEnergy Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New York Jets",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 18
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     }
   ],
   "minnesota-vikings": [
@@ -2565,126 +4245,210 @@ const nflschedules =  {
       "date": "2024-09-08T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
+      "stadium": "MetLife Stadium",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "-1",
       "adj_spread_odds": -110,
-      "adj_moneyline": "-118"
+      "adj_moneyline": "-118",
+      "total_line": 41.5,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "San Francisco 49ers",
       "date": "2024-09-15T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 2
+      "stadium": "U.S. Bank Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Houston Texans",
       "date": "2024-09-22T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 3
+      "stadium": "U.S. Bank Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Green Bay Packers",
       "date": "2024-09-29T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 4
+      "stadium": "Lambeau Field",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New York Jets",
       "date": "2024-10-06T09:30:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 5
-    },
-    {
-      "opponent": "BYE",
-      "week": 6
+      "stadium": "U.S. Bank Stadium",
+      "location": "Neutral",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Detroit Lions",
       "date": "2024-10-20T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 7
+      "stadium": "U.S. Bank Stadium",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Los Angeles Rams",
       "date": "2024-10-24T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 8
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Thursday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Indianapolis Colts",
       "date": "2024-11-03T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 9
+      "stadium": "U.S. Bank Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Jacksonville Jaguars",
       "date": "2024-11-10T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 10
+      "stadium": "TIAA Bank Stadium",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Tennessee Titans",
       "date": "2024-11-17T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 11
+      "stadium": "Nissan Stadium",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Chicago Bears",
       "date": "2024-11-24T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 12
+      "stadium": "Soldier Field",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Arizona Cardinals",
       "date": "2024-12-01T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 13
+      "stadium": "U.S. Bank Stadium",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Atlanta Falcons",
       "date": "2024-12-08T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 14
+      "stadium": "U.S. Bank Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Chicago Bears",
       "date": "2024-12-16T20:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 15
+      "stadium": "U.S. Bank Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Monday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Seattle Seahawks",
       "date": "2024-12-22T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 16
+      "stadium": "Lumen Field",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Green Bay Packers",
       "date": "2024-12-29T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 17
+      "stadium": "U.S. Bank Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Detroit Lions",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 18
+      "stadium": "Ford Field",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "fieldturf"
     }
   ],
   "new-england-patriots": [
@@ -2693,126 +4457,210 @@ const nflschedules =  {
       "date": "2024-09-08T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
+      "stadium": "Paycor Stadium",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "+9",
       "adj_spread_odds": -110,
-      "adj_moneyline": "+350"
+      "adj_moneyline": "+350",
+      "total_line": 43,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Seattle Seahawks",
       "date": "2024-09-15T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 2
+      "stadium": "Gillette Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "New York Jets",
       "date": "2024-09-19T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 3
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "San Francisco 49ers",
       "date": "2024-09-29T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 4
+      "stadium": "Levi's Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Miami Dolphins",
       "date": "2024-10-06T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 5
+      "stadium": "Gillette Stadium",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Houston Texans",
       "date": "2024-10-13T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 6
+      "stadium": "Gillette Stadium",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Jacksonville Jaguars",
       "date": "2024-10-20T09:30:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 7
+      "stadium": "TIAA Bank Stadium",
+      "location": "Neutral",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New York Jets",
       "date": "2024-10-27T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 8
+      "stadium": "Gillette Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Tennessee Titans",
       "date": "2024-11-03T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 9
+      "stadium": "Nissan Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Chicago Bears",
       "date": "2024-11-10T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 10
+      "stadium": "Soldier Field",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Los Angeles Rams",
       "date": "2024-11-17T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 11
+      "stadium": "Gillette Stadium",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Miami Dolphins",
       "date": "2024-11-24T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 12
+      "stadium": "Hard Rock Stadium",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Indianapolis Colts",
       "date": "2024-12-01T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 13
-    },
-    {
-      "opponent": "BYE",
-      "week": 14
+      "stadium": "Gillette Stadium",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Arizona Cardinals",
       "date": "2024-12-15T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 15
+      "stadium": "State Farm Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "grass"
     },
     {
       "opponent": "Buffalo Bills",
       "date": "2024-12-22T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 16
+      "stadium": "New Era Field",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "a_turf"
     },
     {
       "opponent": "Los Angeles Chargers",
       "date": "2024-12-29T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 17
+      "stadium": "Gillette Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Buffalo Bills",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 18
+      "stadium": "Gillette Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     }
   ],
   "new-orleans-saints": [
@@ -2821,126 +4669,210 @@ const nflschedules =  {
       "date": "2024-09-08T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
+      "stadium": "Mercedes-Benz Superdome",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "-5",
       "adj_spread_odds": -108,
-      "adj_moneyline": "-205"
+      "adj_moneyline": "-218",
+      "total_line": 40.5,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Dallas Cowboys",
       "date": "2024-09-15T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 2
+      "stadium": "AT&T Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Philadelphia Eagles",
       "date": "2024-09-22T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 3
+      "stadium": "Mercedes-Benz Superdome",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Atlanta Falcons",
       "date": "2024-09-29T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 4
+      "stadium": "Mercedes-Benz Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Kansas City Chiefs",
       "date": "2024-10-07T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 5
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Tampa Bay Buccaneers",
       "date": "2024-10-13T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 6
+      "stadium": "Mercedes-Benz Superdome",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Denver Broncos",
       "date": "2024-10-17T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 7
+      "stadium": "Mercedes-Benz Superdome",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Thursday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Los Angeles Chargers",
       "date": "2024-10-27T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 8
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Carolina Panthers",
       "date": "2024-11-03T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 9
+      "stadium": "Bank of America Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Atlanta Falcons",
       "date": "2024-11-10T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 10
+      "stadium": "Mercedes-Benz Superdome",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Cleveland Browns",
       "date": "2024-11-17T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 11
-    },
-    {
-      "opponent": "BYE",
-      "week": 12
+      "stadium": "Mercedes-Benz Superdome",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Los Angeles Rams",
       "date": "2024-12-01T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 13
+      "stadium": "Mercedes-Benz Superdome",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "New York Giants",
       "date": "2024-12-08T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 14
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Washington Commanders",
       "date": "2024-12-15T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 15
+      "stadium": "Mercedes-Benz Superdome",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Green Bay Packers",
       "date": "2024-12-23T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 16
+      "stadium": "Lambeau Field",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Las Vegas Raiders",
       "date": "2024-12-29T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 17
+      "stadium": "Mercedes-Benz Superdome",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Tampa Bay Buccaneers",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 18
+      "stadium": "Raymond James Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     }
   ],
   "new-york-giants": [
@@ -2949,126 +4881,210 @@ const nflschedules =  {
       "date": "2024-09-08T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
+      "stadium": "MetLife Stadium",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "+1",
       "adj_spread_odds": -110,
-      "adj_moneyline": "-102"
+      "adj_moneyline": "-102",
+      "total_line": 41.5,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Washington Commanders",
       "date": "2024-09-15T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 2
+      "stadium": "FedExField",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Cleveland Browns",
       "date": "2024-09-22T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 3
+      "stadium": "FirstEnergy Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Dallas Cowboys",
       "date": "2024-09-26T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 4
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Seattle Seahawks",
       "date": "2024-10-06T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 5
+      "stadium": "Lumen Field",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Cincinnati Bengals",
       "date": "2024-10-13T20:20:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 6
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Philadelphia Eagles",
       "date": "2024-10-20T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 7
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Pittsburgh Steelers",
       "date": "2024-10-28T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 8
+      "stadium": "Acrisure Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Washington Commanders",
       "date": "2024-11-03T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 9
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Carolina Panthers",
       "date": "2024-11-10T09:30:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 10
-    },
-    {
-      "opponent": "BYE",
-      "week": 11
+      "stadium": "Bank of America Stadium",
+      "location": "Neutral",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Tampa Bay Buccaneers",
       "date": "2024-11-24T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 12
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Dallas Cowboys",
       "date": "2024-11-28T16:30:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 13
+      "stadium": "AT&T Stadium",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Thursday",
+      "roof": "closed",
+      "surface": "matrixturf"
     },
     {
       "opponent": "New Orleans Saints",
       "date": "2024-12-08T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 14
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Baltimore Ravens",
       "date": "2024-12-15T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 15
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Atlanta Falcons",
       "date": "2024-12-22T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 16
+      "stadium": "Mercedes-Benz Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Indianapolis Colts",
       "date": "2024-12-29T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 17
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Philadelphia Eagles",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 18
+      "stadium": "Lincoln Financial Field",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     }
   ],
   "new-york-jets": [
@@ -3077,126 +5093,210 @@ const nflschedules =  {
       "date": "2024-09-09T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
+      "stadium": "Levi's Stadium",
+      "location": "Home",
       "week": 1,
+      "weekday": "Monday",
       "spread_line": "+5",
       "adj_spread_odds": -112,
-      "adj_moneyline": "+180"
+      "adj_moneyline": "+180",
+      "total_line": 44.5,
+      "over_odds": -108,
+      "under_odds": -112,
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Tennessee Titans",
       "date": "2024-09-15T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 2
+      "stadium": "Nissan Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New England Patriots",
       "date": "2024-09-19T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 3
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Denver Broncos",
       "date": "2024-09-29T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 4
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Minnesota Vikings",
       "date": "2024-10-06T09:30:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 5
+      "stadium": "U.S. Bank Stadium",
+      "location": "Neutral",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Buffalo Bills",
       "date": "2024-10-14T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 6
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Pittsburgh Steelers",
       "date": "2024-10-20T20:20:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 7
+      "stadium": "Acrisure Stadium",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New England Patriots",
       "date": "2024-10-27T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 8
+      "stadium": "Gillette Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Houston Texans",
       "date": "2024-10-31T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 9
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Arizona Cardinals",
       "date": "2024-11-10T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 10
+      "stadium": "State Farm Stadium",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "grass"
     },
     {
       "opponent": "Indianapolis Colts",
       "date": "2024-11-17T20:20:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 11
-    },
-    {
-      "opponent": "BYE",
-      "week": 12
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Seattle Seahawks",
       "date": "2024-12-01T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 13
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Miami Dolphins",
       "date": "2024-12-08T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 14
+      "stadium": "Hard Rock Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Jacksonville Jaguars",
       "date": "2024-12-15T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 15
+      "stadium": "TIAA Bank Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Los Angeles Rams",
       "date": "2024-12-22T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 16
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Buffalo Bills",
       "date": "2024-12-29T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 17
+      "stadium": "New Era Field",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "a_turf"
     },
     {
       "opponent": "Miami Dolphins",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 18
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     }
   ],
   "philadelphia-eagles": [
@@ -3205,126 +5305,210 @@ const nflschedules =  {
       "date": "2024-09-06T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
+      "stadium": "Lincoln Financial Field",
+      "location": "Neutral",
       "week": 1,
+      "weekday": "Friday",
       "spread_line": "-2",
       "adj_spread_odds": -110,
-      "adj_moneyline": "-125"
+      "adj_moneyline": "-125",
+      "total_line": 48.5,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Atlanta Falcons",
       "date": "2024-09-16T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 2
+      "stadium": "Lincoln Financial Field",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New Orleans Saints",
       "date": "2024-09-22T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 3
+      "stadium": "Mercedes-Benz Superdome",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Tampa Bay Buccaneers",
       "date": "2024-09-29T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 4
-    },
-    {
-      "opponent": "BYE",
-      "week": 5
+      "stadium": "Raymond James Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Cleveland Browns",
       "date": "2024-10-13T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 6
+      "stadium": "Lincoln Financial Field",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New York Giants",
       "date": "2024-10-20T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 7
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Cincinnati Bengals",
       "date": "2024-10-27T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 8
+      "stadium": "Paycor Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Jacksonville Jaguars",
       "date": "2024-11-03T20:20:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 9
+      "stadium": "Lincoln Financial Field",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Dallas Cowboys",
       "date": "2024-11-10T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 10
+      "stadium": "AT&T Stadium",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Washington Commanders",
       "date": "2024-11-14T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 11
+      "stadium": "Lincoln Financial Field",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Los Angeles Rams",
       "date": "2024-11-24T20:20:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 12
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Baltimore Ravens",
       "date": "2024-12-01T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 13
+      "stadium": "M&T Bank Stadium",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Carolina Panthers",
       "date": "2024-12-08T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 14
+      "stadium": "Lincoln Financial Field",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Pittsburgh Steelers",
       "date": "2024-12-15T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 15
+      "stadium": "Lincoln Financial Field",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Washington Commanders",
       "date": "2024-12-22T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 16
+      "stadium": "FedExField",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Dallas Cowboys",
       "date": "2024-12-29T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 17
+      "stadium": "Lincoln Financial Field",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New York Giants",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 18
+      "stadium": "Lincoln Financial Field",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     }
   ],
   "pittsburgh-steelers": [
@@ -3333,126 +5517,210 @@ const nflschedules =  {
       "date": "2024-09-08T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
+      "stadium": "Mercedes-Benz Stadium",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "+2",
       "adj_spread_odds": -110,
-      "adj_moneyline": "+110"
+      "adj_moneyline": "+110",
+      "total_line": 42.5,
+      "over_odds": -115,
+      "under_odds": -105,
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Denver Broncos",
       "date": "2024-09-15T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 2
+      "stadium": "Empower Field at Mile High",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Los Angeles Chargers",
       "date": "2024-09-22T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 3
+      "stadium": "Acrisure Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Indianapolis Colts",
       "date": "2024-09-29T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 4
+      "stadium": "Lucas Oil Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Dallas Cowboys",
       "date": "2024-10-06T20:20:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 5
+      "stadium": "Acrisure Stadium",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Las Vegas Raiders",
       "date": "2024-10-13T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 6
+      "stadium": "Allegiant Stadium",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "grass"
     },
     {
       "opponent": "New York Jets",
       "date": "2024-10-20T20:20:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 7
+      "stadium": "Acrisure Stadium",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New York Giants",
       "date": "2024-10-28T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 8
-    },
-    {
-      "opponent": "BYE",
-      "week": 9
+      "stadium": "Acrisure Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Washington Commanders",
       "date": "2024-11-10T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 10
+      "stadium": "FedExField",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Baltimore Ravens",
       "date": "2024-11-17T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 11
+      "stadium": "Acrisure Stadium",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Cleveland Browns",
       "date": "2024-11-21T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 12
+      "stadium": "FirstEnergy Stadium",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Cincinnati Bengals",
       "date": "2024-12-01T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 13
+      "stadium": "Paycor Stadium",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Cleveland Browns",
       "date": "2024-12-08T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 14
+      "stadium": "Acrisure Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Philadelphia Eagles",
       "date": "2024-12-15T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 15
+      "stadium": "Lincoln Financial Field",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Baltimore Ravens",
       "date": "2024-12-21T16:30:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 16
+      "stadium": "M&T Bank Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Saturday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Kansas City Chiefs",
       "date": "2024-12-25T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 17
+      "stadium": "Acrisure Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Wednesday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Cincinnati Bengals",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 18
+      "stadium": "Acrisure Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     }
   ],
   "san-francisco-49ers": [
@@ -3461,126 +5729,210 @@ const nflschedules =  {
       "date": "2024-09-09T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
+      "stadium": "Levi's Stadium",
+      "location": "Home",
       "week": 1,
+      "weekday": "Monday",
       "spread_line": "-5",
       "adj_spread_odds": -108,
-      "adj_moneyline": "-218"
+      "adj_moneyline": "-218",
+      "total_line": 44.5,
+      "over_odds": -108,
+      "under_odds": -112,
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Minnesota Vikings",
       "date": "2024-09-15T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 2
+      "stadium": "U.S. Bank Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Los Angeles Rams",
       "date": "2024-09-22T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 3
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "New England Patriots",
       "date": "2024-09-29T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 4
+      "stadium": "Levi's Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Arizona Cardinals",
       "date": "2024-10-06T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 5
+      "stadium": "Levi's Stadium",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Seattle Seahawks",
       "date": "2024-10-10T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 6
+      "stadium": "Lumen Field",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Kansas City Chiefs",
       "date": "2024-10-20T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 7
+      "stadium": "Levi's Stadium",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Dallas Cowboys",
       "date": "2024-10-27T20:20:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 8
-    },
-    {
-      "opponent": "BYE",
-      "week": 9
+      "stadium": "Levi's Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Tampa Bay Buccaneers",
       "date": "2024-11-10T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 10
+      "stadium": "Raymond James Stadium",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Seattle Seahawks",
       "date": "2024-11-17T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 11
+      "stadium": "Levi's Stadium",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Green Bay Packers",
       "date": "2024-11-24T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 12
+      "stadium": "Lambeau Field",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Buffalo Bills",
       "date": "2024-12-01T20:20:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 13
+      "stadium": "New Era Field",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "a_turf"
     },
     {
       "opponent": "Chicago Bears",
       "date": "2024-12-08T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 14
+      "stadium": "Levi's Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Los Angeles Rams",
       "date": "2024-12-12T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 15
+      "stadium": "Levi's Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Miami Dolphins",
       "date": "2024-12-22T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 16
+      "stadium": "Hard Rock Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Detroit Lions",
       "date": "2024-12-30T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 17
+      "stadium": "Levi's Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Arizona Cardinals",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 18
+      "stadium": "State Farm Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "grass"
     }
   ],
   "seattle-seahawks": [
@@ -3589,126 +5941,210 @@ const nflschedules =  {
       "date": "2024-09-08T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
+      "stadium": "Lumen Field",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "-4.5",
       "adj_spread_odds": -115,
-      "adj_moneyline": "-205"
+      "adj_moneyline": "-205",
+      "total_line": 42.5,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "New England Patriots",
       "date": "2024-09-15T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 2
+      "stadium": "Gillette Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Miami Dolphins",
       "date": "2024-09-22T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 3
+      "stadium": "Lumen Field",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Detroit Lions",
       "date": "2024-09-30T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 4
+      "stadium": "Ford Field",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Monday",
+      "roof": "dome",
+      "surface": "fieldturf"
     },
     {
       "opponent": "New York Giants",
       "date": "2024-10-06T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 5
+      "stadium": "Lumen Field",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "San Francisco 49ers",
       "date": "2024-10-10T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 6
+      "stadium": "Lumen Field",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Atlanta Falcons",
       "date": "2024-10-20T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 7
+      "stadium": "Mercedes-Benz Stadium",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Buffalo Bills",
       "date": "2024-10-27T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 8
+      "stadium": "Lumen Field",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Los Angeles Rams",
       "date": "2024-11-03T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 9
-    },
-    {
-      "opponent": "BYE",
-      "week": 10
+      "stadium": "Lumen Field",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "San Francisco 49ers",
       "date": "2024-11-17T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 11
+      "stadium": "Levi's Stadium",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Arizona Cardinals",
       "date": "2024-11-24T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 12
+      "stadium": "Lumen Field",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "New York Jets",
       "date": "2024-12-01T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 13
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Arizona Cardinals",
       "date": "2024-12-08T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 14
+      "stadium": "State Farm Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "grass"
     },
     {
       "opponent": "Green Bay Packers",
       "date": "2024-12-15T20:20:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 15
+      "stadium": "Lumen Field",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Minnesota Vikings",
       "date": "2024-12-22T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 16
+      "stadium": "Lumen Field",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Chicago Bears",
       "date": "2024-12-26T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 17
+      "stadium": "Soldier Field",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Los Angeles Rams",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 18
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     }
   ],
   "tampa-bay-buccaneers": [
@@ -3717,126 +6153,210 @@ const nflschedules =  {
       "date": "2024-09-08T16:25:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
+      "stadium": "Raymond James Stadium",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "-3.5",
       "adj_spread_odds": -110,
-      "adj_moneyline": "-185"
+      "adj_moneyline": "-192",
+      "total_line": 41.5,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Detroit Lions",
       "date": "2024-09-15T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 2
+      "stadium": "Ford Field",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Denver Broncos",
       "date": "2024-09-22T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 3
+      "stadium": "Raymond James Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Philadelphia Eagles",
       "date": "2024-09-29T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 4
+      "stadium": "Raymond James Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Atlanta Falcons",
       "date": "2024-10-03T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 5
+      "stadium": "Mercedes-Benz Stadium",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Thursday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "New Orleans Saints",
       "date": "2024-10-13T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 6
+      "stadium": "Mercedes-Benz Superdome",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Baltimore Ravens",
       "date": "2024-10-21T20:15:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 7
+      "stadium": "Raymond James Stadium",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Atlanta Falcons",
       "date": "2024-10-27T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 8
+      "stadium": "Raymond James Stadium",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Kansas City Chiefs",
       "date": "2024-11-04T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 9
+      "stadium": "GEHA Field at Arrowhead Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "San Francisco 49ers",
       "date": "2024-11-10T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 10
-    },
-    {
-      "opponent": "BYE",
-      "week": 11
+      "stadium": "Raymond James Stadium",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New York Giants",
       "date": "2024-11-24T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 12
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Carolina Panthers",
       "date": "2024-12-01T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 13
+      "stadium": "Bank of America Stadium",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Las Vegas Raiders",
       "date": "2024-12-08T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 14
+      "stadium": "Raymond James Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Los Angeles Chargers",
       "date": "2024-12-15T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 15
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Dallas Cowboys",
       "date": "2024-12-22T20:20:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 16
+      "stadium": "AT&T Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Carolina Panthers",
       "date": "2024-12-29T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 17
+      "stadium": "Raymond James Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New Orleans Saints",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 18
+      "stadium": "Raymond James Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     }
   ],
   "tennessee-titans": [
@@ -3845,126 +6365,210 @@ const nflschedules =  {
       "date": "2024-09-08T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
+      "stadium": "Soldier Field",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "+4",
       "adj_spread_odds": -108,
-      "adj_moneyline": "+164"
+      "adj_moneyline": "+164",
+      "total_line": 43,
+      "over_odds": -112,
+      "under_odds": -108,
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New York Jets",
       "date": "2024-09-15T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 2
+      "stadium": "Nissan Stadium",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Green Bay Packers",
       "date": "2024-09-22T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 3
+      "stadium": "Nissan Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Miami Dolphins",
       "date": "2024-09-30T19:30:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 4
-    },
-    {
-      "opponent": "BYE",
-      "week": 5
+      "stadium": "Hard Rock Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Indianapolis Colts",
       "date": "2024-10-13T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 6
+      "stadium": "Nissan Stadium",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Buffalo Bills",
       "date": "2024-10-20T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 7
+      "stadium": "New Era Field",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "a_turf"
     },
     {
       "opponent": "Detroit Lions",
       "date": "2024-10-27T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 8
+      "stadium": "Ford Field",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "fieldturf"
     },
     {
       "opponent": "New England Patriots",
       "date": "2024-11-03T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 9
+      "stadium": "Nissan Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Los Angeles Chargers",
       "date": "2024-11-10T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 10
+      "stadium": "SoFi Stadium",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "matrixturf"
     },
     {
       "opponent": "Minnesota Vikings",
       "date": "2024-11-17T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 11
+      "stadium": "Nissan Stadium",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Houston Texans",
       "date": "2024-11-24T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 12
+      "stadium": "NRG Stadium",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "astroturf"
     },
     {
       "opponent": "Washington Commanders",
       "date": "2024-12-01T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 13
+      "stadium": "FedExField",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Jacksonville Jaguars",
       "date": "2024-12-08T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 14
+      "stadium": "Nissan Stadium",
+      "location": "Home",
+      "week": 14,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Cincinnati Bengals",
       "date": "2024-12-15T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 15
+      "stadium": "Nissan Stadium",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Indianapolis Colts",
       "date": "2024-12-22T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 16
+      "stadium": "Lucas Oil Stadium",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Jacksonville Jaguars",
       "date": "2024-12-29T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 17
+      "stadium": "TIAA Bank Stadium",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Houston Texans",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 18
+      "stadium": "Nissan Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     }
   ],
   "washington-commanders": [
@@ -3973,126 +6577,210 @@ const nflschedules =  {
       "date": "2024-09-08T16:25:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
+      "stadium": "Raymond James Stadium",
+      "location": "Home",
       "week": 1,
+      "weekday": "Sunday",
       "spread_line": "+3.5",
       "adj_spread_odds": -110,
-      "adj_moneyline": "+154"
+      "adj_moneyline": "+160",
+      "total_line": 41.5,
+      "over_odds": -110,
+      "under_odds": -110,
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New York Giants",
       "date": "2024-09-15T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 2
+      "stadium": "FedExField",
+      "location": "Home",
+      "week": 2,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Cincinnati Bengals",
       "date": "2024-09-23T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 3
+      "stadium": "Paycor Stadium",
+      "location": "Home",
+      "week": 3,
+      "weekday": "Monday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Arizona Cardinals",
       "date": "2024-09-29T16:05:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 4
+      "stadium": "State Farm Stadium",
+      "location": "Home",
+      "week": 4,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "grass"
     },
     {
       "opponent": "Cleveland Browns",
       "date": "2024-10-06T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 5
+      "stadium": "FedExField",
+      "location": "Home",
+      "week": 5,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Baltimore Ravens",
       "date": "2024-10-13T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 6
+      "stadium": "M&T Bank Stadium",
+      "location": "Home",
+      "week": 6,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Carolina Panthers",
       "date": "2024-10-20T16:05:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 7
+      "stadium": "FedExField",
+      "location": "Home",
+      "week": 7,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Chicago Bears",
       "date": "2024-10-27T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 8
+      "stadium": "FedExField",
+      "location": "Home",
+      "week": 8,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New York Giants",
       "date": "2024-11-03T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 9
+      "stadium": "MetLife Stadium",
+      "location": "Home",
+      "week": 9,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "fieldturf"
     },
     {
       "opponent": "Pittsburgh Steelers",
       "date": "2024-11-10T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 10
+      "stadium": "FedExField",
+      "location": "Home",
+      "week": 10,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Philadelphia Eagles",
       "date": "2024-11-14T20:15:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 11
+      "stadium": "Lincoln Financial Field",
+      "location": "Home",
+      "week": 11,
+      "weekday": "Thursday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Dallas Cowboys",
       "date": "2024-11-24T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 12
+      "stadium": "FedExField",
+      "location": "Home",
+      "week": 12,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Tennessee Titans",
       "date": "2024-12-01T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 13
-    },
-    {
-      "opponent": "BYE",
-      "week": 14
+      "stadium": "FedExField",
+      "location": "Home",
+      "week": 13,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "New Orleans Saints",
       "date": "2024-12-15T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 15
+      "stadium": "Mercedes-Benz Superdome",
+      "location": "Home",
+      "week": 15,
+      "weekday": "Sunday",
+      "roof": "dome",
+      "surface": "sportturf"
     },
     {
       "opponent": "Philadelphia Eagles",
       "date": "2024-12-22T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 16
+      "stadium": "FedExField",
+      "location": "Home",
+      "week": 16,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Atlanta Falcons",
       "date": "2024-12-29T13:00:00Z",
       "isHomeGame": true,
       "home_or_away": "vs",
-      "week": 17
+      "stadium": "FedExField",
+      "location": "Home",
+      "week": 17,
+      "weekday": "Sunday",
+      "roof": "outdoors",
+      "surface": "grass"
     },
     {
       "opponent": "Dallas Cowboys",
       "date": "2025-01-05T13:00:00Z",
       "isHomeGame": false,
       "home_or_away": "@",
-      "week": 18
+      "stadium": "AT&T Stadium",
+      "location": "Home",
+      "week": 18,
+      "weekday": "Sunday",
+      "roof": "closed",
+      "surface": "matrixturf"
     }
   ]
 } ;

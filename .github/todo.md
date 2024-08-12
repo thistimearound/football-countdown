@@ -4,7 +4,7 @@
 ### v0.8
 - [X] on index.html and team.html show spread_line as - for favorite and + for underdog
 - [ ] on team.html show moneyline as - for favorite and + for underdog
-- [ ] on team.html putting betting details into Betting analysis placeholder
+- [O] on team.html putting betting details into Betting analysis placeholder
     * https://nflreadr.nflverse.com/articles/dictionary_schedules.html
 - [ ] on index.html and team.html show current record
     * [ ] show current record when 0-0
@@ -39,4 +39,4 @@
     * and/or if the INT was ~around the same range as an expected punt (>40yds)
 - [ ] Look at current game score conditions vs. final score
 - [ ] analyze injury impacts by position, snaps, etc.
-- [ ] add to betting analysis
+- [ ] Expand Betting analysis
