@@ -4,14 +4,14 @@
 ### v0.8
 - [ ] on index.html and team.html show current record
     * [ ] show current record when 0-0
-- [ ] update cfbfastR.r to output bye weeks
+- [O] update cfbfastR.r to output bye weeks
     * output data from cfbfastR.r
-- [ ] create job/DAG to run nflfastR.r and cfbfastR.r on a schedule
 
 ### v0.9
 - [ ] look into affiliate links and adds
 - [ ] add banner adds: https://github.com/orgs/community/discussions/22016
-- [ ] give this thing a real name
+- [ ] give this thing a real name: NextBet? BetDown? Countdown to Degeneracy?
+   * the other side of the ball?
 - [ ] setup a web domain and service
 
 ### v1.0
@@ -19,8 +19,10 @@
 - [ ] add weather data as emoji/icon to weather place holder
 - [ ] mouse over weather data w/ more details
 - [ ] input weather details into betting analysis
+    * data is feeding from nflfastR.r *after* the game is played and the library is updated, not in advance of games
 - [ ] add playoff odds, eliminated, clinched, etc.
 - [ ] scrape notable injuries and add to betting analyis placeholder
+    * data appears available via nflverse packages
 
 ### Project Reading
 - [ ] Check out https://docs.astral.sh/ruff/faq/#how-does-ruff-determine-which-of-my-imports-are-first-party-third-party-etc
@@ -35,4 +37,5 @@
     * and/or if the INT was ~around the same range as an expected punt (>40yds)
 - [ ] Look at current game score conditions vs. final score
 - [ ] analyze injury impacts by position, snaps, etc.
-- [ ] Expand Betting analysis
+- [ ] Expand Betting analysis to be dynamic and with detailed information on opponents
+    * likely need to add output data in schedules that indicates opponents' odds, etc.

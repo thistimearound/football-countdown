@@ -1,9 +1,9 @@
 # Load necessary libraries
+library(nflreadr)
+library(nflplotR)
 library(tidyverse)
 library(tidyr)
 library(ggrepel)
-library(nflreadr)
-library(nflplotR)
 library(lubridate)
 library(jsonlite)
 library(tibble)
@@ -26,7 +26,7 @@ if (!is.null(schedule_data)) {
 }
 
 # Replace all instances of "Invalid Number" with "NA"
-team_schedules <- data.frame(lapply(team_schedules, function(x) {
+schedule_data <- data.frame(lapply(schedule_data, function(x) {
   gsub("Invalid Number", "NA", x)
 }))
 
