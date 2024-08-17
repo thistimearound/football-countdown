@@ -1,11 +1,11 @@
 # Load necessary libraries
-library(nflreadr)
+library(nflverse)
 library(tidyverse)
 library(dplyr) # Includes dplyr, tidyr, tibble, etc.
 library(lubridate)
 library(jsonlite)
 
-# prevent scientific notation
+# Prevent scientific notation
 options(scipen = 9999)
 
 # Load NFL schedule data for 2024
@@ -211,8 +211,22 @@ view(team_schedules)
 # Convert to JSON-like structure
 team_schedules_json <- jsonlite::toJSON(team_schedules, pretty = TRUE, auto_unbox = TRUE) # nolint: line_length_linter
 
-# Write to file
-writeLines(paste("const nflschedules = ", team_schedules_json, ";"), "nfl-schedules.js") # nolint: line_length_linter
+# Get the current date and time
+current_time <- Sys.time()
 
-# View the resulting JavaScript
-cat(paste("const nflschedules = ", team_schedules_json, ";"))
+# Write to file with timestamp
+writeLines(
+  paste(
+    "// Last updated:", current_time,
+    "\nconst nflschedules = ", team_schedules_json, ";"
+  ),
+  "nfl-schedules.js"
+)
+
+# View the resulting JavaScript with timestamp
+cat(
+  paste(
+    "// Last updated:", current_time,
+    "\nconst nflschedules = ", team_schedules_json, ";"
+  )
+)
