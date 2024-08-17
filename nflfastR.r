@@ -1,13 +1,12 @@
 # Load necessary libraries
 library(nflreadr)
-library(nflplotR)
 library(tidyverse)
-library(tidyr)
-library(ggrepel)
+library(dplyr) # Includes dplyr, tidyr, tibble, etc.
 library(lubridate)
 library(jsonlite)
-library(tibble)
-library(dplyr)
+
+# prevent scientific notation
+options(scipen = 9999)
 
 # Load NFL schedule data for 2024
 schedule_data <- tryCatch(
@@ -26,9 +25,8 @@ if (!is.null(schedule_data)) {
 }
 
 # Replace all instances of "Invalid Number" with "NA"
-schedule_data <- data.frame(lapply(schedule_data, function(x) {
-  gsub("Invalid Number", "NA", x)
-}))
+schedule_data <- schedule_data %>%
+  mutate(across(everything(), ~ gsub("Invalid Number", "NA", .)))
 
 # Define the mapping between team abbreviations and full names
 team_name_mapping <- list(
@@ -87,7 +85,7 @@ schedule_cleaned <- schedule_data %>%
     home_team,
     home_score,
     location,
-    result, # The number of points the home team scored minus the number of points the visiting team scored. Equals h_score - v_score. Is NA for games which haven't yet been played. Convenient for evaluating against the spread bets. # nolint: line_length_linter
+    result, # The sum of pts the home team scored - points visiting team scored. Equals h_score - v_score. Is NA for games which haven't yet been played. Convenient for evaluating against the spread bets. # nolint: line_length_linter
     total, # The sum of each team's score in the game. Equals h_score + v_score. Is NA for games which haven't yet been played. Convenient for evaluating over/under total bets. # nolint: line_length_linter
     away_moneyline,
     home_moneyline,
@@ -127,8 +125,8 @@ process_games <- function(schedule, team_col, opponent_col, score_col, is_home_g
       opponent = sapply(!!sym(opponent_col), format_team_name),
       score = !!sym(score_col),
       isHomeGame = is_home_game,
-      home_or_away = as.character(home_or_away_symbol), # Ensure home_or_away is character # nolint: line_length_linter.
-      adj_spread_odds = as.integer(!!sym(spread_odds_col)), # Ensure adj_spread_odds is integer # nolint: line_length_linter
+      home_or_away = as.character(home_or_away_symbol), # Ensure is character
+      adj_spread_odds = as.integer(!!sym(spread_odds_col)), # Ensure is integer
       adj_moneyline = !!sym(moneyline_col),
       spread_line = ifelse(spread_line < 0, paste0(ifelse(is_home_game, "+", "-"), abs(spread_line)), paste0(ifelse(is_home_game, "-", "+"), abs(spread_line))), # nolint: line_length_linter
       adj_moneyline = ifelse(adj_moneyline >= 0, paste0("+", adj_moneyline), as.character(adj_moneyline)) # nolint: line_length_linter

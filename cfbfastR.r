@@ -34,6 +34,7 @@ schedule_data <- data.frame(lapply(schedule_data, function(x) {
 view(schedule_data)
 
 # Define the mapping between team abbreviations and full names
+# commented out for now
 "
 team_name_mapping <- list(
   afa = 'air-force-falcons',
@@ -319,13 +320,13 @@ team_name_mapping <- list(
   win = 'winthrop-eagles',
   ws = 'wichita-state-shockers',
 )
-"
 
 # Create a reverse mapping for team names
 reverse_team_name_mapping <- setNames(
-  gsub("-", " ", sapply(team_name_mapping, function(x) tools::toTitleCase(x))),
+  gsub('-', ' ', sapply(team_name_mapping, function(x) tools::toTitleCase(x))),
   team_name_mapping
 )
+"
 
 # Clean and process the data
 schedule_cleaned <- schedule_data %>%
