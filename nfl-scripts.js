@@ -40,12 +40,6 @@ function getCountdown(targetDate) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const conferenceDivider = document.querySelector(".conference-divider");
-    if (conferenceDivider) {
-        const contentHeight = document.body.scrollHeight;
-        conferenceDivider.style.height = `${contentHeight}px`;
-    };
-
     const DIVISION_NAMES = new Map([
         [0, "North"],
         [1, "East"],
@@ -123,19 +117,25 @@ document.addEventListener("DOMContentLoaded", () => {
             const teamLink = document.createElement('a');
             teamLink.href = `team.html?team=${encodeURIComponent(team.name)}`;
             teamLink.className = 'team-link';
-        
-            let nextGame = nflschedules ? getNextGameDate(team.class) : '';
-            if (nextGame && nextGame.opponent !== 'BYE') {
-                teamLink.innerHTML = `<strong>${team.name}</strong> <strong>(${nextGame.spread_line})</strong>`;
+            teamLink.innerHTML = `<strong>${team.name}</strong>`;
+    
+            // Add cumulative record inside the teamLink
+            const recordDiv = document.createElement('div');
+            recordDiv.className = 'record';
+            const cumulativeRecord = nflschedules[team.class].find(game => game.opponent === "Cumulative Record");
+            if (cumulativeRecord) {
+                recordDiv.textContent = `(${cumulativeRecord.wins}-${cumulativeRecord.losses}-${cumulativeRecord.ties})`;
             } else {
-                teamLink.innerHTML = `<strong>${team.name}</strong>`;
+                recordDiv.textContent = '(0-0-0)';
             }
-        
+            teamLink.appendChild(recordDiv);
+    
             teamElement.appendChild(teamLink);
-        
+    
             let countdownDiv = document.createElement('div');
             countdownDiv.className = 'countdown';
         
+            const nextGame = nflschedules ? getNextGameDate(team.class) : '';
             if (nextGame) {
                 if (nextGame.opponent === 'BYE') {
                     countdownDiv.innerHTML = `Week ${nextGame.week}: BYE`;
@@ -147,9 +147,10 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         
             teamElement.appendChild(countdownDiv);
+    
             divisionContainer.appendChild(teamElement);
         });
-
+    
         setInterval(() => {
             const countdownDivs = divisionContainer.getElementsByClassName('countdown');
             for (let i = 0; i < countdownDivs.length; i++) {

@@ -54,12 +54,22 @@
                     header.classList.add('team-header', teamClass);
                     document.title = `${teamName} Schedule`;
 
-                    // Update the schedule heading to include the team name
-                    scheduleHeadingElem.textContent = `${teamName} Schedule`;
-
                     const schedule = nflschedules[teamClass];
 
                     if (Array.isArray(schedule) && schedule.length) {
+                        // Calculate the current record
+                        let wins = 0, losses = 0, ties = 0;
+                        schedule.forEach(game => {
+                            if (game.opponent === "Cumulative Record") {
+                                wins = game.wins || 0;
+                                losses = game.losses || 0;
+                                ties = game.ties || 0;
+                            }
+                        });
+
+                        // Update the schedule heading to include the team name and current record
+                        scheduleHeadingElem.textContent = `${teamName} Schedule (Current Record: ${wins}-${losses}-${ties})`;
+
                         // If there are upcoming games, iterate through the schedule and display each game
                         schedule.forEach(game => {
                             if (game.opponent === "Cumulative Record") {
@@ -148,7 +158,7 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 NextBet</p>
+        <p>&copy; 2024 The Other Side of the Ball</p>
     </footer>
 </body>
 </html>
