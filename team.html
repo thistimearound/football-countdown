@@ -80,25 +80,35 @@
                                     ${gameDate.toLocaleString()}
                                     <div class="countdown" id="countdown-${gameDate.getTime()}"></div>
                                 `;
+
                                 updateCountdown(gameDate, `countdown-${gameDate.getTime()}`);
                                 const intervalId = setInterval(() => updateCountdown(gameDate, `countdown-${gameDate.getTime()}`), 1000);
                             }
                             const weekDiv = document.createElement('div');
                             weekDiv.className = 'week-number';
                             weekDiv.textContent = `Week ${game.week}`;
+
                             const weatherDiv = document.createElement('div');
                             weatherDiv.className = 'weather-info';
                             weatherDiv.textContent = 'Weather Info';
+
+                            // Define spread_line and adj_moneyline before using them
+                            const spread_line = game.spread_line >= 0 ? `+${game.spread_line}` : game.spread_line;
+                            const adj_moneyline = game.adj_moneyline >= 0 ? `+${game.adj_moneyline}` : game.adj_moneyline;
+
                             // Display the betting analysis for the game
                             const bettingDiv = document.createElement('div');
                             bettingDiv.className = 'betting-analysis';
-                            bettingDiv.textContent = `Betting Analysis: In Week ${game.week} the ${teamName} ${game.isHomeGame ? 'host the' : 'travel to the'} ${game.opponent} in ${game.stadium}. The current spread is ${game.spread_line || 'not set yet'} with ${teamName} odds to cover ${game.adj_spread_odds || 'not set yet'}. The point total is ${game.total_line || 'not set yet'}, ${game.over_odds || 'NA'} Over / ${game.under_odds || 'NA'} Under. The moneyline is ${game.adj_moneyline || 'not set yet'} for ${teamName} to win outright.`;
+                            bettingDiv.textContent = `Betting Analysis: In Week ${game.week} the ${teamName} ${game.isHomeGame ? 'host the' : 'travel to the'} ${game.opponent} in ${game.stadium}. The current spread is ${spread_line || 'not set yet'} with ${teamName} odds to cover ${game.adj_spread_odds || 'not set yet'}. The point total is ${game.total_line || 'not set yet'}, ${game.over_odds || 'NA'} Over / ${game.under_odds || 'NA'} Under. The moneyline is ${adj_moneyline || 'not set yet'} for ${teamName} to win outright.`;
+
                             const containerDiv = document.createElement('div');
                             containerDiv.className = 'game-container';
                             containerDiv.appendChild(weekDiv);
                             containerDiv.appendChild(gameDiv);
                             containerDiv.appendChild(weatherDiv);
                             containerDiv.appendChild(bettingDiv);
+
+                            // Append the gameDiv to the schedule container
                             scheduleContainer.appendChild(containerDiv);
                         });
                     } else {

@@ -3,7 +3,7 @@ function getNextGameDate(teamClass) {
 
     if (!schedule) {
         console.error(`Schedule not found for team class: ${teamClass}`);
-        return { date: null, opponent: 'Unknown', home_or_away: '', spread_line: null, adj_spread_odds: null };
+        return { date: '', opponent: 'Unknown', home_or_away: '', spread_line: '', adj_spread_odds: '', adj_moneyline: '' };
     }
 
     const now = new Date();
@@ -11,17 +11,19 @@ function getNextGameDate(teamClass) {
         if (game.opponent === "BYE") {
             const gameDate = new Date(game.date);
             if (gameDate > now) {
-                return { date: gameDate, opponent: 'BYE', home_or_away: '', spread_line: null, adj_spread_odds: null };
+                return { date: gameDate, opponent: 'BYE', home_or_away: '', spread_line: '', adj_spread_odds: '', adj_moneyline: '' };
             }
         } else {
             const gameDate = new Date(game.date);
             if (gameDate > now) {
                 const adj_spread_odds = game.adj_spread_odds;
-                return { date: gameDate, opponent: game.opponent, home_or_away: game.home_or_away, spread_line: game.spread_line, adj_spread_odds: adj_spread_odds };
+                const spread_line = game.spread_line >= 0 ? `+${game.spread_line}` : game.spread_line;
+                const adj_moneyline = game.adj_moneyline >= 0 ? `+${game.adj_moneyline}` : game.adj_moneyline;
+                return { date: gameDate, opponent: game.opponent, home_or_away: game.home_or_away, spread_line: spread_line, adj_spread_odds: adj_spread_odds, adj_moneyline: adj_moneyline };
             }
         }
     }
-    return { date: null, opponent: 'No upcoming games', home_or_away: '', spread_line: null, adj_spread_odds: null };
+    return { date: '', opponent: 'No upcoming games', home_or_away: '', spread_line: '', adj_spread_odds: '', adj_moneyline: '' };
 }
 
 function getCountdown(targetDate) {
@@ -121,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
             teamLink.href = `team.html?team=${encodeURIComponent(team.name)}`;
             teamLink.className = 'team-link';
         
-            let nextGame = nflschedules ? getNextGameDate(team.class) : null;
+            let nextGame = nflschedules ? getNextGameDate(team.class) : '';
             if (nextGame && nextGame.opponent !== 'BYE') {
                 teamLink.innerHTML = `<strong>${team.name}</strong> <strong>(${nextGame.spread_line})</strong>`;
             } else {
@@ -152,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
             for (let i = 0; i < countdownDivs.length; i++) {
                 const countdownDiv = countdownDivs[i];
                 const teamClass = countdownDiv.parentNode.classList[1];
-                const nextGame = nflschedules ? getNextGameDate(teamClass) : null;
+                const nextGame = nflschedules ? getNextGameDate(teamClass) : '';
                 if (nextGame) {
                     if (nextGame.opponent === 'BYE') {
                         countdownDiv.innerHTML = `Week ${nextGame.week}: BYE`;

@@ -39,3 +39,5 @@
 - [ ] analyze injury impacts by position, snaps, etc.
 - [ ] Expand Betting analysis to be dynamic and with detailed information on opponents
     * likely need to add output data in schedules that indicates opponents' odds, etc.
+- [ ] Wins & Losses are not a QB Stat, but what about W/L when down +10?
+    * aka the "Patrick Mahomes W/L" Stat

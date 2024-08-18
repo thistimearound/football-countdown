@@ -70,6 +70,15 @@ reverse_team_name_mapping <- setNames(
   team_name_mapping
 )
 
+# Ensure spread_line is numeric
+schedule_data <- schedule_data %>%
+  mutate(
+    spread_line = as.numeric(spread_line),
+    total_line = as.numeric(total_line),
+    over_odds = as.numeric(over_odds),
+    under_odds = as.numeric(under_odds)
+  )
+
 # Clean and process the data
 schedule_cleaned <- schedule_data %>%
   select(
@@ -85,8 +94,8 @@ schedule_cleaned <- schedule_data %>%
     home_team,
     home_score,
     location,
-    result, # The sum of pts the home team scored - points visiting team scored. Equals h_score - v_score. Is NA for games which haven't yet been played. Convenient for evaluating against the spread bets. # nolint: line_length_linter
-    total, # The sum of each team's score in the game. Equals h_score + v_score. Is NA for games which haven't yet been played. Convenient for evaluating over/under total bets. # nolint: line_length_linter
+    result, # The sum of pts home team scored - points visiting team scored. Equals h_score - v_score. Is NA for games which haven't yet been played. Convenient for evaluating against the spread bets. # nolint: line_length_linter
+    total, # The sum of each team's score in the game. Equals h_score + v_score.
     away_moneyline,
     home_moneyline,
     spread_line,
@@ -134,25 +143,36 @@ process_games <- function(schedule, team_col, opponent_col, score_col, is_home_g
     select(team, opponent, game_id, season, week, weekday, datetime, isHomeGame, home_or_away, score, stadium, location, spread_line, adj_spread_odds, adj_moneyline, result, total, total_line, over_odds, under_odds, roof, surface, temp, wind) # nolint: line_length_linter
 }
 
-home_games <- process_games(schedule_cleaned, "home_team", "away_team", "home_score", TRUE, "home_spread_odds", "home_moneyline", "vs") # nolint: line_length_linter
-away_games <- process_games(schedule_cleaned, "away_team", "home_team", "away_score", FALSE, "away_spread_odds", "away_moneyline", "@") # nolint: line_length_linter
+home_games <- process_games(schedule_cleaned, "home_team", "away_team",
+                            "home_score", TRUE, "home_spread_odds",
+                            "home_moneyline", "vs") %>%
+  mutate(week = as.integer(week))
+
+away_games <- process_games(schedule_cleaned, "away_team", "home_team",
+                            "away_score", FALSE, "away_spread_odds",
+                            "away_moneyline", "@") %>%
+  mutate(week = as.integer(week))
 
 # Combine home and away games
-all_games <- bind_rows(home_games, away_games)
+all_games <- bind_rows(home_games, away_games) %>%
+  mutate(
+    spread_line = as.numeric(spread_line),
+    adj_moneyline = as.numeric(adj_moneyline)
+  )
 
 # Function to add BYE weeks
 add_bye_weeks <- function(schedule) {
   all_weeks <- 1:18
-  played_weeks <- schedule$week
+  played_weeks <- as.integer(schedule$week)  # Ensure integer type
   bye_weeks <- setdiff(all_weeks, played_weeks)
 
   bye_schedule <- tibble(
-    team = unique(schedule$team),
+    team = unique(schedule$team),  # Make sure this gets the correct team names
     opponent = "BYE",
     datetime = NA,
     isHomeGame = NA,
     home_or_away = NA,
-    week = bye_weeks,
+    week = as.integer(bye_weeks),  # Convert to integer
     spread_line = NA,
     adj_spread_odds = NA,
     adj_moneyline = NA
