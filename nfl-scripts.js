@@ -8,19 +8,20 @@ function getNextGameDate(teamClass) {
 
     const now = new Date();
     for (const game of schedule) {
+        const gameDate = new Date(game.date);
         if (game.opponent === "BYE") {
-            const gameDate = new Date(game.date);
-            if (gameDate > now) {
-                return { date: gameDate, opponent: 'BYE', home_or_away: '', spread_line: '', adj_spread_odds: '', adj_moneyline: '' };
-            }
-        } else {
-            const gameDate = new Date(game.date);
-            if (gameDate > now) {
-                const adj_spread_odds = game.adj_spread_odds;
-                const spread_line = game.spread_line >= 0 ? `+${game.spread_line}` : game.spread_line;
-                const adj_moneyline = game.adj_moneyline >= 0 ? `+${game.adj_moneyline}` : game.adj_moneyline;
-                return { date: gameDate, opponent: game.opponent, home_or_away: game.home_or_away, spread_line: spread_line, adj_spread_odds: adj_spread_odds, adj_moneyline: adj_moneyline };
-            }
+            continue;
+        }
+        if (game.opponent === "Cumulative Record") {
+            // Display "Cumulative Record" but do not treat it as a regular game
+            console.log(`Cumulative Record: ${gameDate}`);
+            continue;
+        }
+        if (gameDate > now) {
+            const adj_spread_odds = game.adj_spread_odds;
+            const spread_line = game.spread_line >= 0 ? `+${game.spread_line}` : game.spread_line;
+            const adj_moneyline = game.adj_moneyline >= 0 ? `+${game.adj_moneyline}` : game.adj_moneyline;
+            return { date: gameDate, opponent: game.opponent, home_or_away: game.home_or_away, spread_line: spread_line, adj_spread_odds: adj_spread_odds, adj_moneyline: adj_moneyline };
         }
     }
     return { date: '', opponent: 'No upcoming games', home_or_away: '', spread_line: '', adj_spread_odds: '', adj_moneyline: '' };

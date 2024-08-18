@@ -52,3 +52,4 @@ v0.8 Betting Data, Bye Weeks, and Project Support
 * Updated view for mobile devices
 * Add GHA job to run r-scripts on a schedule
 * Importing CFB data from cfbfastR.r to JSON in cfb-schedules.js
+* Calculate current cumulative season record

@@ -1,4 +1,4 @@
-// Last updated: 2024-08-17 21:11:45.331257 
+// Last updated: 2024-08-17 23:56:38.366161 
 const nflschedules =  {
   "arizona-cardinals": [
     {
@@ -214,6 +214,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "closed",
       "surface": "grass"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "atlanta-falcons": [
@@ -430,6 +436,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "closed",
       "surface": "fieldturf"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "baltimore-ravens": [
@@ -646,6 +658,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "buffalo-bills": [
@@ -862,6 +880,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "fieldturf"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "carolina-panthers": [
@@ -1078,6 +1102,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "closed",
       "surface": "fieldturf"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "chicago-bears": [
@@ -1294,6 +1324,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "cincinnati-bengals": [
@@ -1510,6 +1546,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "cleveland-browns": [
@@ -1726,6 +1768,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "dallas-cowboys": [
@@ -1942,6 +1990,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "closed",
       "surface": "matrixturf"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "denver-broncos": [
@@ -2158,6 +2212,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "detroit-lions": [
@@ -2374,6 +2434,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "dome",
       "surface": "fieldturf"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "green-bay-packers": [
@@ -2590,6 +2656,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "houston-texans": [
@@ -2806,6 +2878,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "indianapolis-colts": [
@@ -3022,6 +3100,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "closed",
       "surface": "fieldturf"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "jacksonville-jaguars": [
@@ -3238,6 +3322,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "closed",
       "surface": "fieldturf"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "kansas-city-chiefs": [
@@ -3454,6 +3544,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "las-vegas-raiders": [
@@ -3670,6 +3766,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "dome",
       "surface": "grass"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "los-angeles-chargers": [
@@ -3886,6 +3988,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "dome",
       "surface": "grass"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "los-angeles-rams": [
@@ -4102,6 +4210,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "dome",
       "surface": "matrixturf"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "miami-dolphins": [
@@ -4318,6 +4432,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "fieldturf"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "minnesota-vikings": [
@@ -4534,6 +4654,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "dome",
       "surface": "fieldturf"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "new-england-patriots": [
@@ -4750,6 +4876,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "fieldturf"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "new-orleans-saints": [
@@ -4966,6 +5098,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "new-york-giants": [
@@ -5182,6 +5320,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "new-york-jets": [
@@ -5398,6 +5542,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "fieldturf"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "philadelphia-eagles": [
@@ -5614,6 +5764,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "pittsburgh-steelers": [
@@ -5830,6 +5986,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "san-francisco-49ers": [
@@ -6046,6 +6208,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "closed",
       "surface": "grass"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "seattle-seahawks": [
@@ -6262,6 +6430,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "dome",
       "surface": "matrixturf"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "tampa-bay-buccaneers": [
@@ -6478,6 +6652,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "tennessee-titans": [
@@ -6694,6 +6874,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "outdoors",
       "surface": "grass"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ],
   "washington-commanders": [
@@ -6910,6 +7096,12 @@ const nflschedules =  {
       "weekday": "Sunday",
       "roof": "closed",
       "surface": "matrixturf"
+    },
+    {
+      "opponent": "Cumulative Record",
+      "wins": 0,
+      "losses": 0,
+      "ties": 0
     }
   ]
 } ;

@@ -1,7 +1,7 @@
 # Load necessary libraries
 library(nflverse)
-library(tidyverse)
-library(dplyr) # Includes dplyr, tidyr, tibble, etc.
+library(tidyverse) # Includes dplyr, tidyr, tibble, etc.
+library(dplyr) # explicitly load dplyr because tidyverse does not load it right
 library(lubridate)
 library(jsonlite)
 
@@ -156,9 +156,12 @@ away_games <- process_games(schedule_cleaned, "away_team", "home_team",
 # Combine home and away games
 all_games <- bind_rows(home_games, away_games) %>%
   mutate(
-    spread_line = as.numeric(spread_line),
-    adj_moneyline = as.numeric(adj_moneyline)
+    # Clean and convert spread_line
+    spread_line = as.numeric(gsub("[^0-9.-]", "", spread_line)),
+    # Clean and convert adj_moneyline
+    adj_moneyline = as.numeric(gsub("[^0-9.-]", "", adj_moneyline))
   )
+
 
 # Function to add BYE weeks
 add_bye_weeks <- function(schedule) {
@@ -172,14 +175,39 @@ add_bye_weeks <- function(schedule) {
     datetime = NA,
     isHomeGame = NA,
     home_or_away = NA,
-    week = as.integer(bye_weeks),  # Convert to integer
+    week = bye_weeks,  # Converted to integer in the original calculation
     spread_line = NA,
     adj_spread_odds = NA,
-    adj_moneyline = NA
+    adj_moneyline = NA,
+    wins = max(schedule$wins),  # Use max because these are aggregated in groups
+    losses = max(schedule$losses),
+    ties = max(schedule$ties),
+    result = NA,
+    total = NA,
+    total_line = NA,
+    over_odds = NA,
+    under_odds = NA,
+    roof = NA,
+    surface = NA,
+    temp = NA,
+    wind = NA,
+    stadium = NA,
+    location = NA
   )
+
 
   bind_rows(schedule, bye_schedule)
 }
+
+# Modify add_bye_weeks Function to Handle Wins, Losses, Ties
+all_games <- all_games %>%
+  group_by(team) %>%
+  mutate(
+    wins = sum(ifelse(result > 0, 1, 0), na.rm = TRUE),
+    losses = sum(ifelse(result < 0, 1, 0), na.rm = TRUE),
+    ties = sum(ifelse(result == 0 & !is.na(result), 1, 0), na.rm = TRUE)
+  ) %>%
+  ungroup()
 
 # Group by team and add BYE weeks
 all_games_with_bye <- all_games %>%
@@ -187,7 +215,7 @@ all_games_with_bye <- all_games %>%
   group_modify(~ add_bye_weeks(.x)) %>%
   ungroup()
 
-# Group by team and create the final structure
+# Group by team and create the final structure without wins, losses, and ties
 team_schedules <- all_games_with_bye %>%
   arrange(week) %>%
   mutate(
@@ -221,7 +249,38 @@ team_schedules <- all_games_with_bye %>%
         wind = wind
       )
     ),
+    wins = sum(result > 0, na.rm = TRUE),
+    losses = sum(result < 0, na.rm = TRUE),
+    ties = sum(result == 0 & !is.na(result), na.rm = TRUE),
     .groups = "drop"
+  ) %>%
+  mutate(
+    games = map2(games, wins, ~ bind_rows(.x, tibble(
+      opponent = "Cumulative Record",
+      date = NA,
+      isHomeGame = NA,
+      home_or_away = NA,
+      stadium = NA,
+      location = NA,
+      week = NA,
+      weekday = NA,
+      score = NA,
+      total = NA,
+      spread_line = NA,
+      adj_spread_odds = NA,
+      adj_moneyline = NA,
+      result = NA,
+      total_line = NA,
+      over_odds = NA,
+      under_odds = NA,
+      roof = NA,
+      surface = NA,
+      temp = NA,
+      wind = NA,
+      wins = .y,
+      losses = losses[1],
+      ties = ties[1]
+    )))
   ) %>%
   deframe()
 

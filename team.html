@@ -62,6 +62,11 @@
                     if (Array.isArray(schedule) && schedule.length) {
                         // If there are upcoming games, iterate through the schedule and display each game
                         schedule.forEach(game => {
+                            if (game.opponent === "Cumulative Record") {
+                                // Skip games with opponent "Cumulative Record"
+                                return;
+                            }
+
                             const gameDiv = document.createElement('div');
                             gameDiv.className = 'game';
                             if (game.opponent === "BYE") {

@@ -3,6 +3,8 @@
 ## Football Countdown
 ### v0.8
 - [ ] on index.html and team.html show current record
+    * [X] calculate cumulative current record
+    * [X] add cumulative current record to schedule data
     * [ ] show current record when 0-0
 - [O] update cfbfastR.r to output bye weeks
     * output data from cfbfastR.r
