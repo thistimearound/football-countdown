@@ -6,6 +6,7 @@ on:
     - cron: '0 21 * * 0'
     # Run both scripts at 1:30 PM UTC (9:30 AM Eastern Time) on Mondays
     - cron: '30 13 * * 1'
+  workflow_dispatch: # Add this line to enable manual triggering
 
 jobs:
   run_scripts:
