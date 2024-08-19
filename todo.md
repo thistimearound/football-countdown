@@ -25,12 +25,14 @@
     * Countdown to Degeneracy?
     * The Other Side of the Ball?
 - [ ] **setup a web domain and service**
+- [ ] **new look and feel**
 
 ### v1.1
 - [O] **update `cfbfastR.r` to output bye weeks**
     * output data from `cfbfastR.r`
-- [ ] scrape notable injuries and add to betting analyis placeholder
+- [ ] **scrape notable injuries and add to betting analyis placeholder**
     * data appears available via nflverse packages
+- [ ] **Add preseason and playoff games to schedules**
 
 ### Project Reading
 - [ ] Check out [Ruff](https://docs.astral.sh/ruff/faq/#how-does-ruff-determine-which-of-my-imports-are-first-party-third-party-etc)

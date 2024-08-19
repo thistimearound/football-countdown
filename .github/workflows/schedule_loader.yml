@@ -2,30 +2,36 @@ name: Run NFL and CFB Scripts Weekly
 
 on:
   schedule:
-    # Run both scripts at 5:00 PM on Sundays
-    - cron: '0 17 * * 0'
-    # Run both scripts at 9:30 AM on Mondays
-    - cron: '30 9 * * 1'
+    # Run both scripts at 9:00 PM UTC (5:00 PM Eastern Time) on Sundays
+    - cron: '0 21 * * 0'
+    # Run both scripts at 1:30 PM UTC (9:30 AM Eastern Time) on Mondays
+    - cron: '30 13 * * 1'
 
 jobs:
   run_scripts:
     name: Run NFL and CFB Scripts
     runs-on: ubuntu-latest
-
+    
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3  # This checks out your repository
+      uses: actions/checkout@v4
 
     - name: Set up R
-      uses: r-lib/actions/setup-r@v2  # This sets up R
+      uses: r-lib/actions/setup-r@v2
+
+    - name: Install R Packages
+      run: |
+        Rscript -e 'install.packages("remotes")'
+        Rscript -e 'remotes::install_github("nflverse/nflverse")'
+        Rscript -e 'install.packages(c("tidyverse", "lubridate", "jsonlite"))'
 
     - name: Run nflfastR Script
-      run: Rscript nflfastR.r  # This runs the nflfastR script
+      run: Rscript nflfastR.r
 
     # - name: Run cfbfastR Script
-    #  run: Rscript cfbfastR.r  # This runs the cfbfastR script
+    #  run: Rscript cfbfastR.r
 
-    - name: Commit and push changes  # This commits and pushes changes back to the repo
+    - name: Commit and push changes
       run: |
         git config --local user.name "github-actions[bot]"
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
@@ -33,4 +39,4 @@ jobs:
         git commit -m "Update nfl-schedules.js file after running R script"
         git push
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # This token allows pushing to the repo
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
