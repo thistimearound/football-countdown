@@ -1,11 +1,10 @@
 name: Run NFL and CFB Scripts Weekly
-
+        
 on:
   schedule:
     # Run both scripts at 9:00 PM UTC (5:00 PM Eastern Time) on Sundays
     - cron: '0 21 * * 0'
     # Run both scripts at 1:30 PM UTC (9:30 AM Eastern Time) on Mondays
-    - cron: '30 13 * * 1'
   workflow_dispatch:
 
 jobs:
@@ -33,15 +32,17 @@ jobs:
         GITHUB_PAT: ${{ secrets.GH_PAT }}
         R_LIBS_USER: ${{ runner.temp }}/RLibrary
       run: |
-        Rscript -e 'install.packages("remotes")'
-        Rscript -e 'remotes::install_github("nflverse/nfl4th")'
-        Rscript -e 'remotes::install_github("nflverse/nflfastR")'
-        Rscript -e 'remotes::install_github("nflverse/nflplotR")'
-        Rscript -e 'remotes::install_github("nflverse/nflreadr")'
-        Rscript -e 'remotes::install_github("nflverse/nflseedR")'
-        Rscript -e 'install.packages(c("nflverse", "tidyverse", "lubridate", "jsonlite"))'
+        Rscript -e 'install.packages("remotes", lib = Sys.getenv("R_LIBS_USER"))'
+        Rscript -e 'remotes::install_github("nflverse/nfl4th", lib = Sys.getenv("R_LIBS_USER"))'
+        Rscript -e 'remotes::install_github("nflverse/nflfastR", lib = Sys.getenv("R_LIBS_USER"))'
+        Rscript -e 'remotes::install_github("nflverse/nflplotR", lib = Sys.getenv("R_LIBS_USER"))'
+        Rscript -e 'remotes::install_github("nflverse/nflreadr", lib = Sys.getenv("R_LIBS_USER"))'
+        Rscript -e 'remotes::install_github("nflverse/nflseedR", lib = Sys.getenv("R_LIBS_USER"))'
+        Rscript -e 'install.packages(c("nflverse", "tidyverse", "lubridate", "jsonlite"), lib = Sys.getenv("R_LIBS_USER"))'
 
     - name: Run nflfastR Script
+      env:
+        R_LIBS_USER: ${{ runner.temp }}/RLibrary
       run: Rscript nflfastR.r
 
     # - name: Run cfbfastR Script
@@ -56,3 +57,7 @@ jobs:
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        path: ${{ runner.temp }}/RLibrary
+        key: ${{ runner.os }}-r-${{ hashFiles('**/*.r') }}
+        restore-keys: |
+          ${{ runner.os }}-r-
