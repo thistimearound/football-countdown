@@ -291,9 +291,9 @@ tryCatch({
             location = as.character(location),
             week = week,
             weekday = weekday,
-            result = result,
-            score = score,
-            total = total,
+            result = as.integer(result),
+            score = as.integer(score),
+            total = as.integer(total),
             spread_line = spread_line,
             adj_spread_odds = adj_spread_odds,
             adj_moneyline = adj_moneyline,
@@ -306,9 +306,9 @@ tryCatch({
             wind = wind
           )
         ),
-        wins = sum(result > 0, na.rm = TRUE),
-        losses = sum(result < 0, na.rm = TRUE),
-        ties = sum(result == 0 & !is.na(result), na.rm = TRUE),
+        wins = sum(as.integer(result) > 0, na.rm = TRUE),
+        losses = sum(as.integer(result) < 0, na.rm = TRUE),
+        ties = sum(as.integer(result) == 0 & !is.na(result), na.rm = TRUE),
         .groups = "drop"
       ) %>%
       mutate(
