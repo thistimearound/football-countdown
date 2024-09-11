@@ -34,8 +34,12 @@ jobs:
         R_LIBS_USER: ${{ runner.temp }}/RLibrary
       run: |
         Rscript -e 'install.packages("remotes")'
-        Rscript -e 'remotes::install_github("nflverse/nflverse")'
-        Rscript -e 'install.packages(c("tidyverse", "lubridate", "jsonlite"))'
+        Rscript -e 'remotes::install_github("nflverse/nfl4th")'
+        Rscript -e 'remotes::install_github("nflverse/nflfastR")'
+        Rscript -e 'remotes::install_github("nflverse/nflplotR")'
+        Rscript -e 'remotes::install_github("nflverse/nflreadr")'
+        Rscript -e 'remotes::install_github("nflverse/nflseedR")'
+        Rscript -e 'install.packages(c("nflverse", "tidyverse", "lubridate", "jsonlite"))'
 
     - name: Run nflfastR Script
       run: Rscript nflfastR.r
