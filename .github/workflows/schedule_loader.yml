@@ -23,7 +23,7 @@ jobs:
     - name: Cache R packages
       uses: actions/cache@v3
       with:
-        path: ${{ env.R_LIBS_USER }}
+        path: ${{ runner.temp }}/RLibrary
         key: ${{ runner.os }}-r-${{ hashFiles('**/*.r') }}
         restore-keys: |
           ${{ runner.os }}-r-
@@ -45,7 +45,7 @@ jobs:
       run: Rscript nflfastR.r
 
     # - name: Run cfbfastR Script
-    #  run: Rscript cfbfastR.r
+    #   run: Rscript cfbfastR.r
 
     - name: Commit and push changes
       run: |
