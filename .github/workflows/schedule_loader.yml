@@ -6,7 +6,7 @@ on:
     - cron: '0 21 * * 0'
     # Run both scripts at 1:30 PM UTC (9:30 AM Eastern Time) on Mondays
     - cron: '30 13 * * 1'
-  workflow_dispatch: # Add this line to enable manual triggering
+  workflow_dispatch:
 
 jobs:
   run_scripts:
@@ -25,7 +25,8 @@ jobs:
         GITHUB_PAT: ${{ secrets.GH_PAT }}
       run: |
         Rscript -e 'install.packages("remotes")'
-        Rscript -e 'install.packages(c("nflverse", "tidyverse", "lubridate", "jsonlite"))'
+        Rscript -e 'remotes::install_github("nflverse/nflverse")'
+        Rscript -e 'install.packages(c("tidyverse", "lubridate", "jsonlite"))'
 
     - name: Run nflfastR Script
       run: Rscript nflfastR.r

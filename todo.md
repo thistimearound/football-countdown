@@ -54,3 +54,4 @@
     * aka the "Patrick Mahomes W/L" Stat
     * Compare QBs w/ high W/L ratio to rest of their stats
     * Compare to other QBs on team in-out splits
+- [ ] Get w/ Wynne on Random Forest Model
