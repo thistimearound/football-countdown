@@ -12,6 +12,11 @@ tryCatch({
 # Prevent scientific notation
 options(scipen = 9999)
 
+# Function to calculate absolute result
+calculate_absolute_result <- function(home_score, away_score) {
+  abs(home_score - away_score)
+}
+
 # Function to log errors
 log_error <- function(error_message) {
   writeLines(paste0("Error: ", error_message, "\n"),
@@ -154,15 +159,16 @@ tryCatch({
                                       abs(spread_line))),
           adj_moneyline = ifelse(adj_moneyline >= 0,
                                  paste0("+", adj_moneyline),
-                                 as.character(adj_moneyline))
+                                 as.character(adj_moneyline)),
+          result = home_score - away_score,
+          absolute_result = calculate_absolute_result(home_score, away_score)
         ) %>%
         select(team, opponent, game_id, season, week, weekday, datetime,
-               #datetime is gameday and gametime # nolint: line_length_linter.
                game_type, away_team, away_score, away_moneyline,
                home_team, home_score, home_moneyline, spread_line,
-               away_spread_odds, home_spread_odds, score, isHomeGame,
-               home_or_away, stadium, location, adj_spread_odds,
-               adj_moneyline, result, total, total_line,
+               away_spread_odds, home_spread_odds, score, total_line,
+               isHomeGame, home_or_away, stadium, location, adj_spread_odds,
+               adj_moneyline, result, absolute_result, total, total_line,
                over_odds, under_odds, roof, surface, temp, wind)
     }, error = function(e) {
       log_error(paste("Failed to process games:", e$message))
@@ -318,6 +324,7 @@ tryCatch({
             adj_moneyline = adj_moneyline,
             location = as.character(location),
             result = as.integer(result),
+            absolute_result = as.integer(absolute_result),
             score = as.integer(score),
             total = as.integer(total),
             total_line = total_line,
@@ -363,6 +370,7 @@ tryCatch({
           adj_spread_odds = NA,
           adj_moneyline = NA,
           result = NA,
+          absolute_result = NA,
           total = NA,
           over_odds = NA,
           under_odds = NA,
