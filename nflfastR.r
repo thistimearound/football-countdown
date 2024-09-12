@@ -1,10 +1,10 @@
 # Load necessary libraries
 tryCatch({
+  library(dplyr)
+  library(jsonlite)
+  library(lubridate)
   library(nflverse)
   library(tidyverse)
-  library(dplyr)
-  library(lubridate)
-  library(jsonlite)
 }, error = function(e) {
   stop("Failed to load required libraries: ", e$message)
 })
@@ -14,9 +14,8 @@ options(scipen = 9999)
 
 # Function to log errors
 log_error <- function(error_message) {
-  cat(paste0("Error: ", error_message, "\n"),
-      file = "error_log.txt",
-      append = TRUE)
+  writeLines(paste0("Error: ", error_message, "\n"),
+             con = "error_log.txt")
 }
 
 # Main execution block
@@ -40,8 +39,7 @@ tryCatch({
   # Replace all instances of "Invalid Number" with NA
   schedule_data <- tryCatch({
     schedule_data %>%
-      mutate(across(everything(), ~ gsub("Invalid Number", "NA", .)))
-
+      mutate(across(everything(), ~ ifelse(grepl("Invalid Number", .), NA, .)))
   }, error = function(e) {
     log_error(paste("Failed to clean schedule data:", e$message))
     stop("Failed to clean schedule data. Check error_log.txt for details.")
@@ -92,15 +90,14 @@ tryCatch({
     )
   }, error = function(e) {
     log_error(paste("Failed to create reverse team name mapping:", e$message))
-    stop("Failed to create reverse team name mapping.
-    Check error_log.txt for details.")
+    stop("Failed to create reverse name mapping. Check error_log.txt details.")
   })
 
   # Ensure numeric columns are properly converted
   schedule_data <- tryCatch({
     schedule_data %>%
       mutate(across(c(spread_line, total_line, over_odds, under_odds),
-                    as.numeric))
+                    ~ suppressWarnings(as.numeric(.))))
   }, error = function(e) {
     log_error(paste("Failed to convert numeric columns:", e$message))
     stop("Failed to convert numeric columns. Check error_log.txt for details.")
@@ -124,8 +121,7 @@ tryCatch({
       select(-gameday, -gametime)
   }, error = function(e) {
     log_error(paste("Failed to clean and process schedule data:", e$message))
-    stop("Failed to clean and process schedule data.
-    Check error_log.txt for details.")
+    stop("Failed to clean & process data. Check error_log.txt details.")
   })
 
   # Create a function to format team names
@@ -160,10 +156,13 @@ tryCatch({
                                  paste0("+", adj_moneyline),
                                  as.character(adj_moneyline))
         ) %>%
-        select(team, opponent, game_id, season, week,
-               weekday, datetime, isHomeGame,
-               home_or_away, score, stadium, location, spread_line,
-               adj_spread_odds, adj_moneyline, result, total, total_line,
+        select(team, opponent, game_id, season, week, weekday, datetime,
+               #datetime is gameday and gametime # nolint: line_length_linter.
+               game_type, away_team, away_score, away_moneyline,
+               home_team, home_score, home_moneyline, spread_line,
+               away_spread_odds, home_spread_odds, score, isHomeGame,
+               home_or_away, stadium, location, adj_spread_odds,
+               adj_moneyline, result, total, total_line,
                over_odds, under_odds, roof, surface, temp, wind)
     }, error = function(e) {
       log_error(paste("Failed to process games:", e$message))
@@ -212,16 +211,31 @@ tryCatch({
       bye_schedule <- tibble(
         team = unique(schedule$team),
         opponent = "BYE",
+        game_id = NA,
+        season = NA,
+        week = bye_weeks,
+        weekday = NA,
         datetime = NA,
+        game_type = NA,
+        away_team = NA,
+        away_score = NA,
+        away_moneyline = NA,
+        home_team = NA,
+        home_score = NA,
+        home_moneyline = NA,
+        spread_line = NA,
+        away_spread_odds = NA,
+        home_spread_odds = NA,
+        score = NA,
         isHomeGame = NA,
         home_or_away = NA,
-        week = bye_weeks,
-        spread_line = NA,
+        stadium = NA,
+        location = NA,
         adj_spread_odds = NA,
         adj_moneyline = NA,
-        wins = max(schedule$wins),
-        losses = max(schedule$losses),
-        ties = max(schedule$ties),
+        wins = max(schedule$wins, na.rm = TRUE),
+        losses = max(schedule$losses, na.rm = TRUE),
+        ties = max(schedule$ties, na.rm = TRUE),
         result = NA,
         total = NA,
         total_line = NA,
@@ -229,10 +243,7 @@ tryCatch({
         under_odds = NA,
         roof = NA,
         surface = NA,
-        temp = NA,
-        wind = NA,
-        stadium = NA,
-        location = NA
+        temp = NA,        wind = NA
       )
 
       bind_rows(schedule, bye_schedule)
@@ -285,18 +296,30 @@ tryCatch({
           tibble(
             opponent = opponent,
             date = date,
+            game_id = game_id,
+            season = season,
+            week = week,
+            weekday = weekday,
+            datetime = datetime,
+            game_type = game_type,
+            away_team = away_team,
+            away_score = away_score,
+            away_moneyline = away_moneyline,
+            home_team = home_team,
+            home_score = home_score,
+            home_moneyline = home_moneyline,
+            spread_line = spread_line,
+            away_spread_odds = away_spread_odds,
+            home_spread_odds = home_spread_odds,
             isHomeGame = isHomeGame,
             home_or_away = home_or_away,
             stadium = stadium,
+            adj_spread_odds = adj_spread_odds,
+            adj_moneyline = adj_moneyline,
             location = as.character(location),
-            week = week,
-            weekday = weekday,
             result = as.integer(result),
             score = as.integer(score),
             total = as.integer(total),
-            spread_line = spread_line,
-            adj_spread_odds = adj_spread_odds,
-            adj_moneyline = adj_moneyline,
             total_line = total_line,
             over_odds = over_odds,
             under_odds = under_odds,
@@ -313,21 +336,34 @@ tryCatch({
       ) %>%
       mutate(
         games = map2(games, wins, ~ bind_rows(.x, tibble(
+          team = NA,
           opponent = "Cumulative Record",
           date = NA,
+          game_id = NA,
+          season = NA,
+          week = NA,
+          weekday = NA,
+          datetime = NA,
+          game_type = NA,
+          away_team = NA,
+          away_score = NA,
+          away_moneyline = NA,
+          home_team = NA,
+          home_score = NA,
+          home_moneyline = NA,
+          spread_line = NA,
+          away_spread_odds = NA,
+          home_spread_odds = NA,
+          score = NA,
+          total_line = NA,
           isHomeGame = NA,
           home_or_away = NA,
           stadium = NA,
           location = NA,
-          week = NA,
-          weekday = NA,
-          score = NA,
-          total = NA,
-          spread_line = NA,
           adj_spread_odds = NA,
           adj_moneyline = NA,
           result = NA,
-          total_line = NA,
+          total = NA,
           over_odds = NA,
           under_odds = NA,
           roof = NA,
