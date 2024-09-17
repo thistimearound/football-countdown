@@ -1,0 +1,168 @@
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+nflvrs_d [544 × 37] (S3: nflverse_data/tbl_df/tbl/data.table/data.frame)
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ team            : Named chr [1:544] "kansas-city-chiefs" "philadelphia-eagles" "atlanta-falcons" "buffalo-bills" ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+  ..- attr(*, "names")= chr [1:544] "KC" "PHI" "ATL" "BUF" ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ opponent        : Named chr [1:544] "baltimore-ravens" "green-bay-packers" "pittsburgh-steelers" "arizona-cardinals" ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+  ..- attr(*, "names")= chr [1:544] "BAL" "GB" "PIT" "ARI" ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ game_id         : chr [1:544] "2024_01_BAL_KC" "2024_01_GB_PHI" "2024_01_PIT_ATL" "2024_01_ARI_BUF" ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ season          : int [1:544] 2024 2024 2024 2024 2024 2024 2024 2024 2024 2024 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ week            : int [1:544] 1 1 1 1 1 1 1 1 1 1 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ weekday         : chr [1:544] "Thursday" "Friday" "Sunday" "Sunday" ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ datetime        : POSIXct[1:544], format: "2024-09-05 20:20:00" "2024-09-06 20:15:00" ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ game_type       : chr [1:544] "REG" "REG" "REG" "REG" ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ away_team       : chr [1:544] "BAL" "GB" "PIT" "ARI" ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ away_score      : int [1:544] 20 29 18 28 17 16 29 17 10 28 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ away_moneyline  : int [1:544] 124 110 160 250 164 295 -155 150 160 -115 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ home_team       : chr [1:544] "KC" "PHI" "ATL" "BUF" ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ home_score      : int [1:544] 27 34 10 34 24 10 27 20 47 6 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ home_moneyline  : int [1:544] -148 -130 -192 -310 -198 -375 130 -180 -192 -105 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ spread_line     : num [1:544] -3 -2 -4 -6.5 -4 -8 3 -3.5 -3.5 1 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ away_spread_odds: int [1:544] -118 -110 -110 -105 -108 -110 -108 -110 -108 -108 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ home_spread_odds: int [1:544] -102 -110 -110 -115 -112 -110 -112 -110 -112 -112 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ score           : int [1:544] 27 34 10 34 24 10 27 20 47 6 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ total_line      : num [1:544] 46 49.5 43 46 43 40.5 49 49.5 41.5 42.5 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ isHomeGame      : logi [1:544] TRUE TRUE TRUE TRUE TRUE TRUE ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ home_or_away    : chr [1:544] "vs" "vs" "vs" "vs" ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ stadium         : chr [1:544] "GEHA Field at Arrowhead Stadium" "Arena Corinthians" "Mercedes-Benz Stadium" "New Era Field" ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ location        : chr [1:544] "Home" "Neutral" "Home" "Home" ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ adj_spread_odds : int [1:544] -102 -110 -110 -115 -112 -110 -112 -110 -112 -112 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ adj_moneyline   : num [1:544] -148 -130 -192 -310 -198 -375 130 -180 -192 -105 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ result          : int [1:544] 7 5 -8 6 7 -6 -2 3 37 -22 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ absolute_result : int [1:544] 7 5 8 6 7 6 2 3 37 22 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ win             : num [1:544] 1 1 0 1 1 0 0 1 1 0 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ loss            : num [1:544] 0 0 1 0 0 1 1 0 0 1 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ tie             : num [1:544] 0 0 0 0 0 0 0 0 0 0 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ total           : int [1:544] 47 63 28 62 41 26 56 37 57 34 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ over_odds       : num [1:544] -110 -108 -105 -108 -110 -108 -108 -108 -108 -112 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ under_odds      : num [1:544] -110 -112 -115 -112 -110 -112 -112 -112 -112 -108 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ roof            : chr [1:544] "outdoors" "outdoors" "closed" "outdoors" ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ surface         : chr [1:544] "grass" "" "fieldturf" "a_turf" ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ temp            : int [1:544] 67 NA NA 61 67 66 NA 91 NA 64 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ $ wind            : int [1:544] 8 NA NA 20 8 5 NA 10 NA 10 ...
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ - attr(*, "nflverse_type")= chr "games and schedules"
+
+Info: Structure of all_games before calculating wins,
+    losses, and ties:
+ - attr(*, "nflverse_timestamp")= POSIXct[1:1], format: "2024-09-17 12:46:31"
+

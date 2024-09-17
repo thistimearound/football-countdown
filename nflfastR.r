@@ -23,32 +23,31 @@ log_error <- function(error_message) {
              con = "error_log.txt")
 }
 
+# Function to log informational messages
+log_info <- function(info_message) {
+  writeLines(paste0("Info: ", info_message, "\n"),
+             con = "info_log.txt")
+}
+
 # Main execution block
 tryCatch({
   # Get the current season year
   current_year <- as.numeric(format(Sys.Date(), "%Y"))
 
-  # Fetch schedule data
+  # Fetch and clean schedule data
   schedule_data <- tryCatch({
-    load_schedules(seasons = 2024)
+    load_schedules(seasons = 2024) %>%
+      mutate(across(everything(), ~ ifelse(grepl("Invalid Number", .), NA, .)))
   }, error = function(e) {
-    log_error(paste("Failed to load schedules:", e$message))
-    stop("Failed to load schedules. Check error_log.txt for details.")
+    log_error(paste("Failed to load or clean schedules:", e$message))
+    stop("Failed to load or clean schedules. Check error_log.txt for details.")
   })
 
-  # Check if the schedule data is available and inspect the column names
+  # Check if the schedule data is available
   if (is.null(schedule_data) || nrow(schedule_data) == 0) {
     stop(paste("Schedule data is not available for", current_year))
   }
 
-  # Replace all instances of "Invalid Number" with NA
-  schedule_data <- tryCatch({
-    schedule_data %>%
-      mutate(across(everything(), ~ ifelse(grepl("Invalid Number", .), NA, .)))
-  }, error = function(e) {
-    log_error(paste("Failed to clean schedule data:", e$message))
-    stop("Failed to clean schedule data. Check error_log.txt for details.")
-  })
 
   # Define the mapping between team abbreviations and full names
   team_name_mapping <- list(
@@ -89,6 +88,7 @@ tryCatch({
   # Create a reverse mapping for team names
   reverse_team_name_mapping <- tryCatch({
     setNames(
+      # Replace hyphens with spaces in team names
       gsub("-", " ", sapply(team_name_mapping,
                             function(x) tools::toTitleCase(x))),
       team_name_mapping
@@ -111,7 +111,7 @@ tryCatch({
   # Clean and process the data
   schedule_cleaned <- tryCatch({
     schedule_data %>%
-      select(
+      select( # Add cumulative records to each team's games using map2
         game_id, season, game_type, week, gameday, weekday, gametime,
         away_team, away_score, home_team, home_score, location,
         result, total, away_moneyline, home_moneyline, spread_line,
@@ -152,7 +152,8 @@ tryCatch({
           home_or_away = as.character(home_or_away_symbol),
           adj_spread_odds = as.integer(!!sym(spread_odds_col)),
           adj_moneyline = !!sym(moneyline_col),
-          spread_line = ifelse(spread_line < 0,
+          spread_line = ifelse(
+                               spread_line < 0,
                                paste0(ifelse(is_home_game, "+", "-"),
                                       abs(spread_line)),
                                paste0(ifelse(is_home_game, "-", "+"),
@@ -160,16 +161,21 @@ tryCatch({
           adj_moneyline = ifelse(adj_moneyline >= 0,
                                  paste0("+", adj_moneyline),
                                  as.character(adj_moneyline)),
-          result = home_score - away_score,
-          absolute_result = calculate_absolute_result(home_score, away_score)
+          absolute_result = calculate_absolute_result(home_score, away_score),
+          win = ifelse((is_home_game & home_score > away_score) |
+                         (!is_home_game & away_score > home_score), 1, 0),
+          loss = ifelse((is_home_game & home_score < away_score) |
+                          (!is_home_game & away_score < home_score), 1, 0),
+
+          tie = ifelse(home_score == away_score, 1, 0)
         ) %>%
         select(team, opponent, game_id, season, week, weekday, datetime,
-               game_type, away_team, away_score, away_moneyline,
-               home_team, home_score, home_moneyline, spread_line,
-               away_spread_odds, home_spread_odds, score, total_line,
-               isHomeGame, home_or_away, stadium, location, adj_spread_odds,
-               adj_moneyline, result, absolute_result, total, total_line,
-               over_odds, under_odds, roof, surface, temp, wind)
+               game_type, away_team, away_score, away_moneyline, home_team,
+               home_score, home_moneyline, spread_line, away_spread_odds,
+               home_spread_odds, score, total_line, isHomeGame, home_or_away,
+               stadium, location, adj_spread_odds, adj_moneyline, result,
+               absolute_result, win, loss, tie, total, total_line, over_odds,
+               under_odds, roof, surface, temp, wind)
     }, error = function(e) {
       log_error(paste("Failed to process games:", e$message))
       stop("Failed to process games. Check error_log.txt for details.")
@@ -203,8 +209,7 @@ tryCatch({
       )
   }, error = function(e) {
     log_error(paste("Failed to combine and clean all games:", e$message))
-    stop("Failed to combine and clean all games.
-    Check error_log.txt for details.")
+    stop("Failed to combine and clean all games. Check error_log.txt for details.") # nolint: line_length_linter.
   })
 
   # Function to add BYE weeks
@@ -239,17 +244,19 @@ tryCatch({
         location = NA,
         adj_spread_odds = NA,
         adj_moneyline = NA,
-        wins = max(schedule$wins, na.rm = TRUE),
-        losses = max(schedule$losses, na.rm = TRUE),
-        ties = max(schedule$ties, na.rm = TRUE),
         result = NA,
+        absolute_result = NA,
+        win = NA,
+        loss = NA,
+        tie = NA,
         total = NA,
         total_line = NA,
         over_odds = NA,
         under_odds = NA,
         roof = NA,
         surface = NA,
-        temp = NA,        wind = NA
+        temp = NA,
+        wind = NA
       )
 
       bind_rows(schedule, bye_schedule)
@@ -259,14 +266,28 @@ tryCatch({
     })
   }
 
+  # Function to log the structure of a data frame
+  log_structure <- function(df, message) {
+    log_info(paste(message, capture.output(str(df)), sep = "\n"))
+  }
+
   # Modify add_bye_weeks Function to Handle Wins, Losses, Ties
   all_games <- tryCatch({
+    # Log the structure of the all_games data frame before the mutate function
+    log_structure(all_games, "Structure of all_games before calculating wins,
+    losses, and ties:")
+
     all_games %>%
       group_by(team) %>%
       mutate(
-        wins = sum(ifelse(result > 0, 1, 0), na.rm = TRUE),
-        losses = sum(ifelse(result < 0, 1, 0), na.rm = TRUE),
-        ties = sum(ifelse(result == 0 & !is.na(result), 1, 0), na.rm = TRUE)
+        win = ifelse((isHomeGame & home_score > away_score) |
+                       (!isHomeGame & away_score > home_score), 1, 0),
+        loss = ifelse((isHomeGame & home_score < away_score) |
+                        (!isHomeGame & away_score < home_score), 1, 0),
+        tie = ifelse(home_score == away_score, 1, 0),
+        wins = cumsum(win),
+        losses = cumsum(loss),
+        ties = cumsum(tie)
       ) %>%
       ungroup()
   }, error = function(e) {
@@ -283,8 +304,7 @@ tryCatch({
       ungroup()
   }, error = function(e) {
     log_error(paste("Failed to add BYE weeks to all games:", e$message))
-    stop("Failed to add BYE weeks to all games.
-    Check error_log.txt for details.")
+    stop("Failed to add BYE weeks to all games. Check error_log.txt for details.") # nolint: line_length_linter.
   })
 
   # Group by team and create the final structure
@@ -327,6 +347,9 @@ tryCatch({
             absolute_result = as.integer(absolute_result),
             score = as.integer(score),
             total = as.integer(total),
+            win = win,
+            loss = loss,
+            tie = tie,
             total_line = total_line,
             over_odds = over_odds,
             under_odds = under_odds,
@@ -336,9 +359,9 @@ tryCatch({
             wind = wind
           )
         ),
-        wins = sum(as.integer(result) > 0, na.rm = TRUE),
-        losses = sum(as.integer(result) < 0, na.rm = TRUE),
-        ties = sum(as.integer(result) == 0 & !is.na(result), na.rm = TRUE),
+        wins = sum(win, na.rm = TRUE),
+        losses = sum(loss, na.rm = TRUE),
+        ties = sum(tie, na.rm = TRUE),
         .groups = "drop"
       ) %>%
       mutate(
@@ -372,23 +395,25 @@ tryCatch({
           result = NA,
           absolute_result = NA,
           total = NA,
+          win = NA,
+          loss = NA,
+          tie = NA,
           over_odds = NA,
           under_odds = NA,
           roof = NA,
           surface = NA,
           temp = NA,
           wind = NA,
-          wins = .y,
-          losses = losses[1],
-          ties = ties[1]
+          wins = sum(win, na.rm = TRUE),
+          losses = sum(loss, na.rm = TRUE),
+          ties = sum(tie, na.rm = TRUE)
         )))
       ) %>%
       deframe()
   }, error = function(e) {
     log_error(paste("Failed to create final team schedules structure:",
                     e$message))
-    stop("Failed to create final team schedules structure.
-    Check error_log.txt for details.")
+    stop("Failed to create final team schedules structure. Check error_log.txt for details.") # nolint: line_length_linter.
   })
 
   # Convert to JSON-like structure
@@ -396,8 +421,7 @@ tryCatch({
     jsonlite::toJSON(team_schedules, pretty = TRUE, auto_unbox = TRUE)
   }, error = function(e) {
     log_error(paste("Failed to convert team schedules to JSON:", e$message))
-    stop("Failed to convert team schedules to JSON.
-    Check error_log.txt for details.")
+    stop("Failed to convert team schedules to JSON. Check error_log.txt for details.") # nolint: line_length_linter.
   })
 
   # Get the current date and time
@@ -414,8 +438,7 @@ tryCatch({
     )
   }, error = function(e) {
     log_error(paste("Failed to write nfl-schedules.js file:", e$message))
-    stop("Failed to write nfl-schedules.js file.
-    Check error_log.txt for details.")
+    stop("Failed to write nfl-schedules.js file. Check error_log.txt for details.") # nolint: line_length_linter.
   })
 
   # Success message
