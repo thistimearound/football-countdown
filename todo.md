@@ -3,6 +3,7 @@
 ## Football Countdown
 
 ### v0.9
+- [ ] **sort `index.html` by division standings**
 - [ ] **add playoff odds, eliminated, clinched, etc.**
 - [ ] **add betting data trends**
     * spread opened at X.1, has moved to X.2, X.3, X.n
