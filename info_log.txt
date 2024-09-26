@@ -164,5 +164,5 @@ Info: Structure of all_games before calculating wins,
 
 Info: Structure of all_games before calculating wins,
     losses, and ties:
- - attr(*, "nflverse_timestamp")= POSIXct[1:1], format: "2024-09-17 12:46:31"
+ - attr(*, "nflverse_timestamp")= POSIXct[1:1], format: "2024-09-26 15:45:38"
 

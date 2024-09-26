@@ -24,7 +24,7 @@ jobs:
       uses: actions/cache@v3
       with:
         path: ${{ runner.temp }}/RLibrary
-        key: ${{ runner.os }}-r-${{ hashFiles('**/*.r') }}-${{ hashFiles('**/*.lock') }}
+        key: ${{ runner.os }}-r-${{ hashFiles('**/*.r') }}-${{ hashFiles('**/*.lock') }}-${{ runner.architecture }}
         restore-keys: |
           ${{ runner.os }}-r-
 
@@ -49,6 +49,16 @@ jobs:
     # - name: Run cfbfastR Script
     #   run: Rscript cfbfastR.r
 
+    - name: Detect Changes
+      id: detect_changes
+      run: |
+        changes=$(git status --porcelain)
+        if [ -n "$changes" ]; then
+          echo "::set-output name=changes_detected::true"
+        else
+          echo "::set-output name=changes_detected::false"
+        fi
+        
     - name: Commit and push changes
       run: |
         git config --local user.name "github-actions[bot]"
