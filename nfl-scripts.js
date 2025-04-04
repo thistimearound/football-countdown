@@ -3,7 +3,7 @@ function getNextGameDate(teamClass) {
 
     if (!schedule) {
         console.error(`Schedule not found for team class: ${teamClass}`);
-        return { date: '', opponent: 'Unknown', home_or_away: '', spread_line: '', adj_spread_odds: '', adj_moneyline: '' };
+        return { date: null, opponent: 'Unknown', home_or_away: '', spread_line: '', adj_spread_odds: '', adj_moneyline: '' };
     }
 
     const now = new Date();
@@ -14,7 +14,6 @@ function getNextGameDate(teamClass) {
         }
         if (game.opponent === "Cumulative Record") {
             // Display "Cumulative Record" but do not treat it as a regular game
-            console.log(`Cumulative Record: ${gameDate}`);
             continue;
         }
         if (gameDate > now) {
@@ -24,12 +23,22 @@ function getNextGameDate(teamClass) {
             return { date: gameDate, opponent: game.opponent, home_or_away: game.home_or_away, spread_line: spread_line, adj_spread_odds: adj_spread_odds, adj_moneyline: adj_moneyline };
         }
     }
-    return { date: '', opponent: 'No upcoming games', home_or_away: '', spread_line: '', adj_spread_odds: '', adj_moneyline: '' };
+    // No upcoming games found
+    return { date: null, opponent: 'Season completed', home_or_away: '', spread_line: '', adj_spread_odds: '', adj_moneyline: '' };
 }
 
 function getCountdown(targetDate) {
+    if (!targetDate) {
+        return 'Season completed';
+    }
+
     const now = new Date();
     const diff = targetDate - now;
+
+    // If the game has already passed, don't show a countdown
+    if (diff <= 0) {
+        return 'Game in progress or completed';
+    }
 
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -135,15 +144,15 @@ document.addEventListener("DOMContentLoaded", () => {
             let countdownDiv = document.createElement('div');
             countdownDiv.className = 'countdown';
         
-            const nextGame = nflschedules ? getNextGameDate(team.class) : '';
-            if (nextGame) {
+            const nextGame = nflschedules ? getNextGameDate(team.class) : null;
+            if (nextGame && nextGame.date) {
                 if (nextGame.opponent === 'BYE') {
                     countdownDiv.innerHTML = `Week ${nextGame.week}: BYE`;
                 } else {
                     countdownDiv.innerHTML = `${nextGame.home_or_away} ${nextGame.opponent} <br> ${getCountdown(nextGame.date)}`;
                 }
             } else {
-                countdownDiv.textContent = 'No upcoming games';
+                countdownDiv.textContent = 'Season completed';
             }
         
             teamElement.appendChild(countdownDiv);
@@ -156,15 +165,15 @@ document.addEventListener("DOMContentLoaded", () => {
             for (let i = 0; i < countdownDivs.length; i++) {
                 const countdownDiv = countdownDivs[i];
                 const teamClass = countdownDiv.parentNode.classList[1];
-                const nextGame = nflschedules ? getNextGameDate(teamClass) : '';
-                if (nextGame) {
+                const nextGame = nflschedules ? getNextGameDate(teamClass) : null;
+                if (nextGame && nextGame.date) {
                     if (nextGame.opponent === 'BYE') {
                         countdownDiv.innerHTML = `Week ${nextGame.week}: BYE`;
                     } else {
                         countdownDiv.innerHTML = `${nextGame.home_or_away} ${nextGame.opponent} <br>${getCountdown(nextGame.date)}`;
                     }
                 } else {
-                    countdownDiv.textContent = 'No upcoming games';
+                    countdownDiv.textContent = 'Season completed';
                 }
             }
         }, 1000);

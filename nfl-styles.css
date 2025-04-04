@@ -5,6 +5,23 @@ body {
     padding: 0;
     text-align: center;
     box-sizing: border-box;
+    background-image: url('https://images.unsplash.com/photo-1604537466608-109fa4c52402');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+ }
+    
+.frosted-glass {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 2rem;
+    margin: 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 header {

@@ -39,12 +39,32 @@ jobs:
         Rscript -e 'remotes::install_github("nflverse/nflplotR", lib = Sys.getenv("R_LIBS_USER"))'
         Rscript -e 'remotes::install_github("nflverse/nflreadr", lib = Sys.getenv("R_LIBS_USER"))'
         Rscript -e 'remotes::install_github("nflverse/nflseedR", lib = Sys.getenv("R_LIBS_USER"))'
-        Rscript -e 'install.packages(c("nflverse", "tidyverse", "lubridate", "jsonlite"), lib = Sys.getenv("R_LIBS_USER"))'
+        Rscript -e 'install.packages(c("nflverse", "tidyverse", "lubridate", "jsonlite", "dplyr"), lib = Sys.getenv("R_LIBS_USER"))'
+        
+    - name: Check Installed Packages
+      env:
+        R_LIBS_USER: ${{ runner.temp }}/RLibrary
+      run: |
+        echo "Listing installed R packages:"
+        Rscript -e '.libPaths(); installed.packages()[,1]'
+
+    - name: Update season year in script
+      run: |
+        CURRENT_YEAR=$(date +%Y)
+        echo "Using NFL season year: $CURRENT_YEAR"
+        # Replace any hardcoded year with the current year
+        sed -i "s/load_schedules(seasons = [0-9]\{4\})/load_schedules(seasons = $CURRENT_YEAR)/g" nflfastR.r
 
     - name: Run nflfastR Script
       env:
         R_LIBS_USER: ${{ runner.temp }}/RLibrary
-      run: Rscript nflfastR.r
+      run: |
+        Rscript nflfastR.r
+        if [ $? -ne 0 ]; then
+          echo "R script execution failed"
+          cat error_log.txt || echo "No error log found"
+          exit 1
+        fi
 
     # - name: Run cfbfastR Script
     #   run: Rscript cfbfastR.r
@@ -53,13 +73,11 @@ jobs:
       id: detect_changes
       run: |
         changes=$(git status --porcelain)
-        if [ -n "$changes" ]; then
-          echo "::set-output name=changes_detected::true"
-        else
-          echo "::set-output name=changes_detected::false"
-        fi
+        echo "changes_detected=$([[ -n "$changes" ]] && echo "true" || echo "false")" >> $GITHUB_OUTPUT
+        echo "Changes detected: $changes"
         
     - name: Commit and push changes
+      if: steps.detect_changes.outputs.changes_detected == 'true'
       run: |
         git config --local user.name "github-actions[bot]"
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
@@ -68,7 +86,3 @@ jobs:
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        path: ${{ runner.temp }}/RLibrary
-        key: ${{ runner.os }}-r-${{ hashFiles('**/*.r') }}-${{ hashFiles('**/*.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-r-

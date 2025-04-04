@@ -33,21 +33,33 @@ log_info <- function(info_message) {
 tryCatch({
   # Get the current season year
   current_year <- as.numeric(format(Sys.Date(), "%Y"))
+  message("Starting NFL schedule processing for season:", current_year)
 
   # Fetch and clean schedule data
   schedule_data <- tryCatch({
-    load_schedules(seasons = 2024) %>%
+    message("Attempting to load schedules for season", current_year)
+    schedules <- load_schedules(seasons = current_year)
+    
+    # Check immediately if data is empty
+    if (is.null(schedules) || nrow(schedules) == 0) {
+      stop(paste("Schedule data is not available for", current_year))
+    }
+    
+    schedules %>%
       mutate(across(everything(), ~ ifelse(grepl("Invalid Number", .), NA, .)))
   }, error = function(e) {
     log_error(paste("Failed to load or clean schedules:", e$message))
-    stop("Failed to load or clean schedules. Check error_log.txt for details.")
+    message("Error: Failed to load or clean schedules. Check error_log.txt for details.")
+    # Use quit() with status=1 to ensure R exits completely
+    quit(status = 1)
   })
 
-  # Check if the schedule data is available
+  # Double-check if the schedule data is available
   if (is.null(schedule_data) || nrow(schedule_data) == 0) {
-    stop(paste("Schedule data is not available for", current_year))
+    log_error(paste("Schedule data is empty for", current_year))
+    message("Error: Schedule data is empty. Check error_log.txt for details.")
+    quit(status = 1)
   }
-
 
   # Define the mapping between team abbreviations and full names
   team_name_mapping <- list(
@@ -365,51 +377,56 @@ tryCatch({
         .groups = "drop"
       ) %>%
       mutate(
-        games = map2(games, wins, ~ bind_rows(.x, tibble(
-          team = NA,
-          opponent = "Cumulative Record",
-          date = NA,
-          game_id = NA,
-          season = NA,
-          week = NA,
-          weekday = NA,
-          datetime = NA,
-          game_type = NA,
-          away_team = NA,
-          away_score = NA,
-          away_moneyline = NA,
-          home_team = NA,
-          home_score = NA,
-          home_moneyline = NA,
-          spread_line = NA,
-          away_spread_odds = NA,
-          home_spread_odds = NA,
-          score = NA,
-          total_line = NA,
-          isHomeGame = NA,
-          home_or_away = NA,
-          stadium = NA,
-          location = NA,
-          adj_spread_odds = NA,
-          adj_moneyline = NA,
-          result = NA,
-          absolute_result = NA,
-          total = NA,
-          win = NA,
-          loss = NA,
-          tie = NA,
-          over_odds = NA,
-          under_odds = NA,
-          roof = NA,
-          surface = NA,
-          temp = NA,
-          wind = NA,
-          wins = sum(win, na.rm = TRUE),
-          losses = sum(loss, na.rm = TRUE),
-          ties = sum(tie, na.rm = TRUE)
-        )))
+        games = pmap(list(games = games, team_name = team), function(games, team_name) {
+          bind_rows(games, tibble(
+            team = team_name,  # Use the team name from pmap parameter
+            opponent = "Cumulative Record",
+            date = NA,
+            game_id = NA,
+            season = NA,
+            week = NA,
+            weekday = NA,
+            datetime = NA,
+            game_type = NA,
+            away_team = NA,
+            away_score = NA,
+            away_moneyline = NA,
+            home_team = NA,
+            home_score = NA,
+            home_moneyline = NA,
+            spread_line = NA,
+            away_spread_odds = NA,
+            home_spread_odds = NA,
+            score = NA,
+            total_line = NA,
+            isHomeGame = NA,
+            home_or_away = NA,
+            stadium = NA,
+            location = NA,
+            adj_spread_odds = NA,
+            adj_moneyline = NA,
+            result = NA,
+            absolute_result = NA,
+            total = NA,
+            win = NA,
+            loss = NA,
+            tie = NA,
+            over_odds = NA,
+            under_odds = NA,
+            roof = NA,
+            surface = NA,
+            temp = NA,
+            wind = NA,
+            wins = sum(games$win, na.rm = TRUE),
+            losses = sum(games$loss, na.rm = TRUE),
+            ties = sum(games$tie, na.rm = TRUE)
+          ))
+        })
       ) %>%
-      deframe()
+      # Fix the deframe issue by ensuring we have exactly two columns
+      select(team, games) %>%
+      as.list() %>%
+      setNames(., names(.))
   }, error = function(e) {
     log_error(paste("Failed to create final team schedules structure:",
                     e$message))
@@ -446,7 +463,10 @@ tryCatch({
 
 }, error = function(e) {
   log_error(paste("Main execution failed:", e$message))
-  stop("Main execution failed. Check error_log.txt for details.")
+  message(paste("Error: Main execution failed -", e$message))
+  message("Check error_log.txt for details.")
+  # Ensure we exit with error code
+  quit(status = 1)
 })
 
 # View the resulting JavaScript with timestamp
