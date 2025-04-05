@@ -1,2 +1,2 @@
-Error: Main execution failed: Schedule data is not available for 2025
+Error: Main execution failed: unused argument (capture.output(str(schedule_data)))
 

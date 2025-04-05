@@ -48,6 +48,73 @@ function getCountdown(targetDate) {
     return `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
 
+function sortTeamsByStandings(teams) {
+    return teams.sort((a, b) => {
+        const recordA = nflschedules[a.class].find(game => game.opponent === "Cumulative Record");
+        const recordB = nflschedules[b.class].find(game => game.opponent === "Cumulative Record");
+
+        const winsA = recordA ? recordA.wins : 0;
+        const lossesA = recordA ? recordA.losses : 0;
+        const tiesA = recordA ? recordA.ties : 0;
+
+        const winsB = recordB ? recordB.wins : 0;
+        const lossesB = recordB ? recordB.losses : 0;
+        const tiesB = recordB ? recordB.ties : 0;
+
+        // Sort by wins, then ties, then losses
+        if (winsA !== winsB) return winsB - winsA;
+        if (tiesA !== tiesB) return tiesB - tiesA;
+        return lossesA - lossesB;
+    });
+}
+
+function appendTeamsSorted(conference, division, teams) {
+    const divisionContainer = document.getElementById(`${conference.toLowerCase()}-${division.toLowerCase()}`);
+    if (!divisionContainer) return;
+
+    // Sort teams by standings
+    const sortedTeams = sortTeamsByStandings(teams);
+
+    sortedTeams.forEach(team => {
+        const teamElement = document.createElement('div');
+        teamElement.className = `team ${team.class}`;
+
+        const teamLink = document.createElement('a');
+        teamLink.href = `team.html?team=${encodeURIComponent(team.name)}`;
+        teamLink.className = 'team-link';
+        teamLink.innerHTML = `<strong>${team.name}</strong>`;
+
+        const recordDiv = document.createElement('div');
+        recordDiv.className = 'record';
+
+        // Get the cumulative record
+        const cumulativeRecord = nflschedules[team.class].find(game => game.opponent === "Cumulative Record");
+
+        if (cumulativeRecord) {
+            // Check if the season has ended
+            const now = new Date();
+            const lastGame = nflschedules[team.class].reduce((latest, game) => {
+                const gameDate = new Date(game.date);
+                return gameDate > latest ? gameDate : latest;
+            }, new Date(0));
+
+            if (now > lastGame) {
+                // Show end-of-season record
+                recordDiv.textContent = `End of Season: (${cumulativeRecord.wins}-${cumulativeRecord.losses}-${cumulativeRecord.ties})`;
+            } else {
+                // Show current record
+                recordDiv.textContent = `(${cumulativeRecord.wins}-${cumulativeRecord.losses}-${cumulativeRecord.ties})`;
+            }
+        } else {
+            recordDiv.textContent = '(0-0-0)';
+        }
+
+        teamLink.appendChild(recordDiv);
+        teamElement.appendChild(teamLink);
+        divisionContainer.appendChild(teamElement);
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const DIVISION_NAMES = new Map([
         [0, "North"],
@@ -111,77 +178,9 @@ document.addEventListener("DOMContentLoaded", () => {
         ]
     };
 
-    const appendTeams = (conference, division, teams) => {
-        const divisionContainer = document.getElementById(`${conference.toLowerCase()}-${division.toLowerCase()}`);
-        if (!divisionContainer) {
-            if (window.location.pathname !== '/team.html') {
-                console.log(`Division container not found for ${conference} ${division}`);
-            }
-            return;
-        }
-        teams.forEach(team => {
-            const teamElement = document.createElement('div');
-            teamElement.className = `team ${team.class}`;
-            
-            const teamLink = document.createElement('a');
-            teamLink.href = `team.html?team=${encodeURIComponent(team.name)}`;
-            teamLink.className = 'team-link';
-            teamLink.innerHTML = `<strong>${team.name}</strong>`;
-    
-            // Add cumulative record inside the teamLink
-            const recordDiv = document.createElement('div');
-            recordDiv.className = 'record';
-            const cumulativeRecord = nflschedules[team.class].find(game => game.opponent === "Cumulative Record");
-            if (cumulativeRecord) {
-                recordDiv.textContent = `(${cumulativeRecord.wins}-${cumulativeRecord.losses}-${cumulativeRecord.ties})`;
-            } else {
-                recordDiv.textContent = '(0-0-0)';
-            }
-            teamLink.appendChild(recordDiv);
-    
-            teamElement.appendChild(teamLink);
-    
-            let countdownDiv = document.createElement('div');
-            countdownDiv.className = 'countdown';
-        
-            const nextGame = nflschedules ? getNextGameDate(team.class) : null;
-            if (nextGame && nextGame.date) {
-                if (nextGame.opponent === 'BYE') {
-                    countdownDiv.innerHTML = `Week ${nextGame.week}: BYE`;
-                } else {
-                    countdownDiv.innerHTML = `${nextGame.home_or_away} ${nextGame.opponent} <br> ${getCountdown(nextGame.date)}`;
-                }
-            } else {
-                countdownDiv.textContent = 'Season completed';
-            }
-        
-            teamElement.appendChild(countdownDiv);
-    
-            divisionContainer.appendChild(teamElement);
-        });
-    
-        setInterval(() => {
-            const countdownDivs = divisionContainer.getElementsByClassName('countdown');
-            for (let i = 0; i < countdownDivs.length; i++) {
-                const countdownDiv = countdownDivs[i];
-                const teamClass = countdownDiv.parentNode.classList[1];
-                const nextGame = nflschedules ? getNextGameDate(teamClass) : null;
-                if (nextGame && nextGame.date) {
-                    if (nextGame.opponent === 'BYE') {
-                        countdownDiv.innerHTML = `Week ${nextGame.week}: BYE`;
-                    } else {
-                        countdownDiv.innerHTML = `${nextGame.home_or_away} ${nextGame.opponent} <br>${getCountdown(nextGame.date)}`;
-                    }
-                } else {
-                    countdownDiv.textContent = 'Season completed';
-                }
-            }
-        }, 1000);
-    };
-
     for (const [conference, divisions] of Object.entries(nflTeamsContainer)) {
         divisions.forEach(([division, teamList]) => {
-            appendTeams(conference, division, teamList);
+            appendTeamsSorted(conference, division, teamList);
         });
     }
 });
