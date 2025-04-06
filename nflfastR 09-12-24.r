@@ -1,13 +1,9 @@
 # Load necessary libraries
-tryCatch({
-  library(dplyr)
-  library(jsonlite)
-  library(lubridate)
-  library(nflverse)
-  library(tidyverse)
-}, error = function(e) {
-  stop("Failed to load required libraries: ", e$message)
-})
+library(dplyr)
+library(jsonlite)
+library(lubridate)
+library(nflverse)
+library(tidyverse)
 
 # Prevent scientific notation
 options(scipen = 9999)
@@ -31,25 +27,23 @@ tryCatch({
   # Fetch schedule data
   schedule_data <- tryCatch({
     load_schedules(seasons = 2024)
-  }, error = function(e) {
-    log_error(paste("Failed to load schedules:", e$message))
-    stop("Failed to load schedules. Check error_log.txt for details.")
   })
 
   # Check if the schedule data is available and inspect the column names
-  if (is.null(schedule_data) || nrow(schedule_data) == 0) {
-    stop(paste("Schedule data is not available for", current_year))
-  }
+  #if (is.null(schedule_data) || nrow(schedule_data) == 0) {
+  #  stop(paste("Schedule data is not available for", current_year))
+  #}
 
-  # Replace all instances of "Invalid Number" with NA
-  schedule_data <- tryCatch({
-    schedule_data %>%
-      mutate(across(everything(), ~ ifelse(grepl("Invalid Number",
-                                                 as.character(.)), NA, .)))
-  }, error = function(e) {
-    log_error(paste("Failed to clean schedule data:", e$message))
-    stop("Failed to clean schedule data. Check error_log.txt for details.")
-  })
+  # Ensure schedule_data is not NULL and has rows
+  if (!is.null(schedule_data) && nrow(schedule_data) > 0) {
+    # Convert all columns to character if necessary
+    schedule_data <- schedule_data %>%
+      mutate(across(everything(), as.character))
+
+    # Replace "Invalid Number" with NA
+    schedule_data <- schedule_data %>%
+      mutate(across(everything(), ~ ifelse(. == "Invalid Number", NA, .)))
+  }
 
   # Define the mapping between team abbreviations and full names
   team_name_mapping <- list(
@@ -94,9 +88,6 @@ tryCatch({
                             function(x) tools::toTitleCase(x))),
       team_name_mapping
     )
-  }, error = function(e) {
-    log_error(paste("Failed to create reverse team name mapping:", e$message))
-    stop("Failed to create reverse name mapping. Check error_log.txt details.")
   })
 
   # Ensure numeric columns are properly converted
@@ -104,9 +95,6 @@ tryCatch({
     schedule_data %>%
       mutate(across(c(spread_line, total_line, over_odds, under_odds),
                     ~ suppressWarnings(as.numeric(.))))
-  }, error = function(e) {
-    log_error(paste("Failed to convert numeric columns:", e$message))
-    stop("Failed to convert numeric columns. Check error_log.txt for details.")
   })
 
   # Clean and process the data
@@ -125,9 +113,6 @@ tryCatch({
         datetime = ymd_hm(paste(gameday, gametime), tz = "UTC")
       ) %>%
       select(-gameday, -gametime)
-  }, error = function(e) {
-    log_error(paste("Failed to clean and process schedule data:", e$message))
-    stop("Failed to clean & process data. Check error_log.txt details.")
   })
 
   # Create a function to format team names
@@ -171,9 +156,6 @@ tryCatch({
                isHomeGame, home_or_away, stadium, location, adj_spread_odds,
                adj_moneyline, result, absolute_result, total, total_line,
                over_odds, under_odds, roof, surface, temp, wind)
-    }, error = function(e) {
-      log_error(paste("Failed to process games:", e$message))
-      stop("Failed to process games. Check error_log.txt for details.")
     })
   }
 
@@ -181,18 +163,12 @@ tryCatch({
     process_games(schedule_cleaned, "home_team", "away_team", "home_score",
                   TRUE, "home_spread_odds", "home_moneyline", "vs") %>%
       mutate(week = as.integer(week))
-  }, error = function(e) {
-    log_error(paste("Failed to process home games:", e$message))
-    stop("Failed to process home games. Check error_log.txt for details.")
   })
 
   away_games <- tryCatch({
     process_games(schedule_cleaned, "away_team", "home_team", "away_score",
                   FALSE, "away_spread_odds", "away_moneyline", "@") %>%
       mutate(week = as.integer(week))
-  }, error = function(e) {
-    log_error(paste("Failed to process away games:", e$message))
-    stop("Failed to process away games. Check error_log.txt for details.")
   })
 
   # Combine home and away games
@@ -202,10 +178,6 @@ tryCatch({
         spread_line = as.numeric(gsub("[^0-9.-]", "", spread_line)),
         adj_moneyline = as.numeric(gsub("[^0-9.-]", "", adj_moneyline))
       )
-  }, error = function(e) {
-    log_error(paste("Failed to combine and clean all games:", e$message))
-    stop("Failed to combine and clean all games.
-    Check error_log.txt for details.")
   })
 
   # Function to add BYE weeks
@@ -254,9 +226,6 @@ tryCatch({
       )
 
       bind_rows(schedule, bye_schedule)
-    }, error = function(e) {
-      log_error(paste("Failed to add BYE weeks:", e$message))
-      stop("Failed to add BYE weeks. Check error_log.txt for details.")
     })
   }
 
@@ -270,10 +239,6 @@ tryCatch({
         ties = sum(ifelse(result == 0 & !is.na(result), 1, 0), na.rm = TRUE)
       ) %>%
       ungroup()
-  }, error = function(e) {
-    log_error(paste("Failed to calculate wins, losses, and ties:", e$message))
-    stop("Failed to calculate wins, losses, and ties.
-    Check error_log.txt for details.")
   })
 
   # Group by team and add BYE weeks
@@ -282,10 +247,6 @@ tryCatch({
       group_by(team) %>%
       group_modify(~ add_bye_weeks(.x)) %>%
       ungroup()
-  }, error = function(e) {
-    log_error(paste("Failed to add BYE weeks to all games:", e$message))
-    stop("Failed to add BYE weeks to all games.
-    Check error_log.txt for details.")
   })
 
   # Group by team and create the final structure
@@ -385,20 +346,11 @@ tryCatch({
         )))
       ) %>%
       deframe()
-  }, error = function(e) {
-    log_error(paste("Failed to create final team schedules structure:",
-                    e$message))
-    stop("Failed to create final team schedules structure.
-    Check error_log.txt for details.")
   })
 
   # Convert to JSON-like structure
   team_schedules_json <- tryCatch({
     jsonlite::toJSON(team_schedules, pretty = TRUE, auto_unbox = TRUE)
-  }, error = function(e) {
-    log_error(paste("Failed to convert team schedules to JSON:", e$message))
-    stop("Failed to convert team schedules to JSON.
-    Check error_log.txt for details.")
   })
 
   # Get the current date and time
@@ -409,28 +361,13 @@ tryCatch({
     writeLines(
       paste(
         "// Last updated:", current_time,
-        "\nconst nflschedules = ", team_schedules_json, ";"
+        "\nconst nflschedules2 = ", team_schedules_json, ";"
       ),
       "nfl-schedules2.js"
     )
-  }, error = function(e) {
-    log_error(paste("Failed to write nfl-schedules2.js file:", e$message))
-    stop("Failed to write nfl-schedules2.js file.
-    Check error_log.txt for details.")
   })
 
   # Success message
-  cat("NFL schedules successfully processed and saved to nfl-schedules.js\n")
+  cat("NFL schedules successfully processed and saved to nfl-schedules2.js\n")
 
-}, error = function(e) {
-  log_error(paste("Main execution failed:", e$message))
-  stop("Main execution failed. Check error_log.txt for details.")
 })
-
-# View the resulting JavaScript with timestamp
-# cat(
-# paste(
-# "// Last updated:", current_time,
-# "\nconst nflschedules = ", team_schedules_json, ";"
-# )
-# )

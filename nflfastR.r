@@ -157,20 +157,15 @@ tryCatch({
           adj_moneyline = ifelse(adj_moneyline >= 0,
                                  paste0("+", adj_moneyline),
                                  as.character(adj_moneyline)),
-          absolute_result = calculate_absolute_result(home_score, away_score),
-          win = ifelse((is_home_game & home_score > away_score) |
-                         (!is_home_game & away_score > home_score), 1, 0),
-          loss = ifelse((is_home_game & home_score < away_score) |
-                          (!is_home_game & away_score < home_score), 1, 0),
-
-          tie = ifelse(home_score == away_score, 1, 0)
+          result = home_score - away_score,
+          absolute_result = calculate_absolute_result(home_score, away_score)
         ) %>%
         select(team, opponent, game_id, season, week, weekday, datetime,
                game_type, away_team, away_score, away_moneyline, home_team,
                home_score, home_moneyline, spread_line, away_spread_odds,
                home_spread_odds, score, total_line, isHomeGame, home_or_away,
                stadium, location, adj_spread_odds, adj_moneyline, result,
-               absolute_result, win, loss, tie, total, total_line, over_odds,
+               absolute_result, total, total_line, over_odds,
                under_odds, roof, surface, temp, wind)
     }, error = function(e) {
       log_error(paste("Failed to process games:", e$message))
@@ -201,7 +196,11 @@ tryCatch({
     bind_rows(home_games, away_games) %>%
       mutate(
         spread_line = as.numeric(gsub("[^0-9.-]", "", spread_line)),
-        adj_moneyline = as.numeric(gsub("[^0-9.-]", "", adj_moneyline))
+        adj_moneyline = as.numeric(gsub("[^0-9.-]", "", adj_moneyline)),
+        result_for_team = ifelse(isHomeGame, result, -result),
+        win = ifelse(result_for_team > 0, 1, 0),
+        loss = ifelse(result_for_team < 0, 1, 0),
+        tie = ifelse(result_for_team == 0 & !is.na(result_for_team), 1, 0)
       )
   }, error = function(e) {
     log_error(paste("Failed to combine and clean all games:", e$message))
@@ -245,10 +244,8 @@ tryCatch({
         adj_spread_odds = NA,
         adj_moneyline = NA,
         result = NA,
+        result_for_team = NA,
         absolute_result = NA,
-        win = NA,
-        loss = NA,
-        tie = NA,
         total = NA,
         total_line = NA,
         over_odds = NA,
@@ -272,36 +269,19 @@ tryCatch({
                    paste(capture.output(str(schedule_data)), collapse = "\n")))
   }
 
-  # Modify add_bye_weeks Function to Handle Wins, Losses, Ties
-  all_games <- tryCatch({
-    # Log the structure of the all_games data frame before the mutate function
-    log_structure(all_games, "Structure of all_games before calculating wins,
-    losses, and ties:")
-
-    all_games %>%
-      group_by(team) %>%
-      mutate(
-        win = ifelse((isHomeGame & home_score > away_score) |
-                       (!isHomeGame & away_score > home_score), 1, 0),
-        loss = ifelse((isHomeGame & home_score < away_score) |
-                        (!isHomeGame & away_score < home_score), 1, 0),
-        tie = ifelse(home_score == away_score, 1, 0),
-        wins = cumsum(win),
-        losses = cumsum(loss),
-        ties = cumsum(tie)
-      ) %>%
-      ungroup()
-  }, error = function(e) {
-    log_error(paste("Failed to calculate wins, losses, and ties:", e$message))
-    stop("Failed to calculate wins, losses, and ties.
-    Check error_log.txt for details.")
-  })
-
   # Group by team and add BYE weeks
   all_games_with_bye <- tryCatch({
     all_games %>%
       group_by(team) %>%
       group_modify(~ add_bye_weeks(.x)) %>%
+      ungroup() %>%
+      group_by(team) %>%
+      arrange(week) %>%
+      mutate(
+        cumulative_wins = cumsum(coalesce(win, 0)),
+        cumulative_losses = cumsum(coalesce(loss, 0)),
+        cumulative_ties = cumsum(coalesce(tie, 0))
+      ) %>%
       ungroup()
   }, error = function(e) {
     log_error(paste("Failed to add BYE weeks to all games:", e$message))
@@ -344,10 +324,11 @@ tryCatch({
             adj_spread_odds = adj_spread_odds,
             adj_moneyline = adj_moneyline,
             location = as.character(location),
-            result = as.integer(result),
-            absolute_result = as.integer(absolute_result),
-            score = as.integer(score),
-            total = as.integer(total),
+            result = result,
+            result_for_team = result_for_team,
+            absolute_result = absolute_result,
+            score = score,
+            total = total,
             win = win,
             loss = loss,
             tie = tie,
@@ -357,12 +338,15 @@ tryCatch({
             roof = roof,
             surface = surface,
             temp = temp,
+            cumulative_wins = cumulative_wins,
+            cumulative_losses = cumulative_losses,
+            cumulative_ties = cumulative_ties,
             wind = wind
           )
         ),
-        wins = sum(win, na.rm = TRUE),
-        losses = sum(loss, na.rm = TRUE),
-        ties = sum(tie, na.rm = TRUE),
+        wins = wins[1],
+        losses = losses[1],
+        ties = ties[1],
         .groups = "drop"
       ) %>%
       mutate(
@@ -394,6 +378,7 @@ tryCatch({
           adj_spread_odds = NA,
           adj_moneyline = NA,
           result = NA,
+          result_for_team = NA,
           absolute_result = NA,
           total = NA,
           win = NA,
@@ -404,10 +389,10 @@ tryCatch({
           roof = NA,
           surface = NA,
           temp = NA,
-          wind = NA,
-          wins = sum(win, na.rm = TRUE),
-          losses = sum(loss, na.rm = TRUE),
-          ties = sum(tie, na.rm = TRUE)
+          cumulative_wins = NA,
+          cumulative_losses = NA,
+          cumulative_ties = NA,
+          wind = NA
         )))
       ) %>%
       deframe()
@@ -449,11 +434,3 @@ tryCatch({
   log_error(paste("Main execution failed:", e$message))
   stop("Main execution failed. Check error_log.txt for details.")
 })
-
-# View the resulting JavaScript with timestamp
-# cat(
-# paste(
-# "// Last updated:", current_time,
-# "\nconst nflschedules = ", team_schedules_json, ";"
-# )
-# )
