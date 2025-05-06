@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draft Board</title>
+    <link rel="stylesheet" href="styles/nfl-styles.css">
+    <link rel="stylesheet" href="styles/draft-board-styles.css">
+    <script src="scripts/web_app/draft-board.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Sleeper Draft Board</h1>
+        <nav>
+            <div class="nav-container">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="draft-board.html">Draft Board</a>
+            </div>
+            <div class="logo-container">
+                <img src="logos/nfl/nfl-logo.webp" alt="National Football League Logo" class="nfl-logo" loading="lazy" width="200" height="100">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Enter Sleeper League ID</h2>
+            <input type="text" id="leagueID" placeholder="Enter League ID">
+            <button id="loadDraft">Load Draft</button>
+        </section>
+        <section id="draftBoard">
+            <h2>Draft Board</h2>
+            <div id="draftTable"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 The Other Side of the Ball</p>
+    </footer>
+</body>
+</html>

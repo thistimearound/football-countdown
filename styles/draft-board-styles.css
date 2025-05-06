@@ -1,0 +1,106 @@
+/* General styles for the draft board */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 10px 0 0 0;
+}
+
+main {
+    padding: 20px;
+}
+
+#draftBoard table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#draftBoard th, #draftBoard td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+#draftBoard th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* Draft Board Grid */
+.draft-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Draft Row */
+.draft-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+/* Draft Card */
+.draft-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.draft-card:hover {
+    transform: scale(1.05);
+}
+
+/* Pick Number */
+.pick-number {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Original Owner */
+.original-owner {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+/* Current Owner */
+.current-owner {
+    font-size: 12px;
+    color: #444;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Player Selected */
+.player-selected {
+    font-size: 14px;
+    font-weight: bold;
+    color: #007bff;
+}
