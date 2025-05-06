@@ -96,9 +96,13 @@ h3 {
 }
 
 .teams-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 8 equal columns for 8 divisions */
+    gap: 10px; /* Add spacing between divisions */
+    justify-items: stretch; /* Stretch items to fill the grid cells */
+    align-items: stretch; /* Stretch items to fill the grid cells */
+    width: 100%; /* Ensure the container spans the full width */
+    height: auto; /* Allow the height to adjust dynamically */
 }
 
 .conference {
@@ -133,25 +137,42 @@ h3 {
 }
 
 .division-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Distribute space evenly between divisions */
-    width: 100%;
-    box-sizing: border-box;
+    width: 100%; /* Ensure divisions take up equal space */
+    max-width: 200px; /* Prevent divisions from growing too large */
+    text-align: center; /* Center-align text inside divisions */
 }
 
 .division {
     display: flex;
     flex-direction: column;
-    flex: 1;
-    min-width: 200px;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
     box-sizing: border-box;
-    min-height: 120px; /* Adjust this value based on the line height and desired number of lines */
-    line-height: 20px; /* Set a consistent line height */
-    display: flex; /* Use Flexbox */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    aspect-ratio: 1; /* Maintain a square aspect ratio */
+    font-size: calc(0.8vw + 0.5em); /* Scale font size based on viewport width */
+    transition: transform 0.2s ease-in-out;
+}
+
+.division h3 {
+    margin: 10px 0;
+    font-size: 1em; /* Ensure consistent font size */
+    white-space: nowrap; /* Prevent wrapping of division titles */
+    overflow: hidden; /* Hide overflow if the title is too long */
+    text-overflow: ellipsis; /* Add ellipsis if the title overflows */
+}
+
+/* Division Title */
+.division h3 {
+    margin: 10px 0;
+    font-size: 1em; /* Ensure consistent font size */
+    white-space: nowrap; /* Prevent wrapping of division titles */
+    overflow: hidden; /* Hide overflow if the title is too long */
+    text-overflow: ellipsis; /* Add ellipsis if the title overflows */
 }
 
 /* Styling for the game container */
@@ -219,12 +240,21 @@ h3 {
     font-size: 1.0em; /* Adjust the size as needed */
 }
 
-/* Responsive styles for smaller screens */
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .teams-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for medium screens */
+    }
+}
+
 @media (max-width: 768px) {
     .game-container {
         flex-direction: row; /* Ensure elements stay in a row */
         flex-wrap: nowrap; /* Prevent wrapping */
         padding: 5px;
+    }
+    .teams-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
     }
     .week-number,
     .weather-info {
@@ -246,6 +276,12 @@ h3 {
     }
 }
 
+@media (max-width: 480px) {
+    .teams-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 column for very small screens */
+    }
+}
+
 .teams {
     display: flex;
     flex-wrap: wrap;
@@ -253,15 +289,25 @@ h3 {
 }
 
 .team {
-    border: 1px solid #000000;
-    margin: 5px;
-    padding: 5px;
-    min-width: 190px;
-    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 180px; /* Prevent team boxes from growing too large */
     text-align: center;
-    color: white;
-    line-height: 18px; /* Set a consistent line height */
-    font-size: 0.8em; /* Adjust the size as needed */
+}
+
+.record {
+    font-size: 12px;
+    color: #555;
+    white-space: nowrap; /* Prevent wrapping of the record text */
+    overflow: hidden; /* Hide overflow if the text is too long */
+    text-overflow: ellipsis; /* Add ellipsis if the text overflows */
 }
 
 .transition-effect {
