@@ -25,6 +25,10 @@ h1 {
 
 main {
     padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 #draftBoard table {
@@ -116,6 +120,16 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     max-height: 80vh;
+}
+
+#playerPool {
+    display: none; /* Initially hidden */
+    width: 30%;
+    margin-right: 20px;
+}
+
+#draftBoard {
+    width: 70%;
 }
 
 /* Player Card */

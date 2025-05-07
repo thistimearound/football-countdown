@@ -92,8 +92,9 @@ def upload_to_neon(players):
         if conn:
             conn.close()
 
-# Cache player data locally
+# Ensure the data directory exists before caching players
 def cache_players_locally(players):
+    os.makedirs('data', exist_ok=True)  # Create the data directory if it doesn't exist
     with open('data/cached_players.json', 'w') as f:
         json.dump(players, f)
 

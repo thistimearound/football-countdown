@@ -4,7 +4,7 @@ const SLEEPER_SEASON_YEAR = '2025'; // The season the draft is FOR (e.g., 2025 f
 // --- Event Listener for Load Button ---
 document.getElementById("loadDraft").addEventListener("click", loadDraft);
 
-// Modify the loadDraft event listener to show the player pool after successful loading
+// Modify loadDraft to skip the cache if it's a rookie draft
 async function loadDraft() {
     const leagueID = document.getElementById("leagueID").value.trim();
     if (!leagueID) {
@@ -13,19 +13,17 @@ async function loadDraft() {
     }
 
     try {
-        // Fetch all necessary data from Sleeper API concurrently
+        // Fetch all necessary data from Sleeper API concurrently, except for NFL players
         const [
             usersResponse,
             rostersResponse,
             draftsResponse,
-            tradedPicksResponse,
-            nflPlayersResponse // Fetch NFL players once
+            tradedPicksResponse
         ] = await Promise.all([
             fetch(`https://api.sleeper.app/v1/league/${leagueID}/users`),
             fetch(`https://api.sleeper.app/v1/league/${leagueID}/rosters`),
             fetch(`https://api.sleeper.app/v1/league/${leagueID}/drafts`),
-            fetch(`https://api.sleeper.app/v1/league/${leagueID}/traded_picks`),
-            fetch("https://api.sleeper.app/v1/players/nfl")
+            fetch(`https://api.sleeper.app/v1/league/${leagueID}/traded_picks`)
         ]);
 
         // Check if all responses are OK before parsing JSON
@@ -33,20 +31,16 @@ async function loadDraft() {
         if (!rostersResponse.ok) throw new Error(`Failed to fetch rosters: ${rostersResponse.status}`);
         if (!draftsResponse.ok) throw new Error(`Failed to fetch drafts: ${draftsResponse.status}`);
         if (!tradedPicksResponse.ok) throw new Error(`Failed to fetch traded picks: ${tradedPicksResponse.status}`);
-        if (!nflPlayersResponse.ok) throw new Error(`Failed to fetch NFL players: ${nflPlayersResponse.status}`);
-
 
         const users = await usersResponse.json();
         const rosters = await rostersResponse.json();
         const drafts = await draftsResponse.json();
         const tradedPicks = await tradedPicksResponse.json();
-        const nflPlayers = await nflPlayersResponse.json(); // NFL Players data
 
         console.log("Users Response:", users);
         console.log("Rosters Response:", rosters);
         console.log("Drafts Response:", drafts);
         console.log("Traded Picks Response:", tradedPicks);
-        console.log("NFL Players Response:", nflPlayers);
 
         if (!drafts || drafts.length === 0) {
             alert("No drafts found for this league.");
@@ -55,6 +49,20 @@ async function loadDraft() {
 
         // Find the relevant rookie or linear draft for the specified season
         const rookieDraft = drafts.find(d => (d.type === 'rookie' || d.type === 'linear') && d.season === SLEEPER_SEASON_YEAR);
+
+        let nflPlayers;
+        if (rookieDraft) {
+            console.log("Rookie draft detected. Skipping cache and fetching live player data.");
+            const response = await fetch('https://api.sleeper.app/v1/players/nfl');
+            if (!response.ok) throw new Error(`Failed to fetch live NFL player data: ${response.status}`);
+            nflPlayers = await response.json();
+        } else {
+            nflPlayers = await loadCachedPlayerData();
+            if (!nflPlayers) {
+                alert("Failed to load cached NFL player data.");
+                return;
+            }
+        }
 
         if (!rookieDraft) {
              alert(`Could not find rookie or linear draft for season ${SLEEPER_SEASON_YEAR} in this league.`);
@@ -218,7 +226,7 @@ async function loadDraft() {
         }
         // --- End Data Processing ---
         
-        renderDraftBoard(draftBoardData, numTeams);
+        renderDraftBoard(draftBoardData, numTeams, nflPlayers);
         renderPlayerPool(nflPlayers, new Set(Object.keys(picksMadeMap).map(pick => picksMadeMap[pick].player_id)));
 
         // Show the player pool after rendering the draft board
@@ -234,43 +242,36 @@ async function loadDraft() {
  * Renders the draft board data into the HTML table.
  * @param {Array<Object>} draftBoardData Array of pick objects, each with pick details, player, and owners.
  * @param {number} numTeams The number of teams in the league (used for grid layout).
+ * @param {Object} nflPlayers Object containing NFL player data.
  */
-function renderDraftBoard(draftBoardData, numTeams) {
+function renderDraftBoard(draftBoardData, numTeams, nflPlayers) {
     const draftTable = document.getElementById("draftTable");
     draftTable.innerHTML = ""; // Clear previous data
 
-    // Create a grid container for the draft board
     const gridContainer = document.createElement("div");
     gridContainer.classList.add("draft-grid");
-    // Set grid columns dynamically based on number of teams
     gridContainer.style.gridTemplateColumns = `repeat(${numTeams}, 1fr)`;
 
-
-    // Iterate through processed pick data and create cards
     draftBoardData.forEach(pick => {
         const card = document.createElement("div");
         card.classList.add("draft-card");
 
-        // Pick number
         const pickNumber = document.createElement("div");
         pickNumber.classList.add("pick-number");
-        // Display pick number in Round.Pick format
         pickNumber.textContent = `Pick ${pick.round}.${String(pick.pick_in_round).padStart(2, '0')} (${pick.pick_no})`;
         card.appendChild(pickNumber);
 
-        // Drafted Player
         const playerSelected = document.createElement("div");
         playerSelected.classList.add("player-selected");
-        playerSelected.textContent = pick.playerName;
+        const playerData = nflPlayers[pick.player_id] || {};
+        playerSelected.textContent = `${playerData.full_name || 'Unknown Player'} (${playerData.position || 'N/A'}) - ${playerData.team || 'N/A'}`;
         card.appendChild(playerSelected);
 
-        // Current Pick Owner
         const currentOwner = document.createElement("div");
         currentOwner.classList.add("pick-owner");
         currentOwner.textContent = `Owner: ${pick.currentOwnerName}`;
         card.appendChild(currentOwner);
 
-        // Original Owner
         const originalOwner = document.createElement("div");
         originalOwner.classList.add("original-owner");
         originalOwner.textContent = `Original: ${pick.originalOwnerName}`;
@@ -341,14 +342,27 @@ function showPlayerPool() {
     }
 }
 
+// Update the cachePlayerData function to save the fetched data to the cached_players.json file
 async function cachePlayerData() {
-    const response = await fetch('https://api.sleeper.app/v1/players/nfl');
-    if (!response.ok) {
-        throw new Error(`Failed to fetch player data: ${response.status}`);
+    try {
+        const response = await fetch('https://api.sleeper.app/v1/players/nfl');
+        if (!response.ok) {
+            throw new Error(`Failed to fetch player data: ${response.status}`);
+        }
+        const players = await response.json();
+
+        // Save the fetched data to the cached_players.json file
+        const cachedData = JSON.stringify(players);
+        await fetch('data/cached_players.json', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: cachedData
+        });
+
+        console.log('Player data cached successfully:', cachedData);
+    } catch (error) {
+        console.error('Error caching player data:', error);
     }
-    const players = await response.json();
-    fs.writeFileSync('cached_players.json', JSON.stringify(players));
-    console.log('Player data cached successfully.');
 }
 
 cachePlayerData().catch(console.error);
@@ -356,7 +370,7 @@ cachePlayerData().catch(console.error);
 // Load cached player data using fetch
 async function loadCachedPlayerData() {
     try {
-        const response = await fetch('data/cached_players.json'); // Replace with the correct path to your cached JSON file
+        const response = await fetch('data/cached_players.json'); // path to cached JSON file
         if (!response.ok) {
             throw new Error(`Failed to load cached player data: ${response.status}`);
         }
