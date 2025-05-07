@@ -1,0 +1,16 @@
+2025-05-07 15:30:30,597 - INFO - Starting ADP calculation from BeatADP rankings.
+2025-05-07 15:30:30,648 - INFO - Attempting to download BeatADP rankings from: https://www.beatadp.com/api/rankings/download
+2025-05-07 15:30:30,653 - DEBUG - Starting new HTTPS connection (1): www.beatadp.com:443
+2025-05-07 15:30:31,850 - DEBUG - https://www.beatadp.com:443 "GET /api/rankings/download HTTP/11" 400 None
+2025-05-07 15:30:31,852 - ERROR - Failed to download from https://www.beatadp.com/api/rankings/download. Status code: 400
+2025-05-07 15:30:31,852 - INFO - Attempting to download BeatADP rankings from: https://www.beatadp.com/rankings/download
+2025-05-07 15:30:31,852 - DEBUG - Starting new HTTPS connection (1): www.beatadp.com:443
+2025-05-07 15:30:32,895 - DEBUG - https://www.beatadp.com:443 "GET /rankings/download HTTP/11" 302 None
+2025-05-07 15:30:33,235 - DEBUG - https://www.beatadp.com:443 "GET /login?callbackUrl=%2Frankings%2Fdownload HTTP/11" 200 None
+2025-05-07 15:30:33,237 - WARNING - Response from https://www.beatadp.com/rankings/download does not appear to be a CSV file
+2025-05-07 15:30:33,237 - INFO - Attempting to download BeatADP rankings from: https://www.beatadp.com/free-rankings-dashboard/download
+2025-05-07 15:30:33,238 - DEBUG - Starting new HTTPS connection (1): www.beatadp.com:443
+2025-05-07 15:30:34,969 - DEBUG - https://www.beatadp.com:443 "GET /free-rankings-dashboard/download HTTP/11" 404 None
+2025-05-07 15:30:34,969 - ERROR - Failed to download from https://www.beatadp.com/free-rankings-dashboard/download. Status code: 404
+2025-05-07 15:30:34,969 - ERROR - Failed to download rankings from any of the available URLs
+2025-05-07 15:30:34,969 - WARNING - No ADP data retrieved from BeatADP. Aborting.

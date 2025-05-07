@@ -1,0 +1,2697 @@
+{
+    "source_note": "Rankings based off of redraft, half-ppr, 1QB from BeatADP.com",
+    "last_updated": "2025-05-07",
+    "players": {
+        "Ja'Marr Chase": {
+            "full_name": "Ja'Marr Chase",
+            "rank": 1,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "1",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Saquon Barkley": {
+            "full_name": "Saquon Barkley",
+            "rank": 2,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "1",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Justin Jefferson": {
+            "full_name": "Justin Jefferson",
+            "rank": 3,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "2",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Bijan Robinson": {
+            "full_name": "Bijan Robinson",
+            "rank": 4,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "2",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "CeeDee Lamb": {
+            "full_name": "CeeDee Lamb",
+            "rank": 5,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "3",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Puka Nacua": {
+            "full_name": "Puka Nacua",
+            "rank": 6,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "4",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Amon-Ra St. Brown": {
+            "full_name": "Amon-Ra St. Brown",
+            "rank": 7,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "5",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jahmyr Gibbs": {
+            "full_name": "Jahmyr Gibbs",
+            "rank": 8,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "3",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Nico Collins": {
+            "full_name": "Nico Collins",
+            "rank": 9,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "6",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Malik Nabers": {
+            "full_name": "Malik Nabers",
+            "rank": 10,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "7",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Drake London": {
+            "full_name": "Drake London",
+            "rank": 11,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "8",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Brian Thomas": {
+            "full_name": "Brian Thomas",
+            "rank": 12,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "9",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "A.J. Brown": {
+            "full_name": "A.J. Brown",
+            "rank": 13,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "10",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Derrick Henry": {
+            "full_name": "Derrick Henry",
+            "rank": 14,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "4",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "De'Von Achane": {
+            "full_name": "De'Von Achane",
+            "rank": 15,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "5",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Brock Bowers": {
+            "full_name": "Brock Bowers",
+            "rank": 16,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "1",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tyreek Hill": {
+            "full_name": "Tyreek Hill",
+            "rank": 17,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "11",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jaxon Smith-Njigba": {
+            "full_name": "Jaxon Smith-Njigba",
+            "rank": 18,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "12",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Trey McBride": {
+            "full_name": "Trey McBride",
+            "rank": 19,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "2",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Ladd McConkey": {
+            "full_name": "Ladd McConkey",
+            "rank": 20,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "13",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tee Higgins": {
+            "full_name": "Tee Higgins",
+            "rank": 21,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "14",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Josh Allen": {
+            "full_name": "Josh Allen",
+            "rank": 22,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "1",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Bucky Irving": {
+            "full_name": "Bucky Irving",
+            "rank": 23,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "6",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Lamar Jackson": {
+            "full_name": "Lamar Jackson",
+            "rank": 24,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "2",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Garrett Wilson": {
+            "full_name": "Garrett Wilson",
+            "rank": 25,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "15",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Josh Jacobs": {
+            "full_name": "Josh Jacobs",
+            "rank": 26,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "7",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Terry McLaurin": {
+            "full_name": "Terry McLaurin",
+            "rank": 27,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "16",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Christian McCaffrey": {
+            "full_name": "Christian McCaffrey",
+            "rank": 28,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "8",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jonathan Taylor": {
+            "full_name": "Jonathan Taylor",
+            "rank": 29,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "9",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Mike Evans": {
+            "full_name": "Mike Evans",
+            "rank": 30,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "17",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jayden Daniels": {
+            "full_name": "Jayden Daniels",
+            "rank": 31,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "3",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Breece Hall": {
+            "full_name": "Breece Hall",
+            "rank": 32,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "10",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Chase Brown": {
+            "full_name": "Chase Brown",
+            "rank": 33,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "11",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Davante Adams": {
+            "full_name": "Davante Adams",
+            "rank": 34,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "18",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Marvin Harrison": {
+            "full_name": "Marvin Harrison",
+            "rank": 35,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "19",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "DJ Moore": {
+            "full_name": "DJ Moore",
+            "rank": 36,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "20",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Ashton Jeanty": {
+            "full_name": "Ashton Jeanty",
+            "rank": 37,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "12",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Kyren Williams": {
+            "full_name": "Kyren Williams",
+            "rank": 38,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "13",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "T.J. Hockenson": {
+            "full_name": "T.J. Hockenson",
+            "rank": 39,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "3",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jalen Hurts": {
+            "full_name": "Jalen Hurts",
+            "rank": 40,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "4",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "James Cook": {
+            "full_name": "James Cook",
+            "rank": 41,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "14",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Kenneth Walker": {
+            "full_name": "Kenneth Walker",
+            "rank": 42,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "15",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Zay Flowers": {
+            "full_name": "Zay Flowers",
+            "rank": 43,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "21",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Rashee Rice": {
+            "full_name": "Rashee Rice",
+            "rank": 44,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "22",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Courtland Sutton": {
+            "full_name": "Courtland Sutton",
+            "rank": 45,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "23",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Chris Olave": {
+            "full_name": "Chris Olave",
+            "rank": 46,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "24",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Alvin Kamara": {
+            "full_name": "Alvin Kamara",
+            "rank": 47,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "16",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Joe Burrow": {
+            "full_name": "Joe Burrow",
+            "rank": 48,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "5",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "DK Metcalf": {
+            "full_name": "DK Metcalf",
+            "rank": 49,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "25",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Chuba Hubbard": {
+            "full_name": "Chuba Hubbard",
+            "rank": 50,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "17",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jaylen Waddle": {
+            "full_name": "Jaylen Waddle",
+            "rank": 51,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "26",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Joe Mixon": {
+            "full_name": "Joe Mixon",
+            "rank": 52,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "18",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "George Kittle": {
+            "full_name": "George Kittle",
+            "rank": 53,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "4",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "James Conner": {
+            "full_name": "James Conner",
+            "rank": 54,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "19",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "DeVonta Smith": {
+            "full_name": "DeVonta Smith",
+            "rank": 55,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "27",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Chris Godwin": {
+            "full_name": "Chris Godwin",
+            "rank": 56,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "28",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jordan Addison": {
+            "full_name": "Jordan Addison",
+            "rank": 57,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "29",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jameson Williams": {
+            "full_name": "Jameson Williams",
+            "rank": 58,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "30",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "George Pickens": {
+            "full_name": "George Pickens",
+            "rank": 59,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "31",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "David Montgomery": {
+            "full_name": "David Montgomery",
+            "rank": 60,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "20",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Baker Mayfield": {
+            "full_name": "Baker Mayfield",
+            "rank": 61,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "6",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Omarion Hampton": {
+            "full_name": "Omarion Hampton",
+            "rank": 62,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "21",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Patrick Mahomes": {
+            "full_name": "Patrick Mahomes",
+            "rank": 63,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "7",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jerry Jeudy": {
+            "full_name": "Jerry Jeudy",
+            "rank": 64,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "32",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Xavier Worthy": {
+            "full_name": "Xavier Worthy",
+            "rank": 65,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "33",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Sam LaPorta": {
+            "full_name": "Sam LaPorta",
+            "rank": 66,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "5",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Isiah Pacheco": {
+            "full_name": "Isiah Pacheco",
+            "rank": 67,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "22",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tyrone Tracy": {
+            "full_name": "Tyrone Tracy",
+            "rank": 68,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "23",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Najee Harris": {
+            "full_name": "Najee Harris",
+            "rank": 69,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "24",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Aaron Jones": {
+            "full_name": "Aaron Jones",
+            "rank": 70,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "25",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tony Pollard": {
+            "full_name": "Tony Pollard",
+            "rank": 71,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "26",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Brandon Aiyuk": {
+            "full_name": "Brandon Aiyuk",
+            "rank": 72,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "34",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Rome Odunze": {
+            "full_name": "Rome Odunze",
+            "rank": 73,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "35",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Khalil Shakir": {
+            "full_name": "Khalil Shakir",
+            "rank": 74,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "36",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jared Goff": {
+            "full_name": "Jared Goff",
+            "rank": 75,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "8",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jaylen Warren": {
+            "full_name": "Jaylen Warren",
+            "rank": 76,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "27",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jonnu Smith": {
+            "full_name": "Jonnu Smith",
+            "rank": 77,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "6",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Mark Andrews": {
+            "full_name": "Mark Andrews",
+            "rank": 78,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "7",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Kyler Murray": {
+            "full_name": "Kyler Murray",
+            "rank": 79,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "9",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Justin Herbert": {
+            "full_name": "Justin Herbert",
+            "rank": 80,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "10",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jakobi Meyers": {
+            "full_name": "Jakobi Meyers",
+            "rank": 81,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "37",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Brian Robinson": {
+            "full_name": "Brian Robinson",
+            "rank": 82,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "28",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Calvin Ridley": {
+            "full_name": "Calvin Ridley",
+            "rank": 83,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "38",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "D'Andre Swift": {
+            "full_name": "D'Andre Swift",
+            "rank": 84,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "29",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Travis Kelce": {
+            "full_name": "Travis Kelce",
+            "rank": 85,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "8",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Deebo Samuel": {
+            "full_name": "Deebo Samuel",
+            "rank": 86,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "39",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "David Njoku": {
+            "full_name": "David Njoku",
+            "rank": 87,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "9",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Evan Engram": {
+            "full_name": "Evan Engram",
+            "rank": 88,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "10",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Travis Etienne": {
+            "full_name": "Travis Etienne",
+            "rank": 89,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "30",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jordan Love": {
+            "full_name": "Jordan Love",
+            "rank": 90,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "11",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Rhamondre Stevenson": {
+            "full_name": "Rhamondre Stevenson",
+            "rank": 91,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "31",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jayden Reed": {
+            "full_name": "Jayden Reed",
+            "rank": 92,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "40",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Bo Nix": {
+            "full_name": "Bo Nix",
+            "rank": 93,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "12",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Cooper Kupp": {
+            "full_name": "Cooper Kupp",
+            "rank": 94,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "41",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Brock Purdy": {
+            "full_name": "Brock Purdy",
+            "rank": 95,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "13",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Josh Downs": {
+            "full_name": "Josh Downs",
+            "rank": 96,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "42",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Michael Pittman": {
+            "full_name": "Michael Pittman",
+            "rank": 97,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "43",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Caleb Williams": {
+            "full_name": "Caleb Williams",
+            "rank": 98,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "14",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Rico Dowdle": {
+            "full_name": "Rico Dowdle",
+            "rank": 99,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "32",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Stefon Diggs": {
+            "full_name": "Stefon Diggs",
+            "rank": 100,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "44",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tyjae Spears": {
+            "full_name": "Tyjae Spears",
+            "rank": 101,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "33",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jalen McMillan": {
+            "full_name": "Jalen McMillan",
+            "rank": 102,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "45",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Dalton Kincaid": {
+            "full_name": "Dalton Kincaid",
+            "rank": 103,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "11",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jake Ferguson": {
+            "full_name": "Jake Ferguson",
+            "rank": 104,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "12",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Javonte Williams": {
+            "full_name": "Javonte Williams",
+            "rank": 105,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "34",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Rachaad White": {
+            "full_name": "Rachaad White",
+            "rank": 106,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "35",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tucker Kraft": {
+            "full_name": "Tucker Kraft",
+            "rank": 107,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "13",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "C.J. Stroud": {
+            "full_name": "C.J. Stroud",
+            "rank": 108,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "15",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "J.K. Dobbins": {
+            "full_name": "J.K. Dobbins",
+            "rank": 109,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "36",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Darnell Mooney": {
+            "full_name": "Darnell Mooney",
+            "rank": 110,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "46",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Keenan Allen": {
+            "full_name": "Keenan Allen",
+            "rank": 111,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "47",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Ricky Pearsall": {
+            "full_name": "Ricky Pearsall",
+            "rank": 112,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "48",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Dak Prescott": {
+            "full_name": "Dak Prescott",
+            "rank": 113,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "16",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tua Tagovailoa": {
+            "full_name": "Tua Tagovailoa",
+            "rank": 114,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "17",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Zach Charbonnet": {
+            "full_name": "Zach Charbonnet",
+            "rank": 115,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "37",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tank Bigsby": {
+            "full_name": "Tank Bigsby",
+            "rank": 116,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "38",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Christian Kirk": {
+            "full_name": "Christian Kirk",
+            "rank": 117,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "49",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Drake Maye": {
+            "full_name": "Drake Maye",
+            "rank": 118,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "18",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "TreVeyon Henderson": {
+            "full_name": "TreVeyon Henderson",
+            "rank": 119,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "39",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Amari Cooper": {
+            "full_name": "Amari Cooper",
+            "rank": 120,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "50",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Trevor Lawrence": {
+            "full_name": "Trevor Lawrence",
+            "rank": 121,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "19",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Matthew Stafford": {
+            "full_name": "Matthew Stafford",
+            "rank": 122,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "20",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Anthony Richardson": {
+            "full_name": "Anthony Richardson",
+            "rank": 123,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "21",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Keon Coleman": {
+            "full_name": "Keon Coleman",
+            "rank": 124,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "51",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Dallas Goedert": {
+            "full_name": "Dallas Goedert",
+            "rank": 125,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "14",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jerome Ford": {
+            "full_name": "Jerome Ford",
+            "rank": 126,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "40",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Blake Corum": {
+            "full_name": "Blake Corum",
+            "rank": 127,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "41",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Hollywood Brown": {
+            "full_name": "Hollywood Brown",
+            "rank": 128,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "52",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Austin Ekeler": {
+            "full_name": "Austin Ekeler",
+            "rank": 129,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "42",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Hunter Henry": {
+            "full_name": "Hunter Henry",
+            "rank": 130,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "15",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tetairoa McMillan": {
+            "full_name": "Tetairoa McMillan",
+            "rank": 131,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "53",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Quinshon Judkins": {
+            "full_name": "Quinshon Judkins",
+            "rank": 132,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "43",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Rashid Shaheed": {
+            "full_name": "Rashid Shaheed",
+            "rank": 133,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "54",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Quentin Johnston": {
+            "full_name": "Quentin Johnston",
+            "rank": 134,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "55",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "DeAndre Hopkins": {
+            "full_name": "DeAndre Hopkins",
+            "rank": 135,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "56",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tyler Allgeier": {
+            "full_name": "Tyler Allgeier",
+            "rank": 136,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "44",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Romeo Doubs": {
+            "full_name": "Romeo Doubs",
+            "rank": 137,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "57",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Kyle Pitts": {
+            "full_name": "Kyle Pitts",
+            "rank": 138,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "16",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Ray Davis": {
+            "full_name": "Ray Davis",
+            "rank": 139,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "45",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Geno Smith": {
+            "full_name": "Geno Smith",
+            "rank": 140,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "22",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Adam Thielen": {
+            "full_name": "Adam Thielen",
+            "rank": 141,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "58",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Sam Darnold": {
+            "full_name": "Sam Darnold",
+            "rank": 142,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "23",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Braelon Allen": {
+            "full_name": "Braelon Allen",
+            "rank": 143,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "46",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jaylen Wright": {
+            "full_name": "Jaylen Wright",
+            "rank": 144,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "47",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Bryce Young": {
+            "full_name": "Bryce Young",
+            "rank": 145,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "24",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Marvin Mims": {
+            "full_name": "Marvin Mims",
+            "rank": 146,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "59",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Pat Freiermuth": {
+            "full_name": "Pat Freiermuth",
+            "rank": 147,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "17",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jaleel McLaughlin": {
+            "full_name": "Jaleel McLaughlin",
+            "rank": 148,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "48",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Justin Fields": {
+            "full_name": "Justin Fields",
+            "rank": 149,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "25",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Rashod Bateman": {
+            "full_name": "Rashod Bateman",
+            "rank": 150,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "60",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Isaac Guerendo": {
+            "full_name": "Isaac Guerendo",
+            "rank": 151,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "49",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Xavier Legette": {
+            "full_name": "Xavier Legette",
+            "rank": 152,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "61",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Zach Ertz": {
+            "full_name": "Zach Ertz",
+            "rank": 153,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "18",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Adonai Mitchell": {
+            "full_name": "Adonai Mitchell",
+            "rank": 154,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "62",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Dylan Sampson": {
+            "full_name": "Dylan Sampson",
+            "rank": 155,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "50",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Trey Benson": {
+            "full_name": "Trey Benson",
+            "rank": 156,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "51",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Cole Kmet": {
+            "full_name": "Cole Kmet",
+            "rank": 157,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "19",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tyler Warren": {
+            "full_name": "Tyler Warren",
+            "rank": 158,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "20",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Nick Chubb": {
+            "full_name": "Nick Chubb",
+            "rank": 159,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "52",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Cade Otton": {
+            "full_name": "Cade Otton",
+            "rank": 160,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "21",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "MarShawn Lloyd": {
+            "full_name": "MarShawn Lloyd",
+            "rank": 161,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "53",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Wan'Dale Robinson": {
+            "full_name": "Wan'Dale Robinson",
+            "rank": 162,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "63",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "DeMario Douglas": {
+            "full_name": "DeMario Douglas",
+            "rank": 163,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "64",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "J.J. McCarthy": {
+            "full_name": "J.J. McCarthy",
+            "rank": 164,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "26",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Michael Wilson": {
+            "full_name": "Michael Wilson",
+            "rank": 165,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "65",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Luther Burden": {
+            "full_name": "Luther Burden",
+            "rank": 166,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "66",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Emeka Egbuka": {
+            "full_name": "Emeka Egbuka",
+            "rank": 167,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "67",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Roschon Johnson": {
+            "full_name": "Roschon Johnson",
+            "rank": 168,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "54",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Audric Estime": {
+            "full_name": "Audric Estime",
+            "rank": 169,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "55",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Matthew Golden": {
+            "full_name": "Matthew Golden",
+            "rank": 170,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "68",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Isaiah Likely": {
+            "full_name": "Isaiah Likely",
+            "rank": 171,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "22",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Bhayshul Tuten": {
+            "full_name": "Bhayshul Tuten",
+            "rank": 172,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "56",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Dalton Schultz": {
+            "full_name": "Dalton Schultz",
+            "rank": 173,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "23",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Dontayvion Wicks": {
+            "full_name": "Dontayvion Wicks",
+            "rank": 174,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "69",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Diontae Johnson": {
+            "full_name": "Diontae Johnson",
+            "rank": 175,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "70",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Kaleb Johnson": {
+            "full_name": "Kaleb Johnson",
+            "rank": 176,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "57",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Cam Ward": {
+            "full_name": "Cam Ward",
+            "rank": 177,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "27",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Antonio Gibson": {
+            "full_name": "Antonio Gibson",
+            "rank": 178,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "58",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Cam Skattebo": {
+            "full_name": "Cam Skattebo",
+            "rank": 179,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "59",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Joshua Palmer": {
+            "full_name": "Joshua Palmer",
+            "rank": 180,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "71",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Ja'Tavion Sanders": {
+            "full_name": "Ja'Tavion Sanders",
+            "rank": 181,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "24",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Kimani Vidal": {
+            "full_name": "Kimani Vidal",
+            "rank": 182,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "60",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Mike Gesicki": {
+            "full_name": "Mike Gesicki",
+            "rank": 183,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "25",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Brandin Cooks": {
+            "full_name": "Brandin Cooks",
+            "rank": 184,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "72",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Kendre Miller": {
+            "full_name": "Kendre Miller",
+            "rank": 185,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "61",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tre Harris": {
+            "full_name": "Tre Harris",
+            "rank": 186,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "73",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Shedeur Sanders": {
+            "full_name": "Shedeur Sanders",
+            "rank": 187,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "28",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Isaiah Bond": {
+            "full_name": "Isaiah Bond",
+            "rank": 188,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "74",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Colston Loveland": {
+            "full_name": "Colston Loveland",
+            "rank": 189,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "26",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Devin Singletary": {
+            "full_name": "Devin Singletary",
+            "rank": 190,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "62",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Travis Hunter": {
+            "full_name": "Travis Hunter",
+            "rank": 191,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "75",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Noah Fant": {
+            "full_name": "Noah Fant",
+            "rank": 192,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "27",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Derek Carr": {
+            "full_name": "Derek Carr",
+            "rank": 193,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "29",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Gabe Davis": {
+            "full_name": "Gabe Davis",
+            "rank": 194,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "76",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Devin Neal": {
+            "full_name": "Devin Neal",
+            "rank": 195,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "63",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Damien Martinez": {
+            "full_name": "Damien Martinez",
+            "rank": 196,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "64",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jalen Tolbert": {
+            "full_name": "Jalen Tolbert",
+            "rank": 197,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "77",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Ollie Gordon": {
+            "full_name": "Ollie Gordon",
+            "rank": 198,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "65",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Christian Watson": {
+            "full_name": "Christian Watson",
+            "rank": 199,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "78",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Justice Hill": {
+            "full_name": "Justice Hill",
+            "rank": 200,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "66",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Xavier Restrepo": {
+            "full_name": "Xavier Restrepo",
+            "rank": 201,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "79",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Juwan Johnson": {
+            "full_name": "Juwan Johnson",
+            "rank": 202,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "28",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Taysom Hill": {
+            "full_name": "Taysom Hill",
+            "rank": 203,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "29",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Trevor Etienne": {
+            "full_name": "Trevor Etienne",
+            "rank": 204,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "67",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "RJ Harvey": {
+            "full_name": "RJ Harvey",
+            "rank": 205,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "68",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Kyle Monangai": {
+            "full_name": "Kyle Monangai",
+            "rank": 206,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "69",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Elic Ayomanor": {
+            "full_name": "Elic Ayomanor",
+            "rank": 207,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "80",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Alexander Mattison": {
+            "full_name": "Alexander Mattison",
+            "rank": 208,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "70",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Roman Wilson": {
+            "full_name": "Roman Wilson",
+            "rank": 209,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "81",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Gus Edwards": {
+            "full_name": "Gus Edwards",
+            "rank": 210,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "71",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Russell Wilson": {
+            "full_name": "Russell Wilson",
+            "rank": 211,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "30",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Khalil Herbert": {
+            "full_name": "Khalil Herbert",
+            "rank": 212,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "72",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Raheem Mostert": {
+            "full_name": "Raheem Mostert",
+            "rank": 213,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "73",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Luke McCaffrey": {
+            "full_name": "Luke McCaffrey",
+            "rank": 214,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "82",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tank Dell": {
+            "full_name": "Tank Dell",
+            "rank": 215,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "83",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Mike Williams": {
+            "full_name": "Mike Williams",
+            "rank": 216,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "84",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Harold Fannin": {
+            "full_name": "Harold Fannin",
+            "rank": 217,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "30",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Aaron Rodgers": {
+            "full_name": "Aaron Rodgers",
+            "rank": 218,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "31",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Curtis Samuel": {
+            "full_name": "Curtis Samuel",
+            "rank": 219,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "85",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Zack Moss": {
+            "full_name": "Zack Moss",
+            "rank": 220,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "74",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Elijah Mitchell": {
+            "full_name": "Elijah Mitchell",
+            "rank": 221,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "75",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tyler Lockett": {
+            "full_name": "Tyler Lockett",
+            "rank": 222,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "86",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jalen Royals": {
+            "full_name": "Jalen Royals",
+            "rank": 223,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "87",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Theo Johnson": {
+            "full_name": "Theo Johnson",
+            "rank": 224,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "31",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Keaton Mitchell": {
+            "full_name": "Keaton Mitchell",
+            "rank": 225,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "76",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tez Johnson": {
+            "full_name": "Tez Johnson",
+            "rank": 226,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "88",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jaxson Dart": {
+            "full_name": "Jaxson Dart",
+            "rank": 227,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "32",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Raheim Sanders": {
+            "full_name": "Raheim Sanders",
+            "rank": 228,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "77",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Oronde Gadsden": {
+            "full_name": "Oronde Gadsden",
+            "rank": 229,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "32",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "DJ Giddens": {
+            "full_name": "DJ Giddens",
+            "rank": 230,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "78",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Donovan Edwards": {
+            "full_name": "Donovan Edwards",
+            "rank": 231,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "79",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Brashard Smith": {
+            "full_name": "Brashard Smith",
+            "rank": 232,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "80",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tory Horton": {
+            "full_name": "Tory Horton",
+            "rank": 233,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "89",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tahj Brooks": {
+            "full_name": "Tahj Brooks",
+            "rank": 234,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "81",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Elijah Arroyo": {
+            "full_name": "Elijah Arroyo",
+            "rank": 235,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "33",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Woody Marks": {
+            "full_name": "Woody Marks",
+            "rank": 236,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "82",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jaylin Noel": {
+            "full_name": "Jaylin Noel",
+            "rank": 237,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "90",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jayden Higgins": {
+            "full_name": "Jayden Higgins",
+            "rank": 238,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "91",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Ja'Quinden Jackson": {
+            "full_name": "Ja'Quinden Jackson",
+            "rank": 239,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "83",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jack Bech": {
+            "full_name": "Jack Bech",
+            "rank": 240,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "92",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jarquez Hunter": {
+            "full_name": "Jarquez Hunter",
+            "rank": 241,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "84",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Marcus Yarns": {
+            "full_name": "Marcus Yarns",
+            "rank": 242,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "85",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jaydon Blue": {
+            "full_name": "Jaydon Blue",
+            "rank": 243,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "86",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Savion Williams": {
+            "full_name": "Savion Williams",
+            "rank": 244,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "93",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Mason Taylor": {
+            "full_name": "Mason Taylor",
+            "rank": 245,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "34",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jalen Milroe": {
+            "full_name": "Jalen Milroe",
+            "rank": 246,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "33",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Kalel Mullings": {
+            "full_name": "Kalel Mullings",
+            "rank": 247,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "87",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Terrance Ferguson": {
+            "full_name": "Terrance Ferguson",
+            "rank": 248,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "35",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Quinn Ewers": {
+            "full_name": "Quinn Ewers",
+            "rank": 249,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "34",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Dillon Gabriel": {
+            "full_name": "Dillon Gabriel",
+            "rank": 250,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "35",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jordan James": {
+            "full_name": "Jordan James",
+            "rank": 251,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "88",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Riley Leonard": {
+            "full_name": "Riley Leonard",
+            "rank": 252,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "36",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Kurtis Rourke": {
+            "full_name": "Kurtis Rourke",
+            "rank": 253,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "37",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Mitchell Evans": {
+            "full_name": "Mitchell Evans",
+            "rank": 254,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "36",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Gunnar Helm": {
+            "full_name": "Gunnar Helm",
+            "rank": 255,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "37",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tai Felton": {
+            "full_name": "Tai Felton",
+            "rank": 256,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "94",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Ricky White": {
+            "full_name": "Ricky White",
+            "rank": 257,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "95",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Will Howard": {
+            "full_name": "Will Howard",
+            "rank": 258,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "38",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Kyle McCord": {
+            "full_name": "Kyle McCord",
+            "rank": 259,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "39",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Pat Bryant": {
+            "full_name": "Pat Bryant",
+            "rank": 260,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "96",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Nick Nash": {
+            "full_name": "Nick Nash",
+            "rank": 261,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "97",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jimmy Horn": {
+            "full_name": "Jimmy Horn",
+            "rank": 262,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "98",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Moliki Matavao": {
+            "full_name": "Moliki Matavao",
+            "rank": 263,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "38",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Isaac TeSlaa": {
+            "full_name": "Isaac TeSlaa",
+            "rank": 264,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "99",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jacory Croskey-Merritt": {
+            "full_name": "Jacory Croskey-Merritt",
+            "rank": 265,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "89",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tyler Shough": {
+            "full_name": "Tyler Shough",
+            "rank": 266,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "40",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "LeQuint Allen": {
+            "full_name": "LeQuint Allen",
+            "rank": 267,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "90",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Efton Chism": {
+            "full_name": "Efton Chism",
+            "rank": 268,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "100",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Dont'e Thornton": {
+            "full_name": "Dont'e Thornton",
+            "rank": 269,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "101",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Chimere Dike": {
+            "full_name": "Chimere Dike",
+            "rank": 270,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "102",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Arian Smith": {
+            "full_name": "Arian Smith",
+            "rank": 271,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "103",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Brady Cook": {
+            "full_name": "Brady Cook",
+            "rank": 272,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "41",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Kyle Williams": {
+            "full_name": "Kyle Williams",
+            "rank": 273,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "104",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tanner Knue": {
+            "full_name": "Tanner Knue",
+            "rank": 274,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "105",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Mike DiLiello": {
+            "full_name": "Mike DiLiello",
+            "rank": 275,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "42",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Baylor Cupp": {
+            "full_name": "Baylor Cupp",
+            "rank": 276,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "39",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Colby Suits": {
+            "full_name": "Colby Suits",
+            "rank": 277,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "43",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jaylen Johnson": {
+            "full_name": "Jaylen Johnson",
+            "rank": 278,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "106",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "JJ Galbreath": {
+            "full_name": "JJ Galbreath",
+            "rank": 279,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "40",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "DJ Thomas-Jones": {
+            "full_name": "DJ Thomas-Jones",
+            "rank": 280,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "41",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Roc Taylor": {
+            "full_name": "Roc Taylor",
+            "rank": 281,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "107",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Ke'Shawn Williams": {
+            "full_name": "Ke'Shawn Williams",
+            "rank": 282,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "108",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Lan Larison": {
+            "full_name": "Lan Larison",
+            "rank": 283,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "91",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jacolby George": {
+            "full_name": "Jacolby George",
+            "rank": 284,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "109",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Moose Muhammad": {
+            "full_name": "Moose Muhammad",
+            "rank": 285,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "110",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Ethan Garbers": {
+            "full_name": "Ethan Garbers",
+            "rank": 286,
+            "position": "QB",
+            "team": "Unknown",
+            "positional_rank": "44",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Kay'Ron Lynch-Adams": {
+            "full_name": "Kay'Ron Lynch-Adams",
+            "rank": 287,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "92",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Bryce Pierre": {
+            "full_name": "Bryce Pierre",
+            "rank": 288,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "42",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Kye Robichaux": {
+            "full_name": "Kye Robichaux",
+            "rank": 289,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "93",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jalen White": {
+            "full_name": "Jalen White",
+            "rank": 290,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "94",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Robert Lewis": {
+            "full_name": "Robert Lewis",
+            "rank": 291,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "111",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Dontae Fleming": {
+            "full_name": "Dontae Fleming",
+            "rank": 292,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "112",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Bryson Nesbit": {
+            "full_name": "Bryson Nesbit",
+            "rank": 293,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "43",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Tre Stewart": {
+            "full_name": "Tre Stewart",
+            "rank": 294,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "95",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Anthony Tyus": {
+            "full_name": "Anthony Tyus",
+            "rank": 295,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "96",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jackson Meeks": {
+            "full_name": "Jackson Meeks",
+            "rank": 296,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "113",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Jakobie Keeney-James": {
+            "full_name": "Jakobie Keeney-James",
+            "rank": 297,
+            "position": "WR",
+            "team": "Unknown",
+            "positional_rank": "114",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Caden Prieskorn": {
+            "full_name": "Caden Prieskorn",
+            "rank": 298,
+            "position": "TE",
+            "team": "Unknown",
+            "positional_rank": "44",
+            "tier": "1",
+            "auction_value": "1"
+        },
+        "Amar Johnson": {
+            "full_name": "Amar Johnson",
+            "rank": 299,
+            "position": "RB",
+            "team": "Unknown",
+            "positional_rank": "97",
+            "tier": "1",
+            "auction_value": "1"
+        }
+    }
+}
