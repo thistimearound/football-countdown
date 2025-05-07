@@ -1,0 +1,2 @@
+2025-05-07 08:59:52,443 - INFO - Starting ADP calculation from cached data.
+2025-05-07 08:59:52,443 - ERROR - Cached player data file data/cached_players.json does not exist or is empty.
