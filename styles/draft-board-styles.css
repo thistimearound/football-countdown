@@ -104,3 +104,37 @@ main {
     font-weight: bold;
     color: #007bff;
 }
+
+/* Player Pool */
+.player-pool {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+/* Player Card */
+.player-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.player-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.player-details {
+    font-size: 14px;
+    color: #555;
+}

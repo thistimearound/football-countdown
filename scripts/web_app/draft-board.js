@@ -2,7 +2,10 @@
 const SLEEPER_SEASON_YEAR = '2025'; // The season the draft is FOR (e.g., 2025 for the upcoming rookie draft)
 
 // --- Event Listener for Load Button ---
-document.getElementById("loadDraft").addEventListener("click", async () => {
+document.getElementById("loadDraft").addEventListener("click", loadDraft);
+
+// Modify the loadDraft event listener to show the player pool after successful loading
+async function loadDraft() {
     const leagueID = document.getElementById("leagueID").value.trim();
     if (!leagueID) {
         alert("Please enter a valid League ID.");
@@ -22,7 +25,7 @@ document.getElementById("loadDraft").addEventListener("click", async () => {
             fetch(`https://api.sleeper.app/v1/league/${leagueID}/rosters`),
             fetch(`https://api.sleeper.app/v1/league/${leagueID}/drafts`),
             fetch(`https://api.sleeper.app/v1/league/${leagueID}/traded_picks`),
-            fetch("https://api.sleeper.app/v1/players/nfl") // Fetch NFL players
+            fetch("https://api.sleeper.app/v1/players/nfl")
         ]);
 
         // Check if all responses are OK before parsing JSON
@@ -38,6 +41,12 @@ document.getElementById("loadDraft").addEventListener("click", async () => {
         const drafts = await draftsResponse.json();
         const tradedPicks = await tradedPicksResponse.json();
         const nflPlayers = await nflPlayersResponse.json(); // NFL Players data
+
+        console.log("Users Response:", users);
+        console.log("Rosters Response:", rosters);
+        console.log("Drafts Response:", drafts);
+        console.log("Traded Picks Response:", tradedPicks);
+        console.log("NFL Players Response:", nflPlayers);
 
         if (!drafts || drafts.length === 0) {
             alert("No drafts found for this league.");
@@ -55,7 +64,7 @@ document.getElementById("loadDraft").addEventListener("click", async () => {
 
         const draftID = rookieDraft.draft_id;
         const draftSettings = rookieDraft.settings;
-        const numRounds = draftSettings?.rounds || 5; // Default to 5 rounds if not specified
+        const numRounds = draftSettings?.rounds || 4; // Default to 4 rounds if not specified
         const numTeams = draftSettings?.teams || rosters.length; // Use roster count as fallback
         const isSnake = rookieDraft.type !== 'linear'; // Determine if it's a snake draft
 
@@ -84,9 +93,13 @@ document.getElementById("loadDraft").addEventListener("click", async () => {
         // --- Data Processing ---
         // Create necessary lookup maps for efficient access
         const userMap = {}; // { user_id: display_name }
-        users.forEach(user => {
-          userMap[user.user_id] = user.display_name;
-        });
+        if (Array.isArray(users)) {
+            users.forEach(user => {
+                userMap[user.user_id] = user.display_name;
+            });
+        } else {
+            console.error("Users data is not an array:", users);
+        }
         console.log("User Map:", userMap); // Log user map for debugging
 
         const rosterOwnerMap = {}; // { roster_id: owner_id }
@@ -206,12 +219,15 @@ document.getElementById("loadDraft").addEventListener("click", async () => {
         // --- End Data Processing ---
         
         renderDraftBoard(draftBoardData, numTeams);
+        renderPlayerPool(nflPlayers, new Set(Object.keys(picksMadeMap).map(pick => picksMadeMap[pick].player_id)));
 
+        // Show the player pool after rendering the draft board
+        showPlayerPool();
     } catch (error) {
         console.error("Error loading draft data:", error);
         alert(`Failed to load draft data: ${error.message}. Please check the League ID and try again.`);
     }
-});
+}
 
 // --- Rendering Function ---
 /**
@@ -265,3 +281,98 @@ function renderDraftBoard(draftBoardData, numTeams) {
 
     draftTable.appendChild(gridContainer);
 }
+
+/**
+ * Renders the player pool, filtering undrafted players and sorting them by Sleeper ADP.
+ * @param {Object} players Object containing player data.
+ * @param {Set} draftedPlayerIds Set of drafted player IDs.
+ */
+function renderPlayerPool(players, draftedPlayerIds) {
+    console.log("Players:", players);
+    console.log("Drafted Player IDs:", draftedPlayerIds);
+    console.log("Player IDs in Players Object:", Object.keys(players));
+
+    const playerList = document.getElementById("playerList");
+    playerList.innerHTML = ""; // Clear previous data
+
+    // Filter undrafted players and sort by Sleeper ADP
+    const undraftedPlayers = Object.values(players)
+        .filter(player => !draftedPlayerIds.has(player.player_id))
+        .sort((a, b) => (a.adp || Infinity) - (b.adp || Infinity));
+
+    // Log undrafted players for debugging
+    undraftedPlayers.forEach(player => {
+        console.log(`Player ID: ${player.player_id}, ADP: ${player.adp}`);
+    });
+
+    console.log("Undrafted Players:", undraftedPlayers);
+
+    undraftedPlayers.forEach(player => {
+        const playerCard = document.createElement("div");
+        playerCard.classList.add("player-card");
+
+        // Player Name
+        const playerName = document.createElement("div");
+        playerName.classList.add("player-name");
+        playerName.textContent = player.full_name;
+        playerCard.appendChild(playerName);
+
+        // Player Details
+        const playerDetails = document.createElement("div");
+        playerDetails.classList.add("player-details");
+        playerDetails.innerHTML = `
+            <span>Position: ${player.position}</span><br>
+            <span>Team: ${player.team || "N/A"}</span><br>
+            <span>${player.rookie ? "Rookie" : ""}</span><br>
+            <span>ADP: ${player.adp}</span><br>
+            <span>Projected Points: ${player.fantasy_points || "N/A"}</span>
+        `;
+        playerCard.appendChild(playerDetails);
+
+        playerList.appendChild(playerCard);
+    });
+}
+
+// Show the player pool only after the draft board is successfully loaded
+function showPlayerPool() {
+    const playerPoolSection = document.getElementById("playerPool");
+    if (playerPoolSection) {
+        playerPoolSection.style.display = "block"; // Make the player pool visible
+    }
+}
+
+async function cachePlayerData() {
+    const response = await fetch('https://api.sleeper.app/v1/players/nfl');
+    if (!response.ok) {
+        throw new Error(`Failed to fetch player data: ${response.status}`);
+    }
+    const players = await response.json();
+    fs.writeFileSync('cached_players.json', JSON.stringify(players));
+    console.log('Player data cached successfully.');
+}
+
+cachePlayerData().catch(console.error);
+
+// Load cached player data using fetch
+async function loadCachedPlayerData() {
+    try {
+        const response = await fetch('data/cached_players.json'); // Replace with the correct path to your cached JSON file
+        if (!response.ok) {
+            throw new Error(`Failed to load cached player data: ${response.status}`);
+        }
+        const players = await response.json();
+        console.log('Cached player data loaded successfully:', players);
+        return players;
+    } catch (error) {
+        console.error('Error loading cached player data:', error);
+        return null;
+    }
+}
+
+// Example usage
+loadCachedPlayerData().then(players => {
+    if (players) {
+        // Use the loaded player data
+        console.log('Player data:', players);
+    }
+});
