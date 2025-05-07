@@ -24,11 +24,45 @@ h1 {
 }
 
 main {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Allocate 25% to Sleeper League ID section and 75% to the draft table */
+    gap: 20px; /* Add spacing between sections */
     padding: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: flex-start;
+}
+
+section {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#playerPool {
+    grid-column: 1 / 2; /* Ensure Player Pool stays in the first column */
+    display: none; /* Initially hidden */
+    width: 30%;
+    margin-right: 20px;
+    flex: 1;
+    max-width: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px; /* Add spacing between Player Pool and Draft Board */
+}
+
+#draftBoard {
+    grid-column: 2 / 3; /* Ensure Draft Board occupies the second column */
+    display: flex;
+    flex-direction: column; /* Stack Player Pool and Draft Board vertically */
+    justify-content: space-between;
+}
+
+#draftTable {
+    flex: 3;
+    margin-right: 20px;
+    margin-top: 0; /* Remove unnecessary margin */
 }
 
 #draftBoard table {
@@ -120,16 +154,6 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     max-height: 80vh;
-}
-
-#playerPool {
-    display: none; /* Initially hidden */
-    width: 30%;
-    margin-right: 20px;
-}
-
-#draftBoard {
-    width: 70%;
 }
 
 /* Player Card */

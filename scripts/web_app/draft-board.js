@@ -219,6 +219,7 @@ async function loadDraft() {
                 pick_no: pickNumber,
                 round: round,
                 pick_in_round: pickInRound,
+                player_id: pickData?.player_id || null, // Include player_id for mapping
                 playerName: playerName,
                 currentOwnerName: currentOwnerName,
                 originalOwnerName: originalOwnerName
@@ -296,7 +297,7 @@ function renderPlayerPool(players, draftedPlayerIds) {
     const playerList = document.getElementById("playerList");
     playerList.innerHTML = ""; // Clear previous data
 
-    // Filter undrafted players and sort by Sleeper ADP
+    // Sort undrafted players by ADP in ascending order
     const undraftedPlayers = Object.values(players)
         .filter(player => !draftedPlayerIds.has(player.player_id))
         .sort((a, b) => (a.adp || Infinity) - (b.adp || Infinity));
