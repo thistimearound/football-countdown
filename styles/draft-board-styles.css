@@ -25,7 +25,7 @@ h1 {
 
 main {
     display: grid;
-    grid-template-columns: 1fr 3fr; /* Allocate 25% to Sleeper League ID section and 75% to the draft table */
+    grid-template-columns: 1fr 4fr; /* Allocate 20% to Sleeper League ID section and 80% to the draft table */
     gap: 20px; /* Add spacing between sections */
     padding: 20px;
     align-items: flex-start;
@@ -39,30 +39,32 @@ section {
 }
 
 #playerPool {
-    grid-column: 1 / 2; /* Ensure Player Pool stays in the first column */
-    display: none; /* Initially hidden */
-    width: 30%;
-    margin-right: 20px;
-    flex: 1;
-    max-width: 300px;
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #f9f9f9;
-    margin-bottom: 20px; /* Add spacing between Player Pool and Draft Board */
+    grid-column: 1 / -1; /* Span the full width */
+    display: block; /* Ensure it is visible */
+    margin-top: 20px; /* Add padding between the Player Pool section and the input box */
+    width: 100%; /* Take full width */
+    max-width: 90%; /* Set max width to 90% of the parent section */
+    margin: 0 auto; /* Center align within the parent section */
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 #draftBoard {
-    grid-column: 2 / 3; /* Ensure Draft Board occupies the second column */
+    grid-column: 2 / 4; /* Ensure Draft Board occupies the second column */
     display: flex;
     flex-direction: column; /* Stack Player Pool and Draft Board vertically */
     justify-content: space-between;
 }
 
 #draftTable {
-    flex: 3;
-    margin-right: 20px;
-    margin-top: 0; /* Remove unnecessary margin */
+    display: flex;
+    flex-direction: column; /* Stack header row and grid vertically */
+    align-items: stretch; /* Ensure both header and grid take full width */
+    gap: 10px; /* Add spacing between header row and grid */
+    width: 100%; /* Ensure it takes full advantage of the allocated space */
+    max-width: none; /* Remove any maximum width constraints */
+    margin: 0 auto; /* Center align within the parent section */
+    flex-grow: 1; /* Allow draftTable to take up all available space */
+    height: 99%; /* Ensure it stretches to fill the parent container */
 }
 
 #draftBoard table {
@@ -84,29 +86,34 @@ section {
 
 /* Draft Board Grid */
 .draft-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(var(--num-teams, 12), 1fr); /* Ensure consistent column layout */
+    gap: 10px; /* Add spacing between items */
+    width: 100%; /* Ensure full width alignment */
+    max-width: 1200px; /* Limit maximum width */
+    margin: 0 auto; /* Center align both header and grid */
 }
 
 /* Draft Row */
 .draft-row {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
+    gap: 5px;
 }
 
 /* Draft Card */
 .draft-card {
+    width: 100%; /* Ensure all cards are the same size within their grid cell */
+    height: 150px; /* Set a fixed height for uniformity */
+    padding: 5px; /* Reduce padding for each card */
+    box-sizing: border-box; /* Include padding and border in width and height */
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 8px;
-    padding: 10px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
+    justify-self: stretch; /* Ensure each card aligns with its corresponding header cell */
 }
 
 .draft-card:hover {
@@ -115,39 +122,39 @@ section {
 
 /* Pick Number */
 .pick-number {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
     color: #333;
     margin-bottom: 5px;
 }
 
-/* Original Owner */
-.original-owner {
-    font-size: 12px;
+/* Pick Owner */
+.pick-owner {
+    font-size: 8px;
     color: #888;
     margin-bottom: 5px;
 }
 
 /* Current Owner */
 .current-owner {
-    font-size: 12px;
-    color: #444;
+    font-size: 6px;
+    color: #888;
     margin-bottom: 5px;
-    font-weight: bold;
 }
 
 /* Player Selected */
 .player-selected {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     color: #007bff;
 }
 
 /* Player Pool */
 .player-pool {
-    float: left;
-    width: 30%;
-    padding: 10px;
+    float: none; /* Remove float */
+    margin: 0 auto; /* Center align if needed */
+    width: auto; /* Adjust width dynamically */
+    padding: 5px;
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -167,7 +174,7 @@ section {
 }
 
 .player-name {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     margin-bottom: 5px;
 }
@@ -175,4 +182,41 @@ section {
 .player-details {
     font-size: 14px;
     color: #555;
+}
+
+.draft-header-row {
+    display: grid;
+    grid-template-columns: repeat(var(--num-teams, 12), 1fr); /* Ensure consistent column layout */
+    gap: 10px; /* Unified spacing between items */
+    width: 100%; /* Ensure full width alignment */
+    max-width: 1200px; /* Limit maximum width */
+    margin: 0 auto; /* Center align both header and grid */
+    text-align: center;
+    font-weight: bold;
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    border-bottom: 2px solid #ccc;
+}
+
+.draft-header-cell {
+    padding: 3px;
+    border: 1px solid #ccc;
+    background-color: #e9e9e9;
+    border-radius: 4px;
+}
+
+.draft-header-cell, .draft-card {
+    width: 100%; /* Ensure consistent width within their grid cell */
+    max-width: 100px; /* Set a fixed maximum width for alignment */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Ensure consistent spacing and alignment between draft-header-row and draft-grid */
+.draft-header-row, .draft-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--num-teams, 12), 1fr); /* Ensure consistent column layout */
+    gap: 10px; /* Unified spacing between items */
+    width: 100%; /* Ensure full width alignment */
+    max-width: 1200px; /* Limit maximum width */
+    margin: 0 auto; /* Center align both header and grid */
 }

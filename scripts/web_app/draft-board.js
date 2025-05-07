@@ -227,7 +227,7 @@ async function loadDraft() {
         }
         // --- End Data Processing ---
         
-        renderDraftBoard(draftBoardData, numTeams, nflPlayers);
+        renderDraftBoard(draftBoardData, numTeams, nflPlayers, draftBoardData.map(pick => pick.originalOwnerName));
         renderPlayerPool(nflPlayers, new Set(Object.keys(picksMadeMap).map(pick => picksMadeMap[pick].player_id)));
 
         // Show the player pool after rendering the draft board
@@ -244,11 +244,24 @@ async function loadDraft() {
  * @param {Array<Object>} draftBoardData Array of pick objects, each with pick details, player, and owners.
  * @param {number} numTeams The number of teams in the league (used for grid layout).
  * @param {Object} nflPlayers Object containing NFL player data.
+ * @param {Array<string>} originalOwners Array of original owner names.
  */
-function renderDraftBoard(draftBoardData, numTeams, nflPlayers) {
+function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwners) {
     const draftTable = document.getElementById("draftTable");
     draftTable.innerHTML = ""; // Clear previous data
 
+    // Create a header row for original owners
+    const headerRow = document.createElement("div");
+    headerRow.classList.add("draft-header-row");
+    for (let i = 1; i <= numTeams; i++) {
+        const headerCell = document.createElement("div");
+        headerCell.classList.add("draft-header-cell");
+        headerCell.textContent = originalOwners[i - 1] || `Owner ${i}`; // Use original owner names if available
+        headerRow.appendChild(headerCell);
+    }
+    draftTable.appendChild(headerRow);
+
+    // Create the grid container for draft cards
     const gridContainer = document.createElement("div");
     gridContainer.classList.add("draft-grid");
     gridContainer.style.gridTemplateColumns = `repeat(${numTeams}, 1fr)`;
@@ -272,11 +285,6 @@ function renderDraftBoard(draftBoardData, numTeams, nflPlayers) {
         currentOwner.classList.add("pick-owner");
         currentOwner.textContent = `Owner: ${pick.currentOwnerName}`;
         card.appendChild(currentOwner);
-
-        const originalOwner = document.createElement("div");
-        originalOwner.classList.add("original-owner");
-        originalOwner.textContent = `Original: ${pick.originalOwnerName}`;
-        card.appendChild(originalOwner);
 
         gridContainer.appendChild(card);
     });
@@ -368,26 +376,47 @@ async function cachePlayerData() {
 
 cachePlayerData().catch(console.error);
 
-// Load cached player data using fetch
+// Import the pg library to connect to NeonDB
+const { Client } = require('pg');
+
+// Load environment variables from .env
+require('dotenv').config();
+
+// Create a function to load cached player data from NeonDB
 async function loadCachedPlayerData() {
+    const client = new Client({
+        connectionString: process.env.NEONDB_CONNECTION_STRING,
+    });
+
     try {
-        const response = await fetch('data/cached_players.json'); // path to cached JSON file
-        if (!response.ok) {
-            throw new Error(`Failed to load cached player data: ${response.status}`);
-        }
-        const players = await response.json();
-        console.log('Cached player data loaded successfully:', players);
-        return players;
+        await client.connect();
+        console.log('Connected to NeonDB');
+
+        // Query the player data from the database
+        const res = await client.query('SELECT * FROM players');
+        console.log('Player data loaded successfully:', res.rows);
+
+        return res.rows;
     } catch (error) {
-        console.error('Error loading cached player data:', error);
+        console.error('Error loading player data from NeonDB:', error);
         return null;
+    } finally {
+        await client.end();
     }
 }
 
 // Example usage
 loadCachedPlayerData().then(players => {
     if (players) {
-        // Use the loaded player data
         console.log('Player data:', players);
     }
 });
+
+function setDraftGridColumns(numTeams) {
+    const root = document.documentElement;
+    root.style.setProperty('--num-teams', numTeams);
+}
+
+// Example usage: Call this function after determining the number of teams in the league
+// Replace `numTeams` with the actual number of teams dynamically fetched or calculated
+setDraftGridColumns(12); // Default to 12 teams for now
