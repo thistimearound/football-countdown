@@ -36,7 +36,7 @@ jobs:
 
     - name: Run Devy Scraper script
       working-directory: scripts/scrapers
-      run: python devy_scaper.py
+      run: python devy_scraper.py
       env:
         # Pass database credentials from GitHub Secrets
         # Ensure these secrets are configured in your GitHub repository settings
