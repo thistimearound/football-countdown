@@ -4,7 +4,7 @@ const SLEEPER_SEASON_YEAR = '2025'; // The season the draft is FOR (e.g., 2025 f
 // --- Event Listener for Load Button ---
 document.getElementById("loadDraft").addEventListener("click", loadDraft);
 
-// Modify loadDraft to skip the cache if it's a rookie draft
+// Modify loadDraft to fetch undrafted players and load them into playerPool
 async function loadDraft() {
     const leagueID = document.getElementById("leagueID").value.trim();
     if (!leagueID) {
@@ -13,6 +13,10 @@ async function loadDraft() {
     }
 
     try {
+        // Show loading indicator
+        document.getElementById("draftTable").innerHTML = "<p class='loading'>Loading draft data...</p>";
+        document.getElementById("playerList").innerHTML = "<p class='loading'>Preparing player pool...</p>";
+        
         // Fetch all necessary data from Sleeper API concurrently, except for NFL players
         const [
             usersResponse,
@@ -50,19 +54,12 @@ async function loadDraft() {
         // Find the relevant rookie or linear draft for the specified season
         const rookieDraft = drafts.find(d => (d.type === 'rookie' || d.type === 'linear') && d.season === SLEEPER_SEASON_YEAR);
 
-        let nflPlayers;
-        if (rookieDraft) {
-            console.log("Rookie draft detected. Skipping cache and fetching live player data.");
-            const response = await fetch('https://api.sleeper.app/v1/players/nfl');
-            if (!response.ok) throw new Error(`Failed to fetch live NFL player data: ${response.status}`);
-            nflPlayers = await response.json();
-        } else {
-            nflPlayers = await loadCachedPlayerData();
-            if (!nflPlayers) {
-                alert("Failed to load cached NFL player data.");
-                return;
-            }
-        }
+        // Always fetch live player data to ensure we have the most up-to-date list
+        console.log("Fetching live player data from Sleeper API...");
+        const playerResponse = await fetch('https://api.sleeper.app/v1/players/nfl');
+        if (!playerResponse.ok) throw new Error(`Failed to fetch NFL player data: ${playerResponse.status}`);
+        const nflPlayers = await playerResponse.json();
+        console.log(`Loaded ${Object.keys(nflPlayers).length} NFL players`);
 
         if (!rookieDraft) {
              alert(`Could not find rookie or linear draft for season ${SLEEPER_SEASON_YEAR} in this league.`);
@@ -151,16 +148,17 @@ async function loadDraft() {
         console.log(`Fetched ${Object.keys(picksMadeMap).length} picks made.`);
 
 
-        // Map NFL Players: { player_id: full_name }
-        const playerMap = {};
-        if (nflPlayers) {
-            Object.keys(nflPlayers).forEach(playerId => {
-                const player = nflPlayers[playerId];
-                // Use 'full_name' or fall back to 'first_name last_name'
-                playerMap[playerId] = player.full_name || (player.first_name + ' ' + player.last_name);
-            });
-        }
-        console.log(`Mapped names for ${Object.keys(playerMap).length} NFL players.`);
+        // Map NFL Players: { player_id: player_object } 
+        // Note: The nflPlayers object from the API already has this structure
+
+        // Create a set of drafted player IDs for easy lookup
+        const draftedPlayerIds = new Set();
+        picksMade.forEach(pick => {
+            if (pick.player_id) {
+                draftedPlayerIds.add(pick.player_id);
+            }
+        });
+        console.log(`Found ${draftedPlayerIds.size} drafted players out of ${picksMade.length} picks.`);
 
 
         // Generate data for all picks (1 to total picks)
@@ -212,7 +210,9 @@ async function loadDraft() {
             let playerName = "Not Selected"; // Default if no player picked
 
             if (pickData && pickData.player_id) {
-                playerName = playerMap[pickData.player_id] || `Player ID ${pickData.player_id} (Unknown Name)`; // Fallback name if player ID not in map
+                playerName = pickData.metadata?.first_name && pickData.metadata?.last_name 
+                    ? `${pickData.metadata.first_name} ${pickData.metadata.last_name}` 
+                    : nflPlayers[pickData.player_id]?.full_name || `Player ID ${pickData.player_id} (Unknown Name)`;
             }
 
             draftBoardData.push({
@@ -228,7 +228,7 @@ async function loadDraft() {
         // --- End Data Processing ---
         
         renderDraftBoard(draftBoardData, numTeams, nflPlayers, draftBoardData.map(pick => pick.originalOwnerName));
-        renderPlayerPool(nflPlayers, new Set(Object.keys(picksMadeMap).map(pick => picksMadeMap[pick].player_id)));
+        renderPlayerPool(nflPlayers, draftedPlayerIds);
 
         // Show the player pool after rendering the draft board
         showPlayerPool();
@@ -253,6 +253,10 @@ function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwners) 
     // Create a header row for original owners
     const headerRow = document.createElement("div");
     headerRow.classList.add("draft-header-row");
+    
+    // Get unique owner slots
+    const uniqueOwners = [...new Set(originalOwners)];
+    
     for (let i = 1; i <= numTeams; i++) {
         const headerCell = document.createElement("div");
         headerCell.classList.add("draft-header-cell");
@@ -269,6 +273,11 @@ function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwners) 
     draftBoardData.forEach(pick => {
         const card = document.createElement("div");
         card.classList.add("draft-card");
+        
+        // Add a class if the pick has been made
+        if (pick.player_id) {
+            card.classList.add("pick-made");
+        }
 
         const pickNumber = document.createElement("div");
         pickNumber.classList.add("pick-number");
@@ -277,8 +286,25 @@ function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwners) 
 
         const playerSelected = document.createElement("div");
         playerSelected.classList.add("player-selected");
-        const playerData = nflPlayers[pick.player_id] || {};
-        playerSelected.textContent = `${playerData.full_name || 'Unknown Player'} (${playerData.position || 'N/A'}) - ${playerData.team || 'N/A'}`;
+        
+        if (pick.player_id) {
+            const playerData = nflPlayers[pick.player_id] || {};
+            let displayText = pick.playerName;
+            
+            // Add position and team if available
+            if (playerData.position) {
+                displayText += ` (${playerData.position}`;
+                if (playerData.team) {
+                    displayText += ` - ${playerData.team}`;
+                }
+                displayText += ')';
+            }
+            
+            playerSelected.textContent = displayText;
+        } else {
+            playerSelected.textContent = "Not Selected";
+        }
+        
         card.appendChild(playerSelected);
 
         const currentOwner = document.createElement("div");
@@ -293,54 +319,190 @@ function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwners) 
 }
 
 /**
- * Renders the player pool, filtering undrafted players and sorting them by Sleeper ADP.
+ * Renders the player pool, filtering undrafted players and sorting them by position and name.
  * @param {Object} players Object containing player data.
  * @param {Set} draftedPlayerIds Set of drafted player IDs.
  */
 function renderPlayerPool(players, draftedPlayerIds) {
-    console.log("Players:", players);
-    console.log("Drafted Player IDs:", draftedPlayerIds);
-    console.log("Player IDs in Players Object:", Object.keys(players));
+    console.log("Total Players:", Object.keys(players).length);
+    console.log("Drafted Player IDs:", draftedPlayerIds.size);
 
     const playerList = document.getElementById("playerList");
     playerList.innerHTML = ""; // Clear previous data
-
-    // Sort undrafted players by ADP in ascending order
-    const undraftedPlayers = Object.values(players)
-        .filter(player => !draftedPlayerIds.has(player.player_id))
-        .sort((a, b) => (a.adp || Infinity) - (b.adp || Infinity));
-
-    // Log undrafted players for debugging
-    undraftedPlayers.forEach(player => {
-        console.log(`Player ID: ${player.player_id}, ADP: ${player.adp}`);
+    
+    // Add search/filter controls to the top of the player pool
+    const filterControls = document.createElement("div");
+    filterControls.classList.add("player-filter-controls");
+    
+    // Search input
+    const searchInput = document.createElement("input");
+    searchInput.type = "text";
+    searchInput.id = "playerSearch";
+    searchInput.placeholder = "Search players...";
+    searchInput.addEventListener("input", filterPlayers);
+    
+    // Position filter dropdown
+    const positionFilter = document.createElement("select");
+    positionFilter.id = "positionFilter";
+    positionFilter.addEventListener("change", filterPlayers);
+    
+    const positions = ["All", "QB", "RB", "WR", "TE", "K", "DEF"];
+    positions.forEach(pos => {
+        const option = document.createElement("option");
+        option.value = pos;
+        option.textContent = pos;
+        positionFilter.appendChild(option);
     });
+    
+    filterControls.appendChild(searchInput);
+    filterControls.appendChild(positionFilter);
+    playerList.appendChild(filterControls);
+    
+    // Container for player cards
+    const playerCardsContainer = document.createElement("div");
+    playerCardsContainer.id = "playerCardsContainer";
+    playerCardsContainer.classList.add("player-cards-container");
+    playerList.appendChild(playerCardsContainer);
 
-    console.log("Undrafted Players:", undraftedPlayers);
-
-    undraftedPlayers.forEach(player => {
-        const playerCard = document.createElement("div");
-        playerCard.classList.add("player-card");
-
-        // Player Name
-        const playerName = document.createElement("div");
-        playerName.classList.add("player-name");
-        playerName.textContent = player.full_name;
-        playerCard.appendChild(playerName);
-
-        // Player Details
-        const playerDetails = document.createElement("div");
-        playerDetails.classList.add("player-details");
-        playerDetails.innerHTML = `
-            <span>Position: ${player.position}</span><br>
-            <span>Team: ${player.team || "N/A"}</span><br>
-            <span>${player.rookie ? "Rookie" : ""}</span><br>
-            <span>ADP: ${player.adp}</span><br>
-            <span>Projected Points: ${player.fantasy_points || "N/A"}</span>
-        `;
-        playerCard.appendChild(playerDetails);
-
-        playerList.appendChild(playerCard);
+    // Prepare player data for filtering
+    window.allPlayers = [];
+    Object.entries(players).forEach(([playerId, player]) => {
+        if (!draftedPlayerIds.has(playerId) && isValidDraftablePlayer(player)) {
+            window.allPlayers.push({
+                id: playerId,
+                name: player.full_name || `${player.first_name || ''} ${player.last_name || ''}`.trim(),
+                position: player.position || "N/A",
+                team: player.team || "N/A",
+                rookie: player.years_exp === 0 || Boolean(player.rookie),
+                adp: player.adp || Infinity,
+                fantasy_points: player.fantasy_points || null,
+                search_text: `${player.full_name || ''} ${player.first_name || ''} ${player.last_name || ''} ${player.team || ''} ${player.position || ''}`.toLowerCase()
+            });
+        }
     });
+    
+    // Sort undrafted players by position then by name
+    window.allPlayers.sort((a, b) => {
+        // First by position
+        if (a.position !== b.position) {
+            // Custom position order: QB, RB, WR, TE, K, DEF
+            const posOrder = { "QB": 1, "RB": 2, "WR": 3, "TE": 4, "K": 5, "DEF": 6 };
+            return (posOrder[a.position] || 99) - (posOrder[b.position] || 99);
+        }
+        
+        // Then by name
+        return a.name.localeCompare(b.name);
+    });
+    
+    console.log(`Found ${window.allPlayers.length} undrafted players`);
+
+    // Initial display of players
+    filterPlayers();
+    
+    // Add count of undrafted players to the player pool header
+    const playerPoolHeader = document.querySelector("#playerPool h2");
+    if (playerPoolHeader) {
+        playerPoolHeader.textContent = `Player Pool (${window.allPlayers.length} Undrafted Players)`;
+    }
+}
+
+/**
+ * Filters players based on search input and position filter
+ */
+function filterPlayers() {
+    const searchTerm = document.getElementById("playerSearch").value.toLowerCase();
+    const positionFilter = document.getElementById("positionFilter").value;
+    const container = document.getElementById("playerCardsContainer");
+    
+    container.innerHTML = ""; // Clear current display
+    
+    let matchCount = 0;
+    const MAX_DISPLAYED = 100; // Limit number of displayed cards for performance
+    
+    window.allPlayers.forEach(player => {
+        // Check if player matches filters
+        const matchesSearch = searchTerm === "" || player.search_text.includes(searchTerm);
+        const matchesPosition = positionFilter === "All" || player.position === positionFilter;
+        
+        if (matchesSearch && matchesPosition && matchCount < MAX_DISPLAYED) {
+            const playerCard = document.createElement("div");
+            playerCard.classList.add("player-card");
+            
+            if (player.rookie) {
+                playerCard.classList.add("rookie-player");
+            }
+
+            // Player Name
+            const playerName = document.createElement("div");
+            playerName.classList.add("player-name");
+            playerName.textContent = player.name;
+            playerCard.appendChild(playerName);
+
+            // Player Details
+            const playerDetails = document.createElement("div");
+            playerDetails.classList.add("player-details");
+            
+            let detailsHtml = `
+                <span class="player-position">${player.position}</span>
+                <span class="player-team">${player.team}</span>
+            `;
+            
+            if (player.rookie) {
+                detailsHtml += `<span class="player-rookie">Rookie</span>`;
+            }
+            
+            if (player.adp && player.adp !== Infinity) {
+                detailsHtml += `<span class="player-adp">ADP: ${player.adp.toFixed(1)}</span>`;
+            }
+            
+            if (player.fantasy_points) {
+                detailsHtml += `<span class="player-points">Proj: ${player.fantasy_points.toFixed(1)}</span>`;
+            }
+            
+            playerDetails.innerHTML = detailsHtml;
+            playerCard.appendChild(playerDetails);
+
+            container.appendChild(playerCard);
+            matchCount++;
+        }
+    });
+    
+    // Show message if no results
+    if (matchCount === 0) {
+        const noResults = document.createElement("div");
+        noResults.classList.add("no-results");
+        noResults.textContent = "No players match your filters";
+        container.appendChild(noResults);
+    }
+    
+    // Show message if results were limited
+    if (matchCount === MAX_DISPLAYED && window.allPlayers.length > MAX_DISPLAYED) {
+        const limitMessage = document.createElement("div");
+        limitMessage.classList.add("limit-message");
+        limitMessage.textContent = `Showing ${MAX_DISPLAYED} of ${window.allPlayers.length} matching players. Please refine your search.`;
+        container.appendChild(limitMessage);
+    }
+}
+
+/**
+ * Determines if a player should be included in the undrafted player pool
+ * @param {Object} player The player object to check
+ * @returns {boolean} Whether the player should be included
+ */
+function isValidDraftablePlayer(player) {
+    // Skip players with no position or name
+    if (!player.position || (!player.full_name && !player.last_name)) {
+        return false;
+    }
+    
+    // Only include active players
+    if (player.status === "Retired" || player.status === "Inactive") {
+        return false;
+    }
+    
+    // Include players with these positions
+    const validPositions = ["QB", "RB", "WR", "TE", "K", "DEF"];
+    return validPositions.includes(player.position);
 }
 
 // Show the player pool only after the draft board is successfully loaded
@@ -351,72 +513,10 @@ function showPlayerPool() {
     }
 }
 
-// Update the cachePlayerData function to save the fetched data to the cached_players.json file
-async function cachePlayerData() {
-    try {
-        const response = await fetch('https://api.sleeper.app/v1/players/nfl');
-        if (!response.ok) {
-            throw new Error(`Failed to fetch player data: ${response.status}`);
-        }
-        const players = await response.json();
-
-        // Save the fetched data to the cached_players.json file
-        const cachedData = JSON.stringify(players);
-        await fetch('data/cached_players.json', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: cachedData
-        });
-
-        console.log('Player data cached successfully:', cachedData);
-    } catch (error) {
-        console.error('Error caching player data:', error);
-    }
-}
-
-cachePlayerData().catch(console.error);
-
-// Import the pg library to connect to NeonDB
-const { Client } = require('pg');
-
-// Load environment variables from .env
-require('dotenv').config();
-
-// Create a function to load cached player data from NeonDB
-async function loadCachedPlayerData() {
-    const client = new Client({
-        connectionString: process.env.NEONDB_CONNECTION_STRING,
-    });
-
-    try {
-        await client.connect();
-        console.log('Connected to NeonDB');
-
-        // Query the player data from the database
-        const res = await client.query('SELECT * FROM players');
-        console.log('Player data loaded successfully:', res.rows);
-
-        return res.rows;
-    } catch (error) {
-        console.error('Error loading player data from NeonDB:', error);
-        return null;
-    } finally {
-        await client.end();
-    }
-}
-
-// Example usage
-loadCachedPlayerData().then(players => {
-    if (players) {
-        console.log('Player data:', players);
-    }
-});
-
 function setDraftGridColumns(numTeams) {
     const root = document.documentElement;
     root.style.setProperty('--num-teams', numTeams);
 }
 
 // Example usage: Call this function after determining the number of teams in the league
-// Replace `numTeams` with the actual number of teams dynamically fetched or calculated
-setDraftGridColumns(12); // Default to 12 teams for now
+setDraftGridColumns(12); // Default to 12 teams, will be updated dynamically

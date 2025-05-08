@@ -18,8 +18,14 @@ DB_PORT = os.environ.get("NEON_PORT", 5432) # Default PostgreSQL port
 # Debugging: Print connection parameters (excluding sensitive data)
 print(f"Connecting to database at {DB_HOST}:{DB_PORT} with user {DB_USER}")
 
-# --- Sleeper API Fetch and Upload ---
+# --- Sleeper API URLs ---
 SLEEPER_PLAYERS_URL = "https://api.sleeper.app/v1/players/nfl"
+SLEEPER_LEAGUE_URL = "https://api.sleeper.app/v1/league/{league_id}"
+SLEEPER_DRAFT_URL = "https://api.sleeper.app/v1/draft/{draft_id}"
+SLEEPER_DRAFT_PICKS_URL = "https://api.sleeper.app/v1/draft/{draft_id}/picks"
+SLEEPER_LEAGUE_DRAFTS_URL = "https://api.sleeper.app/v1/league/{league_id}/drafts"
+
+# --- Fetch Functions ---
 
 # Fetch player data from Sleeper API
 def fetch_sleeper_players():
@@ -43,6 +49,72 @@ def fetch_sleeper_players():
         return current_players
     else:
         raise Exception(f"Failed to fetch players: {response.status_code}")
+
+# Fetch league data from Sleeper API
+def fetch_league_data(league_id):
+    response = requests.get(SLEEPER_LEAGUE_URL.format(league_id=league_id))
+    if response.status_code == 200:
+        return response.json()
+    else:
+        raise Exception(f"Failed to fetch league data: {response.status_code}")
+
+# Fetch draft data from Sleeper API
+def fetch_league_drafts(league_id):
+    response = requests.get(SLEEPER_LEAGUE_DRAFTS_URL.format(league_id=league_id))
+    if response.status_code == 200:
+        drafts = response.json()
+        print(f"Total drafts for league {league_id}: {len(drafts)}")
+        return drafts
+    else:
+        raise Exception(f"Failed to fetch league drafts: {response.status_code}")
+
+# Fetch draft picks data from Sleeper API
+def fetch_draft_picks(draft_id):
+    response = requests.get(SLEEPER_DRAFT_PICKS_URL.format(draft_id=draft_id))
+    if response.status_code == 200:
+        picks = response.json()
+        print(f"Total picks for draft {draft_id}: {len(picks)}")
+        return picks
+    else:
+        raise Exception(f"Failed to fetch draft picks: {response.status_code}")
+
+# Get undrafted players based on a specific draft
+def get_undrafted_players(draft_id, season_year='2025'):
+    """
+    Get a list of undrafted players for a specific draft.
+    
+    Args:
+        draft_id (str): The Sleeper draft ID
+        season_year (str): The season year to filter relevant rookies
+        
+    Returns:
+        dict: Dictionary containing undrafted players
+    """
+    try:
+        # Get all players
+        all_players = fetch_sleeper_players()
+        
+        # Get draft picks
+        draft_picks = fetch_draft_picks(draft_id)
+        
+        # Create a set of player IDs that have been drafted
+        drafted_player_ids = {pick['player_id'] for pick in draft_picks if 'player_id' in pick}
+        print(f"Total drafted players: {len(drafted_player_ids)}")
+        
+        # Filter out drafted players
+        undrafted_players = {
+            player_id: player
+            for player_id, player in all_players.items()
+            if player_id not in drafted_player_ids
+        }
+        
+        print(f"Total undrafted players: {len(undrafted_players)}")
+        return undrafted_players
+    except Exception as e:
+        print(f"Error getting undrafted players: {e}")
+        return {}
+
+# --- Database Functions ---
 
 # Modify the upload_to_neon function to include progress logging and batch inserts
 def upload_to_neon(players):
@@ -102,12 +174,22 @@ def upload_to_neon(players):
         if conn:
             conn.close()
 
+# --- Caching Functions ---
+
 # Ensure the data directory exists before caching players
-def cache_players_locally(players):
+def cache_players_locally(players, file_name='cached_players.json'):
     os.makedirs('data', exist_ok=True)  # Create the data directory if it doesn't exist
     # Ensure the correct path for cached_players.json
-    with open('data/cached_players.json', 'w') as f:
+    with open(f'data/{file_name}', 'w') as f:
         json.dump(players, f)
+        print(f"Player data cached to data/{file_name}")
+
+# Cache undrafted players for quick access
+def cache_undrafted_players(undrafted_players, draft_id):
+    file_name = f'undrafted_players_{draft_id}.json'
+    cache_players_locally(undrafted_players, file_name)
+
+# --- Verification Functions ---
 
 def verify_nfl_players_table():
     conn = None
@@ -172,21 +254,99 @@ def verify_nfl_players_table():
         if conn:
             conn.close()
 
+# --- API Routes for Web Use ---
+
+# This function could be wrapped in a Flask or FastAPI endpoint
+def api_get_undrafted_players(league_id, draft_id=None, season_year='2025'):
+    """
+    API endpoint to get undrafted players.
+    
+    Args:
+        league_id (str): Sleeper league ID
+        draft_id (str, optional): Specific draft ID. If None, will use the most recent draft.
+        season_year (str): The season year to filter for
+        
+    Returns:
+        dict: Dictionary containing undrafted players
+    """
+    try:
+        # If no draft ID provided, get the most recent draft for the league
+        if not draft_id:
+            drafts = fetch_league_drafts(league_id)
+            # Find the most recent draft for the specified season
+            relevant_drafts = [d for d in drafts if d.get('season') == season_year]
+            if not relevant_drafts:
+                return {"error": f"No drafts found for season {season_year}"}
+            
+            # Sort by created timestamp (descending)
+            relevant_drafts.sort(key=lambda x: x.get('created', 0), reverse=True)
+            draft_id = relevant_drafts[0]['draft_id']
+        
+        # Get undrafted players
+        undrafted_players = get_undrafted_players(draft_id, season_year)
+        
+        # Return only the relevant fields for each player
+        simplified_players = {}
+        for player_id, player in undrafted_players.items():
+            simplified_players[player_id] = {
+                "player_id": player_id,
+                "full_name": player.get('full_name') or f"{player.get('first_name', '')} {player.get('last_name', '')}",
+                "first_name": player.get('first_name'),
+                "last_name": player.get('last_name'),
+                "position": player.get('position'),
+                "team": player.get('team'),
+                "years_exp": player.get('years_exp'),
+                "status": player.get('status'),
+                "college": player.get('college'),
+                "number": player.get('number'),
+                "rookie": True if player.get('years_exp') == 0 else False
+            }
+        
+        return {"undrafted_players": simplified_players}
+    except Exception as e:
+        print(f"API error: {e}")
+        return {"error": str(e)}
+
 # Update main execution flow
 if __name__ == "__main__":
     try:
-        print("Verifying 'nfl_players' table...")
-        if verify_nfl_players_table():
-            print("Skipping full upload as verification passed.")
+        print("Starting Sleeper API data fetch process...")
+        
+        # Check if we're being called with specific parameters
+        import sys
+        if len(sys.argv) > 1:
+            if sys.argv[1] == "undrafted":
+                if len(sys.argv) >= 3:
+                    league_id = sys.argv[2]
+                    draft_id = sys.argv[3] if len(sys.argv) >= 4 else None
+                    season_year = sys.argv[4] if len(sys.argv) >= 5 else '2025'
+                    
+                    print(f"Fetching undrafted players for league {league_id}, draft {draft_id}, season {season_year}")
+                    result = api_get_undrafted_players(league_id, draft_id, season_year)
+                    
+                    if "error" not in result:
+                        print(f"Found {len(result['undrafted_players'])} undrafted players")
+                        cache_file = f"undrafted_league_{league_id}.json"
+                        cache_players_locally(result['undrafted_players'], cache_file)
+                    else:
+                        print(f"Error: {result['error']}")
+                else:
+                    print("Usage: python fetch_sleeper.py undrafted <league_id> [draft_id] [season_year]")
+            else:
+                print("Unknown command. Available commands: undrafted")
         else:
-            print("Fetching players from Sleeper API...")
-            players = fetch_sleeper_players()
+            print("Verifying 'nfl_players' table...")
+            if verify_nfl_players_table():
+                print("Skipping full upload as verification passed.")
+            else:
+                print("Fetching players from Sleeper API...")
+                players = fetch_sleeper_players()
 
-            print("Uploading players to Neon database...")
-            upload_to_neon(players)
+                print("Uploading players to Neon database...")
+                upload_to_neon(players)
 
-            print("Caching players locally...")
-            cache_players_locally(players)
+                print("Caching players locally...")
+                cache_players_locally(players)
 
         print("Process completed successfully.")
     except Exception as e:

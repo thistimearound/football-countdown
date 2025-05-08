@@ -120,6 +120,11 @@ section {
     transform: scale(1.05);
 }
 
+.pick-made {
+    background-color: #e6f7ff; /* Light blue background for picks that have been made */
+    border-color: #91d5ff;
+}
+
 /* Pick Number */
 .pick-number {
     font-size: 12px;
@@ -147,6 +152,134 @@ section {
     font-size: 12px;
     font-weight: bold;
     color: #007bff;
+}
+
+/* Player Pool */
+.player-pool {
+    float: none; /* Remove float */
+    margin: 0 auto; /* Center align if needed */
+    width: auto; /* Adjust width dynamically */
+    padding: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 80vh;
+    display: none; /* Hidden by default, shown after loading */
+}
+
+/* Player Filter Controls */
+.player-filter-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    align-items: center;
+}
+
+#playerSearch {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#positionFilter {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 80px;
+}
+
+/* Player Cards Container */
+.player-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+    padding: 10px;
+}
+
+/* Player Card */
+.player-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.15s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rookie-player {
+    border-left: 4px solid #28a745; /* Green border for rookie players */
+}
+
+.player-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.player-details {
+    font-size: 12px;
+    color: #555;
+}
+
+.player-details span {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 3px;
+}
+
+.player-position {
+    background-color: #007bff;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.player-team {
+    background-color: #6c757d;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.player-rookie {
+    background-color: #28a745;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* No Results and Limit Messages */
+.no-results, .limit-message {
+    padding: 15px;
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.limit-message {
+    border-top: 1px dashed #dee2e6;
+    margin-top: 10px;
+}
+
+/* Loading Indicator */
+.loading {
+    padding: 20px;
+    text-align: center;
+    color: #007bff;
+    font-style: italic;
 }
 
 /* Player Pool */
