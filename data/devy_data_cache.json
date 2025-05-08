@@ -1,0 +1,592 @@
+{
+    "last_updated": "2025-05-08T09:43:03.614359",
+    "source_note": "Devy rankings data from KTC (Superflex values) for 2025 season",
+    "format": "Superflex",
+    "players": {
+        "Dorian Singer": {
+            "position": "WR",
+            "ktc_value": null,
+            "ds_rank": 83
+        },
+        "Dylan Raiola": {
+            "position": "QB",
+            "ktc_value": 4235,
+            "ds_rank": 25
+        },
+        "Le'Veon Moss": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 60
+        },
+        "T.J. Moore": {
+            "position": "WR",
+            "ktc_value": null,
+            "ds_rank": 9
+        },
+        "Malachi Fields": {
+            "position": "WR",
+            "ktc_value": null,
+            "ds_rank": 95
+        },
+        "Brandon Inniss": {
+            "position": "WR",
+            "ktc_value": 2464,
+            "ds_rank": 84
+        },
+        "Bryant Wesco": {
+            "position": "WR",
+            "ktc_value": 3032,
+            "ds_rank": null
+        },
+        "Jadan Baugh": {
+            "position": "RB",
+            "ktc_value": 1127,
+            "ds_rank": 71
+        },
+        "Malcolm Simmons": {
+            "position": "WR",
+            "ktc_value": null,
+            "ds_rank": 99
+        },
+        "Mark Fletcher": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 35
+        },
+        "John Mateer": {
+            "position": "QB",
+            "ktc_value": null,
+            "ds_rank": 53
+        },
+        "Makhi Hughes": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 34
+        },
+        "Dylan Edwards": {
+            "position": "RB",
+            "ktc_value": 2491,
+            "ds_rank": null
+        },
+        "Aidan Chiles": {
+            "position": "QB",
+            "ktc_value": 1203,
+            "ds_rank": null
+        },
+        "Drew Allar": {
+            "position": "QB",
+            "ktc_value": 5335,
+            "ds_rank": 16
+        },
+        "Dakorien Moore": {
+            "position": "WR",
+            "ktc_value": null,
+            "ds_rank": 13
+        },
+        "Jordan Lyle": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 58
+        },
+        "Conner Weigman": {
+            "position": "QB",
+            "ktc_value": 2091,
+            "ds_rank": null
+        },
+        "DJ Lagway": {
+            "position": "QB",
+            "ktc_value": 6118,
+            "ds_rank": 4
+        },
+        "Garrett Nussmeier": {
+            "position": "QB",
+            "ktc_value": 5427,
+            "ds_rank": 12
+        },
+        "Jaydn Ott": {
+            "position": "RB",
+            "ktc_value": 2939,
+            "ds_rank": 27
+        },
+        "Tre Wisner": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 57
+        },
+        "Kam Davis": {
+            "position": "RB",
+            "ktc_value": 1100,
+            "ds_rank": null
+        },
+        "Antonio Williams": {
+            "position": "WR",
+            "ktc_value": 3088,
+            "ds_rank": 26
+        },
+        "Micah Hudson": {
+            "position": "WR",
+            "ktc_value": 2306,
+            "ds_rank": 52
+        },
+        "Demond Claiborne": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 82
+        },
+        "Jackson Arnold": {
+            "position": "QB",
+            "ktc_value": 1959,
+            "ds_rank": null
+        },
+        "Quinton Martin": {
+            "position": "RB",
+            "ktc_value": 1641,
+            "ds_rank": null
+        },
+        "Jonah Coleman": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 43
+        },
+        "Aaron Anderson": {
+            "position": "WR",
+            "ktc_value": null,
+            "ds_rank": 70
+        },
+        "Akylin Dear": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 90
+        },
+        "Jeremiyah Love": {
+            "position": "RB",
+            "ktc_value": 5955,
+            "ds_rank": 5
+        },
+        "Talyn Taylor": {
+            "position": "WR",
+            "ktc_value": null,
+            "ds_rank": 88
+        },
+        "Jaheim White": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 98
+        },
+        "Taylor Tatum": {
+            "position": "RB",
+            "ktc_value": 1501,
+            "ds_rank": 59
+        },
+        "Kaytron Allen": {
+            "position": "RB",
+            "ktc_value": 3747,
+            "ds_rank": 45
+        },
+        "CJ Bailey": {
+            "position": "QB",
+            "ktc_value": 484,
+            "ds_rank": null
+        },
+        "Nico Iamaleava": {
+            "position": "QB",
+            "ktc_value": 4236,
+            "ds_rank": 15
+        },
+        "Quinten Joyner": {
+            "position": "RB",
+            "ktc_value": 1889,
+            "ds_rank": null
+        },
+        "Mike Matthews": {
+            "position": "WR",
+            "ktc_value": null,
+            "ds_rank": 85
+        },
+        "James Peoples": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 92
+        },
+        "LaNorris Sellers": {
+            "position": "QB",
+            "ktc_value": 6010,
+            "ds_rank": 6
+        },
+        "Dane Key": {
+            "position": "WR",
+            "ktc_value": 474,
+            "ds_rank": 56
+        },
+        "Marcel Reed": {
+            "position": "QB",
+            "ktc_value": null,
+            "ds_rank": 62
+        },
+        "Ryan Williams": {
+            "position": "WR",
+            "ktc_value": 7368,
+            "ds_rank": 2
+        },
+        "Jordan Marshall": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 65
+        },
+        "Jamarion Miller": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 91
+        },
+        "Justice Haynes": {
+            "position": "RB",
+            "ktc_value": 3776,
+            "ds_rank": 18
+        },
+        "Deion Burks": {
+            "position": "WR",
+            "ktc_value": null,
+            "ds_rank": 37
+        },
+        "Elijah Sarratt": {
+            "position": "WR",
+            "ktc_value": null,
+            "ds_rank": 75
+        },
+        "Kevin Concepcion": {
+            "position": "WR",
+            "ktc_value": null,
+            "ds_rank": 46
+        },
+        "Carnell Tate": {
+            "position": "WR",
+            "ktc_value": 5538,
+            "ds_rank": 8
+        },
+        "Jeremiah Smith": {
+            "position": "WR",
+            "ktc_value": 9821,
+            "ds_rank": 1
+        },
+        "Fluff Bothwell": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 72
+        },
+        "Nate Frazier": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 14
+        },
+        "Zachariah Branch": {
+            "position": "WR",
+            "ktc_value": 3372,
+            "ds_rank": 42
+        },
+        "Nyck Harbor": {
+            "position": "WR",
+            "ktc_value": 2224,
+            "ds_rank": 74
+        },
+        "Sam Leavitt": {
+            "position": "QB",
+            "ktc_value": 3254,
+            "ds_rank": 80
+        },
+        "Arch Manning": {
+            "position": "QB",
+            "ktc_value": 8832,
+            "ds_rank": 3
+        },
+        "Devin Brown": {
+            "position": "QB",
+            "ktc_value": 285,
+            "ds_rank": null
+        },
+        "Eric Singleton": {
+            "position": "WR",
+            "ktc_value": 2671,
+            "ds_rank": 33
+        },
+        "Ja'Kobi Lane": {
+            "position": "WR",
+            "ktc_value": null,
+            "ds_rank": 47
+        },
+        "Malachi Nelson": {
+            "position": "QB",
+            "ktc_value": 1144,
+            "ds_rank": null
+        },
+        "Barion Brown": {
+            "position": "WR",
+            "ktc_value": 2878,
+            "ds_rank": 36
+        },
+        "Cam Coleman": {
+            "position": "WR",
+            "ktc_value": 4590,
+            "ds_rank": 10
+        },
+        "Dante Moore": {
+            "position": "QB",
+            "ktc_value": 3337,
+            "ds_rank": 30
+        },
+        "Oscar Delp": {
+            "position": "TE",
+            "ktc_value": 582,
+            "ds_rank": 77
+        },
+        "Caleb Cunningham": {
+            "position": "WR",
+            "ktc_value": null,
+            "ds_rank": 48
+        },
+        "Ryan Wingo": {
+            "position": "WR",
+            "ktc_value": 4224,
+            "ds_rank": 17
+        },
+        "Kaden Feagin": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 63
+        },
+        "Carson Beck": {
+            "position": "QB",
+            "ktc_value": 2818,
+            "ds_rank": 51
+        },
+        "Kaliq Lockett": {
+            "position": "WR",
+            "ktc_value": null,
+            "ds_rank": 79
+        },
+        "Caden Durham": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 54
+        },
+        "Rocco Becht": {
+            "position": "QB",
+            "ktc_value": null,
+            "ds_rank": 96
+        },
+        "Tyler Brown": {
+            "position": "WR",
+            "ktc_value": null,
+            "ds_rank": 100
+        },
+        "Duce Robinson": {
+            "position": "WR",
+            "ktc_value": 1952,
+            "ds_rank": 68
+        },
+        "Evan Stewart": {
+            "position": "WR",
+            "ktc_value": 4046,
+            "ds_rank": 11
+        },
+        "Jordyn Tyson": {
+            "position": "WR",
+            "ktc_value": 265,
+            "ds_rank": 29
+        },
+        "Germie Bernard": {
+            "position": "WR",
+            "ktc_value": null,
+            "ds_rank": 61
+        },
+        "Nick Marsh": {
+            "position": "WR",
+            "ktc_value": 1221,
+            "ds_rank": 32
+        },
+        "Roderick Robinson": {
+            "position": "RB",
+            "ktc_value": 1394,
+            "ds_rank": null
+        },
+        "Branson Robinson": {
+            "position": "RB",
+            "ktc_value": 1451,
+            "ds_rank": null
+        },
+        "Darius Taylor": {
+            "position": "RB",
+            "ktc_value": 2477,
+            "ds_rank": 40
+        },
+        "Harlem Berry": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 38
+        },
+        "Nic Anderson": {
+            "position": "WR",
+            "ktc_value": 3004,
+            "ds_rank": 44
+        },
+        "CJ Donaldson": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 67
+        },
+        "Julian Sayin": {
+            "position": "QB",
+            "ktc_value": 3866,
+            "ds_rank": 50
+        },
+        "Cade Klubnik": {
+            "position": "QB",
+            "ktc_value": 4646,
+            "ds_rank": 28
+        },
+        "Rueben Owens": {
+            "position": "RB",
+            "ktc_value": 2360,
+            "ds_rank": null
+        },
+        "Jerrick Gibson": {
+            "position": "RB",
+            "ktc_value": 1510,
+            "ds_rank": 55
+        },
+        "Tavien St. Clair": {
+            "position": "QB",
+            "ktc_value": null,
+            "ds_rank": 41
+        },
+        "Avery Johnson": {
+            "position": "QB",
+            "ktc_value": 1896,
+            "ds_rank": 73
+        },
+        "Kaleb Jackson": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 93
+        },
+        "RJ Maryland": {
+            "position": "TE",
+            "ktc_value": null,
+            "ds_rank": 81
+        },
+        "Joshisa Trader": {
+            "position": "WR",
+            "ktc_value": 600,
+            "ds_rank": null
+        },
+        "Kaidon Salter": {
+            "position": "QB",
+            "ktc_value": null,
+            "ds_rank": 87
+        },
+        "CJ Baxter": {
+            "position": "RB",
+            "ktc_value": 3979,
+            "ds_rank": 19
+        },
+        "Makai Lemon": {
+            "position": "WR",
+            "ktc_value": 3290,
+            "ds_rank": 39
+        },
+        "Trey'Dez Green": {
+            "position": "TE",
+            "ktc_value": null,
+            "ds_rank": 97
+        },
+        "Luke Hasz": {
+            "position": "TE",
+            "ktc_value": 0,
+            "ds_rank": 69
+        },
+        "Nicholas Singleton": {
+            "position": "RB",
+            "ktc_value": 5874,
+            "ds_rank": 7
+        },
+        "Bryce Underwood": {
+            "position": "QB",
+            "ktc_value": null,
+            "ds_rank": 22
+        },
+        "Tanner Koziol": {
+            "position": "TE",
+            "ktc_value": null,
+            "ds_rank": 66
+        },
+        "Abu Sama": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 76
+        },
+        "Jalon Daniels": {
+            "position": "QB",
+            "ktc_value": 2337,
+            "ds_rank": null
+        },
+        "Isaac Brown": {
+            "position": "RB",
+            "ktc_value": 1490,
+            "ds_rank": 64
+        },
+        "Squirrel White": {
+            "position": "WR",
+            "ktc_value": 840,
+            "ds_rank": null
+        },
+        "Keelon Russell": {
+            "position": "QB",
+            "ktc_value": null,
+            "ds_rank": 24
+        },
+        "Eugene Wilson": {
+            "position": "WR",
+            "ktc_value": 3403,
+            "ds_rank": 21
+        },
+        "Dallas Wilson": {
+            "position": "WR",
+            "ktc_value": null,
+            "ds_rank": 78
+        },
+        "Jaden Greathouse": {
+            "position": "WR",
+            "ktc_value": null,
+            "ds_rank": 20
+        },
+        "Ahmad Hardy": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 86
+        },
+        "Desmond Reid": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 49
+        },
+        "Cameron Seldon": {
+            "position": "RB",
+            "ktc_value": null,
+            "ds_rank": 94
+        },
+        "Demond Williams": {
+            "position": "QB",
+            "ktc_value": 1254,
+            "ds_rank": null
+        },
+        "Perry Thompson": {
+            "position": "WR",
+            "ktc_value": 1708,
+            "ds_rank": 89
+        },
+        "Johntay Cook": {
+            "position": "WR",
+            "ktc_value": 1403,
+            "ds_rank": null
+        }
+    }
+}

@@ -6,6 +6,7 @@ import psycopg2
 from dotenv import load_dotenv # Optional: for local testing with a .env file
 import math
 import logging # Import the logging module
+from datetime import datetime
 
 # --- Configuration ---
 # Load environment variables from a .env file for local testing
@@ -200,6 +201,30 @@ def insert_or_update_devy_players(cursor, players_data):
 
     logging.info(f"Successfully processed {upsert_count} devy players for database upsert.")
 
+def save_to_local_cache(data):
+    """Saves the devy data to a local JSON cache file."""
+    try:
+        # Create the file path in the data directory
+        cache_dir = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "../..", "data"))
+        cache_file = os.path.join(cache_dir, "devy_data_cache.json")
+        
+        # Prepare the cache data structure with metadata
+        cache_data = {
+            "last_updated": datetime.now().isoformat(),
+            "source_note": f"Devy rankings data from KTC (Superflex values) for {datetime.now().year} season",
+            "format": "Superflex",
+            "players": data
+        }
+        
+        # Save to JSON file
+        with open(cache_file, 'w') as f:
+            json.dump(cache_data, f, indent=4)
+            
+        logging.info(f"Successfully cached devy Superflex data to {cache_file}")
+        return True
+    except Exception as e:
+        logging.error(f"Error saving to local cache: {e}")
+        return False
 
 # --- Main Execution Logic ---
 if __name__ == "__main__":
@@ -267,6 +292,8 @@ if __name__ == "__main__":
 
     # --- Database Insertion/Update ---
     # Ensure all necessary database credentials are provided
+    db_success = False  # Flag to track if database update was successful
+    
     if not all([DB_HOST, DB_DATABASE, DB_USER, DB_PASSWORD, DB_PORT]):
         logging.error("Database credentials not fully provided. Skipping database update.")
     else:
@@ -291,6 +318,7 @@ if __name__ == "__main__":
 
             conn.commit() # Commit transaction
             logging.info("Database update completed.")
+            db_success = True  # Mark database update as successful
 
         except psycopg2.Error as e:
             logging.error(f"Database connection or operation error: {e}")
@@ -304,5 +332,23 @@ if __name__ == "__main__":
             if conn:
                 conn.close()
             logging.info("Database connection closed.")
+    
+    # Save to local cache if database update was successful
+    if db_success:
+        logging.info("Database update was successful, saving to local cache...")
+        cache_success = save_to_local_cache(processed_players_data)
+        if cache_success:
+            logging.info("Local cache update completed.")
+        else:
+            logging.warning("Failed to update local cache.")
+    
+    # If we have data but database update failed, still try to save locally
+    elif processed_players_data:
+        logging.info("Database update failed but we have data, attempting to save to local cache...")
+        cache_success = save_to_local_cache(processed_players_data)
+        if cache_success:
+            logging.info("Local cache update completed despite database failure.")
+        else:
+            logging.warning("Failed to update local cache.")
 
     logging.info("Devy Scraper script finished.")

@@ -1,0 +1,534 @@
+{
+    "last_updated": "2025-05-08T09:28:15.776765",
+    "source_note": "Rookie rankings data from MFL and KTC for 2025 season",
+    "players": {
+        "Matthew Golden": {
+            "position": "WR",
+            "mfl": 14.45,
+            "ktc": 4433,
+            "name": "Matthew Golden"
+        },
+        "Mason Taylor": {
+            "position": "TE",
+            "mfl": 25.78,
+            "ktc": 2851,
+            "name": "Mason Taylor"
+        },
+        "Tre Harris": {
+            "position": "WR",
+            "mfl": 20.89,
+            "ktc": 3529,
+            "name": "Tre Harris"
+        },
+        "Phil Mafah": {
+            "position": "RB",
+            "mfl": 65.66,
+            "ktc": 798,
+            "name": "Phil Mafah"
+        },
+        "DJ Giddens": {
+            "position": "RB",
+            "mfl": 41.18,
+            "ktc": 2217,
+            "name": "DJ Giddens"
+        },
+        "Kaleb Johnson": {
+            "position": "RB",
+            "mfl": 12.1,
+            "ktc": 4690,
+            "name": "Kaleb Johnson"
+        },
+        "Jayden Higgins": {
+            "position": "WR",
+            "mfl": 19.58,
+            "ktc": 3812,
+            "name": "Jayden Higgins"
+        },
+        "Chris Paul": {
+            "position": "LB",
+            "mfl": 59.98,
+            "ktc": null,
+            "name": "Chris Paul"
+        },
+        "Damien Martinez": {
+            "position": "RB",
+            "mfl": 57.75,
+            "ktc": 1885,
+            "name": "Damien Martinez"
+        },
+        "Tez Johnson": {
+            "position": "WR",
+            "mfl": 67.45,
+            "ktc": 1642,
+            "name": "Tez Johnson"
+        },
+        "Dont'e Thornton": {
+            "position": "WR",
+            "mfl": 55.93,
+            "ktc": 698,
+            "name": "Dont'e Thornton"
+        },
+        "Brashard Smith": {
+            "position": "RB",
+            "mfl": 50.67,
+            "ktc": 1344,
+            "name": "Brashard Smith"
+        },
+        "Jimmy Horn": {
+            "position": "WR",
+            "mfl": 66.11,
+            "ktc": null,
+            "name": "Jimmy Horn"
+        },
+        "Raheim Sanders": {
+            "position": "RB",
+            "mfl": 69.34,
+            "ktc": 770,
+            "name": "Raheim Sanders"
+        },
+        "Omarion Hampton": {
+            "position": "RB",
+            "mfl": 5.13,
+            "ktc": 6204,
+            "name": "Omarion Hampton"
+        },
+        "Nick Nash": {
+            "position": "WR",
+            "mfl": 73.03,
+            "ktc": null,
+            "name": "Nick Nash"
+        },
+        "Tory Horton": {
+            "position": "WR",
+            "mfl": 50.66,
+            "ktc": 1869,
+            "name": "Tory Horton"
+        },
+        "Carson Schwesinger": {
+            "position": "LB",
+            "mfl": 28.19,
+            "ktc": null,
+            "name": "Carson Schwesinger"
+        },
+        "Trevor Etienne": {
+            "position": "RB",
+            "mfl": 44.14,
+            "ktc": 2499,
+            "name": "Trevor Etienne"
+        },
+        "Luther Burden": {
+            "position": "WR",
+            "mfl": 17.8,
+            "ktc": 4178,
+            "name": "Luther Burden"
+        },
+        "TreVeyon Henderson": {
+            "position": "RB",
+            "mfl": 8.28,
+            "ktc": 5562,
+            "name": "TreVeyon Henderson"
+        },
+        "Jarquez Hunter": {
+            "position": "RB",
+            "mfl": 43.94,
+            "ktc": 1955,
+            "name": "Jarquez Hunter"
+        },
+        "Riley Leonard": {
+            "position": "QB",
+            "mfl": 67.27,
+            "ktc": 1093,
+            "name": "Riley Leonard"
+        },
+        "Nick Martin": {
+            "position": "LB",
+            "mfl": 43.05,
+            "ktc": null,
+            "name": "Nick Martin"
+        },
+        "Cody Simon": {
+            "position": "LB",
+            "mfl": 63.58,
+            "ktc": null,
+            "name": "Cody Simon"
+        },
+        "Kalel Mullings": {
+            "position": "RB",
+            "mfl": 71.43,
+            "ktc": null,
+            "name": "Kalel Mullings"
+        },
+        "Travis Hunter": {
+            "position": "WR",
+            "mfl": 7.07,
+            "ktc": 6115,
+            "name": "Travis Hunter"
+        },
+        "Cam Skattebo": {
+            "position": "RB",
+            "mfl": 18.68,
+            "ktc": 3642,
+            "name": "Cam Skattebo"
+        },
+        "Emeka Egbuka": {
+            "position": "WR",
+            "mfl": 13.31,
+            "ktc": 4742,
+            "name": "Emeka Egbuka"
+        },
+        "Jaxson Dart": {
+            "position": "QB",
+            "mfl": 21.37,
+            "ktc": 4407,
+            "name": "Jaxson Dart"
+        },
+        "Donovan Edwards": {
+            "position": "RB",
+            "mfl": 66.33,
+            "ktc": 851,
+            "name": "Donovan Edwards"
+        },
+        "Arian Smith": {
+            "position": "WR",
+            "mfl": 73.87,
+            "ktc": 600,
+            "name": "Arian Smith"
+        },
+        "Tyler Warren": {
+            "position": "TE",
+            "mfl": 11.4,
+            "ktc": 4702,
+            "name": "Tyler Warren"
+        },
+        "Mitchell Evans": {
+            "position": "TE",
+            "mfl": 67.33,
+            "ktc": null,
+            "name": "Mitchell Evans"
+        },
+        "Jaylin Noel": {
+            "position": "WR",
+            "mfl": 32.25,
+            "ktc": 2913,
+            "name": "Jaylin Noel"
+        },
+        "Harold Fannin": {
+            "position": "TE",
+            "mfl": 36.79,
+            "ktc": 2564,
+            "name": "Harold Fannin"
+        },
+        "RJ Harvey": {
+            "position": "RB",
+            "mfl": 14.11,
+            "ktc": 4510,
+            "name": "RJ Harvey"
+        },
+        "Quinn Ewers": {
+            "position": "QB",
+            "mfl": 58.22,
+            "ktc": 1840,
+            "name": "Quinn Ewers"
+        },
+        "Tommy Mellott": {
+            "position": "WR",
+            "mfl": 69.49,
+            "ktc": null,
+            "name": "Tommy Mellott"
+        },
+        "Barrett Carter": {
+            "position": "LB",
+            "mfl": 68.6,
+            "ktc": null,
+            "name": "Barrett Carter"
+        },
+        "Teddye Buchanan": {
+            "position": "LB",
+            "mfl": 71.46,
+            "ktc": null,
+            "name": "Teddye Buchanan"
+        },
+        "Terrance Ferguson": {
+            "position": "TE",
+            "mfl": 32.33,
+            "ktc": 2715,
+            "name": "Terrance Ferguson"
+        },
+        "Elic Ayomanor": {
+            "position": "WR",
+            "mfl": 41.79,
+            "ktc": 2393,
+            "name": "Elic Ayomanor"
+        },
+        "Devin Neal": {
+            "position": "RB",
+            "mfl": 40.48,
+            "ktc": 2573,
+            "name": "Devin Neal"
+        },
+        "Shedeur Sanders": {
+            "position": "QB",
+            "mfl": 34.52,
+            "ktc": 2727,
+            "name": "Shedeur Sanders"
+        },
+        "Danny Stutsman": {
+            "position": "LB",
+            "mfl": 51.62,
+            "ktc": null,
+            "name": "Danny Stutsman"
+        },
+        "Elijah Arroyo": {
+            "position": "TE",
+            "mfl": 32.37,
+            "ktc": 2549,
+            "name": "Elijah Arroyo"
+        },
+        "Dillon Gabriel": {
+            "position": "QB",
+            "mfl": 52.97,
+            "ktc": 1992,
+            "name": "Dillon Gabriel"
+        },
+        "Jack Bech": {
+            "position": "WR",
+            "mfl": 24.56,
+            "ktc": 3219,
+            "name": "Jack Bech"
+        },
+        "Kurtis Rourke": {
+            "position": "QB",
+            "mfl": null,
+            "ktc": 426,
+            "name": "Kurtis Rourke"
+        },
+        "Jacory Croskey-Merritt": {
+            "position": "RB",
+            "mfl": 58.98,
+            "ktc": 1091,
+            "name": "Jacory Croskey-Merritt"
+        },
+        "Chimere Dike": {
+            "position": "WR",
+            "mfl": 58.54,
+            "ktc": 912,
+            "name": "Chimere Dike"
+        },
+        "Kyle Williams": {
+            "position": "WR",
+            "mfl": 27.41,
+            "ktc": 2782,
+            "name": "Kyle Williams"
+        },
+        "Demetrius Knight": {
+            "position": "LB",
+            "mfl": 41.03,
+            "ktc": null,
+            "name": "Demetrius Knight"
+        },
+        "Isaiah Bond": {
+            "position": "WR",
+            "mfl": 56.68,
+            "ktc": 1105,
+            "name": "Isaiah Bond"
+        },
+        "Jaydon Blue": {
+            "position": "RB",
+            "mfl": 32.18,
+            "ktc": 2785,
+            "name": "Jaydon Blue"
+        },
+        "Jordan James": {
+            "position": "RB",
+            "mfl": 45.14,
+            "ktc": 2115,
+            "name": "Jordan James"
+        },
+        "Luke Lachey": {
+            "position": "TE",
+            "mfl": 64.18,
+            "ktc": 650,
+            "name": "Luke Lachey"
+        },
+        "Tyler Shough": {
+            "position": "QB",
+            "mfl": 34.38,
+            "ktc": 2725,
+            "name": "Tyler Shough"
+        },
+        "Jalen Milroe": {
+            "position": "QB",
+            "mfl": 31.55,
+            "ktc": 3168,
+            "name": "Jalen Milroe"
+        },
+        "Colston Loveland": {
+            "position": "TE",
+            "mfl": 13.47,
+            "ktc": 4597,
+            "name": "Colston Loveland"
+        },
+        "LeQuint Allen": {
+            "position": "RB",
+            "mfl": 63.72,
+            "ktc": 870,
+            "name": "LeQuint Allen"
+        },
+        "Woody Marks": {
+            "position": "RB",
+            "mfl": 45.42,
+            "ktc": 1725,
+            "name": "Woody Marks"
+        },
+        "Isaac TeSlaa": {
+            "position": "WR",
+            "mfl": 40.77,
+            "ktc": 1933,
+            "name": "Isaac TeSlaa"
+        },
+        "Kyle Monangai": {
+            "position": "RB",
+            "mfl": 54.21,
+            "ktc": 1685,
+            "name": "Kyle Monangai"
+        },
+        "Tetairoa McMillan": {
+            "position": "WR",
+            "mfl": 6.96,
+            "ktc": 5567,
+            "name": "Tetairoa McMillan"
+        },
+        "Jordan Watkins": {
+            "position": "WR",
+            "mfl": 64.87,
+            "ktc": null,
+            "name": "Jordan Watkins"
+        },
+        "Oronde Gadsden": {
+            "position": "TE",
+            "mfl": 55.39,
+            "ktc": 1325,
+            "name": "Oronde Gadsden"
+        },
+        "Jack Kiser": {
+            "position": "LB",
+            "mfl": 71.04,
+            "ktc": null,
+            "name": "Jack Kiser"
+        },
+        "Jalen Royals": {
+            "position": "WR",
+            "mfl": 36.6,
+            "ktc": 2583,
+            "name": "Jalen Royals"
+        },
+        "Jihaad Campbell": {
+            "position": "LB",
+            "mfl": 27.73,
+            "ktc": null,
+            "name": "Jihaad Campbell"
+        },
+        "Quinshon Judkins": {
+            "position": "RB",
+            "mfl": 9.07,
+            "ktc": 5301,
+            "name": "Quinshon Judkins"
+        },
+        "Kyle McCord": {
+            "position": "QB",
+            "mfl": 68.92,
+            "ktc": 1016,
+            "name": "Kyle McCord"
+        },
+        "Tai Felton": {
+            "position": "WR",
+            "mfl": 56.09,
+            "ktc": 1765,
+            "name": "Tai Felton"
+        },
+        "Tahj Brooks": {
+            "position": "RB",
+            "mfl": 53.52,
+            "ktc": 1931,
+            "name": "Tahj Brooks"
+        },
+        "Dylan Sampson": {
+            "position": "RB",
+            "mfl": 34.23,
+            "ktc": 2808,
+            "name": "Dylan Sampson"
+        },
+        "Ollie Gordon": {
+            "position": "RB",
+            "mfl": 50.15,
+            "ktc": 2230,
+            "name": "Ollie Gordon"
+        },
+        "Ricky White": {
+            "position": "WR",
+            "mfl": 75.6,
+            "ktc": null,
+            "name": "Ricky White"
+        },
+        "KeAndre Lambert-Smith": {
+            "position": "WR",
+            "mfl": 74.0,
+            "ktc": null,
+            "name": "KeAndre Lambert-Smith"
+        },
+        "Will Howard": {
+            "position": "QB",
+            "mfl": 45.26,
+            "ktc": 2241,
+            "name": "Will Howard"
+        },
+        "Xavier Restrepo": {
+            "position": "WR",
+            "mfl": 61.63,
+            "ktc": 1612,
+            "name": "Xavier Restrepo"
+        },
+        "Gunnar Helm": {
+            "position": "TE",
+            "mfl": 54.17,
+            "ktc": 1546,
+            "name": "Gunnar Helm"
+        },
+        "Savion Williams": {
+            "position": "WR",
+            "mfl": 50.51,
+            "ktc": 1753,
+            "name": "Savion Williams"
+        },
+        "Jaylin Lane": {
+            "position": "WR",
+            "mfl": 61.3,
+            "ktc": 1507,
+            "name": "Jaylin Lane"
+        },
+        "Bhayshul Tuten": {
+            "position": "RB",
+            "mfl": 24.73,
+            "ktc": 3004,
+            "name": "Bhayshul Tuten"
+        },
+        "Pat Bryant": {
+            "position": "WR",
+            "mfl": 42.82,
+            "ktc": 2019,
+            "name": "Pat Bryant"
+        },
+        "Ashton Jeanty": {
+            "position": "RB",
+            "mfl": 2.28,
+            "ktc": 7792,
+            "name": "Ashton Jeanty"
+        },
+        "Cameron Ward": {
+            "position": "QB",
+            "mfl": 11.04,
+            "ktc": 5558,
+            "name": "Cameron Ward"
+        }
+    }
+}
