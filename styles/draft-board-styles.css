@@ -125,6 +125,37 @@ section {
     border-color: #91d5ff;
 }
 
+/* Position-specific colors for player selections */
+.pick-made[data-position="QB"] {
+    background-color: #d4edbc; /* Light green for QB */
+    border-color: #a5d46a;
+}
+
+.pick-made[data-position="RB"] {
+    background-color: #bfe1f6; /* Light blue for RB */
+    border-color: #7cc2e7;
+}
+
+.pick-made[data-position="WR"] {
+    background-color: #ffe5a0; /* Light yellow for WR */
+    border-color: #ffd24d;
+}
+
+.pick-made[data-position="TE"] {
+    background-color: #ffc8aa; /* Light orange for TE */
+    border-color: #ff9966;
+}
+
+.pick-made[data-position="K"] {
+    background-color: #e6cff2; /* Light purple for K */
+    border-color: #ca9ce0;
+}
+
+.pick-made[data-position="DEF"], .pick-made[data-position="DST"] {
+    background-color: #e8eaed; /* Light gray for DST */
+    border-color: #c4c9d4;
+}
+
 /* Pick Number */
 .pick-number {
     font-size: 12px;

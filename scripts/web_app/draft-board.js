@@ -502,6 +502,14 @@ function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwners, 
             // Add a class if the pick has been made
             if (pick.player_id) {
                 card.classList.add("pick-made");
+                
+                // Get player data
+                const playerData = nflPlayers[pick.player_id] || {};
+                
+                // Add the position data attribute to the card itself
+                if (playerData.position) {
+                    card.dataset.position = playerData.position;
+                }
             }
 
             const pickNumber = document.createElement("div");
@@ -519,6 +527,7 @@ function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwners, 
                 // Add position and team if available
                 if (playerData.position) {
                     displayText += ` (${playerData.position}`;
+                    
                     if (playerData.team) {
                         displayText += ` - ${playerData.team}`;
                     }
