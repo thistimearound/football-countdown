@@ -1,5 +1,6 @@
 // --- Configuration ---
 const SLEEPER_SEASON_YEAR = '2025'; // The season the draft is FOR (e.g., 2025 for the upcoming rookie draft)
+const ADP_DATA_FILE = '/data/adp_data.json'; // Path to your ADP data file
 
 // --- Event Listener for Load Button ---
 document.getElementById("loadDraft").addEventListener("click", loadDraft);
@@ -12,25 +13,27 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// Global variable to store state needed for toggle functionality
+// Global variable to store state needed for toggle functionality and filtering
 let globalDraftState = {
     nflPlayers: null,
     draftedPlayerIds: null,
     isRookiesOnly: null,
-    validPositions: null
+    validPositions: null,
+    adpData: null // Store ADP data globally
 };
 
 // Handle toggle between rookies only and all players
 function handlePlayerPoolToggle(event) {
     // Only proceed if we have the necessary data
-    if (globalDraftState.nflPlayers && globalDraftState.validPositions) {
+    if (globalDraftState.nflPlayers && globalDraftState.validPositions && globalDraftState.adpData) {
         const showAllPlayers = event.target.checked;
         // Re-render the player pool with the opposite of the current rookies only setting
         renderPlayerPool(
             globalDraftState.nflPlayers,
             globalDraftState.draftedPlayerIds,
             !showAllPlayers, // When toggle is checked, show all players (rookies = false)
-            globalDraftState.validPositions
+            globalDraftState.validPositions,
+            globalDraftState.adpData // Pass ADP data
         );
     }
 }
@@ -48,19 +51,21 @@ async function loadDraft() {
         document.getElementById("draftTable").innerHTML = "<p class='loading'>Loading draft data...</p>";
         document.getElementById("playerList").innerHTML = "<p class='loading'>Preparing player pool...</p>";
 
-        // Fetch all necessary data from Sleeper API concurrently, except for NFL players
+        // Fetch all necessary data from Sleeper API and local ADP file concurrently
         const [
             usersResponse,
             rostersResponse,
             draftsResponse,
             tradedPicksResponse,
-            leagueResponse // Added league settings API call
+            leagueResponse, // Added league settings API call
+            adpResponse // Fetch ADP data
         ] = await Promise.all([
             fetch(`https://api.sleeper.app/v1/league/${leagueID}/users`),
             fetch(`https://api.sleeper.app/v1/league/${leagueID}/rosters`),
             fetch(`https://api.sleeper.app/v1/league/${leagueID}/drafts`),
             fetch(`https://api.sleeper.app/v1/league/${leagueID}/traded_picks`),
-            fetch(`https://api.sleeper.app/v1/league/${leagueID}`) // Get league settings
+            fetch(`https://api.sleeper.app/v1/league/${leagueID}`), // Get league settings
+            fetch(ADP_DATA_FILE) // Fetch ADP data
         ]);
 
         // Check if all responses are OK before parsing JSON
@@ -69,12 +74,21 @@ async function loadDraft() {
         if (!draftsResponse.ok) throw new Error(`Failed to fetch drafts: ${draftsResponse.status}`);
         if (!tradedPicksResponse.ok) throw new Error(`Failed to fetch traded picks: ${tradedPicksResponse.status}`);
         if (!leagueResponse.ok) throw new Error(`Failed to fetch league settings: ${leagueResponse.status}`);
+        if (!adpResponse.ok) {
+             console.warn(`Failed to fetch ADP data from ${ADP_DATA_FILE}: ${adpResponse.status}. Player pool will not be sorted by ADP.`);
+             globalDraftState.adpData = null; // Set to null if fetching fails
+        } else {
+             globalDraftState.adpData = await adpResponse.json(); // Parse ADP data if successful
+             console.log("ADP Data Loaded:", globalDraftState.adpData);
+        }
+
 
         const users = await usersResponse.json();
         const rosters = await rostersResponse.json();
         const drafts = await draftsResponse.json();
         const tradedPicks = await tradedPicksResponse.json();
         const league = await leagueResponse.json(); // Parse league settings
+
 
         console.log("Users Response:", users);
         console.log("Rosters Response:", rosters);
@@ -147,7 +161,7 @@ async function loadDraft() {
 
         // Draft type (which players are eligible): ROOKIE or ALL
         // First check the checkbox (user override)
-        const isRookieDraftChecked = document.getElementById("isRookieDraft")?.checked || false;
+        const isRookieDraftChecked = document.getElementById("playerPoolToggle")?.checked || false; // Use playerPoolToggle for rookie override
 
         // Fetch specific draft details which might have more metadata
         const draftDetailsResponse = await fetch(`https://api.sleeper.app/v1/draft/${draftID}`);
@@ -224,7 +238,7 @@ async function loadDraft() {
         console.log(`Draft ID: ${draftID}`);
         console.log(`Draft metadata:`, selectedDraft.metadata || 'None');
         console.log(`Draft settings:`, draftSettings);
-        console.log(`Rookie Signal Count: ${rookieSignalCount}`);
+        console.log(`Rookie Signal Count: ${rookieSignalCount}`); // Corrected typo
         console.log(`Is Rookies Only: ${isRookiesOnly} (${rookieDetectionReason})`);
         console.log(`Player Pool: ${isRookiesOnly ? 'Rookies Only' : 'All Players'}`);
 
@@ -411,18 +425,19 @@ async function loadDraft() {
              originalOwnerNamesOrdered.push(userMap[originalOwnerUserId] || `Roster ${originalRosterId} (Unknown User)`);
         }
 
-
-        renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwnerNamesOrdered, is3RREnabled);
-        renderPlayerPool(nflPlayers, draftedPlayerIds, isRookiesOnly, validPositions);
-
-        // Show the player pool after rendering the draft board
-        showPlayerPool();
-
-        // Store state for toggle functionality
+        // Store NFL players globally for filtering
         globalDraftState.nflPlayers = nflPlayers;
         globalDraftState.draftedPlayerIds = draftedPlayerIds;
         globalDraftState.isRookiesOnly = isRookiesOnly;
         globalDraftState.validPositions = validPositions;
+
+
+        renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwnerNamesOrdered, is3RREnabled);
+        renderPlayerPool(nflPlayers, draftedPlayerIds, isRookiesOnly, validPositions, globalDraftState.adpData); // Pass ADP data
+
+        // Show the player pool after rendering the draft board
+        showPlayerPool();
+
     } catch (error) {
         console.error("Error loading draft data:", error);
         alert(`Failed to load draft data: ${error.message}. Please check the League ID and try again.`);
@@ -447,10 +462,11 @@ function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwnersOr
     const draftFormatText = draftFormatElem ? draftFormatElem.dataset.format : "SNAKE";
 
     // Update the Draft Board heading with draft format info
-    const draftBoardHeading = document.querySelector("#draftBoard h2");
-    if (draftBoardHeading) {
-        draftBoardHeading.innerHTML = `Draft Board <span class="draft-type-info">${draftFormatText} ${is3RREnabled ? '(3rd Round Reversal)' : ''}</span>`;
+    const draftTypeInfoSpan = document.getElementById("draft-type-info"); // Use the span element
+    if (draftTypeInfoSpan) {
+        draftTypeInfoSpan.textContent = `${draftFormatText} ${is3RREnabled ? '(3rd Round Reversal)' : ''}`;
     }
+
 
     // Group picks by round
     const picksByRound = {};
@@ -547,7 +563,7 @@ function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwnersOr
         // --- DEBUG LOGGING: Check display reversal and initial pick order ---
         console.log(`Round ${roundNum}: is3RREnabled=${is3RREnabled}, shouldReverseDisplay=${shouldReverseDisplay}`);
         console.log(`Round ${roundNum} picks before sorting:`, [...roundPicks]);
-        // --- END DEBUG LOGGING ---
+        // --- END DEBUGGING ---
 
 
         // Sort picks for display order within the row
@@ -562,13 +578,18 @@ function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwnersOr
 
         // --- DEBUG LOGGING: Check pick order after sorting ---
         console.log(`Round ${roundNum} picks after sorting (${shouldReverseDisplay ? 'R to L' : 'L to R'}):`, orderedPicks.map(p => `${p.round}.${String(p.pick_in_round).padStart(2, '0')}`));
-        // --- END DEBUG LOGGING ---
+        // --- END LOGGING ---
 
 
         // Add each pick to the cards container in the determined display order
         orderedPicks.forEach(pick => {
             const card = document.createElement("div");
             card.classList.add("draft-card");
+
+            // Add 'traded-pick' class if the current owner is different from the original owner
+            if (pick.currentOwnerName !== pick.originalOwnerName) {
+            card.classList.add("traded-pick");
+            }
 
             // Add a class if the pick has been made
             if (pick.player_id) {
@@ -644,27 +665,38 @@ function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwnersOr
 }
 
 /**
- * Renders the player pool, filtering undrafted players and sorting them by position and name.
- * @param {Object} players Object containing player data.
+ * Renders the player pool, filtering undrafted players and sorting them by ADP (or position/name if ADP is not available).
+ * @param {Object} players Object containing player data from Sleeper.
  * @param {Set} draftedPlayerIds Set of drafted player IDs.
  * @param {boolean} isRookieDraft Whether the draft is a rookie draft.
  * @param {Object} validPositions Object with valid positions as keys and true as values.
+ * @param {Object|null} adpData ADP data loaded from the JSON file, or null if not available.
  */
-function renderPlayerPool(players, draftedPlayerIds, isRookieDraft, validPositions) {
+function renderPlayerPool(players, draftedPlayerIds, isRookieDraft, validPositions, adpData) {
     console.log("Total Players:", Object.keys(players).length);
     console.log("Drafted Player IDs:", draftedPlayerIds.size);
     console.log("Is Rookie Draft:", isRookieDraft);
     console.log("Valid Positions:", validPositions);
+    console.log("ADP Data Available:", !!adpData);
 
     const playerList = document.getElementById("playerList");
     playerList.innerHTML = ""; // Clear previous data
 
-    // Sample some players to debug rookie detection
-    console.log("Sample Players for Debugbing Rookie Detection:");
-    const samplePlayers = Object.entries(players).slice(0, 10);
-    samplePlayers.forEach(([id, player]) => {
-        console.log(`Player ID: ${id}, Name: ${player.full_name || player.first_name + ' ' + player.last_name}, Years Exp: ${player.years_exp}, Rookie: ${player.rookie}, Status: ${player.status}`);
-    });
+    // Create a map for quick ADP lookup by player name
+    const adpMap = {};
+    if (adpData && adpData.players) {
+        Object.values(adpData.players).forEach(player => {
+            if (player.full_name && player.rank) {
+                adpMap[player.full_name.toLowerCase()] = parseInt(player.rank);
+            }
+        });
+        console.log("Created ADP Map:", adpMap);
+    } else if (adpData) {
+         console.warn("ADP data loaded but does not contain a 'players' object or player ranks.");
+    } else {
+         console.warn("ADP data not loaded, player pool will not be sorted by ADP.");
+    }
+
 
     // Add search/filter controls to the top of the player pool
     const filterControls = document.createElement("div");
@@ -707,7 +739,7 @@ function renderPlayerPool(players, draftedPlayerIds, isRookieDraft, validPositio
     playerCardsContainer.classList.add("player-cards-container");
     playerList.appendChild(playerCardsContainer);
 
-    // Prepare player data for filtering
+    // Prepare player data for filtering and sorting
     window.allPlayers = [];
 
     // Count players by bucket to debug filtering issues
@@ -758,8 +790,7 @@ function renderPlayerPool(players, draftedPlayerIds, isRookieDraft, validPositio
         // Check if player is a rookie
         const isRookie = player.years_exp === 0 || player.rookie === true || player.status === "Rookie";
 
-        // FIXED: Only filter rookies if it's a rookie draft
-        // This was causing the issue with startup drafts showing only rookies
+        // Only filter rookies if it's a rookie draft (based on detection or override)
         if (isRookieDraft && !isRookie) {
             nonRookiePlayers++;
             return; // Skip non-rookies only for rookie drafts
@@ -773,13 +804,17 @@ function renderPlayerPool(players, draftedPlayerIds, isRookieDraft, validPositio
 
         acceptedPlayers++;
 
+        // Get ADP if available
+        const playerNameLower = (player.full_name || `${player.first_name || ''} ${player.last_name || ''}`).trim().toLowerCase();
+        const adp = adpMap[playerNameLower] || Infinity; // Use Infinity if ADP is not found
+
         window.allPlayers.push({
             id: playerId,
             name: player.full_name || `${player.first_name || ''} ${player.last_name || ''}`.trim(),
             position: player.position || "N/A",
             team: player.team || "N/A",
             rookie: isRookie,
-            adp: player.adp || Infinity,
+            adp: adp, // Include ADP
             fantasy_points: player.fantasy_points || null,
             search_text: `${player.full_name || ''} ${player.first_name || ''} ${player.last_name || ''} ${player.team || ''} ${player.position || ''}`.toLowerCase()
         });
@@ -797,8 +832,18 @@ function renderPlayerPool(players, draftedPlayerIds, isRookieDraft, validPositio
         Final Player Count: ${window.allPlayers.length}`
     );
 
-    // Sort undrafted players by position then by name
+    // Sort undrafted players
     window.allPlayers.sort((a, b) => {
+        // --- Sorting Logic ---
+        // Currently sorting by ADP (Average Draft Position) ascending.
+        // Future: Implement a custom "value" calculation and sort by value.
+
+        // Sort primarily by ADP (lower ADP is better)
+        if (a.adp !== b.adp) {
+            return a.adp - b.adp;
+        }
+
+        // If ADP is the same (or Infinity), sort by position then name as a fallback
         // First by position
         if (a.position !== b.position) {
             // Custom position order: QB, RB, WR, TE, K, DEF
@@ -808,18 +853,23 @@ function renderPlayerPool(players, draftedPlayerIds, isRookieDraft, validPositio
 
         // Then by name
         return a.name.localeCompare(b.name);
+        // --- End Sorting Logic ---
     });
 
     console.log(`Found ${window.allPlayers.length} undrafted players for the player pool`);
 
     // If we have no players but it's a rookie draft, try including non-rookies as a fallback
-    if (window.allPlayers.length === 0 && isRookieDraft) {
-        console.log("No rookies found, showing all valid players as fallback");
+    // This fallback logic is less critical now that ADP sorting is in place, but kept for robustness.
+    if (window.allPlayers.length === 0 && isRookieDraft && totalPlayers > 0) { // Added check for totalPlayers > 0
+        console.log("No rookies found based on filters, showing all valid players as fallback");
         Object.entries(players).forEach(([playerId, player]) => {
             if (!draftedPlayerIds.has(playerId) &&
                 player.position && validPositions[player.position] &&
                 (player.full_name || (player.first_name && player.last_name)) &&
                 player.status !== "Retired" && player.status !== "Inactive") {
+
+                 const playerNameLower = (player.full_name || `${player.first_name || ''} ${player.last_name || ''}`).trim().toLowerCase();
+                 const adp = adpMap[playerNameLower] || Infinity;
 
                 window.allPlayers.push({
                     id: playerId,
@@ -827,14 +877,24 @@ function renderPlayerPool(players, draftedPlayerIds, isRookieDraft, validPositio
                     position: player.position || "N/A",
                     team: player.team || "N/A",
                     rookie: false, // Not a rookie but showing anyway
-                    adp: player.adp || Infinity,
+                    adp: adp, // Include ADP
                     fantasy_points: player.fantasy_points || null,
                     search_text: `${player.full_name || ''} ${player.first_name || ''} ${player.last_name || ''} ${player.team || ''} ${player.position || ''}`.toLowerCase()
                 });
             }
         });
         console.log(`Fallback: Found ${window.allPlayers.length} players`);
+
+         // Re-sort fallback players by ADP
+         window.allPlayers.sort((a, b) => {
+             if (a.adp !== b.adp) {
+                 return a.adp - b.adp;
+             }
+             const posOrder = { "QB": 1, "RB": 2, "WR": 3, "TE": 4, "K": 5, "DEF": 6 };
+             return (posOrder[a.position] || 99) - (posOrder[b.position] || 99);
+         });
     }
+
 
     // Initial display of players
     filterPlayers();
@@ -883,6 +943,16 @@ function filterPlayers() {
             const playerDetails = document.createElement("div");
             playerDetails.classList.add("player-details");
 
+            // Add ADP if available and not Infinity
+            if (player.adp && player.adp !== Infinity) {
+                 const adpSpan = document.createElement("span");
+                 adpSpan.classList.add("player-adp");
+                 // Display ADP as a whole number
+                 adpSpan.textContent = `ADP: ${Math.round(player.adp)}`;
+                 playerDetails.appendChild(adpSpan);
+            }
+
+
             // Create position element
             const positionSpan = document.createElement("span");
             positionSpan.classList.add("player-position");
@@ -907,14 +977,6 @@ function filterPlayers() {
                 rookieSpan.classList.add("player-rookie");
                 rookieSpan.textContent = "Rookie";
                 playerDetails.appendChild(rookieSpan);
-            }
-
-            // Add ADP if available
-            if (player.adp && player.adp !== Infinity) {
-                const adpSpan = document.createElement("span");
-                adpSpan.classList.add("player-adp");
-                adpSpan.textContent = `ADP: ${player.adp.toFixed(1)}`;
-                playerDetails.appendChild(adpSpan);
             }
 
             // Add fantasy points if available
@@ -960,7 +1022,8 @@ function getValidPositionsFromRoster(rosterPositions) {
         "WR": false,
         "TE": false,
         "K": false,
-        "DEF": false
+        "DEF": false,
+        "DST": false // Added DST as a valid position
     };
 
     // Map Sleeper position codes to our simplified position codes
@@ -971,6 +1034,7 @@ function getValidPositionsFromRoster(rosterPositions) {
         "TE": "TE",
         "K": "K",
         "DEF": "DEF",
+        "DST": "DST", // Mapped DST
         "FLEX": ["RB", "WR", "TE"], // FLEX includes RB/WR/TE
         "SUPER_FLEX": ["QB", "RB", "WR", "TE"], // SUPER_FLEX includes QB/RB/WR/TE
         "REC_FLEX": ["WR", "TE"], // Receiver FLEX includes WR/TE
@@ -1001,6 +1065,7 @@ function getValidPositionsFromRoster(rosterPositions) {
     });
 
     // If we didn't find any valid positions (possible parsing error), default to common positions
+    // Only default if *no* valid positions were found at all.
     if (!Object.values(validPositions).some(Boolean)) {
         console.warn("No valid positions found, using default positions");
         validPositions.QB = true;
@@ -1009,16 +1074,18 @@ function getValidPositionsFromRoster(rosterPositions) {
         validPositions.TE = true;
         validPositions.K = true;
         validPositions.DEF = true;
+        validPositions.DST = true; // Include DST in default
     }
 
     return validPositions;
 }
 
+
 // Show the player pool only after the draft board is successfully loaded
 function showPlayerPool() {
     const playerPoolSection = document.getElementById("playerPool");
     if (playerPoolSection) {
-        playerPoolSection.style.display = "block"; // Make the player pool visible
+        playerPoolSection.style.display = "flex"; // Use flex to enable column layout
     }
 }
 
@@ -1028,4 +1095,4 @@ function setDraftGridColumns(numTeams) {
 }
 
 // Example usage: Call this function after determining the number of teams in the league
-// setDraftGridColumns(12); // This will be called dynamically now inside renderDraftBoard
+// setDraftGridColumns(12); // Default to 12 teams, will be updated dynamically

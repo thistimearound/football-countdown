@@ -92,10 +92,10 @@ section {
     flex-direction: column; /* Stack children vertically */
     gap: 10px; /* Add space between direct children (h2, controls, player list) */
     padding: 15px; /* Increased padding for better spacing */
-    background-color: #f9f9f9; /* Match other sections */
-    border: 1px solid #ccc; /* Match other sections */
-    border-radius: 5px; /* Match other sections */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Match other sections */
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     max-height: 80vh;
     display: block; /* Ensure it is visible */
@@ -238,8 +238,10 @@ section {
     transition: transform 0.2s ease-in-out;
     display: flex; /* Use flexbox within the card for content layout */
     flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Center content vertically */
+    justify-content: space-between; /* Distribute space between items */
     align-items: center; /* Center content horizontally */
+    position: relative; /* Needed for absolute positioning of the banner */
+    padding-bottom: 25px; /* Add padding at the bottom for the banner */
 }
 
 .draft-card:hover {
@@ -290,39 +292,53 @@ section {
     margin-bottom: 5px;
 }
 
-/* Pick Owner */
-.pick-owner {
-    font-size: 8px;
-    color: #888;
-    margin-bottom: 5px;
-}
-
-/* Current Owner */
-.current-owner {
-    font-size: 6px;
-    color: #888;
-    margin-bottom: 5px;
-}
-
 /* Player Selected */
 .player-selected {
     font-size: 12px;
     font-weight: bold;
     color: #007bff;
+    flex-grow: 1; /* Allow player name to take up available space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px; /* Add some horizontal padding */
+}
+
+/* Pick Owner Banner */
+.pick-owner {
+    position: absolute; /* Position absolutely within the card */
+    bottom: 0; /* Align to the bottom */
+    left: 0;
+    right: 0;
+    width: 100%; /* Take full width of the card */
+    background-color: white; /* White background for regular picks */
+    color: black; /* Black text for regular picks */
+    font-size: 8px;
+    font-weight: bold;
+    padding: 3px 0; /* Padding top/bottom */
+    border-bottom-left-radius: 8px; /* Match card border radius */
+    border-bottom-right-radius: 8px; /* Match card border radius */
+    text-align: center;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Style for traded picks */
+.draft-card.traded-pick .pick-owner {
+    background-color: black; /* Black background for traded picks */
+    color: white; /* White text for traded picks */
 }
 
 /* Player Pool */
 .player-pool {
     grid-column: 1; /* Keep Player Pool in the first column */
-    /* Removed float, margin: 0 auto, and width: auto */
     display: flex; /* Use flexbox for internal layout */
     flex-direction: column; /* Stack children vertically */
     gap: 10px; /* Add space between direct children (h2, controls, player list) */
     padding: 15px; /* Increased padding for better spacing */
-    background-color: #f9f9f9; /* Match other sections */
-    border: 1px solid #ccc; /* Match other sections */
-    border-radius: 5px; /* Match other sections */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Match other sections */
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     max-height: 80vh;
     display: block; /* Ensure it is visible */
