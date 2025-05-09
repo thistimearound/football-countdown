@@ -477,20 +477,34 @@ function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwners, 
         roundRow.classList.add("draft-round-row");
         roundRow.dataset.round = roundNum; // Add round number as data attribute
         
-        // Sort picks according to the draft format - odd rounds go left to right, even rounds go right to left
-        // If 3RR is enabled, the 3rd round also goes left to right
-        const isReversedRound = roundNum % 2 === 0;
+        // Get the draft format from the indicator element
+        const draftFormatElem = document.getElementById("draftFormatIndicator");
+        const draftFormat = draftFormatElem ? draftFormatElem.dataset.format : "SNAKE"; // Default to SNAKE if not found
+        const isSnakeDraft = draftFormat === "SNAKE";
         
-        // Check if this is the 3rd round and 3RR is enabled from draft settings
-        const shouldReverseDisplay = isReversedRound && !(roundNum === 3 && is3RREnabled);
+        // Only apply round reversal logic for snake drafts
+        let shouldReverseDisplay = false;
+        
+        if (isSnakeDraft) {
+            const isEvenRound = roundNum % 2 === 0;
+            
+            // For standard snake: reverse even rounds
+            // For 3RR: reverse ONLY round 2, rounds 3+ follow same pattern as odd rounds
+            if (is3RREnabled) {
+                shouldReverseDisplay = (roundNum === 2); // Only round 2 is reversed in 3RR
+            } else {
+                shouldReverseDisplay = isEvenRound; // Every even round is reversed in standard snake
+            }
+        }
+        // For linear drafts, shouldReverseDisplay remains false - no rounds are reversed
         
         // Sort picks for display order
         const orderedPicks = [...roundPicks];
         if (shouldReverseDisplay) {
-            // For even rounds (or non-3RR 3rd round), display right to left
+            // For rounds that should be reversed, display right to left
             orderedPicks.sort((a, b) => b.pick_in_round - a.pick_in_round);
         } else {
-            // For odd rounds (or 3RR 3rd round), display left to right
+            // For normal order, display left to right
             orderedPicks.sort((a, b) => a.pick_in_round - b.pick_in_round);
         }
         
