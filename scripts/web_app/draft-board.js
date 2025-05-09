@@ -1,7 +1,7 @@
 // --- Configuration ---
 const SLEEPER_SEASON_YEAR = '2025'; // The season the draft is FOR (e.g., 2025 for the upcoming rookie draft)
 // Corrected path to be relative to the web server root for deployment
-const ADP_DATA_FILE = '/data/adp_data.json'; // Path to your ADP data file
+const ADP_DATA_FILE = './data/adp_data.json';
 
 // --- Event Listener for Load Button ---
 document.getElementById("loadDraft").addEventListener("click", loadDraft);
@@ -204,8 +204,8 @@ async function loadDraft() {
         else if (draftSignals.nameContainsRookie) rookieDetectionReason = "Draft name contains 'rookie'";
         else if (rookieSignalCount >= 5) rookieDetectionReason = "Multiple signals indicate rookie draft";
 
-        console.log(`Draft Format: ${draftFormat.toUpperCase()}`); // Minimized log
-        console.log(`Is Rookies Only: ${isRookiesOnly} (${rookieDetectionReason})`); // Minimized log
+        console.log(`Draft Format: ${draftFormat.toUpperCase()}`);
+        console.log(`Is Rookies Only: ${isRookiesOnly} (${rookieDetectionReason})`);
 
 
         // Get valid positions from league settings
