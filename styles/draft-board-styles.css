@@ -275,11 +275,10 @@ section {
     color: white;
     padding: 2px 6px;
     border-radius: 3px;
-    font-weight: bold;
 }
 
 .player-team {
-    background-color: #6c757d;
+    background-color: #6c757d; /* Default gray for players not signed to a team */
     color: white;
     padding: 2px 6px;
     border-radius: 3px;
@@ -290,6 +289,105 @@ section {
     color: white;
     padding: 2px 6px;
     border-radius: 3px;
+}
+/* Team-specific colors for player teams in player pool */
+.player-team[data-team="ARI"] {
+    background-color: #97233F; /* Arizona Cardinals */
+}
+.player-team[data-team="ATL"] {
+    background-color: #A71930; /* Atlanta Falcons */
+}
+.player-team[data-team="BAL"] {
+    background-color: #241773; /* Baltimore Ravens */
+}
+.player-team[data-team="BUF"] {
+    background-color: #00338D; /* Buffalo Bills */
+}
+.player-team[data-team="CAR"] {
+    background-color: #0085CA; /* Carolina Panthers */
+}
+.player-team[data-team="CHI"] {
+    background-color: #0B162A; /* Chicago Bears */
+}
+.player-team[data-team="CIN"] {
+    background-color: #FB4F14; /* Cincinnati Bengals */
+}
+.player-team[data-team="CLE"] {
+    background-color: #311D00; /* Cleveland Browns */
+}
+.player-team[data-team="DAL"] {
+    background-color: #041E42; /* Dallas Cowboys */
+}
+.player-team[data-team="DEN"] {
+    background-color: #FB4F14; /* Denver Broncos */
+}
+.player-team[data-team="DET"] {
+    background-color: #0076B6; /* Detroit Lions */
+}
+.player-team[data-team="GB"] {
+    background-color: #203731; /* Green Bay Packers */
+}
+.player-team[data-team="HOU"] {
+    background-color: #03202F; /* Houston Texans */
+}
+.player-team[data-team="IND"] {
+    background-color: #002C5F; /* Indianapolis Colts */
+}
+.player-team[data-team="JAX"], .player-team[data-team="JAC"] {
+    background-color: #006778; /* Jacksonville Jaguars */
+}
+.player-team[data-team="KC"] {
+    background-color: #E31837; /* Kansas City Chiefs */
+}
+.player-team[data-team="LV"] {
+    background-color: #000000; /* Las Vegas Raiders */
+}
+.player-team[data-team="LAC"] {
+    background-color: #0080C6; /* Los Angeles Chargers */
+}
+.player-team[data-team="LAR"] {
+    background-color: #003594; /* Los Angeles Rams */
+}
+.player-team[data-team="MIA"] {
+    background-color: #008E97; /* Miami Dolphins */
+}
+.player-team[data-team="MIN"] {
+    background-color: #4F2683; /* Minnesota Vikings */
+}
+.player-team[data-team="NE"] {
+    background-color: #002244; /* New England Patriots */
+}
+.player-team[data-team="NO"] {
+    background-color: #D3BC8D; /* New Orleans Saints */
+    color: #000000; /* Black text for better contrast on light background */
+}
+.player-team[data-team="NYG"] {
+    background-color: #0B2265; /* New York Giants */
+}
+.player-team[data-team="NYJ"] {
+    background-color: #125740; /* New York Jets */
+}
+.player-team[data-team="PHI"] {
+    background-color: #004C54; /* Philadelphia Eagles */
+}
+.player-team[data-team="PIT"] {
+    background-color: #FFB612; /* Pittsburgh Steelers */
+    color: #000000; /* Black text for better contrast on light background */
+}
+.player-team[data-team="SF"] {
+    background-color: #AA0000; /* San Francisco 49ers */
+}
+.player-team[data-team="SEA"] {
+    background-color: #002244; /* Seattle Seahawks */
+}
+.player-team[data-team="TB"] {
+    background-color: #D50A0A; /* Tampa Bay Buccaneers */
+}
+.player-team[data-team="TEN"] {
+    background-color: #4B92DB; /* Tennessee Titans */
+}
+.player-team[data-team="WAS"] {
+    background-color: #773141; /* Washington Commanders */
 }
 
 /* No Results and Limit Messages */
@@ -482,11 +580,14 @@ input:checked + .slider:before {
 
 /* Draft Type Info */
 .draft-type-info {
-    padding: 10px;
-    margin-top: 15px;
+    display: inline-block;
+    font-size: 0.75em;
+    padding: 5px 10px;
+    margin-left: 10px;
     background-color: #f8f9fa;
     border: 1px solid #dee2e6;
     border-radius: 4px;
-    text-align: center;
-    font-weight: bold;
+    font-weight: normal;
+    color: #555;
+    vertical-align: middle;
 }

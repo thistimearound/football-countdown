@@ -432,6 +432,16 @@ async function loadDraft() {
 function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwners, is3RREnabled) {
     const draftTable = document.getElementById("draftTable");
     draftTable.innerHTML = ""; // Clear previous data
+    
+    // Get draft format from global scope or pass it as parameter
+    const draftFormatElem = document.getElementById("draftFormatIndicator");
+    const draftFormatText = draftFormatElem ? draftFormatElem.dataset.format : "SNAKE";
+    
+    // Update the Draft Board heading with draft format info
+    const draftBoardHeading = document.querySelector("#draftBoard h2");
+    if (draftBoardHeading) {
+        draftBoardHeading.innerHTML = `Draft Board <span class="draft-type-info">${draftFormatText} ${is3RREnabled ? '(3rd Round Reversal)' : ''}</span>`;
+    }
 
     // Group picks by round
     const picksByRound = {};
@@ -567,17 +577,6 @@ function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwners, 
     });
 
     draftTable.appendChild(draftBoardContainer);
-    
-    // Display draft format information
-    const draftTypeInfo = document.createElement("div");
-    draftTypeInfo.classList.add("draft-type-info");
-    
-    // Get draft format from global scope or pass it as parameter
-    const draftFormatElem = document.getElementById("draftFormatIndicator");
-    if (draftFormatElem) {
-        draftTypeInfo.textContent = `Draft Format: ${draftFormatElem.dataset.format} ${is3RREnabled ? '(3rd Round Reversal)' : ''}`;
-        draftTable.appendChild(draftTypeInfo);
-    }
 }
 
 /**
@@ -820,26 +819,49 @@ function filterPlayers() {
             const playerDetails = document.createElement("div");
             playerDetails.classList.add("player-details");
             
-            let detailsHtml = `
-                <span class="player-position">${player.position}</span>
-                <span class="player-team">${player.team}</span>
-            `;
+            // Create position element
+            const positionSpan = document.createElement("span");
+            positionSpan.classList.add("player-position");
+            positionSpan.textContent = player.position;
+            playerDetails.appendChild(positionSpan);
             
+            // Create team element with team-specific color
+            const teamSpan = document.createElement("span");
+            teamSpan.classList.add("player-team");
+            teamSpan.textContent = player.team;
+            
+            // Add team code as data attribute for CSS styling if it's not "N/A"
+            if (player.team && player.team !== "N/A") {
+                teamSpan.dataset.team = player.team;
+            }
+            
+            playerDetails.appendChild(teamSpan);
+            
+            // Add rookie tag if applicable
             if (player.rookie) {
-                detailsHtml += `<span class="player-rookie">Rookie</span>`;
+                const rookieSpan = document.createElement("span");
+                rookieSpan.classList.add("player-rookie");
+                rookieSpan.textContent = "Rookie";
+                playerDetails.appendChild(rookieSpan);
             }
             
+            // Add ADP if available
             if (player.adp && player.adp !== Infinity) {
-                detailsHtml += `<span class="player-adp">ADP: ${player.adp.toFixed(1)}</span>`;
+                const adpSpan = document.createElement("span");
+                adpSpan.classList.add("player-adp");
+                adpSpan.textContent = `ADP: ${player.adp.toFixed(1)}`;
+                playerDetails.appendChild(adpSpan);
             }
             
+            // Add fantasy points if available
             if (player.fantasy_points) {
-                detailsHtml += `<span class="player-points">Proj: ${player.fantasy_points.toFixed(1)}</span>`;
+                const pointsSpan = document.createElement("span");
+                pointsSpan.classList.add("player-points");
+                pointsSpan.textContent = `Proj: ${player.fantasy_points.toFixed(1)}`;
+                playerDetails.appendChild(pointsSpan);
             }
             
-            playerDetails.innerHTML = detailsHtml;
             playerCard.appendChild(playerDetails);
-
             container.appendChild(playerCard);
             matchCount++;
         }
