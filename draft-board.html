@@ -31,6 +31,22 @@
                 <!-- todo: if kicker or punter, show Nickname or League Comment field when devy checked -->
                 <label for="isDevy"><input type="checkbox" id="isDevy"> Devy? <br>(Currently Nonfunctional)</label>
             </div>
+            
+            <!-- Player Pool Toggle - Single Implementation -->
+            <div class="player-pool-controls">
+                <div class="player-pool-toggle">
+                    <span>Rookies Only</span>
+                    <label class="switch">
+                        <input type="checkbox" id="playerPoolToggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span>All Players</span>
+                </div>
+                <div style="font-size: 12px; color: #666; margin-top: 5px;">
+                    Override automatic detection of rookie-only drafts
+                </div>
+            </div>
+            
             <section id="playerPool" class="player-pool">
                 <h2>Player Pool</h2>
                 <div id="playerList"></div>
