@@ -1,6 +1,6 @@
 // --- Configuration ---
 const SLEEPER_SEASON_YEAR = '2025'; // The season the draft is FOR (e.g., 2025 for the upcoming rookie draft)
-const ADP_DATA_FILE = 'data/adp_data.json'; // Path to your ADP data file
+const ADP_DATA_FILE = '../../data/adp_data.json'; // Path to your ADP data file
 
 // --- Event Listener for Load Button ---
 document.getElementById("loadDraft").addEventListener("click", loadDraft);
