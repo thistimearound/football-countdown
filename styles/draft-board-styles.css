@@ -38,18 +38,73 @@ section {
     background-color: #f9f9f9;
 }
 
+#draftQueue {
+    grid-column: 1; /* Ensure Draft Queue is in the first column */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#draftQueue > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#draftQueue input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Make input take full width of its container */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+#draftQueue button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#draftQueue button:hover {
+    background-color: #0056b3;
+}
+
+#draftQueue label {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    color: #555;
+}
+
+#draftQueue input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+
 #playerPool {
-    grid-column: 1 / -1; /* Span the full width */
+    grid-column: 1; /* Keep Player Pool in the first column */
+    /* Removed float, margin: 0 auto, and width: auto */
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack children vertically */
+    gap: 10px; /* Add space between direct children (h2, controls, player list) */
+    padding: 15px; /* Increased padding for better spacing */
+    background-color: #f9f9f9; /* Match other sections */
+    border: 1px solid #ccc; /* Match other sections */
+    border-radius: 5px; /* Match other sections */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Match other sections */
+    overflow-y: auto;
+    max-height: 80vh;
     display: block; /* Ensure it is visible */
-    margin-top: 20px; /* Add padding between the Player Pool section and the input box */
-    width: 100%; /* Take full width */
-    max-width: 90%; /* Set max width to 90% of the parent section */
-    margin: 0 auto; /* Center align within the parent section */
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    margin-bottom: 15px; /* Add space below the section */
+    align-items: stretch; /* Stretch children to fill the container width */
 }
 
 #draftBoard {
-    grid-column: 2 / 4; /* Ensure Draft Board occupies the second column */
+    grid-column: 2; /* Ensure Draft Board occupies the second column */
     display: flex;
     flex-direction: column; /* Stack Player Pool and Draft Board vertically */
     justify-content: space-between;
@@ -67,43 +122,111 @@ section {
     height: 99%; /* Ensure it stretches to fill the parent container */
 }
 
-#draftBoard table {
+
+/* Draft Board Container */
+.draft-board-container {
+    display: flex; /* Use flexbox for the main container */
+    flex-direction: column; /* Stack header and rows vertically */
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+    gap: 10px; /* Space between header and rows */
 }
 
-#draftBoard th, #draftBoard td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
-}
-
-#draftBoard th {
-    background-color: #f4f4f4;
+/* Draft Header Row */
+.draft-header-row {
+    display: grid; /* Use grid for the header to align with round rows */
+    /* The first column is for the round indicator, subsequent columns for teams */
+    grid-template-columns: 100px repeat(var(--num-teams, 12), 1fr);
+    gap: 10px; /* Match gap in round rows */
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
     font-weight: bold;
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    border-bottom: 2px solid #ccc;
 }
 
-/* Draft Board Grid */
-.draft-grid {
-    display: grid;
-    grid-template-columns: repeat(var(--num-teams, 12), 1fr); /* Ensure consistent column layout */
-    gap: 10px; /* Add spacing between items */
-    width: 100%; /* Ensure full width alignment */
-    max-width: 1200px; /* Limit maximum width */
-    margin: 0 auto; /* Center align both header and grid */
+/* Round Indicator Header - Empty space for alignment */
+.round-indicator-header {
+    /* This cell aligns with the round indicator column */
+    grid-column: 1;
+    padding: 3px;
+    background-color: transparent;
+    border-radius: 4px;
 }
 
-/* Draft Row */
-.draft-row {
+.draft-header-cell {
+    /* Styling for owner names in the header */
+     text-align: center;
+     font-weight: bold;
+     overflow: hidden; /* Hide overflowing text */
+     text-overflow: ellipsis; /* Add ellipsis for overflow */
+     white-space: nowrap; /* Prevent wrapping */
+}
+
+
+/* Draft Round Row */
+.draft-round-row {
+    display: grid; /* Use grid for the main row layout */
+    /* First column for the indicator, second for the cards container */
+    grid-template-columns: 100px 1fr;
+    gap: 10px; /* Gap between indicator and cards container */
+    width: 100%;
+    margin-bottom: 10px;
+    align-items: start; /* Align items to the top of the grid cell */
+}
+
+/* Style for the round indicator element */
+.round-indicator {
+    /* This element is in the first grid column */
+    grid-column: 1;
+    width: 90px; /* Fixed width for the indicator */
+    flex-shrink: 0; /* Prevent shrinking */
     display: flex;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 5px;
+    flex-direction: column; /* Stack content vertically if needed */
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    border-radius: 0; /* Square corners */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Add a subtle shadow */
+    height: 150px; /* Match card height */
+}
+
+/* Style even/odd round indicators differently for visual clarity */
+.draft-round-row:nth-child(odd) .round-indicator {
+    background-color: rgba(0, 123, 255, 0.9); /* Example color - slightly more opaque */
+}
+
+.draft-round-row:nth-child(even) .round-indicator {
+    background-color: rgba(40, 167, 69, 0.9); /* Example color - slightly more opaque */
+}
+
+/* Container for the draft cards */
+.draft-cards-container {
+    /* This element is in the second grid column */
+    grid-column: 2;
+    display: flex; /* Use flexbox to lay out the cards */
+    gap: 10px; /* Space between cards */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: flex-start; /* Default L-R flow */
+    width: 100%; /* Take full width of the grid cell */
+}
+
+/* Style for reversed display on the cards container */
+.draft-round-row .draft-cards-container.reverse-display {
+    flex-direction: row-reverse; /* Reverse the visual order of cards */
+    /* Justification should still be flex-start to align reversed items to the left */
+    justify-content: flex-start;
 }
 
 /* Draft Card */
 .draft-card {
-    width: 100%; /* Ensure all cards are the same size within their grid cell */
+    /* Use flex-basis to control card width within the flex container */
+    /* Ensure flex-basis calculation accounts for the gap within the cards container */
+    flex-basis: calc((100% - (var(--num-teams, 12) - 1) * 10px) / var(--num-teams, 12)); /* Calculate width considering gaps */
+    flex-grow: 0; /* Prevent cards from growing */
+    flex-shrink: 0; /* Prevent cards from shrinking below basis */
     height: 150px; /* Set a fixed height for uniformity */
     padding: 5px; /* Reduce padding for each card */
     box-sizing: border-box; /* Include padding and border in width and height */
@@ -113,7 +236,10 @@ section {
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
-    justify-self: stretch; /* Ensure each card aligns with its corresponding header cell */
+    display: flex; /* Use flexbox within the card for content layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
 }
 
 .draft-card:hover {
@@ -187,28 +313,33 @@ section {
 
 /* Player Pool */
 .player-pool {
-    float: none; /* Remove float */
-    margin: 0 auto; /* Center align if needed */
-    width: auto; /* Adjust width dynamically */
-    padding: 5px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    grid-column: 1; /* Keep Player Pool in the first column */
+    /* Removed float, margin: 0 auto, and width: auto */
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack children vertically */
+    gap: 10px; /* Add space between direct children (h2, controls, player list) */
+    padding: 15px; /* Increased padding for better spacing */
+    background-color: #f9f9f9; /* Match other sections */
+    border: 1px solid #ccc; /* Match other sections */
+    border-radius: 5px; /* Match other sections */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Match other sections */
     overflow-y: auto;
     max-height: 80vh;
-    display: none; /* Hidden by default, shown after loading */
+    display: block; /* Ensure it is visible */
+    margin-bottom: 15px; /* Add space below the section */
+    align-items: stretch; /* Stretch children to fill the container width */
 }
 
 /* Player Filter Controls */
 .player-filter-controls {
     display: flex;
     gap: 10px;
-    margin-bottom: 15px;
-    padding: 10px;
-    background-color: #f4f4f4;
-    border-radius: 5px;
+    margin-bottom: 0; /* Removed bottom margin here, gap on parent handles spacing */
+    padding: 0; /* Removed padding here, padding on parent handles spacing */
+    background-color: transparent; /* Remove background */
+    border-radius: 0; /* Remove border radius */
     align-items: center;
+    box-shadow: none; /* Remove box shadow */
 }
 
 #playerSearch {
@@ -230,7 +361,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 12px;
-    padding: 10px;
+    padding: 0; /* Removed padding here, padding on parent handles spacing */
 }
 
 /* Player Card */
@@ -238,7 +369,7 @@ section {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0; /* Removed bottom margin here, gap on parent handles spacing */
     background-color: #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: transform 0.15s ease;
@@ -291,104 +422,38 @@ section {
     border-radius: 3px;
 }
 /* Team-specific colors for player teams in player pool */
-.player-team[data-team="ARI"] {
-    background-color: #97233F; /* Arizona Cardinals */
-}
-.player-team[data-team="ATL"] {
-    background-color: #A71930; /* Atlanta Falcons */
-}
-.player-team[data-team="BAL"] {
-    background-color: #241773; /* Baltimore Ravens */
-}
-.player-team[data-team="BUF"] {
-    background-color: #00338D; /* Buffalo Bills */
-}
-.player-team[data-team="CAR"] {
-    background-color: #0085CA; /* Carolina Panthers */
-}
-.player-team[data-team="CHI"] {
-    background-color: #0B162A; /* Chicago Bears */
-}
-.player-team[data-team="CIN"] {
-    background-color: #FB4F14; /* Cincinnati Bengals */
-}
-.player-team[data-team="CLE"] {
-    background-color: #311D00; /* Cleveland Browns */
-}
-.player-team[data-team="DAL"] {
-    background-color: #041E42; /* Dallas Cowboys */
-}
-.player-team[data-team="DEN"] {
-    background-color: #FB4F14; /* Denver Broncos */
-}
-.player-team[data-team="DET"] {
-    background-color: #0076B6; /* Detroit Lions */
-}
-.player-team[data-team="GB"] {
-    background-color: #203731; /* Green Bay Packers */
-}
-.player-team[data-team="HOU"] {
-    background-color: #03202F; /* Houston Texans */
-}
-.player-team[data-team="IND"] {
-    background-color: #002C5F; /* Indianapolis Colts */
-}
-.player-team[data-team="JAX"], .player-team[data-team="JAC"] {
-    background-color: #006778; /* Jacksonville Jaguars */
-}
-.player-team[data-team="KC"] {
-    background-color: #E31837; /* Kansas City Chiefs */
-}
-.player-team[data-team="LV"] {
-    background-color: #000000; /* Las Vegas Raiders */
-}
-.player-team[data-team="LAC"] {
-    background-color: #0080C6; /* Los Angeles Chargers */
-}
-.player-team[data-team="LAR"] {
-    background-color: #003594; /* Los Angeles Rams */
-}
-.player-team[data-team="MIA"] {
-    background-color: #008E97; /* Miami Dolphins */
-}
-.player-team[data-team="MIN"] {
-    background-color: #4F2683; /* Minnesota Vikings */
-}
-.player-team[data-team="NE"] {
-    background-color: #002244; /* New England Patriots */
-}
-.player-team[data-team="NO"] {
-    background-color: #D3BC8D; /* New Orleans Saints */
-    color: #000000; /* Black text for better contrast on light background */
-}
-.player-team[data-team="NYG"] {
-    background-color: #0B2265; /* New York Giants */
-}
-.player-team[data-team="NYJ"] {
-    background-color: #125740; /* New York Jets */
-}
-.player-team[data-team="PHI"] {
-    background-color: #004C54; /* Philadelphia Eagles */
-}
-.player-team[data-team="PIT"] {
-    background-color: #FFB612; /* Pittsburgh Steelers */
-    color: #000000; /* Black text for better contrast on light background */
-}
-.player-team[data-team="SF"] {
-    background-color: #AA0000; /* San Francisco 49ers */
-}
-.player-team[data-team="SEA"] {
-    background-color: #002244; /* Seattle Seahawks */
-}
-.player-team[data-team="TB"] {
-    background-color: #D50A0A; /* Tampa Bay Buccaneers */
-}
-.player-team[data-team="TEN"] {
-    background-color: #4B92DB; /* Tennessee Titans */
-}
-.player-team[data-team="WAS"] {
-    background-color: #773141; /* Washington Commanders */
-}
+.player-team[data-team="ARI"] { background-color: #97233F; } /* Arizona Cardinals */
+.player-team[data-team="ATL"] { background-color: #A71930; } /* Atlanta Falcons */
+.player-team[data-team="BAL"] { background-color: #241773; } /* Baltimore Ravens */
+.player-team[data-team="BUF"] { background-color: #00338D; } /* Buffalo Bills */
+.player-team[data-team="CAR"] { background-color: #0085CA; } /* Carolina Panthers */
+.player-team[data-team="CHI"] { background-color: #0B162A; } /* Chicago Bears */
+.player-team[data-team="CIN"] { background-color: #FB4F14; } /* Cincinnati Bengals */
+.player-team[data-team="CLE"] { background-color: #311D00; } /* Cleveland Browns */
+.player-team[data-team="DAL"] { background-color: #041E42; } /* Dallas Cowboys */
+.player-team[data-team="DEN"] { background-color: #FB4F14; } /* Denver Broncos */
+.player-team[data-team="DET"] { background-color: #0076B6; } /* Detroit Lions */
+.player-team[data-team="GB"] { background-color: #203731; } /* Green Bay Packers */
+.player-team[data-team="HOU"] { background-color: #03202F; } /* Houston Texans */
+.player-team[data-team="IND"] { background-color: #002C5F; } /* Indianapolis Colts */
+.player-team[data-team="JAX"], .player-team[data-team="JAC"] { background-color: #006778; } /* Jacksonville Jaguars */
+.player-team[data-team="KC"] { background-color: #E31837; } /* Kansas City Chiefs */
+.player-team[data-team="LV"] { background-color: #000000; } /* Las Vegas Raiders */
+.player-team[data-team="LAC"] { background-color: #0080C6; } /* Los Angeles Chargers */
+.player-team[data-team="LAR"] { background-color: #003594; } /* Los Angeles Rams */
+.player-team[data-team="MIA"] { background-color: #008E97; } /* Miami Dolphins */
+.player-team[data-team="MIN"] { background-color: #4F2683; } /* Minnesota Vikings */
+.player-team[data-team="NE"] { background-color: #002244; } /* New England Patriots */
+.player-team[data-team="NO"] { background-color: #D3BC8D; color: #000000; } /* New Orleans Saints */
+.player-team[data-team="NYG"] { background-color: #0B2265; } /* New York Giants */
+.player-team[data-team="NYJ"] { background-color: #125740; } /* New York Jets */
+.player-team[data-team="PHI"] { background-color: #004C54; } /* Philadelphia Eagles */
+.player-team[data-team="PIT"] { background-color: #FFB612; color: #000000; } /* Pittsburgh Steelers */
+.player-team[data-team="SF"] { background-color: #AA0000; } /* San Francisco 49ers */
+.player-team[data-team="SEA"] { background-color: #002244; } /* Seattle Seahawks */
+.player-team[data-team="TB"] { background-color: #D50A0A; } /* Tampa Bay Buccaneers */
+.player-team[data-team="TEN"] { background-color: #4B92DB; } /* Tennessee Titans */
+.player-team[data-team="WAS"] { background-color: #773141; } /* Washington Commanders */
 
 /* No Results and Limit Messages */
 .no-results, .limit-message {
@@ -411,104 +476,13 @@ section {
     font-style: italic;
 }
 
-/* Player Pool */
-.player-pool {
-    float: none; /* Remove float */
-    margin: 0 auto; /* Center align if needed */
-    width: auto; /* Adjust width dynamically */
-    padding: 5px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    max-height: 80vh;
-}
-
-/* Player Card */
-.player-card {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #fff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.player-name {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.player-details {
-    font-size: 14px;
-    color: #555;
-}
-
-.draft-header-row {
-    display: grid;
-    grid-template-columns: 100px repeat(var(--num-teams, 12), 1fr);
-    gap: 10px;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    font-weight: bold;
-    background-color: #f4f4f4;
-    padding: 10px 0;
-    border-bottom: 2px solid #ccc;
-}
-
-/* Round Indicator Header - Empty space for alignment */
-.round-indicator-header {
-    padding: 3px;
-    background-color: transparent;
-    border-radius: 4px;
-}
-
-/* Draft Round Row */
-.draft-round-row {
-    display: grid;
-    grid-template-columns: repeat(var(--num-teams, 12), 1fr);
-    gap: 10px;
-    width: 100%;
-    margin-bottom: 10px;
-    position: relative; /* Needed for absolute positioning of the :before element */
-    padding-left: 100px; /* Space for the round indicator */
-}
-
-/* Add a visual indicator for each round using :before */
-.draft-round-row:before {
-    content: "Round " attr(data-round);
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: white;
-    border-radius: 4px;
-    margin-right: 10px;
-}
-
-/* Style even/odd rounds differently for visual clarity */
-.draft-round-row:nth-child(odd):before {
-    background-color: rgba(0, 123, 255, 0.8);
-}
-
-.draft-round-row:nth-child(even):before {
-    background-color: rgba(40, 167, 69, 0.8);
-}
-
 /* Player Pool Toggle Switch */
 .player-pool-toggle {
     margin: 10px 0;
     display: flex;
     align-items: center;
     font-weight: bold;
+    justify-content: center; /* Center the toggle horizontally */
 }
 
 .switch {
@@ -568,18 +542,14 @@ input:checked + .slider:before {
     border-radius: 5px;
     margin-bottom: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flexbox for controls */
+    flex-direction: column; /* Stack controls vertically */
+    align-items: center; /* Center controls horizontally */
+    gap: 10px; /* Space between controls */
 }
 
-/* Draft Board Container */
-.draft-board-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-}
-
-/* Draft Type Info */
-.draft-type-info {
+/* Style for the Draft Type Info span */
+#draftBoard h2 #draft-type-info {
     display: inline-block;
     font-size: 0.75em;
     padding: 5px 10px;
@@ -591,3 +561,4 @@ input:checked + .slider:before {
     color: #555;
     vertical-align: middle;
 }
+
