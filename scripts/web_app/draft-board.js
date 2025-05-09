@@ -132,6 +132,19 @@ async function loadDraft() {
         const draftFormat = selectedDraft.type || 'snake'; // Default to snake
         const isSnake = draftFormat === 'snake';
         
+        // Store the draft format in the hidden element for display
+        const draftFormatElem = document.getElementById("draftFormatIndicator");
+        if (draftFormatElem) {
+            draftFormatElem.dataset.format = draftFormat.toUpperCase();
+        }
+        
+        // Check if this is a 3rd Round Reversal (3RR) draft
+        // In Sleeper API, this is indicated by the "reversal_round" setting. By default, the first reversed round is 2 (for normal snake).
+        // For 3RR, the reversal_round would be 3, meaning round 3 and beyond follow the same direction as round 1.
+        const reversal_round = draftSettings.reversal_round || 2; // Default to standard snake (reverse every even round)
+        const is3RREnabled = isSnake && reversal_round === 3;
+        console.log(`Reversal Round: ${reversal_round}, 3RR Enabled: ${is3RREnabled}`);
+        
         // Draft type (which players are eligible): ROOKIE or ALL
         // First check the checkbox (user override)
         const isRookieDraftChecked = document.getElementById("isRookieDraft")?.checked || false;
@@ -326,8 +339,17 @@ async function loadDraft() {
             // Determine the original owner's slot based on the draft format
             let originalOwnerSlot;
             if (isSnake) {
-                // In snake drafts, even rounds go in reverse order
-                originalOwnerSlot = round % 2 === 0 ? (numTeams - pickInRound + 1) : pickInRound;
+                // Handle 3rd Round Reversal (3RR) if enabled
+                if (is3RREnabled && round === 2) {
+                    // In 3RR, round 2 is reversed, but round 3 is not (it's the same direction as round 1)
+                    originalOwnerSlot = numTeams - pickInRound + 1;
+                } else if (is3RREnabled && round >= 3) {
+                    // For round 3 and beyond with 3RR, odd rounds go left to right, even rounds go right to left
+                    originalOwnerSlot = round % 2 === 0 ? (numTeams - pickInRound + 1) : pickInRound;
+                } else {
+                    // Standard snake draft: odd rounds go left to right, even rounds go right to left
+                    originalOwnerSlot = round % 2 === 0 ? (numTeams - pickInRound + 1) : pickInRound;
+                }
             } else {
                 // In linear drafts, all rounds use the same order
                 originalOwnerSlot = pickInRound;
@@ -381,7 +403,7 @@ async function loadDraft() {
         }
         // --- End Data Processing ---
         
-        renderDraftBoard(draftBoardData, numTeams, nflPlayers, draftBoardData.map(pick => pick.originalOwnerName));
+        renderDraftBoard(draftBoardData, numTeams, nflPlayers, draftBoardData.map(pick => pick.originalOwnerName), is3RREnabled);
         renderPlayerPool(nflPlayers, draftedPlayerIds, isRookiesOnly, validPositions);
 
         // Show the player pool after rendering the draft board
@@ -405,14 +427,33 @@ async function loadDraft() {
  * @param {number} numTeams The number of teams in the league (used for grid layout).
  * @param {Object} nflPlayers Object containing NFL player data.
  * @param {Array<string>} originalOwners Array of original owner names.
+ * @param {boolean} is3RREnabled Whether 3rd Round Reversal (3RR) is enabled.
  */
-function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwners) {
+function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwners, is3RREnabled) {
     const draftTable = document.getElementById("draftTable");
     draftTable.innerHTML = ""; // Clear previous data
 
+    // Group picks by round
+    const picksByRound = {};
+    draftBoardData.forEach(pick => {
+        if (!picksByRound[pick.round]) {
+            picksByRound[pick.round] = [];
+        }
+        picksByRound[pick.round].push(pick);
+    });
+
+    // Create the draft board container
+    const draftBoardContainer = document.createElement("div");
+    draftBoardContainer.classList.add("draft-board-container");
+    
     // Create a header row for original owners
     const headerRow = document.createElement("div");
     headerRow.classList.add("draft-header-row");
+    
+    // Add an empty cell for the round indicator column
+    const emptyHeaderCell = document.createElement("div");
+    emptyHeaderCell.classList.add("round-indicator-header");
+    headerRow.appendChild(emptyHeaderCell);
     
     // Get unique owner slots
     const uniqueOwners = [...new Set(originalOwners)];
@@ -423,59 +464,97 @@ function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwners) 
         headerCell.textContent = originalOwners[i - 1] || `Owner ${i}`; // Use original owner names if available
         headerRow.appendChild(headerCell);
     }
-    draftTable.appendChild(headerRow);
+    draftBoardContainer.appendChild(headerRow);
 
-    // Create the grid container for draft cards
-    const gridContainer = document.createElement("div");
-    gridContainer.classList.add("draft-grid");
-    gridContainer.style.gridTemplateColumns = `repeat(${numTeams}, 1fr)`;
-
-    draftBoardData.forEach(pick => {
-        const card = document.createElement("div");
-        card.classList.add("draft-card");
+    // Process each round
+    const rounds = Object.keys(picksByRound).sort((a, b) => parseInt(a) - parseInt(b));
+    rounds.forEach(round => {
+        const roundPicks = picksByRound[round];
+        const roundNum = parseInt(round);
         
-        // Add a class if the pick has been made
-        if (pick.player_id) {
-            card.classList.add("pick-made");
+        // Create a row for this round
+        const roundRow = document.createElement("div");
+        roundRow.classList.add("draft-round-row");
+        roundRow.dataset.round = roundNum; // Add round number as data attribute
+        
+        // Sort picks according to the draft format - odd rounds go left to right, even rounds go right to left
+        // If 3RR is enabled, the 3rd round also goes left to right
+        const isReversedRound = roundNum % 2 === 0;
+        
+        // Check if this is the 3rd round and 3RR is enabled from draft settings
+        const shouldReverseDisplay = isReversedRound && !(roundNum === 3 && is3RREnabled);
+        
+        // Sort picks for display order
+        const orderedPicks = [...roundPicks];
+        if (shouldReverseDisplay) {
+            // For even rounds (or non-3RR 3rd round), display right to left
+            orderedPicks.sort((a, b) => b.pick_in_round - a.pick_in_round);
+        } else {
+            // For odd rounds (or 3RR 3rd round), display left to right
+            orderedPicks.sort((a, b) => a.pick_in_round - b.pick_in_round);
         }
-
-        const pickNumber = document.createElement("div");
-        pickNumber.classList.add("pick-number");
-        pickNumber.textContent = `Pick ${pick.round}.${String(pick.pick_in_round).padStart(2, '0')} (${pick.pick_no})`;
-        card.appendChild(pickNumber);
-
-        const playerSelected = document.createElement("div");
-        playerSelected.classList.add("player-selected");
         
-        if (pick.player_id) {
-            const playerData = nflPlayers[pick.player_id] || {};
-            let displayText = pick.playerName;
+        // Add each pick to the round row
+        orderedPicks.forEach(pick => {
+            const card = document.createElement("div");
+            card.classList.add("draft-card");
             
-            // Add position and team if available
-            if (playerData.position) {
-                displayText += ` (${playerData.position}`;
-                if (playerData.team) {
-                    displayText += ` - ${playerData.team}`;
+            // Add a class if the pick has been made
+            if (pick.player_id) {
+                card.classList.add("pick-made");
+            }
+
+            const pickNumber = document.createElement("div");
+            pickNumber.classList.add("pick-number");
+            pickNumber.textContent = `Pick ${pick.round}.${String(pick.pick_in_round).padStart(2, '0')} (${pick.pick_no})`;
+            card.appendChild(pickNumber);
+
+            const playerSelected = document.createElement("div");
+            playerSelected.classList.add("player-selected");
+            
+            if (pick.player_id) {
+                const playerData = nflPlayers[pick.player_id] || {};
+                let displayText = pick.playerName;
+                
+                // Add position and team if available
+                if (playerData.position) {
+                    displayText += ` (${playerData.position}`;
+                    if (playerData.team) {
+                        displayText += ` - ${playerData.team}`;
+                    }
+                    displayText += ')';
                 }
-                displayText += ')';
+                
+                playerSelected.textContent = displayText;
+            } else {
+                playerSelected.textContent = "Not Selected";
             }
             
-            playerSelected.textContent = displayText;
-        } else {
-            playerSelected.textContent = "Not Selected";
-        }
+            card.appendChild(playerSelected);
+
+            const currentOwner = document.createElement("div");
+            currentOwner.classList.add("pick-owner");
+            currentOwner.textContent = `Owner: ${pick.currentOwnerName}`;
+            card.appendChild(currentOwner);
+
+            roundRow.appendChild(card);
+        });
         
-        card.appendChild(playerSelected);
-
-        const currentOwner = document.createElement("div");
-        currentOwner.classList.add("pick-owner");
-        currentOwner.textContent = `Owner: ${pick.currentOwnerName}`;
-        card.appendChild(currentOwner);
-
-        gridContainer.appendChild(card);
+        draftBoardContainer.appendChild(roundRow);
     });
 
-    draftTable.appendChild(gridContainer);
+    draftTable.appendChild(draftBoardContainer);
+    
+    // Display draft format information
+    const draftTypeInfo = document.createElement("div");
+    draftTypeInfo.classList.add("draft-type-info");
+    
+    // Get draft format from global scope or pass it as parameter
+    const draftFormatElem = document.getElementById("draftFormatIndicator");
+    if (draftFormatElem) {
+        draftTypeInfo.textContent = `Draft Format: ${draftFormatElem.dataset.format} ${is3RREnabled ? '(3rd Round Reversal)' : ''}`;
+        draftTable.appendChild(draftTypeInfo);
+    }
 }
 
 /**

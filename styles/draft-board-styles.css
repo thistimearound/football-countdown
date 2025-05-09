@@ -319,11 +319,10 @@ section {
 
 .draft-header-row {
     display: grid;
-    grid-template-columns: repeat(var(--num-teams, 12), 1fr); /* Ensure consistent column layout */
-    gap: 10px; /* Unified spacing between items */
-    width: 100%; /* Ensure full width alignment */
-    max-width: 1200px; /* Limit maximum width */
-    margin: 0 auto; /* Center align both header and grid */
+    grid-template-columns: 100px repeat(var(--num-teams, 12), 1fr);
+    gap: 10px;
+    width: 100%;
+    margin: 0 auto;
     text-align: center;
     font-weight: bold;
     background-color: #f4f4f4;
@@ -331,27 +330,48 @@ section {
     border-bottom: 2px solid #ccc;
 }
 
-.draft-header-cell {
+/* Round Indicator Header - Empty space for alignment */
+.round-indicator-header {
     padding: 3px;
-    border: 1px solid #ccc;
-    background-color: #e9e9e9;
+    background-color: transparent;
     border-radius: 4px;
 }
 
-.draft-header-cell, .draft-card {
-    width: 100%; /* Ensure consistent width within their grid cell */
-    max-width: 100px; /* Set a fixed maximum width for alignment */
-    box-sizing: border-box; /* Include padding and border in width */
+/* Draft Round Row */
+.draft-round-row {
+    display: grid;
+    grid-template-columns: repeat(var(--num-teams, 12), 1fr);
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative; /* Needed for absolute positioning of the :before element */
+    padding-left: 100px; /* Space for the round indicator */
 }
 
-/* Ensure consistent spacing and alignment between draft-header-row and draft-grid */
-.draft-header-row, .draft-grid {
-    display: grid;
-    grid-template-columns: repeat(var(--num-teams, 12), 1fr); /* Ensure consistent column layout */
-    gap: 10px; /* Unified spacing between items */
-    width: 100%; /* Ensure full width alignment */
-    max-width: 1200px; /* Limit maximum width */
-    margin: 0 auto; /* Center align both header and grid */
+/* Add a visual indicator for each round using :before */
+.draft-round-row:before {
+    content: "Round " attr(data-round);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+/* Style even/odd rounds differently for visual clarity */
+.draft-round-row:nth-child(odd):before {
+    background-color: rgba(0, 123, 255, 0.8);
+}
+
+.draft-round-row:nth-child(even):before {
+    background-color: rgba(40, 167, 69, 0.8);
 }
 
 /* Player Pool Toggle Switch */
@@ -421,3 +441,21 @@ input:checked + .slider:before {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Draft Board Container */
+.draft-board-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+/* Draft Type Info */
+.draft-type-info {
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+}
