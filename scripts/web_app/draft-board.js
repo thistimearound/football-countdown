@@ -442,11 +442,44 @@ function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwnersOr
     headerRow.appendChild(emptyHeaderCell);
 
     // Use the correctly ordered original owner names for the header
-    originalOwnersOrdered.forEach(ownerName => {
-        const headerCell = document.createElement("div");
-        headerCell.classList.add("draft-header-cell");
-        headerCell.textContent = ownerName;
-        headerRow.appendChild(headerCell);
+    originalOwnersOrdered.forEach((ownerName, ownerIdx) => {
+    const headerCell = document.createElement('div');
+    headerCell.classList.add('draft-header-cell');
+    headerCell.textContent = ownerName;
+    headerCell.style.cursor = 'pointer';
+
+    headerCell.addEventListener('click', () => {
+        // Remove highlight from all header cells
+        document.querySelectorAll('.draft-header-cell').forEach(cell => {
+        cell.classList.remove('selected-owner');
+        });
+        headerCell.classList.add('selected-owner');
+
+        // Highlight picks for this owner, fade others
+        const allCards = document.querySelectorAll('.draft-card');
+        allCards.forEach(card => {
+        card.classList.remove('highlight-owner', 'fade-owner');
+        // Get owner from card's child .pick-owner
+        const ownerDiv = card.querySelector('.pick-owner');
+        if (ownerDiv && ownerDiv.textContent.includes(ownerName)) {
+            card.classList.add('highlight-owner');
+        } else {
+            card.classList.add('fade-owner');
+        }
+        });
+    });
+
+    // Optional: allow deselect by clicking again
+    headerCell.addEventListener('dblclick', () => {
+        document.querySelectorAll('.draft-header-cell').forEach(cell => {
+        cell.classList.remove('selected-owner');
+        });
+        document.querySelectorAll('.draft-card').forEach(card => {
+        card.classList.remove('highlight-owner', 'fade-owner');
+        });
+    });
+
+    headerRow.appendChild(headerCell);
     });
 
     draftBoardContainer.appendChild(headerRow);

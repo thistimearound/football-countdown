@@ -164,6 +164,24 @@ section {
      white-space: nowrap; /* Prevent wrapping */
 }
 
+/* Add to your CSS file */
+.draft-header-cell.selected-owner {
+  background: #a49190;
+  font-weight: bold;
+}
+
+.draft-card.highlight-owner {
+  box-shadow: 0 0 8px 2px #404040;
+  background: #cecece;
+  opacity: 1;
+  transition: opacity 0.2s, box-shadow 0.2s;
+}
+
+.draft-card.fade-owner {
+  opacity: 0.4;
+  filter: grayscale(0.2);
+  transition: opacity 0.2s, filter 0.2s;
+}
 
 /* Draft Round Row */
 .draft-round-row {
