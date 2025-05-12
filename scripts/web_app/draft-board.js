@@ -448,18 +448,31 @@ function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwnersOr
     headerCell.textContent = ownerName;
     headerCell.style.cursor = 'pointer';
 
+    let isSelected = false;
+
     headerCell.addEventListener('click', () => {
-        // Remove highlight from all header cells
+        // If already selected, reset highlight/fade
+        if (isSelected) {
+        document.querySelectorAll('.draft-header-cell').forEach(cell => {
+            cell.classList.remove('selected-owner');
+        });
+        document.querySelectorAll('.draft-card').forEach(card => {
+            card.classList.remove('highlight-owner', 'fade-owner');
+        });
+        isSelected = false;
+        return;
+        }
+
+        // Otherwise, highlight this owner and fade others
         document.querySelectorAll('.draft-header-cell').forEach(cell => {
         cell.classList.remove('selected-owner');
+        cell.isSelected = false;
         });
         headerCell.classList.add('selected-owner');
 
-        // Highlight picks for this owner, fade others
         const allCards = document.querySelectorAll('.draft-card');
         allCards.forEach(card => {
         card.classList.remove('highlight-owner', 'fade-owner');
-        // Get owner from card's child .pick-owner
         const ownerDiv = card.querySelector('.pick-owner');
         if (ownerDiv && ownerDiv.textContent.includes(ownerName)) {
             card.classList.add('highlight-owner');
@@ -467,16 +480,7 @@ function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwnersOr
             card.classList.add('fade-owner');
         }
         });
-    });
-
-    // Optional: allow deselect by clicking again
-    headerCell.addEventListener('dblclick', () => {
-        document.querySelectorAll('.draft-header-cell').forEach(cell => {
-        cell.classList.remove('selected-owner');
-        });
-        document.querySelectorAll('.draft-card').forEach(card => {
-        card.classList.remove('highlight-owner', 'fade-owner');
-        });
+        isSelected = true;
     });
 
     headerRow.appendChild(headerCell);
@@ -588,21 +592,46 @@ function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwnersOr
 
             if (pick.player_id) {
                 const playerData = nflPlayers[pick.player_id] || {};
-                let displayText = pick.playerName;
-
-                // Add position and team if available
-                if (playerData.position) {
-                    displayText += ` (${playerData.position}`;
-
-                    if (playerData.team) {
-                        displayText += ` - ${playerData.team}`;
+                
+            // Create a text node for player name/position/team
+            const displayText = document.createTextNode(
+                `${pick.playerName}${playerData.position ? 
+                    ` (${playerData.position}${playerData.team ? ` - ${playerData.team}` : ''})` : ''}`
+            );
+            
+            // Clear existing content first
+            playerSelected.innerHTML = '';
+            
+            // Append the text node
+            playerSelected.appendChild(displayText);
+            
+            // Now add ADP if available
+            if (globalDraftState.adpData && globalDraftState.adpData.players) {
+                const adpPlayers = globalDraftState.adpData.players;
+                let adpValue = null;
+                
+                if (playerData.full_name && adpPlayers[playerData.full_name]) {
+                adpValue = adpPlayers[playerData.full_name].rank || adpPlayers[playerData.full_name].adp;
+                } else {
+                const playerNameLower = (playerData.full_name || '').toLowerCase();
+                for (const [name, adpObj] of Object.entries(adpPlayers)) {
+                    if (name.toLowerCase() === playerNameLower) {
+                    adpValue = adpObj.rank || adpObj.adp;
+                    break;
                     }
-                    displayText += ')';
                 }
-
-                playerSelected.textContent = displayText;
+                }
+                
+                if (adpValue) {
+                // Create the ADP element
+                const adpLine = document.createElement('div');
+                adpLine.classList.add('player-adp');
+                adpLine.textContent = `ADP: ${adpValue}`;
+                playerSelected.appendChild(adpLine);
+                }
+            }
             } else {
-                playerSelected.textContent = "Not Selected";
+            playerSelected.textContent = 'Not Selected';
             }
 
             card.appendChild(playerSelected);
