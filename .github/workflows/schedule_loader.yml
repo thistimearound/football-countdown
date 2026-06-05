@@ -33,6 +33,7 @@ jobs:
         GITHUB_PAT: ${{ secrets.GH_PAT }}
         R_LIBS_USER: ${{ runner.temp }}/RLibrary
       run: |
+        mkdir -p "${{ runner.temp }}/RLibrary"
         Rscript -e 'install.packages("remotes", lib = Sys.getenv("R_LIBS_USER"))'
         Rscript -e 'remotes::install_github("nflverse/nfl4th", lib = Sys.getenv("R_LIBS_USER"))'
         Rscript -e 'remotes::install_github("nflverse/nflfastR", lib = Sys.getenv("R_LIBS_USER"))'
@@ -53,13 +54,13 @@ jobs:
         CURRENT_YEAR=$(date +%Y)
         echo "Using NFL season year: $CURRENT_YEAR"
         # Replace any hardcoded year with the current year
-        sed -i "s/load_schedules(seasons = [0-9]\{4\})/load_schedules(seasons = $CURRENT_YEAR)/g" nflfastR.r
+        sed -i "s/load_schedules(seasons = [0-9]\{4\})/load_schedules(seasons = $CURRENT_YEAR)/g" scripts/scrapers/nflfastR.r
 
     - name: Run nflfastR Script
       env:
         R_LIBS_USER: ${{ runner.temp }}/RLibrary
       run: |
-        Rscript nflfastR.r
+        Rscript scripts/scrapers/nflfastR.r
         if [ $? -ne 0 ]; then
           echo "R script execution failed"
           cat error_log.txt || echo "No error log found"

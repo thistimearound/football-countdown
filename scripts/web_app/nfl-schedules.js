@@ -1,4 +1,4 @@
-// Last updated: 2025-04-05 23:37:50.663289 
+// Last updated: 2026-06-05 08:04:34.468604 
 const nflschedules =  {
   "arizona-cardinals": [
     {
@@ -26,6 +26,7 @@ const nflschedules =  {
       "adj_moneyline": 250,
       "location": "Home",
       "result": 6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 28,
       "total": 62,
@@ -38,6 +39,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "a_turf",
       "temp": 61,
+      "cumulative_wins": 0,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 20
     },
     {
@@ -65,6 +69,7 @@ const nflschedules =  {
       "adj_moneyline": -108,
       "location": "Home",
       "result": 31,
+      "result_for_team": 31,
       "absolute_result": 31,
       "score": 41,
       "total": 51,
@@ -75,7 +80,10 @@ const nflschedules =  {
       "over_odds": -102,
       "under_odds": -118,
       "roof": "closed",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 1,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Detroit Lions",
@@ -102,6 +110,7 @@ const nflschedules =  {
       "adj_moneyline": 124,
       "location": "Home",
       "result": -7,
+      "result_for_team": -7,
       "absolute_result": 7,
       "score": 13,
       "total": 33,
@@ -112,7 +121,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "closed",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 1,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Washington Commanders",
@@ -139,6 +151,7 @@ const nflschedules =  {
       "adj_moneyline": -180,
       "location": "Home",
       "result": -28,
+      "result_for_team": -28,
       "absolute_result": 28,
       "score": 14,
       "total": 56,
@@ -149,7 +162,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "closed",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 1,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "San Francisco 49ers",
@@ -176,6 +192,7 @@ const nflschedules =  {
       "adj_moneyline": 260,
       "location": "Home",
       "result": -1,
+      "result_for_team": 1,
       "absolute_result": 1,
       "score": 24,
       "total": 47,
@@ -188,6 +205,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 89,
+      "cumulative_wins": 2,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 3
     },
     {
@@ -215,6 +235,7 @@ const nflschedules =  {
       "adj_moneyline": 195,
       "location": "Home",
       "result": 21,
+      "result_for_team": -21,
       "absolute_result": 21,
       "score": 13,
       "total": 47,
@@ -227,6 +248,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 50,
+      "cumulative_wins": 2,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -254,6 +278,7 @@ const nflschedules =  {
       "adj_moneyline": 102,
       "location": "Home",
       "result": 2,
+      "result_for_team": 2,
       "absolute_result": 2,
       "score": 17,
       "total": 32,
@@ -264,7 +289,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 3,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Miami Dolphins",
@@ -291,6 +319,7 @@ const nflschedules =  {
       "adj_moneyline": 164,
       "location": "Home",
       "result": -1,
+      "result_for_team": 1,
       "absolute_result": 1,
       "score": 28,
       "total": 55,
@@ -303,6 +332,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 82,
+      "cumulative_wins": 4,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 14
     },
     {
@@ -330,6 +362,7 @@ const nflschedules =  {
       "adj_moneyline": -120,
       "location": "Home",
       "result": 20,
+      "result_for_team": 20,
       "absolute_result": 20,
       "score": 29,
       "total": 38,
@@ -340,7 +373,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 5,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New York Jets",
@@ -367,6 +403,7 @@ const nflschedules =  {
       "adj_moneyline": 110,
       "location": "Home",
       "result": 25,
+      "result_for_team": 25,
       "absolute_result": 25,
       "score": 31,
       "total": 37,
@@ -377,11 +414,17 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 6,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "BYE",
-      "week": 11
+      "week": 11,
+      "cumulative_wins": 6,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Seattle Seahawks",
@@ -408,6 +451,7 @@ const nflschedules =  {
       "adj_moneyline": -115,
       "location": "Home",
       "result": 10,
+      "result_for_team": -10,
       "absolute_result": 10,
       "score": 6,
       "total": 22,
@@ -420,6 +464,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 45,
+      "cumulative_wins": 6,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -447,6 +494,7 @@ const nflschedules =  {
       "adj_moneyline": 154,
       "location": "Home",
       "result": 1,
+      "result_for_team": -1,
       "absolute_result": 1,
       "score": 22,
       "total": 45,
@@ -457,7 +505,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 6,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Seattle Seahawks",
@@ -484,6 +535,7 @@ const nflschedules =  {
       "adj_moneyline": -175,
       "location": "Home",
       "result": -12,
+      "result_for_team": -12,
       "absolute_result": 12,
       "score": 18,
       "total": 48,
@@ -494,7 +546,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 6,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New England Patriots",
@@ -521,6 +576,7 @@ const nflschedules =  {
       "adj_moneyline": -258,
       "location": "Home",
       "result": 13,
+      "result_for_team": 13,
       "absolute_result": 13,
       "score": 30,
       "total": 47,
@@ -531,7 +587,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 7,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Carolina Panthers",
@@ -558,6 +617,7 @@ const nflschedules =  {
       "adj_moneyline": -245,
       "location": "Home",
       "result": 6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 30,
       "total": 66,
@@ -570,6 +630,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 37,
+      "cumulative_wins": 7,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -597,6 +660,7 @@ const nflschedules =  {
       "adj_moneyline": 270,
       "location": "Home",
       "result": 4,
+      "result_for_team": -4,
       "absolute_result": 4,
       "score": 9,
       "total": 22,
@@ -607,7 +671,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 7,
+      "cumulative_losses": 9,
+      "cumulative_ties": 0
     },
     {
       "opponent": "San Francisco 49ers",
@@ -634,6 +701,7 @@ const nflschedules =  {
       "adj_moneyline": -192,
       "location": "Home",
       "result": 23,
+      "result_for_team": 23,
       "absolute_result": 23,
       "score": 47,
       "total": 71,
@@ -644,12 +712,15 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 8,
+      "cumulative_losses": 9,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 8,
+      "losses": 9,
       "ties": 0
     }
   ],
@@ -679,6 +750,7 @@ const nflschedules =  {
       "adj_moneyline": -192,
       "location": "Home",
       "result": -8,
+      "result_for_team": -8,
       "absolute_result": 8,
       "score": 10,
       "total": 28,
@@ -689,7 +761,10 @@ const nflschedules =  {
       "over_odds": -105,
       "under_odds": -115,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 0,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Philadelphia Eagles",
@@ -716,6 +791,7 @@ const nflschedules =  {
       "adj_moneyline": 215,
       "location": "Home",
       "result": -1,
+      "result_for_team": 1,
       "absolute_result": 1,
       "score": 22,
       "total": 43,
@@ -728,6 +804,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 71,
+      "cumulative_wins": 1,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -755,6 +834,7 @@ const nflschedules =  {
       "adj_moneyline": 142,
       "location": "Home",
       "result": -5,
+      "result_for_team": -5,
       "absolute_result": 5,
       "score": 17,
       "total": 39,
@@ -765,7 +845,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 1,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New Orleans Saints",
@@ -792,6 +875,7 @@ const nflschedules =  {
       "adj_moneyline": -142,
       "location": "Home",
       "result": 2,
+      "result_for_team": 2,
       "absolute_result": 2,
       "score": 26,
       "total": 50,
@@ -802,7 +886,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Tampa Bay Buccaneers",
@@ -829,6 +916,7 @@ const nflschedules =  {
       "adj_moneyline": -142,
       "location": "Home",
       "result": 6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 36,
       "total": 66,
@@ -839,7 +927,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 3,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Carolina Panthers",
@@ -866,6 +957,7 @@ const nflschedules =  {
       "adj_moneyline": -258,
       "location": "Home",
       "result": -18,
+      "result_for_team": 18,
       "absolute_result": 18,
       "score": 38,
       "total": 58,
@@ -878,6 +970,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 79,
+      "cumulative_wins": 4,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -905,6 +1000,7 @@ const nflschedules =  {
       "adj_moneyline": -162,
       "location": "Home",
       "result": -20,
+      "result_for_team": -20,
       "absolute_result": 20,
       "score": 14,
       "total": 48,
@@ -915,7 +1011,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 4,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Tampa Bay Buccaneers",
@@ -942,6 +1041,7 @@ const nflschedules =  {
       "adj_moneyline": -122,
       "location": "Home",
       "result": -5,
+      "result_for_team": 5,
       "absolute_result": 5,
       "score": 31,
       "total": 57,
@@ -954,6 +1054,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 79,
+      "cumulative_wins": 5,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -981,6 +1084,7 @@ const nflschedules =  {
       "adj_moneyline": -166,
       "location": "Home",
       "result": 6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 27,
       "total": 48,
@@ -991,7 +1095,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 6,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New Orleans Saints",
@@ -1018,6 +1125,7 @@ const nflschedules =  {
       "adj_moneyline": -192,
       "location": "Home",
       "result": 3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 17,
       "total": 37,
@@ -1028,7 +1136,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 6,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Denver Broncos",
@@ -1055,6 +1166,7 @@ const nflschedules =  {
       "adj_moneyline": 114,
       "location": "Home",
       "result": 32,
+      "result_for_team": -32,
       "absolute_result": 32,
       "score": 6,
       "total": 44,
@@ -1067,11 +1179,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 55,
+      "cumulative_wins": 6,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
       "opponent": "BYE",
-      "week": 12
+      "week": 12,
+      "cumulative_wins": 6,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Los Angeles Chargers",
@@ -1098,6 +1216,7 @@ const nflschedules =  {
       "adj_moneyline": -102,
       "location": "Home",
       "result": -4,
+      "result_for_team": -4,
       "absolute_result": 4,
       "score": 13,
       "total": 30,
@@ -1108,7 +1227,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 6,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Minnesota Vikings",
@@ -1135,6 +1257,7 @@ const nflschedules =  {
       "adj_moneyline": 205,
       "location": "Home",
       "result": 21,
+      "result_for_team": -21,
       "absolute_result": 21,
       "score": 21,
       "total": 63,
@@ -1145,7 +1268,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 6,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Las Vegas Raiders",
@@ -1172,6 +1298,7 @@ const nflschedules =  {
       "adj_moneyline": -345,
       "location": "Home",
       "result": -6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 15,
       "total": 24,
@@ -1182,7 +1309,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 7,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New York Giants",
@@ -1209,6 +1339,7 @@ const nflschedules =  {
       "adj_moneyline": -550,
       "location": "Home",
       "result": 27,
+      "result_for_team": 27,
       "absolute_result": 27,
       "score": 34,
       "total": 41,
@@ -1219,7 +1350,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 8,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Washington Commanders",
@@ -1246,6 +1380,7 @@ const nflschedules =  {
       "adj_moneyline": 160,
       "location": "Home",
       "result": 6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 24,
       "total": 54,
@@ -1258,6 +1393,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 58,
+      "cumulative_wins": 8,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -1285,6 +1423,7 @@ const nflschedules =  {
       "adj_moneyline": -380,
       "location": "Home",
       "result": -6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 38,
       "total": 82,
@@ -1295,12 +1434,15 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 8,
+      "cumulative_losses": 9,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 8,
+      "losses": 9,
       "ties": 0
     }
   ],
@@ -1330,6 +1472,7 @@ const nflschedules =  {
       "adj_moneyline": 124,
       "location": "Home",
       "result": 7,
+      "result_for_team": -7,
       "absolute_result": 7,
       "score": 20,
       "total": 47,
@@ -1342,6 +1485,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 67,
+      "cumulative_wins": 0,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -1369,6 +1515,7 @@ const nflschedules =  {
       "adj_moneyline": -455,
       "location": "Home",
       "result": -3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 23,
       "total": 49,
@@ -1381,6 +1528,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 76,
+      "cumulative_wins": 0,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -1408,6 +1558,7 @@ const nflschedules =  {
       "adj_moneyline": -120,
       "location": "Home",
       "result": -3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 28,
       "total": 53,
@@ -1418,7 +1569,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "closed",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 1,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Buffalo Bills",
@@ -1445,6 +1599,7 @@ const nflschedules =  {
       "adj_moneyline": -135,
       "location": "Home",
       "result": 25,
+      "result_for_team": 25,
       "absolute_result": 25,
       "score": 35,
       "total": 45,
@@ -1457,6 +1612,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 68,
+      "cumulative_wins": 2,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -1484,6 +1642,7 @@ const nflschedules =  {
       "adj_moneyline": -148,
       "location": "Home",
       "result": -3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 41,
       "total": 79,
@@ -1496,6 +1655,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 81,
+      "cumulative_wins": 3,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -1523,6 +1685,7 @@ const nflschedules =  {
       "adj_moneyline": -285,
       "location": "Home",
       "result": 7,
+      "result_for_team": 7,
       "absolute_result": 7,
       "score": 30,
       "total": 53,
@@ -1535,6 +1698,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 75,
+      "cumulative_wins": 4,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -1562,6 +1728,7 @@ const nflschedules =  {
       "adj_moneyline": -225,
       "location": "Home",
       "result": -10,
+      "result_for_team": 10,
       "absolute_result": 10,
       "score": 41,
       "total": 72,
@@ -1574,6 +1741,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 80,
+      "cumulative_wins": 5,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -1601,6 +1771,7 @@ const nflschedules =  {
       "adj_moneyline": -380,
       "location": "Home",
       "result": 5,
+      "result_for_team": -5,
       "absolute_result": 5,
       "score": 24,
       "total": 53,
@@ -1613,6 +1784,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 52,
+      "cumulative_wins": 5,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -1640,6 +1814,7 @@ const nflschedules =  {
       "adj_moneyline": -440,
       "location": "Home",
       "result": 31,
+      "result_for_team": 31,
       "absolute_result": 31,
       "score": 41,
       "total": 51,
@@ -1652,6 +1827,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 57,
+      "cumulative_wins": 6,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 3
     },
     {
@@ -1679,6 +1857,7 @@ const nflschedules =  {
       "adj_moneyline": -270,
       "location": "Home",
       "result": 1,
+      "result_for_team": 1,
       "absolute_result": 1,
       "score": 35,
       "total": 69,
@@ -1691,6 +1870,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 69,
+      "cumulative_wins": 7,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -1718,6 +1900,7 @@ const nflschedules =  {
       "adj_moneyline": -175,
       "location": "Home",
       "result": 2,
+      "result_for_team": -2,
       "absolute_result": 2,
       "score": 16,
       "total": 34,
@@ -1730,6 +1913,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 52,
+      "cumulative_wins": 7,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -1757,6 +1943,7 @@ const nflschedules =  {
       "adj_moneyline": -166,
       "location": "Home",
       "result": -7,
+      "result_for_team": 7,
       "absolute_result": 7,
       "score": 30,
       "total": 53,
@@ -1767,7 +1954,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 8,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Philadelphia Eagles",
@@ -1794,6 +1984,7 @@ const nflschedules =  {
       "adj_moneyline": -162,
       "location": "Home",
       "result": -5,
+      "result_for_team": -5,
       "absolute_result": 5,
       "score": 19,
       "total": 43,
@@ -1806,11 +1997,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 41,
+      "cumulative_wins": 8,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
       "opponent": "BYE",
-      "week": 14
+      "week": 14,
+      "cumulative_wins": 8,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New York Giants",
@@ -1837,6 +2034,7 @@ const nflschedules =  {
       "adj_moneyline": -1800,
       "location": "Home",
       "result": -21,
+      "result_for_team": 21,
       "absolute_result": 21,
       "score": 35,
       "total": 49,
@@ -1849,6 +2047,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 36,
+      "cumulative_wins": 9,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -1876,6 +2077,7 @@ const nflschedules =  {
       "adj_moneyline": -345,
       "location": "Home",
       "result": 17,
+      "result_for_team": 17,
       "absolute_result": 17,
       "score": 34,
       "total": 51,
@@ -1888,6 +2090,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 35,
+      "cumulative_wins": 10,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 15
     },
     {
@@ -1915,6 +2120,7 @@ const nflschedules =  {
       "adj_moneyline": -245,
       "location": "Home",
       "result": -29,
+      "result_for_team": 29,
       "absolute_result": 29,
       "score": 31,
       "total": 33,
@@ -1925,7 +2131,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "closed",
-      "surface": "astroturf"
+      "surface": "astroturf",
+      "cumulative_wins": 11,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cleveland Browns",
@@ -1952,6 +2161,7 @@ const nflschedules =  {
       "adj_moneyline": -2400,
       "location": "Home",
       "result": 25,
+      "result_for_team": 25,
       "absolute_result": 25,
       "score": 35,
       "total": 45,
@@ -1964,6 +2174,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 31,
+      "cumulative_wins": 12,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 16
     },
     {
@@ -1991,6 +2204,7 @@ const nflschedules =  {
       "adj_moneyline": -520,
       "location": "Home",
       "result": 14,
+      "result_for_team": 14,
       "absolute_result": 14,
       "score": 28,
       "total": 42,
@@ -2003,6 +2217,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 32,
+      "cumulative_wins": 13,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -2030,6 +2247,7 @@ const nflschedules =  {
       "adj_moneyline": -118,
       "location": "Home",
       "result": 2,
+      "result_for_team": -2,
       "absolute_result": 2,
       "score": 25,
       "total": 52,
@@ -2042,12 +2260,15 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "a_turf",
       "temp": 19,
+      "cumulative_wins": 13,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 13,
+      "losses": 6,
       "ties": 0
     }
   ],
@@ -2077,6 +2298,7 @@ const nflschedules =  {
       "adj_moneyline": -310,
       "location": "Home",
       "result": 6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 34,
       "total": 62,
@@ -2089,6 +2311,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "a_turf",
       "temp": 61,
+      "cumulative_wins": 1,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 20
     },
     {
@@ -2116,6 +2341,7 @@ const nflschedules =  {
       "adj_moneyline": 114,
       "location": "Home",
       "result": -21,
+      "result_for_team": 21,
       "absolute_result": 21,
       "score": 31,
       "total": 41,
@@ -2128,6 +2354,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 86,
+      "cumulative_wins": 2,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 3
     },
     {
@@ -2155,6 +2384,7 @@ const nflschedules =  {
       "adj_moneyline": -218,
       "location": "Home",
       "result": 37,
+      "result_for_team": 37,
       "absolute_result": 37,
       "score": 47,
       "total": 57,
@@ -2167,6 +2397,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "a_turf",
       "temp": 68,
+      "cumulative_wins": 3,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -2194,6 +2427,7 @@ const nflschedules =  {
       "adj_moneyline": 114,
       "location": "Home",
       "result": 25,
+      "result_for_team": -25,
       "absolute_result": 25,
       "score": 10,
       "total": 45,
@@ -2206,6 +2440,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 68,
+      "cumulative_wins": 3,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -2233,6 +2470,7 @@ const nflschedules =  {
       "adj_moneyline": -102,
       "location": "Home",
       "result": 3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 20,
       "total": 43,
@@ -2243,7 +2481,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "astroturf"
+      "surface": "astroturf",
+      "cumulative_wins": 3,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New York Jets",
@@ -2270,6 +2511,7 @@ const nflschedules =  {
       "adj_moneyline": -122,
       "location": "Home",
       "result": -3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 23,
       "total": 43,
@@ -2282,6 +2524,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 49,
+      "cumulative_wins": 4,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 14
     },
     {
@@ -2309,6 +2554,7 @@ const nflschedules =  {
       "adj_moneyline": -535,
       "location": "Home",
       "result": 24,
+      "result_for_team": 24,
       "absolute_result": 24,
       "score": 34,
       "total": 44,
@@ -2321,6 +2567,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "a_turf",
       "temp": 66,
+      "cumulative_wins": 5,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -2348,6 +2597,7 @@ const nflschedules =  {
       "adj_moneyline": -170,
       "location": "Home",
       "result": -21,
+      "result_for_team": 21,
       "absolute_result": 21,
       "score": 31,
       "total": 41,
@@ -2360,6 +2610,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 55,
+      "cumulative_wins": 6,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 14
     },
     {
@@ -2387,6 +2640,7 @@ const nflschedules =  {
       "adj_moneyline": -285,
       "location": "Home",
       "result": 3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 30,
       "total": 57,
@@ -2399,6 +2653,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "a_turf",
       "temp": 54,
+      "cumulative_wins": 7,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -2426,6 +2683,7 @@ const nflschedules =  {
       "adj_moneyline": -230,
       "location": "Home",
       "result": -10,
+      "result_for_team": 10,
       "absolute_result": 10,
       "score": 30,
       "total": 50,
@@ -2436,7 +2694,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 8,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Kansas City Chiefs",
@@ -2463,6 +2724,7 @@ const nflschedules =  {
       "adj_moneyline": -142,
       "location": "Home",
       "result": 9,
+      "result_for_team": 9,
       "absolute_result": 9,
       "score": 30,
       "total": 51,
@@ -2475,11 +2737,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "a_turf",
       "temp": 50,
+      "cumulative_wins": 9,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 3
     },
     {
       "opponent": "BYE",
-      "week": 12
+      "week": 12,
+      "cumulative_wins": 9,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "San Francisco 49ers",
@@ -2506,6 +2774,7 @@ const nflschedules =  {
       "adj_moneyline": -340,
       "location": "Home",
       "result": 25,
+      "result_for_team": 25,
       "absolute_result": 25,
       "score": 35,
       "total": 45,
@@ -2518,6 +2787,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "a_turf",
       "temp": 28,
+      "cumulative_wins": 10,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 11
     },
     {
@@ -2545,6 +2817,7 @@ const nflschedules =  {
       "adj_moneyline": -192,
       "location": "Home",
       "result": 2,
+      "result_for_team": -2,
       "absolute_result": 2,
       "score": 42,
       "total": 86,
@@ -2555,7 +2828,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 10,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Detroit Lions",
@@ -2582,6 +2858,7 @@ const nflschedules =  {
       "adj_moneyline": 110,
       "location": "Home",
       "result": -6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 48,
       "total": 90,
@@ -2592,7 +2869,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 11,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New England Patriots",
@@ -2619,6 +2899,7 @@ const nflschedules =  {
       "adj_moneyline": -1100,
       "location": "Home",
       "result": 3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 24,
       "total": 45,
@@ -2631,6 +2912,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "a_turf",
       "temp": 14,
+      "cumulative_wins": 12,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 2
     },
     {
@@ -2658,6 +2942,7 @@ const nflschedules =  {
       "adj_moneyline": -520,
       "location": "Home",
       "result": 26,
+      "result_for_team": 26,
       "absolute_result": 26,
       "score": 40,
       "total": 54,
@@ -2670,6 +2955,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "a_turf",
       "temp": 54,
+      "cumulative_wins": 13,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 15
     },
     {
@@ -2697,6 +2985,7 @@ const nflschedules =  {
       "adj_moneyline": -166,
       "location": "Home",
       "result": 7,
+      "result_for_team": -7,
       "absolute_result": 7,
       "score": 16,
       "total": 39,
@@ -2709,6 +2998,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 33,
+      "cumulative_wins": 13,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 14
     },
     {
@@ -2736,6 +3028,7 @@ const nflschedules =  {
       "adj_moneyline": -425,
       "location": "Home",
       "result": 24,
+      "result_for_team": 24,
       "absolute_result": 24,
       "score": 31,
       "total": 38,
@@ -2748,6 +3041,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "a_turf",
       "temp": 32,
+      "cumulative_wins": 14,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -2775,6 +3071,7 @@ const nflschedules =  {
       "adj_moneyline": -102,
       "location": "Home",
       "result": 2,
+      "result_for_team": 2,
       "absolute_result": 2,
       "score": 27,
       "total": 52,
@@ -2787,6 +3084,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "a_turf",
       "temp": 19,
+      "cumulative_wins": 15,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -2814,6 +3114,7 @@ const nflschedules =  {
       "adj_moneyline": -102,
       "location": "Home",
       "result": 3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 29,
       "total": 61,
@@ -2826,12 +3127,15 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 31,
+      "cumulative_wins": 15,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 15,
+      "losses": 5,
       "ties": 0
     }
   ],
@@ -2861,6 +3165,7 @@ const nflschedules =  {
       "adj_moneyline": 160,
       "location": "Home",
       "result": 37,
+      "result_for_team": -37,
       "absolute_result": 37,
       "score": 10,
       "total": 57,
@@ -2871,7 +3176,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 0,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Los Angeles Chargers",
@@ -2898,6 +3206,7 @@ const nflschedules =  {
       "adj_moneyline": 185,
       "location": "Home",
       "result": -23,
+      "result_for_team": -23,
       "absolute_result": 23,
       "score": 3,
       "total": 29,
@@ -2910,6 +3219,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 78,
+      "cumulative_wins": 0,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 13
     },
     {
@@ -2937,6 +3249,7 @@ const nflschedules =  {
       "adj_moneyline": 200,
       "location": "Home",
       "result": -14,
+      "result_for_team": 14,
       "absolute_result": 14,
       "score": 36,
       "total": 58,
@@ -2947,7 +3260,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 1,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cincinnati Bengals",
@@ -2974,6 +3290,7 @@ const nflschedules =  {
       "adj_moneyline": 170,
       "location": "Home",
       "result": -10,
+      "result_for_team": -10,
       "absolute_result": 10,
       "score": 24,
       "total": 58,
@@ -2986,6 +3303,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 78,
+      "cumulative_wins": 1,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -3013,6 +3333,7 @@ const nflschedules =  {
       "adj_moneyline": 164,
       "location": "Home",
       "result": 26,
+      "result_for_team": -26,
       "absolute_result": 26,
       "score": 10,
       "total": 46,
@@ -3025,6 +3346,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 74,
+      "cumulative_wins": 1,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -3052,6 +3376,7 @@ const nflschedules =  {
       "adj_moneyline": 210,
       "location": "Home",
       "result": -18,
+      "result_for_team": -18,
       "absolute_result": 18,
       "score": 20,
       "total": 58,
@@ -3064,6 +3389,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 79,
+      "cumulative_wins": 1,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -3091,6 +3419,7 @@ const nflschedules =  {
       "adj_moneyline": 400,
       "location": "Home",
       "result": 33,
+      "result_for_team": -33,
       "absolute_result": 33,
       "score": 7,
       "total": 47,
@@ -3103,6 +3432,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 76,
+      "cumulative_wins": 1,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 2
     },
     {
@@ -3130,6 +3462,7 @@ const nflschedules =  {
       "adj_moneyline": 525,
       "location": "Home",
       "result": 14,
+      "result_for_team": -14,
       "absolute_result": 14,
       "score": 14,
       "total": 42,
@@ -3142,6 +3475,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 76,
+      "cumulative_wins": 1,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -3169,6 +3505,7 @@ const nflschedules =  {
       "adj_moneyline": 275,
       "location": "Home",
       "result": 1,
+      "result_for_team": 1,
       "absolute_result": 1,
       "score": 23,
       "total": 45,
@@ -3181,6 +3518,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 66,
+      "cumulative_wins": 2,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -3208,6 +3548,7 @@ const nflschedules =  {
       "adj_moneyline": 240,
       "location": "Neutral",
       "result": 3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 20,
       "total": 37,
@@ -3218,11 +3559,17 @@ const nflschedules =  {
       "over_odds": -105,
       "under_odds": -115,
       "roof": "outdoors",
-      "surface": ""
+      "surface": "",
+      "cumulative_wins": 3,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "BYE",
-      "week": 11
+      "week": 11,
+      "cumulative_wins": 3,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Kansas City Chiefs",
@@ -3249,6 +3596,7 @@ const nflschedules =  {
       "adj_moneyline": 500,
       "location": "Home",
       "result": -3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 27,
       "total": 57,
@@ -3261,6 +3609,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 61,
+      "cumulative_wins": 3,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -3288,6 +3639,7 @@ const nflschedules =  {
       "adj_moneyline": 235,
       "location": "Home",
       "result": -3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 23,
       "total": 49,
@@ -3300,6 +3652,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 51,
+      "cumulative_wins": 3,
+      "cumulative_losses": 9,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -3327,6 +3682,7 @@ const nflschedules =  {
       "adj_moneyline": 625,
       "location": "Home",
       "result": 6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 16,
       "total": 38,
@@ -3339,6 +3695,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 55,
+      "cumulative_wins": 3,
+      "cumulative_losses": 10,
+      "cumulative_ties": 0,
       "wind": 16
     },
     {
@@ -3366,6 +3725,7 @@ const nflschedules =  {
       "adj_moneyline": -142,
       "location": "Home",
       "result": -16,
+      "result_for_team": -16,
       "absolute_result": 16,
       "score": 14,
       "total": 44,
@@ -3378,6 +3738,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 45,
+      "cumulative_wins": 3,
+      "cumulative_losses": 11,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -3405,6 +3768,7 @@ const nflschedules =  {
       "adj_moneyline": 200,
       "location": "Home",
       "result": 6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 36,
       "total": 66,
@@ -3417,6 +3781,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 37,
+      "cumulative_wins": 4,
+      "cumulative_losses": 11,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -3444,6 +3811,7 @@ const nflschedules =  {
       "adj_moneyline": 380,
       "location": "Home",
       "result": 34,
+      "result_for_team": -34,
       "absolute_result": 34,
       "score": 14,
       "total": 62,
@@ -3456,6 +3824,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 76,
+      "cumulative_wins": 4,
+      "cumulative_losses": 12,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -3483,6 +3854,7 @@ const nflschedules =  {
       "adj_moneyline": 300,
       "location": "Home",
       "result": -6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 44,
       "total": 82,
@@ -3493,12 +3865,15 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 5,
+      "cumulative_losses": 12,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 5,
+      "losses": 12,
       "ties": 0
     }
   ],
@@ -3528,6 +3903,7 @@ const nflschedules =  {
       "adj_moneyline": -198,
       "location": "Home",
       "result": 7,
+      "result_for_team": 7,
       "absolute_result": 7,
       "score": 24,
       "total": 41,
@@ -3540,6 +3916,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 67,
+      "cumulative_wins": 1,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -3567,6 +3946,7 @@ const nflschedules =  {
       "adj_moneyline": 210,
       "location": "Home",
       "result": 6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 13,
       "total": 32,
@@ -3577,7 +3957,10 @@ const nflschedules =  {
       "over_odds": -115,
       "under_odds": -105,
       "roof": "closed",
-      "surface": "astroturf"
+      "surface": "astroturf",
+      "cumulative_wins": 1,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Indianapolis Colts",
@@ -3604,6 +3987,7 @@ const nflschedules =  {
       "adj_moneyline": 105,
       "location": "Home",
       "result": 5,
+      "result_for_team": -5,
       "absolute_result": 5,
       "score": 16,
       "total": 37,
@@ -3614,7 +3998,10 @@ const nflschedules =  {
       "over_odds": -115,
       "under_odds": -105,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 1,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Los Angeles Rams",
@@ -3641,6 +4028,7 @@ const nflschedules =  {
       "adj_moneyline": -162,
       "location": "Home",
       "result": 6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 24,
       "total": 42,
@@ -3653,6 +4041,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 70,
+      "cumulative_wins": 2,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 16
     },
     {
@@ -3680,6 +4071,7 @@ const nflschedules =  {
       "adj_moneyline": -198,
       "location": "Home",
       "result": 26,
+      "result_for_team": 26,
       "absolute_result": 26,
       "score": 36,
       "total": 46,
@@ -3692,6 +4084,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 74,
+      "cumulative_wins": 3,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -3719,6 +4114,7 @@ const nflschedules =  {
       "adj_moneyline": 100,
       "location": "Neutral",
       "result": 19,
+      "result_for_team": 19,
       "absolute_result": 19,
       "score": 35,
       "total": 51,
@@ -3731,11 +4127,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 54,
+      "cumulative_wins": 4,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 3
     },
     {
       "opponent": "BYE",
-      "week": 7
+      "week": 7,
+      "cumulative_wins": 4,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Washington Commanders",
@@ -3762,6 +4164,7 @@ const nflschedules =  {
       "adj_moneyline": 102,
       "location": "Home",
       "result": 3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 15,
       "total": 33,
@@ -3774,6 +4177,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 58,
+      "cumulative_wins": 4,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 2
     },
     {
@@ -3801,6 +4207,7 @@ const nflschedules =  {
       "adj_moneyline": 100,
       "location": "Home",
       "result": 20,
+      "result_for_team": -20,
       "absolute_result": 20,
       "score": 9,
       "total": 38,
@@ -3811,7 +4218,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 4,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New England Patriots",
@@ -3838,6 +4248,7 @@ const nflschedules =  {
       "adj_moneyline": -325,
       "location": "Home",
       "result": -16,
+      "result_for_team": -16,
       "absolute_result": 16,
       "score": 3,
       "total": 22,
@@ -3850,6 +4261,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 60,
+      "cumulative_wins": 4,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -3877,6 +4291,7 @@ const nflschedules =  {
       "adj_moneyline": 215,
       "location": "Home",
       "result": -1,
+      "result_for_team": -1,
       "absolute_result": 1,
       "score": 19,
       "total": 39,
@@ -3889,6 +4304,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 54,
+      "cumulative_wins": 4,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -3916,6 +4334,7 @@ const nflschedules =  {
       "adj_moneyline": 145,
       "location": "Home",
       "result": -3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 27,
       "total": 57,
@@ -3928,6 +4347,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 47,
+      "cumulative_wins": 4,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -3955,6 +4377,7 @@ const nflschedules =  {
       "adj_moneyline": 390,
       "location": "Home",
       "result": 3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 20,
       "total": 43,
@@ -3965,7 +4388,10 @@ const nflschedules =  {
       "over_odds": -120,
       "under_odds": 100,
       "roof": "dome",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 4,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0
     },
     {
       "opponent": "San Francisco 49ers",
@@ -3992,6 +4418,7 @@ const nflschedules =  {
       "adj_moneyline": 136,
       "location": "Home",
       "result": 25,
+      "result_for_team": -25,
       "absolute_result": 25,
       "score": 13,
       "total": 51,
@@ -4004,6 +4431,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 65,
+      "cumulative_wins": 4,
+      "cumulative_losses": 9,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -4031,6 +4461,7 @@ const nflschedules =  {
       "adj_moneyline": 260,
       "location": "Home",
       "result": 18,
+      "result_for_team": -18,
       "absolute_result": 18,
       "score": 12,
       "total": 42,
@@ -4041,7 +4472,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 4,
+      "cumulative_losses": 10,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Detroit Lions",
@@ -4068,6 +4502,7 @@ const nflschedules =  {
       "adj_moneyline": 270,
       "location": "Home",
       "result": -17,
+      "result_for_team": -17,
       "absolute_result": 17,
       "score": 17,
       "total": 51,
@@ -4080,6 +4515,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 29,
+      "cumulative_wins": 4,
+      "cumulative_losses": 11,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -4107,6 +4545,7 @@ const nflschedules =  {
       "adj_moneyline": 160,
       "location": "Home",
       "result": -3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 3,
       "total": 9,
@@ -4119,6 +4558,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 47,
+      "cumulative_wins": 4,
+      "cumulative_losses": 12,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -4146,6 +4588,7 @@ const nflschedules =  {
       "adj_moneyline": 320,
       "location": "Home",
       "result": -2,
+      "result_for_team": 2,
       "absolute_result": 2,
       "score": 24,
       "total": 46,
@@ -4158,12 +4601,15 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 16,
+      "cumulative_wins": 5,
+      "cumulative_losses": 12,
+      "cumulative_ties": 0,
       "wind": 13
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 5,
+      "losses": 12,
       "ties": 0
     }
   ],
@@ -4193,6 +4639,7 @@ const nflschedules =  {
       "adj_moneyline": -375,
       "location": "Home",
       "result": -6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 10,
       "total": 26,
@@ -4205,6 +4652,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 66,
+      "cumulative_wins": 0,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -4232,6 +4682,7 @@ const nflschedules =  {
       "adj_moneyline": 235,
       "location": "Home",
       "result": 1,
+      "result_for_team": -1,
       "absolute_result": 1,
       "score": 25,
       "total": 51,
@@ -4244,6 +4695,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 89,
+      "cumulative_wins": 0,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -4271,6 +4725,7 @@ const nflschedules =  {
       "adj_moneyline": -355,
       "location": "Home",
       "result": -5,
+      "result_for_team": -5,
       "absolute_result": 5,
       "score": 33,
       "total": 71,
@@ -4283,6 +4738,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 69,
+      "cumulative_wins": 0,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -4310,6 +4768,7 @@ const nflschedules =  {
       "adj_moneyline": -205,
       "location": "Home",
       "result": -10,
+      "result_for_team": 10,
       "absolute_result": 10,
       "score": 34,
       "total": 58,
@@ -4322,6 +4781,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 78,
+      "cumulative_wins": 1,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -4349,6 +4811,7 @@ const nflschedules =  {
       "adj_moneyline": 124,
       "location": "Home",
       "result": -3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 38,
       "total": 79,
@@ -4361,6 +4824,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 81,
+      "cumulative_wins": 1,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -4388,6 +4854,7 @@ const nflschedules =  {
       "adj_moneyline": -230,
       "location": "Home",
       "result": -10,
+      "result_for_team": 10,
       "absolute_result": 10,
       "score": 17,
       "total": 24,
@@ -4400,6 +4867,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 63,
+      "cumulative_wins": 2,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 2
     },
     {
@@ -4427,6 +4897,7 @@ const nflschedules =  {
       "adj_moneyline": -230,
       "location": "Home",
       "result": -7,
+      "result_for_team": 7,
       "absolute_result": 7,
       "score": 21,
       "total": 35,
@@ -4439,6 +4910,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 62,
+      "cumulative_wins": 3,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -4466,6 +4940,7 @@ const nflschedules =  {
       "adj_moneyline": -148,
       "location": "Home",
       "result": -20,
+      "result_for_team": -20,
       "absolute_result": 20,
       "score": 17,
       "total": 54,
@@ -4478,6 +4953,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 59,
+      "cumulative_wins": 3,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -4505,6 +4983,7 @@ const nflschedules =  {
       "adj_moneyline": -410,
       "location": "Home",
       "result": 17,
+      "result_for_team": 17,
       "absolute_result": 17,
       "score": 41,
       "total": 65,
@@ -4517,6 +4996,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 67,
+      "cumulative_wins": 4,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -4544,6 +5026,7 @@ const nflschedules =  {
       "adj_moneyline": 220,
       "location": "Home",
       "result": 1,
+      "result_for_team": -1,
       "absolute_result": 1,
       "score": 34,
       "total": 69,
@@ -4556,6 +5039,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 69,
+      "cumulative_wins": 4,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -4583,6 +5069,7 @@ const nflschedules =  {
       "adj_moneyline": -110,
       "location": "Home",
       "result": 7,
+      "result_for_team": -7,
       "absolute_result": 7,
       "score": 27,
       "total": 61,
@@ -4593,11 +5080,17 @@ const nflschedules =  {
       "over_odds": -115,
       "under_odds": -105,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 4,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "BYE",
-      "week": 12
+      "week": 12,
+      "cumulative_wins": 4,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Pittsburgh Steelers",
@@ -4624,6 +5117,7 @@ const nflschedules =  {
       "adj_moneyline": -155,
       "location": "Home",
       "result": -6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 38,
       "total": 82,
@@ -4636,6 +5130,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 32,
+      "cumulative_wins": 4,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -4663,6 +5160,7 @@ const nflschedules =  {
       "adj_moneyline": -230,
       "location": "Home",
       "result": -7,
+      "result_for_team": 7,
       "absolute_result": 7,
       "score": 27,
       "total": 47,
@@ -4673,7 +5171,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "closed",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 5,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Tennessee Titans",
@@ -4700,6 +5201,7 @@ const nflschedules =  {
       "adj_moneyline": -250,
       "location": "Home",
       "result": -10,
+      "result_for_team": 10,
       "absolute_result": 10,
       "score": 37,
       "total": 64,
@@ -4712,6 +5214,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 52,
+      "cumulative_wins": 6,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -4739,6 +5244,7 @@ const nflschedules =  {
       "adj_moneyline": -575,
       "location": "Home",
       "result": 18,
+      "result_for_team": 18,
       "absolute_result": 18,
       "score": 24,
       "total": 30,
@@ -4751,6 +5257,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 33,
+      "cumulative_wins": 7,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -4778,6 +5287,7 @@ const nflschedules =  {
       "adj_moneyline": -175,
       "location": "Home",
       "result": 6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 30,
       "total": 54,
@@ -4790,6 +5300,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 60,
+      "cumulative_wins": 8,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -4817,6 +5330,7 @@ const nflschedules =  {
       "adj_moneyline": -148,
       "location": "Home",
       "result": -2,
+      "result_for_team": 2,
       "absolute_result": 2,
       "score": 19,
       "total": 36,
@@ -4829,12 +5343,15 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 19,
+      "cumulative_wins": 9,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 9,
+      "losses": 8,
       "ties": 0
     }
   ],
@@ -4864,6 +5381,7 @@ const nflschedules =  {
       "adj_moneyline": -130,
       "location": "Home",
       "result": -16,
+      "result_for_team": -16,
       "absolute_result": 16,
       "score": 17,
       "total": 50,
@@ -4876,6 +5394,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 69,
+      "cumulative_wins": 0,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 17
     },
     {
@@ -4903,6 +5424,7 @@ const nflschedules =  {
       "adj_moneyline": 142,
       "location": "Home",
       "result": -5,
+      "result_for_team": 5,
       "absolute_result": 5,
       "score": 18,
       "total": 31,
@@ -4915,6 +5437,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 80,
+      "cumulative_wins": 1,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -4942,6 +5467,7 @@ const nflschedules =  {
       "adj_moneyline": -270,
       "location": "Home",
       "result": -6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 15,
       "total": 36,
@@ -4954,6 +5480,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 76,
+      "cumulative_wins": 1,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -4981,6 +5510,7 @@ const nflschedules =  {
       "adj_moneyline": -135,
       "location": "Home",
       "result": 4,
+      "result_for_team": -4,
       "absolute_result": 4,
       "score": 16,
       "total": 36,
@@ -4991,7 +5521,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 1,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Washington Commanders",
@@ -5018,6 +5551,7 @@ const nflschedules =  {
       "adj_moneyline": 130,
       "location": "Home",
       "result": 21,
+      "result_for_team": -21,
       "absolute_result": 21,
       "score": 13,
       "total": 47,
@@ -5030,6 +5564,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 73,
+      "cumulative_wins": 1,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -5057,6 +5594,7 @@ const nflschedules =  {
       "adj_moneyline": 330,
       "location": "Home",
       "result": 4,
+      "result_for_team": -4,
       "absolute_result": 4,
       "score": 16,
       "total": 36,
@@ -5069,6 +5607,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 82,
+      "cumulative_wins": 1,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -5096,6 +5637,7 @@ const nflschedules =  {
       "adj_moneyline": 190,
       "location": "Home",
       "result": -7,
+      "result_for_team": -7,
       "absolute_result": 7,
       "score": 14,
       "total": 35,
@@ -5108,6 +5650,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 62,
+      "cumulative_wins": 1,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -5135,6 +5680,7 @@ const nflschedules =  {
       "adj_moneyline": 300,
       "location": "Home",
       "result": 5,
+      "result_for_team": 5,
       "absolute_result": 5,
       "score": 29,
       "total": 53,
@@ -5147,6 +5693,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 52,
+      "cumulative_wins": 2,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -5174,6 +5723,7 @@ const nflschedules =  {
       "adj_moneyline": 110,
       "location": "Home",
       "result": -17,
+      "result_for_team": -17,
       "absolute_result": 17,
       "score": 10,
       "total": 37,
@@ -5186,11 +5736,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 57,
+      "cumulative_wins": 2,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
       "opponent": "BYE",
-      "week": 10
+      "week": 10,
+      "cumulative_wins": 2,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New Orleans Saints",
@@ -5217,6 +5773,7 @@ const nflschedules =  {
       "adj_moneyline": -115,
       "location": "Home",
       "result": 21,
+      "result_for_team": -21,
       "absolute_result": 21,
       "score": 14,
       "total": 49,
@@ -5227,7 +5784,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Pittsburgh Steelers",
@@ -5254,6 +5814,7 @@ const nflschedules =  {
       "adj_moneyline": 170,
       "location": "Home",
       "result": 5,
+      "result_for_team": 5,
       "absolute_result": 5,
       "score": 24,
       "total": 43,
@@ -5266,6 +5827,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 36,
+      "cumulative_wins": 3,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 13
     },
     {
@@ -5293,6 +5857,7 @@ const nflschedules =  {
       "adj_moneyline": 235,
       "location": "Home",
       "result": 9,
+      "result_for_team": -9,
       "absolute_result": 9,
       "score": 32,
       "total": 73,
@@ -5305,6 +5870,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 48,
+      "cumulative_wins": 3,
+      "cumulative_losses": 9,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -5332,6 +5900,7 @@ const nflschedules =  {
       "adj_moneyline": 210,
       "location": "Home",
       "result": 13,
+      "result_for_team": -13,
       "absolute_result": 13,
       "score": 14,
       "total": 41,
@@ -5344,6 +5913,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 49,
+      "cumulative_wins": 3,
+      "cumulative_losses": 10,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -5371,6 +5943,7 @@ const nflschedules =  {
       "adj_moneyline": 190,
       "location": "Home",
       "result": -14,
+      "result_for_team": -14,
       "absolute_result": 14,
       "score": 7,
       "total": 28,
@@ -5383,6 +5956,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 40,
+      "cumulative_wins": 3,
+      "cumulative_losses": 11,
+      "cumulative_ties": 0,
       "wind": 18
     },
     {
@@ -5410,6 +5986,7 @@ const nflschedules =  {
       "adj_moneyline": 425,
       "location": "Home",
       "result": 18,
+      "result_for_team": -18,
       "absolute_result": 18,
       "score": 6,
       "total": 30,
@@ -5422,6 +5999,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 33,
+      "cumulative_wins": 3,
+      "cumulative_losses": 12,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -5449,6 +6029,7 @@ const nflschedules =  {
       "adj_moneyline": 142,
       "location": "Home",
       "result": -17,
+      "result_for_team": -17,
       "absolute_result": 17,
       "score": 3,
       "total": 23,
@@ -5461,6 +6042,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 54,
+      "cumulative_wins": 3,
+      "cumulative_losses": 13,
+      "cumulative_ties": 0,
       "wind": 15
     },
     {
@@ -5488,6 +6072,7 @@ const nflschedules =  {
       "adj_moneyline": 1200,
       "location": "Home",
       "result": 25,
+      "result_for_team": -25,
       "absolute_result": 25,
       "score": 10,
       "total": 45,
@@ -5500,12 +6085,15 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 31,
+      "cumulative_wins": 3,
+      "cumulative_losses": 14,
+      "cumulative_ties": 0,
       "wind": 16
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 3,
+      "losses": 14,
       "ties": 0
     }
   ],
@@ -5535,6 +6123,7 @@ const nflschedules =  {
       "adj_moneyline": 110,
       "location": "Home",
       "result": -16,
+      "result_for_team": 16,
       "absolute_result": 16,
       "score": 33,
       "total": 50,
@@ -5547,6 +6136,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 69,
+      "cumulative_wins": 1,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 17
     },
     {
@@ -5574,6 +6166,7 @@ const nflschedules =  {
       "adj_moneyline": -290,
       "location": "Home",
       "result": -25,
+      "result_for_team": -25,
       "absolute_result": 25,
       "score": 19,
       "total": 63,
@@ -5584,7 +6177,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 1,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Baltimore Ravens",
@@ -5611,6 +6207,7 @@ const nflschedules =  {
       "adj_moneyline": 100,
       "location": "Home",
       "result": -3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 25,
       "total": 53,
@@ -5621,7 +6218,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "closed",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 1,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New York Giants",
@@ -5648,6 +6248,7 @@ const nflschedules =  {
       "adj_moneyline": -250,
       "location": "Home",
       "result": -5,
+      "result_for_team": 5,
       "absolute_result": 5,
       "score": 20,
       "total": 35,
@@ -5660,6 +6261,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 74,
+      "cumulative_wins": 2,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 3
     },
     {
@@ -5687,6 +6291,7 @@ const nflschedules =  {
       "adj_moneyline": 114,
       "location": "Home",
       "result": -3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 20,
       "total": 37,
@@ -5699,6 +6304,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 67,
+      "cumulative_wins": 3,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -5726,6 +6334,7 @@ const nflschedules =  {
       "adj_moneyline": 150,
       "location": "Home",
       "result": -38,
+      "result_for_team": -38,
       "absolute_result": 38,
       "score": 9,
       "total": 56,
@@ -5736,11 +6345,17 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 3,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "BYE",
-      "week": 7
+      "week": 7,
+      "cumulative_wins": 3,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "San Francisco 49ers",
@@ -5767,6 +6382,7 @@ const nflschedules =  {
       "adj_moneyline": 195,
       "location": "Home",
       "result": 6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 24,
       "total": 54,
@@ -5779,6 +6395,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 69,
+      "cumulative_wins": 3,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -5806,6 +6425,7 @@ const nflschedules =  {
       "adj_moneyline": 140,
       "location": "Home",
       "result": 6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 21,
       "total": 48,
@@ -5816,7 +6436,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 3,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Philadelphia Eagles",
@@ -5843,6 +6466,7 @@ const nflschedules =  {
       "adj_moneyline": 285,
       "location": "Home",
       "result": -28,
+      "result_for_team": -28,
       "absolute_result": 28,
       "score": 6,
       "total": 40,
@@ -5853,7 +6477,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 3,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Houston Texans",
@@ -5880,6 +6507,7 @@ const nflschedules =  {
       "adj_moneyline": 285,
       "location": "Home",
       "result": -24,
+      "result_for_team": -24,
       "absolute_result": 24,
       "score": 10,
       "total": 44,
@@ -5890,7 +6518,10 @@ const nflschedules =  {
       "over_odds": -115,
       "under_odds": -105,
       "roof": "closed",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 3,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Washington Commanders",
@@ -5917,6 +6548,7 @@ const nflschedules =  {
       "adj_moneyline": 455,
       "location": "Home",
       "result": -8,
+      "result_for_team": 8,
       "absolute_result": 8,
       "score": 34,
       "total": 60,
@@ -5929,6 +6561,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 55,
+      "cumulative_wins": 4,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -5956,6 +6591,7 @@ const nflschedules =  {
       "adj_moneyline": -218,
       "location": "Home",
       "result": 7,
+      "result_for_team": 7,
       "absolute_result": 7,
       "score": 27,
       "total": 47,
@@ -5966,7 +6602,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 5,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cincinnati Bengals",
@@ -5993,6 +6632,7 @@ const nflschedules =  {
       "adj_moneyline": 190,
       "location": "Home",
       "result": -7,
+      "result_for_team": -7,
       "absolute_result": 7,
       "score": 20,
       "total": 47,
@@ -6003,7 +6643,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "closed",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 5,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Carolina Panthers",
@@ -6030,6 +6673,7 @@ const nflschedules =  {
       "adj_moneyline": 120,
       "location": "Home",
       "result": -16,
+      "result_for_team": 16,
       "absolute_result": 16,
       "score": 30,
       "total": 44,
@@ -6042,6 +6686,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 45,
+      "cumulative_wins": 6,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -6069,6 +6716,7 @@ const nflschedules =  {
       "adj_moneyline": 180,
       "location": "Home",
       "result": 2,
+      "result_for_team": 2,
       "absolute_result": 2,
       "score": 26,
       "total": 50,
@@ -6079,7 +6727,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 7,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Philadelphia Eagles",
@@ -6106,6 +6757,7 @@ const nflschedules =  {
       "adj_moneyline": 260,
       "location": "Home",
       "result": 34,
+      "result_for_team": -34,
       "absolute_result": 34,
       "score": 7,
       "total": 48,
@@ -6118,6 +6770,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 62,
+      "cumulative_wins": 7,
+      "cumulative_losses": 9,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -6145,6 +6800,7 @@ const nflschedules =  {
       "adj_moneyline": 250,
       "location": "Home",
       "result": -4,
+      "result_for_team": -4,
       "absolute_result": 4,
       "score": 19,
       "total": 42,
@@ -6155,12 +6811,15 @@ const nflschedules =  {
       "over_odds": -102,
       "under_odds": -118,
       "roof": "closed",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 7,
+      "cumulative_losses": 10,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 7,
+      "losses": 10,
       "ties": 0
     }
   ],
@@ -6190,6 +6849,7 @@ const nflschedules =  {
       "adj_moneyline": 225,
       "location": "Home",
       "result": 6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 20,
       "total": 46,
@@ -6202,6 +6862,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 65,
+      "cumulative_wins": 0,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -6229,6 +6892,7 @@ const nflschedules =  {
       "adj_moneyline": 130,
       "location": "Home",
       "result": -7,
+      "result_for_team": -7,
       "absolute_result": 7,
       "score": 6,
       "total": 19,
@@ -6241,6 +6905,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 83,
+      "cumulative_wins": 0,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -6268,6 +6935,7 @@ const nflschedules =  {
       "adj_moneyline": 200,
       "location": "Home",
       "result": -19,
+      "result_for_team": 19,
       "absolute_result": 19,
       "score": 26,
       "total": 33,
@@ -6280,6 +6948,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 85,
+      "cumulative_wins": 1,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -6307,6 +6978,7 @@ const nflschedules =  {
       "adj_moneyline": 330,
       "location": "Home",
       "result": -1,
+      "result_for_team": 1,
       "absolute_result": 1,
       "score": 10,
       "total": 19,
@@ -6319,6 +6991,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 67,
+      "cumulative_wins": 2,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -6346,6 +7021,7 @@ const nflschedules =  {
       "adj_moneyline": -155,
       "location": "Home",
       "result": 16,
+      "result_for_team": 16,
       "absolute_result": 16,
       "score": 34,
       "total": 52,
@@ -6358,6 +7034,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 73,
+      "cumulative_wins": 3,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -6385,6 +7064,7 @@ const nflschedules =  {
       "adj_moneyline": 130,
       "location": "Home",
       "result": -7,
+      "result_for_team": -7,
       "absolute_result": 7,
       "score": 16,
       "total": 39,
@@ -6397,6 +7077,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 65,
+      "cumulative_wins": 3,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -6424,6 +7107,7 @@ const nflschedules =  {
       "adj_moneyline": -148,
       "location": "Home",
       "result": -23,
+      "result_for_team": 23,
       "absolute_result": 23,
       "score": 33,
       "total": 43,
@@ -6434,7 +7118,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 4,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Carolina Panthers",
@@ -6461,6 +7148,7 @@ const nflschedules =  {
       "adj_moneyline": -750,
       "location": "Home",
       "result": 14,
+      "result_for_team": 14,
       "absolute_result": 14,
       "score": 28,
       "total": 42,
@@ -6473,6 +7161,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 76,
+      "cumulative_wins": 5,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -6500,6 +7191,7 @@ const nflschedules =  {
       "adj_moneyline": 330,
       "location": "Home",
       "result": 31,
+      "result_for_team": -31,
       "absolute_result": 31,
       "score": 10,
       "total": 51,
@@ -6512,6 +7204,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 57,
+      "cumulative_wins": 5,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 3
     },
     {
@@ -6539,6 +7234,7 @@ const nflschedules =  {
       "adj_moneyline": 300,
       "location": "Home",
       "result": 2,
+      "result_for_team": -2,
       "absolute_result": 2,
       "score": 14,
       "total": 30,
@@ -6551,6 +7247,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 57,
+      "cumulative_wins": 5,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -6578,6 +7277,7 @@ const nflschedules =  {
       "adj_moneyline": -135,
       "location": "Home",
       "result": 32,
+      "result_for_team": 32,
       "absolute_result": 32,
       "score": 38,
       "total": 44,
@@ -6590,6 +7290,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 55,
+      "cumulative_wins": 6,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -6617,6 +7320,7 @@ const nflschedules =  {
       "adj_moneyline": -278,
       "location": "Home",
       "result": -10,
+      "result_for_team": 10,
       "absolute_result": 10,
       "score": 29,
       "total": 48,
@@ -6627,7 +7331,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 7,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cleveland Browns",
@@ -6654,6 +7361,7 @@ const nflschedules =  {
       "adj_moneyline": -290,
       "location": "Home",
       "result": 9,
+      "result_for_team": 9,
       "absolute_result": 9,
       "score": 41,
       "total": 73,
@@ -6666,11 +7374,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 48,
+      "cumulative_wins": 8,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
       "opponent": "BYE",
-      "week": 14
+      "week": 14,
+      "cumulative_wins": 8,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Indianapolis Colts",
@@ -6697,6 +7411,7 @@ const nflschedules =  {
       "adj_moneyline": -238,
       "location": "Home",
       "result": 18,
+      "result_for_team": 18,
       "absolute_result": 18,
       "score": 31,
       "total": 44,
@@ -6709,6 +7424,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 55,
+      "cumulative_wins": 9,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 15
     },
     {
@@ -6736,6 +7454,7 @@ const nflschedules =  {
       "adj_moneyline": 124,
       "location": "Home",
       "result": 7,
+      "result_for_team": -7,
       "absolute_result": 7,
       "score": 27,
       "total": 61,
@@ -6746,7 +7465,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 9,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cincinnati Bengals",
@@ -6773,6 +7495,7 @@ const nflschedules =  {
       "adj_moneyline": 145,
       "location": "Home",
       "result": 6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 24,
       "total": 54,
@@ -6785,6 +7508,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 60,
+      "cumulative_wins": 9,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -6812,6 +7538,7 @@ const nflschedules =  {
       "adj_moneyline": -485,
       "location": "Home",
       "result": 38,
+      "result_for_team": 38,
       "absolute_result": 38,
       "score": 38,
       "total": 38,
@@ -6824,6 +7551,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 28,
+      "cumulative_wins": 10,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -6851,6 +7581,7 @@ const nflschedules =  {
       "adj_moneyline": 330,
       "location": "Home",
       "result": 24,
+      "result_for_team": -24,
       "absolute_result": 24,
       "score": 7,
       "total": 38,
@@ -6863,12 +7594,15 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "a_turf",
       "temp": 32,
+      "cumulative_wins": 10,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 10,
+      "losses": 8,
       "ties": 0
     }
   ],
@@ -6898,6 +7632,7 @@ const nflschedules =  {
       "adj_moneyline": -225,
       "location": "Home",
       "result": 6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 26,
       "total": 46,
@@ -6908,7 +7643,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 1,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Tampa Bay Buccaneers",
@@ -6935,6 +7673,7 @@ const nflschedules =  {
       "adj_moneyline": -375,
       "location": "Home",
       "result": -4,
+      "result_for_team": -4,
       "absolute_result": 4,
       "score": 16,
       "total": 36,
@@ -6945,7 +7684,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 1,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Arizona Cardinals",
@@ -6972,6 +7714,7 @@ const nflschedules =  {
       "adj_moneyline": -148,
       "location": "Home",
       "result": -7,
+      "result_for_team": 7,
       "absolute_result": 7,
       "score": 20,
       "total": 33,
@@ -6982,7 +7725,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "closed",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 2,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Seattle Seahawks",
@@ -7009,6 +7755,7 @@ const nflschedules =  {
       "adj_moneyline": -185,
       "location": "Home",
       "result": 13,
+      "result_for_team": 13,
       "absolute_result": 13,
       "score": 42,
       "total": 71,
@@ -7019,11 +7766,17 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 3,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "BYE",
-      "week": 5
+      "week": 5,
+      "cumulative_wins": 3,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Dallas Cowboys",
@@ -7050,6 +7803,7 @@ const nflschedules =  {
       "adj_moneyline": -180,
       "location": "Home",
       "result": -38,
+      "result_for_team": 38,
       "absolute_result": 38,
       "score": 47,
       "total": 56,
@@ -7060,7 +7814,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 4,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Minnesota Vikings",
@@ -7087,6 +7844,7 @@ const nflschedules =  {
       "adj_moneyline": -102,
       "location": "Home",
       "result": -2,
+      "result_for_team": 2,
       "absolute_result": 2,
       "score": 31,
       "total": 60,
@@ -7097,7 +7855,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 5,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Tennessee Titans",
@@ -7124,6 +7885,7 @@ const nflschedules =  {
       "adj_moneyline": -800,
       "location": "Home",
       "result": 38,
+      "result_for_team": 38,
       "absolute_result": 38,
       "score": 52,
       "total": 66,
@@ -7134,7 +7896,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 6,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Green Bay Packers",
@@ -7161,6 +7926,7 @@ const nflschedules =  {
       "adj_moneyline": -155,
       "location": "Home",
       "result": -10,
+      "result_for_team": 10,
       "absolute_result": 10,
       "score": 24,
       "total": 38,
@@ -7173,6 +7939,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 50,
+      "cumulative_wins": 7,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 15
     },
     {
@@ -7200,6 +7969,7 @@ const nflschedules =  {
       "adj_moneyline": -230,
       "location": "Home",
       "result": -3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 26,
       "total": 49,
@@ -7210,7 +7980,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "astroturf"
+      "surface": "astroturf",
+      "cumulative_wins": 8,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Jacksonville Jaguars",
@@ -7237,6 +8010,7 @@ const nflschedules =  {
       "adj_moneyline": -1000,
       "location": "Home",
       "result": 46,
+      "result_for_team": 46,
       "absolute_result": 46,
       "score": 52,
       "total": 58,
@@ -7247,7 +8021,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 9,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Indianapolis Colts",
@@ -7274,6 +8051,7 @@ const nflschedules =  {
       "adj_moneyline": -375,
       "location": "Home",
       "result": -18,
+      "result_for_team": 18,
       "absolute_result": 18,
       "score": 24,
       "total": 30,
@@ -7284,7 +8062,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 10,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Chicago Bears",
@@ -7311,6 +8092,7 @@ const nflschedules =  {
       "adj_moneyline": -520,
       "location": "Home",
       "result": 3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 23,
       "total": 43,
@@ -7321,7 +8103,10 @@ const nflschedules =  {
       "over_odds": -120,
       "under_odds": 100,
       "roof": "dome",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 11,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Green Bay Packers",
@@ -7348,6 +8133,7 @@ const nflschedules =  {
       "adj_moneyline": -170,
       "location": "Home",
       "result": 3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 34,
       "total": 65,
@@ -7358,7 +8144,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 12,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Buffalo Bills",
@@ -7385,6 +8174,7 @@ const nflschedules =  {
       "adj_moneyline": -130,
       "location": "Home",
       "result": -6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 42,
       "total": 90,
@@ -7395,7 +8185,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 12,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Chicago Bears",
@@ -7422,6 +8215,7 @@ const nflschedules =  {
       "adj_moneyline": -340,
       "location": "Home",
       "result": -17,
+      "result_for_team": 17,
       "absolute_result": 17,
       "score": 34,
       "total": 51,
@@ -7434,6 +8228,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 29,
+      "cumulative_wins": 13,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -7461,6 +8258,7 @@ const nflschedules =  {
       "adj_moneyline": -230,
       "location": "Home",
       "result": -6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 40,
       "total": 74,
@@ -7471,7 +8269,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "outdoors",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 14,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Minnesota Vikings",
@@ -7498,6 +8299,7 @@ const nflschedules =  {
       "adj_moneyline": -148,
       "location": "Home",
       "result": 22,
+      "result_for_team": 22,
       "absolute_result": 22,
       "score": 31,
       "total": 40,
@@ -7508,7 +8310,10 @@ const nflschedules =  {
       "over_odds": -118,
       "under_odds": -102,
       "roof": "dome",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 15,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Washington Commanders",
@@ -7535,6 +8340,7 @@ const nflschedules =  {
       "adj_moneyline": -520,
       "location": "Home",
       "result": -14,
+      "result_for_team": -14,
       "absolute_result": 14,
       "score": 31,
       "total": 76,
@@ -7545,12 +8351,15 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 15,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 15,
+      "losses": 3,
       "ties": 0
     }
   ],
@@ -7580,6 +8389,7 @@ const nflschedules =  {
       "adj_moneyline": 110,
       "location": "Neutral",
       "result": 5,
+      "result_for_team": -5,
       "absolute_result": 5,
       "score": 29,
       "total": 63,
@@ -7590,7 +8400,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "outdoors",
-      "surface": ""
+      "surface": "",
+      "cumulative_wins": 0,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Indianapolis Colts",
@@ -7617,6 +8430,7 @@ const nflschedules =  {
       "adj_moneyline": 120,
       "location": "Home",
       "result": 6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 16,
       "total": 26,
@@ -7629,6 +8443,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 85,
+      "cumulative_wins": 1,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -7656,6 +8473,7 @@ const nflschedules =  {
       "adj_moneyline": 136,
       "location": "Home",
       "result": -16,
+      "result_for_team": 16,
       "absolute_result": 16,
       "score": 30,
       "total": 44,
@@ -7668,6 +8486,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 87,
+      "cumulative_wins": 2,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -7695,6 +8516,7 @@ const nflschedules =  {
       "adj_moneyline": -135,
       "location": "Home",
       "result": -2,
+      "result_for_team": -2,
       "absolute_result": 2,
       "score": 29,
       "total": 60,
@@ -7707,6 +8529,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 71,
+      "cumulative_wins": 2,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 15
     },
     {
@@ -7734,6 +8559,7 @@ const nflschedules =  {
       "adj_moneyline": -155,
       "location": "Home",
       "result": -5,
+      "result_for_team": 5,
       "absolute_result": 5,
       "score": 24,
       "total": 43,
@@ -7744,7 +8570,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 3,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Arizona Cardinals",
@@ -7771,6 +8600,7 @@ const nflschedules =  {
       "adj_moneyline": -238,
       "location": "Home",
       "result": 21,
+      "result_for_team": 21,
       "absolute_result": 21,
       "score": 34,
       "total": 47,
@@ -7783,6 +8613,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 50,
+      "cumulative_wins": 4,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -7810,6 +8643,7 @@ const nflschedules =  {
       "adj_moneyline": -170,
       "location": "Home",
       "result": 2,
+      "result_for_team": 2,
       "absolute_result": 2,
       "score": 24,
       "total": 46,
@@ -7822,6 +8656,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 72,
+      "cumulative_wins": 5,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 3
     },
     {
@@ -7849,6 +8686,7 @@ const nflschedules =  {
       "adj_moneyline": -192,
       "location": "Home",
       "result": -3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 30,
       "total": 57,
@@ -7861,6 +8699,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 84,
+      "cumulative_wins": 6,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -7888,6 +8729,7 @@ const nflschedules =  {
       "adj_moneyline": 130,
       "location": "Home",
       "result": -10,
+      "result_for_team": -10,
       "absolute_result": 10,
       "score": 14,
       "total": 38,
@@ -7900,11 +8742,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 50,
+      "cumulative_wins": 6,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 15
     },
     {
       "opponent": "BYE",
-      "week": 10
+      "week": 10,
+      "cumulative_wins": 6,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Chicago Bears",
@@ -7931,6 +8779,7 @@ const nflschedules =  {
       "adj_moneyline": -265,
       "location": "Home",
       "result": -1,
+      "result_for_team": 1,
       "absolute_result": 1,
       "score": 20,
       "total": 39,
@@ -7943,6 +8792,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 54,
+      "cumulative_wins": 7,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -7970,6 +8822,7 @@ const nflschedules =  {
       "adj_moneyline": -290,
       "location": "Home",
       "result": 28,
+      "result_for_team": 28,
       "absolute_result": 28,
       "score": 38,
       "total": 48,
@@ -7982,6 +8835,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 43,
+      "cumulative_wins": 8,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 11
     },
     {
@@ -8009,6 +8865,7 @@ const nflschedules =  {
       "adj_moneyline": -175,
       "location": "Home",
       "result": 13,
+      "result_for_team": 13,
       "absolute_result": 13,
       "score": 30,
       "total": 47,
@@ -8021,6 +8878,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 27,
+      "cumulative_wins": 9,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -8048,6 +8908,7 @@ const nflschedules =  {
       "adj_moneyline": 142,
       "location": "Home",
       "result": 3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 31,
       "total": 65,
@@ -8058,7 +8919,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 9,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Seattle Seahawks",
@@ -8085,6 +8949,7 @@ const nflschedules =  {
       "adj_moneyline": -162,
       "location": "Home",
       "result": -17,
+      "result_for_team": 17,
       "absolute_result": 17,
       "score": 30,
       "total": 43,
@@ -8097,6 +8962,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 43,
+      "cumulative_wins": 10,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 3
     },
     {
@@ -8124,6 +8992,7 @@ const nflschedules =  {
       "adj_moneyline": -950,
       "location": "Home",
       "result": 34,
+      "result_for_team": 34,
       "absolute_result": 34,
       "score": 34,
       "total": 34,
@@ -8136,6 +9005,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 34,
+      "cumulative_wins": 11,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -8163,6 +9035,7 @@ const nflschedules =  {
       "adj_moneyline": -112,
       "location": "Home",
       "result": 2,
+      "result_for_team": -2,
       "absolute_result": 2,
       "score": 25,
       "total": 52,
@@ -8173,7 +9046,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 11,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Chicago Bears",
@@ -8200,6 +9076,7 @@ const nflschedules =  {
       "adj_moneyline": -410,
       "location": "Home",
       "result": -2,
+      "result_for_team": -2,
       "absolute_result": 2,
       "score": 22,
       "total": 46,
@@ -8212,6 +9089,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 16,
+      "cumulative_wins": 11,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 13
     },
     {
@@ -8239,6 +9119,7 @@ const nflschedules =  {
       "adj_moneyline": 205,
       "location": "Home",
       "result": 12,
+      "result_for_team": -12,
       "absolute_result": 12,
       "score": 10,
       "total": 32,
@@ -8251,12 +9132,15 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 40,
+      "cumulative_wins": 11,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 11,
+      "losses": 7,
       "ties": 0
     }
   ],
@@ -8286,6 +9170,7 @@ const nflschedules =  {
       "adj_moneyline": -155,
       "location": "Home",
       "result": -2,
+      "result_for_team": 2,
       "absolute_result": 2,
       "score": 29,
       "total": 56,
@@ -8296,7 +9181,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 1,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Chicago Bears",
@@ -8323,6 +9211,7 @@ const nflschedules =  {
       "adj_moneyline": -258,
       "location": "Home",
       "result": 6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 19,
       "total": 32,
@@ -8333,7 +9222,10 @@ const nflschedules =  {
       "over_odds": -115,
       "under_odds": -105,
       "roof": "closed",
-      "surface": "astroturf"
+      "surface": "astroturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Minnesota Vikings",
@@ -8360,6 +9252,7 @@ const nflschedules =  {
       "adj_moneyline": -135,
       "location": "Home",
       "result": 27,
+      "result_for_team": -27,
       "absolute_result": 27,
       "score": 7,
       "total": 41,
@@ -8370,7 +9263,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Jacksonville Jaguars",
@@ -8397,6 +9293,7 @@ const nflschedules =  {
       "adj_moneyline": -238,
       "location": "Home",
       "result": 4,
+      "result_for_team": 4,
       "absolute_result": 4,
       "score": 24,
       "total": 44,
@@ -8407,7 +9304,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "astroturf"
+      "surface": "astroturf",
+      "cumulative_wins": 3,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Buffalo Bills",
@@ -8434,6 +9334,7 @@ const nflschedules =  {
       "adj_moneyline": -118,
       "location": "Home",
       "result": 3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 23,
       "total": 43,
@@ -8444,7 +9345,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "astroturf"
+      "surface": "astroturf",
+      "cumulative_wins": 4,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New England Patriots",
@@ -8471,6 +9375,7 @@ const nflschedules =  {
       "adj_moneyline": -265,
       "location": "Home",
       "result": -20,
+      "result_for_team": 20,
       "absolute_result": 20,
       "score": 41,
       "total": 62,
@@ -8483,6 +9388,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 53,
+      "cumulative_wins": 5,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -8510,6 +9418,7 @@ const nflschedules =  {
       "adj_moneyline": 142,
       "location": "Home",
       "result": 2,
+      "result_for_team": -2,
       "absolute_result": 2,
       "score": 22,
       "total": 46,
@@ -8522,6 +9431,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 72,
+      "cumulative_wins": 5,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 3
     },
     {
@@ -8549,6 +9461,7 @@ const nflschedules =  {
       "adj_moneyline": -225,
       "location": "Home",
       "result": 3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 23,
       "total": 43,
@@ -8559,7 +9472,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "astroturf"
+      "surface": "astroturf",
+      "cumulative_wins": 6,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New York Jets",
@@ -8586,6 +9502,7 @@ const nflschedules =  {
       "adj_moneyline": 124,
       "location": "Home",
       "result": 8,
+      "result_for_team": -8,
       "absolute_result": 8,
       "score": 13,
       "total": 34,
@@ -8598,6 +9515,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 71,
+      "cumulative_wins": 6,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -8625,6 +9545,7 @@ const nflschedules =  {
       "adj_moneyline": 190,
       "location": "Home",
       "result": -3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 23,
       "total": 49,
@@ -8635,7 +9556,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "astroturf"
+      "surface": "astroturf",
+      "cumulative_wins": 6,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Dallas Cowboys",
@@ -8662,6 +9586,7 @@ const nflschedules =  {
       "adj_moneyline": -360,
       "location": "Home",
       "result": -24,
+      "result_for_team": 24,
       "absolute_result": 24,
       "score": 34,
       "total": 44,
@@ -8672,7 +9597,10 @@ const nflschedules =  {
       "over_odds": -115,
       "under_odds": -105,
       "roof": "closed",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 7,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Tennessee Titans",
@@ -8699,6 +9627,7 @@ const nflschedules =  {
       "adj_moneyline": -375,
       "location": "Home",
       "result": -5,
+      "result_for_team": -5,
       "absolute_result": 5,
       "score": 27,
       "total": 59,
@@ -8709,7 +9638,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "closed",
-      "surface": "astroturf"
+      "surface": "astroturf",
+      "cumulative_wins": 7,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Jacksonville Jaguars",
@@ -8736,6 +9668,7 @@ const nflschedules =  {
       "adj_moneyline": -192,
       "location": "Home",
       "result": -3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 23,
       "total": 43,
@@ -8746,11 +9679,17 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "outdoors",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 8,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "BYE",
-      "week": 14
+      "week": 14,
+      "cumulative_wins": 8,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Miami Dolphins",
@@ -8777,6 +9716,7 @@ const nflschedules =  {
       "adj_moneyline": -155,
       "location": "Home",
       "result": 8,
+      "result_for_team": 8,
       "absolute_result": 8,
       "score": 20,
       "total": 32,
@@ -8787,7 +9727,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "closed",
-      "surface": "astroturf"
+      "surface": "astroturf",
+      "cumulative_wins": 9,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Kansas City Chiefs",
@@ -8814,6 +9757,7 @@ const nflschedules =  {
       "adj_moneyline": 150,
       "location": "Home",
       "result": 8,
+      "result_for_team": -8,
       "absolute_result": 8,
       "score": 19,
       "total": 46,
@@ -8826,6 +9770,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 30,
+      "cumulative_wins": 9,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -8853,6 +9800,7 @@ const nflschedules =  {
       "adj_moneyline": 200,
       "location": "Home",
       "result": -29,
+      "result_for_team": -29,
       "absolute_result": 29,
       "score": 2,
       "total": 33,
@@ -8863,7 +9811,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "closed",
-      "surface": "astroturf"
+      "surface": "astroturf",
+      "cumulative_wins": 9,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Tennessee Titans",
@@ -8890,6 +9841,7 @@ const nflschedules =  {
       "adj_moneyline": 120,
       "location": "Home",
       "result": -9,
+      "result_for_team": 9,
       "absolute_result": 9,
       "score": 23,
       "total": 37,
@@ -8902,6 +9854,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 35,
+      "cumulative_wins": 10,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -8929,6 +9884,7 @@ const nflschedules =  {
       "adj_moneyline": 136,
       "location": "Home",
       "result": 20,
+      "result_for_team": 20,
       "absolute_result": 20,
       "score": 32,
       "total": 44,
@@ -8939,7 +9895,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "astroturf"
+      "surface": "astroturf",
+      "cumulative_wins": 11,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Kansas City Chiefs",
@@ -8966,6 +9925,7 @@ const nflschedules =  {
       "adj_moneyline": 410,
       "location": "Home",
       "result": 9,
+      "result_for_team": -9,
       "absolute_result": 9,
       "score": 14,
       "total": 37,
@@ -8978,12 +9938,15 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 23,
+      "cumulative_wins": 11,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 17
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 11,
+      "losses": 8,
       "ties": 0
     }
   ],
@@ -9013,6 +9976,7 @@ const nflschedules =  {
       "adj_moneyline": 130,
       "location": "Home",
       "result": -2,
+      "result_for_team": -2,
       "absolute_result": 2,
       "score": 27,
       "total": 56,
@@ -9023,7 +9987,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 0,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Green Bay Packers",
@@ -9050,6 +10017,7 @@ const nflschedules =  {
       "adj_moneyline": -142,
       "location": "Home",
       "result": 6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 10,
       "total": 26,
@@ -9062,6 +10030,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 85,
+      "cumulative_wins": 0,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -9089,6 +10060,7 @@ const nflschedules =  {
       "adj_moneyline": -125,
       "location": "Home",
       "result": 5,
+      "result_for_team": 5,
       "absolute_result": 5,
       "score": 21,
       "total": 37,
@@ -9099,7 +10071,10 @@ const nflschedules =  {
       "over_odds": -115,
       "under_odds": -105,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 1,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Pittsburgh Steelers",
@@ -9126,6 +10101,7 @@ const nflschedules =  {
       "adj_moneyline": 110,
       "location": "Home",
       "result": 3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 27,
       "total": 51,
@@ -9136,7 +10112,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Jacksonville Jaguars",
@@ -9163,6 +10142,7 @@ const nflschedules =  {
       "adj_moneyline": 154,
       "location": "Home",
       "result": 3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 34,
       "total": 71,
@@ -9175,6 +10155,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 74,
+      "cumulative_wins": 2,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -9202,6 +10185,7 @@ const nflschedules =  {
       "adj_moneyline": 114,
       "location": "Home",
       "result": -3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 20,
       "total": 37,
@@ -9214,6 +10198,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 80,
+      "cumulative_wins": 3,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -9241,6 +10228,7 @@ const nflschedules =  {
       "adj_moneyline": -155,
       "location": "Home",
       "result": 6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 16,
       "total": 26,
@@ -9251,7 +10239,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 4,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Houston Texans",
@@ -9278,6 +10269,7 @@ const nflschedules =  {
       "adj_moneyline": 185,
       "location": "Home",
       "result": 3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 20,
       "total": 43,
@@ -9288,7 +10280,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "astroturf"
+      "surface": "astroturf",
+      "cumulative_wins": 4,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Minnesota Vikings",
@@ -9315,6 +10310,7 @@ const nflschedules =  {
       "adj_moneyline": 240,
       "location": "Home",
       "result": 8,
+      "result_for_team": -8,
       "absolute_result": 8,
       "score": 13,
       "total": 34,
@@ -9325,7 +10321,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 4,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Buffalo Bills",
@@ -9352,6 +10351,7 @@ const nflschedules =  {
       "adj_moneyline": 190,
       "location": "Home",
       "result": -10,
+      "result_for_team": -10,
       "absolute_result": 10,
       "score": 20,
       "total": 50,
@@ -9362,7 +10362,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 4,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New York Jets",
@@ -9389,6 +10392,7 @@ const nflschedules =  {
       "adj_moneyline": 170,
       "location": "Home",
       "result": -1,
+      "result_for_team": 1,
       "absolute_result": 1,
       "score": 28,
       "total": 55,
@@ -9401,6 +10405,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 62,
+      "cumulative_wins": 5,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -9428,6 +10435,7 @@ const nflschedules =  {
       "adj_moneyline": 295,
       "location": "Home",
       "result": -18,
+      "result_for_team": -18,
       "absolute_result": 18,
       "score": 6,
       "total": 30,
@@ -9438,7 +10446,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 5,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New England Patriots",
@@ -9465,6 +10476,7 @@ const nflschedules =  {
       "adj_moneyline": -135,
       "location": "Home",
       "result": -1,
+      "result_for_team": 1,
       "absolute_result": 1,
       "score": 25,
       "total": 49,
@@ -9477,11 +10489,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 36,
+      "cumulative_wins": 6,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
       "opponent": "BYE",
-      "week": 14
+      "week": 14,
+      "cumulative_wins": 6,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Denver Broncos",
@@ -9508,6 +10526,7 @@ const nflschedules =  {
       "adj_moneyline": 195,
       "location": "Home",
       "result": 18,
+      "result_for_team": -18,
       "absolute_result": 18,
       "score": 13,
       "total": 44,
@@ -9520,6 +10539,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 55,
+      "cumulative_wins": 6,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 15
     },
     {
@@ -9547,6 +10569,7 @@ const nflschedules =  {
       "adj_moneyline": -198,
       "location": "Home",
       "result": 8,
+      "result_for_team": 8,
       "absolute_result": 8,
       "score": 38,
       "total": 68,
@@ -9557,7 +10580,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 7,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New York Giants",
@@ -9584,6 +10610,7 @@ const nflschedules =  {
       "adj_moneyline": -410,
       "location": "Home",
       "result": 12,
+      "result_for_team": -12,
       "absolute_result": 12,
       "score": 33,
       "total": 78,
@@ -9596,6 +10623,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 54,
+      "cumulative_wins": 7,
+      "cumulative_losses": 9,
+      "cumulative_ties": 0,
       "wind": 0
     },
     {
@@ -9623,6 +10653,7 @@ const nflschedules =  {
       "adj_moneyline": -180,
       "location": "Home",
       "result": 3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 26,
       "total": 49,
@@ -9633,12 +10664,15 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -105,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 8,
+      "cumulative_losses": 9,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 8,
+      "losses": 9,
       "ties": 0
     }
   ],
@@ -9668,6 +10702,7 @@ const nflschedules =  {
       "adj_moneyline": 150,
       "location": "Home",
       "result": 3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 17,
       "total": 37,
@@ -9680,6 +10715,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 91,
+      "cumulative_wins": 0,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -9707,6 +10745,7 @@ const nflschedules =  {
       "adj_moneyline": -170,
       "location": "Home",
       "result": -5,
+      "result_for_team": -5,
       "absolute_result": 5,
       "score": 13,
       "total": 31,
@@ -9719,6 +10758,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 80,
+      "cumulative_wins": 0,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -9746,6 +10788,7 @@ const nflschedules =  {
       "adj_moneyline": 180,
       "location": "Home",
       "result": 37,
+      "result_for_team": -37,
       "absolute_result": 37,
       "score": 10,
       "total": 57,
@@ -9758,6 +10801,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "a_turf",
       "temp": 68,
+      "cumulative_wins": 0,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -9785,6 +10831,7 @@ const nflschedules =  {
       "adj_moneyline": 195,
       "location": "Home",
       "result": 4,
+      "result_for_team": -4,
       "absolute_result": 4,
       "score": 20,
       "total": 44,
@@ -9795,7 +10842,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "astroturf"
+      "surface": "astroturf",
+      "cumulative_wins": 0,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Indianapolis Colts",
@@ -9822,6 +10872,7 @@ const nflschedules =  {
       "adj_moneyline": -185,
       "location": "Home",
       "result": 3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 37,
       "total": 71,
@@ -9834,6 +10885,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 74,
+      "cumulative_wins": 1,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -9861,6 +10915,7 @@ const nflschedules =  {
       "adj_moneyline": -120,
       "location": "Neutral",
       "result": 19,
+      "result_for_team": -19,
       "absolute_result": 19,
       "score": 16,
       "total": 51,
@@ -9873,6 +10928,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 54,
+      "cumulative_wins": 1,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 3
     },
     {
@@ -9900,6 +10958,7 @@ const nflschedules =  {
       "adj_moneyline": -298,
       "location": "Neutral",
       "result": 16,
+      "result_for_team": 16,
       "absolute_result": 16,
       "score": 32,
       "total": 48,
@@ -9912,6 +10971,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 63,
+      "cumulative_wins": 2,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -9939,6 +11001,7 @@ const nflschedules =  {
       "adj_moneyline": 160,
       "location": "Home",
       "result": -3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 27,
       "total": 57,
@@ -9951,6 +11014,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 84,
+      "cumulative_wins": 2,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -9978,6 +11044,7 @@ const nflschedules =  {
       "adj_moneyline": 270,
       "location": "Home",
       "result": 5,
+      "result_for_team": -5,
       "absolute_result": 5,
       "score": 23,
       "total": 51,
@@ -9990,6 +11057,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 57,
+      "cumulative_wins": 2,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -10017,6 +11087,7 @@ const nflschedules =  {
       "adj_moneyline": 280,
       "location": "Home",
       "result": -5,
+      "result_for_team": -5,
       "absolute_result": 5,
       "score": 7,
       "total": 19,
@@ -10029,6 +11100,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 79,
+      "cumulative_wins": 2,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -10056,6 +11130,7 @@ const nflschedules =  {
       "adj_moneyline": 650,
       "location": "Home",
       "result": 46,
+      "result_for_team": -46,
       "absolute_result": 46,
       "score": 6,
       "total": 58,
@@ -10066,11 +11141,17 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 9,
+      "cumulative_ties": 0
     },
     {
       "opponent": "BYE",
-      "week": 12
+      "week": 12,
+      "cumulative_wins": 2,
+      "cumulative_losses": 9,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Houston Texans",
@@ -10097,6 +11178,7 @@ const nflschedules =  {
       "adj_moneyline": 160,
       "location": "Home",
       "result": -3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 20,
       "total": 43,
@@ -10107,7 +11189,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "outdoors",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 2,
+      "cumulative_losses": 10,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Tennessee Titans",
@@ -10134,6 +11219,7 @@ const nflschedules =  {
       "adj_moneyline": 142,
       "location": "Home",
       "result": -4,
+      "result_for_team": 4,
       "absolute_result": 4,
       "score": 10,
       "total": 16,
@@ -10146,6 +11232,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 53,
+      "cumulative_wins": 3,
+      "cumulative_losses": 10,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -10173,6 +11262,7 @@ const nflschedules =  {
       "adj_moneyline": 145,
       "location": "Home",
       "result": -7,
+      "result_for_team": -7,
       "absolute_result": 7,
       "score": 25,
       "total": 57,
@@ -10183,7 +11273,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "outdoors",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 3,
+      "cumulative_losses": 11,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Las Vegas Raiders",
@@ -10210,6 +11303,7 @@ const nflschedules =  {
       "adj_moneyline": 110,
       "location": "Home",
       "result": 5,
+      "result_for_team": -5,
       "absolute_result": 5,
       "score": 14,
       "total": 33,
@@ -10220,7 +11314,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 3,
+      "cumulative_losses": 12,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Tennessee Titans",
@@ -10247,6 +11344,7 @@ const nflschedules =  {
       "adj_moneyline": -112,
       "location": "Home",
       "result": 7,
+      "result_for_team": 7,
       "absolute_result": 7,
       "score": 20,
       "total": 33,
@@ -10259,6 +11357,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 72,
+      "cumulative_wins": 4,
+      "cumulative_losses": 12,
+      "cumulative_ties": 0,
       "wind": 16
     },
     {
@@ -10286,6 +11387,7 @@ const nflschedules =  {
       "adj_moneyline": 150,
       "location": "Home",
       "result": 3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 23,
       "total": 49,
@@ -10296,12 +11398,15 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -105,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 4,
+      "cumulative_losses": 13,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 4,
+      "losses": 13,
       "ties": 0
     }
   ],
@@ -10331,6 +11436,7 @@ const nflschedules =  {
       "adj_moneyline": -148,
       "location": "Home",
       "result": 7,
+      "result_for_team": 7,
       "absolute_result": 7,
       "score": 27,
       "total": 47,
@@ -10343,6 +11449,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 67,
+      "cumulative_wins": 1,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -10370,6 +11479,7 @@ const nflschedules =  {
       "adj_moneyline": -290,
       "location": "Home",
       "result": 1,
+      "result_for_team": 1,
       "absolute_result": 1,
       "score": 26,
       "total": 51,
@@ -10382,6 +11492,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 89,
+      "cumulative_wins": 2,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -10409,6 +11522,7 @@ const nflschedules =  {
       "adj_moneyline": -170,
       "location": "Home",
       "result": -5,
+      "result_for_team": 5,
       "absolute_result": 5,
       "score": 22,
       "total": 39,
@@ -10419,7 +11533,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 3,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Los Angeles Chargers",
@@ -10446,6 +11563,7 @@ const nflschedules =  {
       "adj_moneyline": -345,
       "location": "Home",
       "result": -7,
+      "result_for_team": 7,
       "absolute_result": 7,
       "score": 17,
       "total": 27,
@@ -10456,7 +11574,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 4,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New Orleans Saints",
@@ -10483,6 +11604,7 @@ const nflschedules =  {
       "adj_moneyline": -230,
       "location": "Home",
       "result": 13,
+      "result_for_team": 13,
       "absolute_result": 13,
       "score": 26,
       "total": 39,
@@ -10495,11 +11617,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 70,
+      "cumulative_wins": 5,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 1
     },
     {
       "opponent": "BYE",
-      "week": 6
+      "week": 6,
+      "cumulative_wins": 5,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0
     },
     {
       "opponent": "San Francisco 49ers",
@@ -10526,6 +11654,7 @@ const nflschedules =  {
       "adj_moneyline": 120,
       "location": "Home",
       "result": -10,
+      "result_for_team": 10,
       "absolute_result": 10,
       "score": 28,
       "total": 46,
@@ -10538,6 +11667,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 78,
+      "cumulative_wins": 6,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 3
     },
     {
@@ -10565,6 +11697,7 @@ const nflschedules =  {
       "adj_moneyline": -440,
       "location": "Home",
       "result": -7,
+      "result_for_team": 7,
       "absolute_result": 7,
       "score": 27,
       "total": 47,
@@ -10575,7 +11708,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 7,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Tampa Bay Buccaneers",
@@ -10602,6 +11738,7 @@ const nflschedules =  {
       "adj_moneyline": -425,
       "location": "Home",
       "result": 6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 30,
       "total": 54,
@@ -10614,6 +11751,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 63,
+      "cumulative_wins": 8,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -10641,6 +11781,7 @@ const nflschedules =  {
       "adj_moneyline": -380,
       "location": "Home",
       "result": 2,
+      "result_for_team": 2,
       "absolute_result": 2,
       "score": 16,
       "total": 30,
@@ -10653,6 +11794,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 57,
+      "cumulative_wins": 9,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -10680,6 +11824,7 @@ const nflschedules =  {
       "adj_moneyline": 120,
       "location": "Home",
       "result": 9,
+      "result_for_team": -9,
       "absolute_result": 9,
       "score": 21,
       "total": 51,
@@ -10692,6 +11837,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "a_turf",
       "temp": 50,
+      "cumulative_wins": 9,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 3
     },
     {
@@ -10719,6 +11867,7 @@ const nflschedules =  {
       "adj_moneyline": -700,
       "location": "Home",
       "result": -3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 30,
       "total": 57,
@@ -10731,6 +11880,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 61,
+      "cumulative_wins": 10,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -10758,6 +11910,7 @@ const nflschedules =  {
       "adj_moneyline": -800,
       "location": "Home",
       "result": 2,
+      "result_for_team": 2,
       "absolute_result": 2,
       "score": 19,
       "total": 36,
@@ -10770,6 +11923,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 37,
+      "cumulative_wins": 11,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -10797,6 +11953,7 @@ const nflschedules =  {
       "adj_moneyline": -238,
       "location": "Home",
       "result": 2,
+      "result_for_team": 2,
       "absolute_result": 2,
       "score": 19,
       "total": 36,
@@ -10809,6 +11966,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 50,
+      "cumulative_wins": 12,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -10836,6 +11996,7 @@ const nflschedules =  {
       "adj_moneyline": -230,
       "location": "Home",
       "result": -14,
+      "result_for_team": 14,
       "absolute_result": 14,
       "score": 21,
       "total": 28,
@@ -10848,6 +12009,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 40,
+      "cumulative_wins": 13,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 18
     },
     {
@@ -10875,6 +12039,7 @@ const nflschedules =  {
       "adj_moneyline": -180,
       "location": "Home",
       "result": 8,
+      "result_for_team": 8,
       "absolute_result": 8,
       "score": 27,
       "total": 46,
@@ -10887,6 +12052,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 30,
+      "cumulative_wins": 14,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -10914,6 +12082,7 @@ const nflschedules =  {
       "adj_moneyline": -162,
       "location": "Home",
       "result": -19,
+      "result_for_team": 19,
       "absolute_result": 19,
       "score": 29,
       "total": 39,
@@ -10926,6 +12095,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 39,
+      "cumulative_wins": 15,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 2
     },
     {
@@ -10953,6 +12125,7 @@ const nflschedules =  {
       "adj_moneyline": 370,
       "location": "Home",
       "result": 38,
+      "result_for_team": -38,
       "absolute_result": 38,
       "score": 0,
       "total": 38,
@@ -10965,6 +12138,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 28,
+      "cumulative_wins": 15,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -10992,6 +12168,7 @@ const nflschedules =  {
       "adj_moneyline": -550,
       "location": "Home",
       "result": 9,
+      "result_for_team": 9,
       "absolute_result": 9,
       "score": 23,
       "total": 37,
@@ -11004,6 +12181,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 23,
+      "cumulative_wins": 16,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 17
     },
     {
@@ -11031,6 +12211,7 @@ const nflschedules =  {
       "adj_moneyline": -118,
       "location": "Home",
       "result": 3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 32,
       "total": 61,
@@ -11043,6 +12224,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 31,
+      "cumulative_wins": 17,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -11070,6 +12254,7 @@ const nflschedules =  {
       "adj_moneyline": -120,
       "location": "Neutral",
       "result": 18,
+      "result_for_team": -18,
       "absolute_result": 18,
       "score": 22,
       "total": 62,
@@ -11080,12 +12265,15 @@ const nflschedules =  {
       "over_odds": -115,
       "under_odds": -105,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 17,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 17,
+      "losses": 3,
       "ties": 0
     }
   ],
@@ -11115,6 +12303,7 @@ const nflschedules =  {
       "adj_moneyline": 130,
       "location": "Home",
       "result": 12,
+      "result_for_team": -12,
       "absolute_result": 12,
       "score": 10,
       "total": 32,
@@ -11125,7 +12314,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 0,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Baltimore Ravens",
@@ -11152,6 +12344,7 @@ const nflschedules =  {
       "adj_moneyline": 350,
       "location": "Home",
       "result": -3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 26,
       "total": 49,
@@ -11164,6 +12357,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 76,
+      "cumulative_wins": 1,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -11191,6 +12387,7 @@ const nflschedules =  {
       "adj_moneyline": -245,
       "location": "Home",
       "result": -14,
+      "result_for_team": -14,
       "absolute_result": 14,
       "score": 22,
       "total": 58,
@@ -11201,7 +12398,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 1,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cleveland Browns",
@@ -11228,6 +12428,7 @@ const nflschedules =  {
       "adj_moneyline": 114,
       "location": "Home",
       "result": 4,
+      "result_for_team": 4,
       "absolute_result": 4,
       "score": 20,
       "total": 36,
@@ -11238,7 +12439,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 2,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Denver Broncos",
@@ -11265,6 +12469,7 @@ const nflschedules =  {
       "adj_moneyline": 130,
       "location": "Home",
       "result": 16,
+      "result_for_team": -16,
       "absolute_result": 16,
       "score": 18,
       "total": 52,
@@ -11277,6 +12482,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 73,
+      "cumulative_wins": 2,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -11304,6 +12512,7 @@ const nflschedules =  {
       "adj_moneyline": 150,
       "location": "Home",
       "result": -19,
+      "result_for_team": -19,
       "absolute_result": 19,
       "score": 13,
       "total": 45,
@@ -11314,7 +12523,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 2,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Los Angeles Rams",
@@ -11341,6 +12553,7 @@ const nflschedules =  {
       "adj_moneyline": 280,
       "location": "Home",
       "result": 5,
+      "result_for_team": -5,
       "absolute_result": 5,
       "score": 15,
       "total": 35,
@@ -11351,7 +12564,10 @@ const nflschedules =  {
       "over_odds": -115,
       "under_odds": -105,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Kansas City Chiefs",
@@ -11378,6 +12594,7 @@ const nflschedules =  {
       "adj_moneyline": 340,
       "location": "Home",
       "result": -7,
+      "result_for_team": -7,
       "absolute_result": 7,
       "score": 20,
       "total": 47,
@@ -11388,7 +12605,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 2,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cincinnati Bengals",
@@ -11415,6 +12635,7 @@ const nflschedules =  {
       "adj_moneyline": 320,
       "location": "Home",
       "result": 17,
+      "result_for_team": -17,
       "absolute_result": 17,
       "score": 24,
       "total": 65,
@@ -11427,11 +12648,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 67,
+      "cumulative_wins": 2,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
       "opponent": "BYE",
-      "week": 10
+      "week": 10,
+      "cumulative_wins": 2,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Miami Dolphins",
@@ -11458,6 +12685,7 @@ const nflschedules =  {
       "adj_moneyline": 330,
       "location": "Home",
       "result": 15,
+      "result_for_team": -15,
       "absolute_result": 15,
       "score": 19,
       "total": 53,
@@ -11470,6 +12698,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 80,
+      "cumulative_wins": 2,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 16
     },
     {
@@ -11497,6 +12728,7 @@ const nflschedules =  {
       "adj_moneyline": 225,
       "location": "Home",
       "result": -10,
+      "result_for_team": -10,
       "absolute_result": 10,
       "score": 19,
       "total": 48,
@@ -11507,7 +12739,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 2,
+      "cumulative_losses": 9,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Kansas City Chiefs",
@@ -11534,6 +12769,7 @@ const nflschedules =  {
       "adj_moneyline": 550,
       "location": "Home",
       "result": 2,
+      "result_for_team": -2,
       "absolute_result": 2,
       "score": 17,
       "total": 36,
@@ -11546,6 +12782,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 37,
+      "cumulative_wins": 2,
+      "cumulative_losses": 10,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -11573,6 +12812,7 @@ const nflschedules =  {
       "adj_moneyline": 260,
       "location": "Home",
       "result": 15,
+      "result_for_team": -15,
       "absolute_result": 15,
       "score": 13,
       "total": 41,
@@ -11585,6 +12825,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 71,
+      "cumulative_wins": 2,
+      "cumulative_losses": 11,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -11612,6 +12855,7 @@ const nflschedules =  {
       "adj_moneyline": 275,
       "location": "Home",
       "result": -6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 9,
       "total": 24,
@@ -11622,7 +12866,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 2,
+      "cumulative_losses": 12,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Jacksonville Jaguars",
@@ -11649,6 +12896,7 @@ const nflschedules =  {
       "adj_moneyline": -130,
       "location": "Home",
       "result": 5,
+      "result_for_team": 5,
       "absolute_result": 5,
       "score": 19,
       "total": 33,
@@ -11659,7 +12907,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 3,
+      "cumulative_losses": 12,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New Orleans Saints",
@@ -11686,6 +12937,7 @@ const nflschedules =  {
       "adj_moneyline": -125,
       "location": "Home",
       "result": -15,
+      "result_for_team": 15,
       "absolute_result": 15,
       "score": 25,
       "total": 35,
@@ -11696,7 +12948,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 4,
+      "cumulative_losses": 12,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Los Angeles Chargers",
@@ -11723,6 +12978,7 @@ const nflschedules =  {
       "adj_moneyline": 275,
       "location": "Home",
       "result": -14,
+      "result_for_team": -14,
       "absolute_result": 14,
       "score": 20,
       "total": 54,
@@ -11733,12 +12989,15 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 4,
+      "cumulative_losses": 13,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 4,
+      "losses": 13,
       "ties": 0
     }
   ],
@@ -11768,6 +13027,7 @@ const nflschedules =  {
       "adj_moneyline": -155,
       "location": "Home",
       "result": 12,
+      "result_for_team": 12,
       "absolute_result": 12,
       "score": 22,
       "total": 32,
@@ -11778,7 +13038,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 1,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Carolina Panthers",
@@ -11805,6 +13068,7 @@ const nflschedules =  {
       "adj_moneyline": -225,
       "location": "Home",
       "result": -23,
+      "result_for_team": 23,
       "absolute_result": 23,
       "score": 26,
       "total": 29,
@@ -11817,6 +13081,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 78,
+      "cumulative_wins": 2,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 13
     },
     {
@@ -11844,6 +13111,7 @@ const nflschedules =  {
       "adj_moneyline": 124,
       "location": "Home",
       "result": 10,
+      "result_for_team": -10,
       "absolute_result": 10,
       "score": 10,
       "total": 30,
@@ -11856,6 +13124,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 72,
+      "cumulative_wins": 2,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 2
     },
     {
@@ -11883,6 +13154,7 @@ const nflschedules =  {
       "adj_moneyline": 275,
       "location": "Home",
       "result": -7,
+      "result_for_team": -7,
       "absolute_result": 7,
       "score": 10,
       "total": 27,
@@ -11893,11 +13165,17 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "BYE",
-      "week": 5
+      "week": 5,
+      "cumulative_wins": 2,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Denver Broncos",
@@ -11924,6 +13202,7 @@ const nflschedules =  {
       "adj_moneyline": -155,
       "location": "Home",
       "result": -7,
+      "result_for_team": 7,
       "absolute_result": 7,
       "score": 23,
       "total": 39,
@@ -11936,6 +13215,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 65,
+      "cumulative_wins": 3,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -11963,6 +13245,7 @@ const nflschedules =  {
       "adj_moneyline": -122,
       "location": "Home",
       "result": 2,
+      "result_for_team": -2,
       "absolute_result": 2,
       "score": 15,
       "total": 32,
@@ -11973,7 +13256,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 3,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New Orleans Saints",
@@ -12000,6 +13286,7 @@ const nflschedules =  {
       "adj_moneyline": -310,
       "location": "Home",
       "result": 18,
+      "result_for_team": 18,
       "absolute_result": 18,
       "score": 26,
       "total": 34,
@@ -12010,7 +13297,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 4,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cleveland Browns",
@@ -12037,6 +13327,7 @@ const nflschedules =  {
       "adj_moneyline": -130,
       "location": "Home",
       "result": -17,
+      "result_for_team": 17,
       "absolute_result": 17,
       "score": 27,
       "total": 37,
@@ -12049,6 +13340,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 57,
+      "cumulative_wins": 5,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -12076,6 +13370,7 @@ const nflschedules =  {
       "adj_moneyline": -380,
       "location": "Home",
       "result": 10,
+      "result_for_team": 10,
       "absolute_result": 10,
       "score": 27,
       "total": 44,
@@ -12086,7 +13381,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 6,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cincinnati Bengals",
@@ -12113,6 +13411,7 @@ const nflschedules =  {
       "adj_moneyline": -110,
       "location": "Home",
       "result": 7,
+      "result_for_team": 7,
       "absolute_result": 7,
       "score": 34,
       "total": 61,
@@ -12123,7 +13422,10 @@ const nflschedules =  {
       "over_odds": -115,
       "under_odds": -105,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 7,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Baltimore Ravens",
@@ -12150,6 +13452,7 @@ const nflschedules =  {
       "adj_moneyline": 140,
       "location": "Home",
       "result": -7,
+      "result_for_team": -7,
       "absolute_result": 7,
       "score": 23,
       "total": 53,
@@ -12160,7 +13463,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 7,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Atlanta Falcons",
@@ -12187,6 +13493,7 @@ const nflschedules =  {
       "adj_moneyline": -118,
       "location": "Home",
       "result": -4,
+      "result_for_team": 4,
       "absolute_result": 4,
       "score": 17,
       "total": 30,
@@ -12197,7 +13504,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 8,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Kansas City Chiefs",
@@ -12224,6 +13534,7 @@ const nflschedules =  {
       "adj_moneyline": 195,
       "location": "Home",
       "result": 2,
+      "result_for_team": -2,
       "absolute_result": 2,
       "score": 17,
       "total": 36,
@@ -12236,6 +13547,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 50,
+      "cumulative_wins": 8,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -12263,6 +13577,7 @@ const nflschedules =  {
       "adj_moneyline": -162,
       "location": "Home",
       "result": -23,
+      "result_for_team": -23,
       "absolute_result": 23,
       "score": 17,
       "total": 57,
@@ -12273,7 +13588,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 8,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Denver Broncos",
@@ -12300,6 +13618,7 @@ const nflschedules =  {
       "adj_moneyline": -148,
       "location": "Home",
       "result": 7,
+      "result_for_team": 7,
       "absolute_result": 7,
       "score": 34,
       "total": 61,
@@ -12310,7 +13629,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 9,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New England Patriots",
@@ -12337,6 +13659,7 @@ const nflschedules =  {
       "adj_moneyline": -305,
       "location": "Home",
       "result": -33,
+      "result_for_team": 33,
       "absolute_result": 33,
       "score": 40,
       "total": 47,
@@ -12349,6 +13672,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 40,
+      "cumulative_wins": 10,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -12376,6 +13702,7 @@ const nflschedules =  {
       "adj_moneyline": -345,
       "location": "Home",
       "result": -14,
+      "result_for_team": 14,
       "absolute_result": 14,
       "score": 34,
       "total": 54,
@@ -12386,7 +13713,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 11,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Houston Texans",
@@ -12413,6 +13743,7 @@ const nflschedules =  {
       "adj_moneyline": -162,
       "location": "Home",
       "result": 20,
+      "result_for_team": -20,
       "absolute_result": 20,
       "score": 12,
       "total": 44,
@@ -12423,12 +13754,15 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "astroturf"
+      "surface": "astroturf",
+      "cumulative_wins": 11,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 11,
+      "losses": 7,
       "ties": 0
     }
   ],
@@ -12458,6 +13792,7 @@ const nflschedules =  {
       "adj_moneyline": 185,
       "location": "Home",
       "result": 6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 20,
       "total": 46,
@@ -12468,7 +13803,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 0,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Arizona Cardinals",
@@ -12495,6 +13833,7 @@ const nflschedules =  {
       "adj_moneyline": -112,
       "location": "Home",
       "result": 31,
+      "result_for_team": -31,
       "absolute_result": 31,
       "score": 10,
       "total": 51,
@@ -12505,7 +13844,10 @@ const nflschedules =  {
       "over_odds": -102,
       "under_odds": -118,
       "roof": "closed",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 0,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "San Francisco 49ers",
@@ -12532,6 +13874,7 @@ const nflschedules =  {
       "adj_moneyline": 210,
       "location": "Home",
       "result": 3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 27,
       "total": 51,
@@ -12542,7 +13885,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 1,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Chicago Bears",
@@ -12569,6 +13915,7 @@ const nflschedules =  {
       "adj_moneyline": 136,
       "location": "Home",
       "result": 6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 18,
       "total": 42,
@@ -12581,6 +13928,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 70,
+      "cumulative_wins": 1,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 16
     },
     {
@@ -12608,6 +13958,7 @@ const nflschedules =  {
       "adj_moneyline": 130,
       "location": "Home",
       "result": -5,
+      "result_for_team": -5,
       "absolute_result": 5,
       "score": 19,
       "total": 43,
@@ -12618,11 +13969,17 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 1,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "BYE",
-      "week": 6
+      "week": 6,
+      "cumulative_wins": 1,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Las Vegas Raiders",
@@ -12649,6 +14006,7 @@ const nflschedules =  {
       "adj_moneyline": -355,
       "location": "Home",
       "result": 5,
+      "result_for_team": 5,
       "absolute_result": 5,
       "score": 20,
       "total": 35,
@@ -12659,7 +14017,10 @@ const nflschedules =  {
       "over_odds": -115,
       "under_odds": -105,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Minnesota Vikings",
@@ -12686,6 +14047,7 @@ const nflschedules =  {
       "adj_moneyline": 130,
       "location": "Home",
       "result": 10,
+      "result_for_team": 10,
       "absolute_result": 10,
       "score": 30,
       "total": 50,
@@ -12696,7 +14058,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 3,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Seattle Seahawks",
@@ -12723,6 +14088,7 @@ const nflschedules =  {
       "adj_moneyline": -125,
       "location": "Home",
       "result": -6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 26,
       "total": 46,
@@ -12735,6 +14101,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 52,
+      "cumulative_wins": 4,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -12762,6 +14131,7 @@ const nflschedules =  {
       "adj_moneyline": -142,
       "location": "Home",
       "result": -8,
+      "result_for_team": -8,
       "absolute_result": 8,
       "score": 15,
       "total": 38,
@@ -12772,7 +14142,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 4,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New England Patriots",
@@ -12799,6 +14172,7 @@ const nflschedules =  {
       "adj_moneyline": -198,
       "location": "Home",
       "result": -6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 28,
       "total": 50,
@@ -12811,6 +14185,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 59,
+      "cumulative_wins": 5,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -12838,6 +14215,7 @@ const nflschedules =  {
       "adj_moneyline": 142,
       "location": "Home",
       "result": -17,
+      "result_for_team": -17,
       "absolute_result": 17,
       "score": 20,
       "total": 57,
@@ -12848,7 +14226,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 5,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New Orleans Saints",
@@ -12875,6 +14256,7 @@ const nflschedules =  {
       "adj_moneyline": -142,
       "location": "Home",
       "result": -7,
+      "result_for_team": 7,
       "absolute_result": 7,
       "score": 21,
       "total": 35,
@@ -12885,7 +14267,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 6,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Buffalo Bills",
@@ -12912,6 +14297,7 @@ const nflschedules =  {
       "adj_moneyline": 160,
       "location": "Home",
       "result": 2,
+      "result_for_team": 2,
       "absolute_result": 2,
       "score": 44,
       "total": 86,
@@ -12922,7 +14308,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 7,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0
     },
     {
       "opponent": "San Francisco 49ers",
@@ -12949,6 +14338,7 @@ const nflschedules =  {
       "adj_moneyline": 130,
       "location": "Home",
       "result": -6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 12,
       "total": 18,
@@ -12961,6 +14351,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 53,
+      "cumulative_wins": 8,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -12988,6 +14381,7 @@ const nflschedules =  {
       "adj_moneyline": -162,
       "location": "Home",
       "result": -10,
+      "result_for_team": 10,
       "absolute_result": 10,
       "score": 19,
       "total": 28,
@@ -13000,6 +14394,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 23,
+      "cumulative_wins": 9,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -13027,6 +14424,7 @@ const nflschedules =  {
       "adj_moneyline": -340,
       "location": "Home",
       "result": 4,
+      "result_for_team": 4,
       "absolute_result": 4,
       "score": 13,
       "total": 22,
@@ -13037,7 +14435,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 10,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Seattle Seahawks",
@@ -13064,6 +14465,7 @@ const nflschedules =  {
       "adj_moneyline": 285,
       "location": "Home",
       "result": -5,
+      "result_for_team": -5,
       "absolute_result": 5,
       "score": 25,
       "total": 55,
@@ -13074,7 +14476,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 10,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Minnesota Vikings",
@@ -13101,6 +14506,7 @@ const nflschedules =  {
       "adj_moneyline": 120,
       "location": "Neutral",
       "result": 18,
+      "result_for_team": 18,
       "absolute_result": 18,
       "score": 27,
       "total": 36,
@@ -13111,7 +14517,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 11,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Philadelphia Eagles",
@@ -13138,6 +14547,7 @@ const nflschedules =  {
       "adj_moneyline": 260,
       "location": "Home",
       "result": 6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 22,
       "total": 50,
@@ -13150,12 +14560,15 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 34,
+      "cumulative_wins": 11,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 11,
+      "losses": 8,
       "ties": 0
     }
   ],
@@ -13185,6 +14598,7 @@ const nflschedules =  {
       "adj_moneyline": -180,
       "location": "Home",
       "result": 3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 20,
       "total": 37,
@@ -13197,6 +14611,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 91,
+      "cumulative_wins": 1,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -13224,6 +14641,7 @@ const nflschedules =  {
       "adj_moneyline": -135,
       "location": "Home",
       "result": -21,
+      "result_for_team": -21,
       "absolute_result": 21,
       "score": 10,
       "total": 41,
@@ -13236,6 +14654,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 86,
+      "cumulative_wins": 1,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 3
     },
     {
@@ -13263,6 +14684,7 @@ const nflschedules =  {
       "adj_moneyline": 170,
       "location": "Home",
       "result": 21,
+      "result_for_team": -21,
       "absolute_result": 21,
       "score": 3,
       "total": 27,
@@ -13275,6 +14697,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 64,
+      "cumulative_wins": 1,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 2
     },
     {
@@ -13302,6 +14727,7 @@ const nflschedules =  {
       "adj_moneyline": -135,
       "location": "Home",
       "result": -19,
+      "result_for_team": -19,
       "absolute_result": 19,
       "score": 12,
       "total": 43,
@@ -13314,6 +14740,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 86,
+      "cumulative_wins": 1,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -13341,6 +14770,7 @@ const nflschedules =  {
       "adj_moneyline": -130,
       "location": "Home",
       "result": -5,
+      "result_for_team": 5,
       "absolute_result": 5,
       "score": 15,
       "total": 25,
@@ -13353,11 +14783,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 65,
+      "cumulative_wins": 2,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 2
     },
     {
       "opponent": "BYE",
-      "week": 6
+      "week": 6,
+      "cumulative_wins": 2,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Indianapolis Colts",
@@ -13384,6 +14820,7 @@ const nflschedules =  {
       "adj_moneyline": 130,
       "location": "Home",
       "result": 6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 10,
       "total": 26,
@@ -13394,7 +14831,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Arizona Cardinals",
@@ -13421,6 +14861,7 @@ const nflschedules =  {
       "adj_moneyline": -198,
       "location": "Home",
       "result": -1,
+      "result_for_team": -1,
       "absolute_result": 1,
       "score": 27,
       "total": 55,
@@ -13433,6 +14874,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 82,
+      "cumulative_wins": 2,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 14
     },
     {
@@ -13460,6 +14904,7 @@ const nflschedules =  {
       "adj_moneyline": 230,
       "location": "Home",
       "result": 3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 27,
       "total": 57,
@@ -13472,6 +14917,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "a_turf",
       "temp": 54,
+      "cumulative_wins": 2,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -13499,6 +14947,7 @@ const nflschedules =  {
       "adj_moneyline": 120,
       "location": "Home",
       "result": -8,
+      "result_for_team": 8,
       "absolute_result": 8,
       "score": 23,
       "total": 38,
@@ -13509,7 +14958,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 3,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Las Vegas Raiders",
@@ -13536,6 +14988,7 @@ const nflschedules =  {
       "adj_moneyline": -425,
       "location": "Home",
       "result": 15,
+      "result_for_team": 15,
       "absolute_result": 15,
       "score": 34,
       "total": 53,
@@ -13548,6 +15001,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 80,
+      "cumulative_wins": 4,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 16
     },
     {
@@ -13575,6 +15031,7 @@ const nflschedules =  {
       "adj_moneyline": -360,
       "location": "Home",
       "result": 19,
+      "result_for_team": 19,
       "absolute_result": 19,
       "score": 34,
       "total": 49,
@@ -13587,6 +15044,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 77,
+      "cumulative_wins": 5,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -13614,6 +15074,7 @@ const nflschedules =  {
       "adj_moneyline": 145,
       "location": "Home",
       "result": 13,
+      "result_for_team": -13,
       "absolute_result": 13,
       "score": 17,
       "total": 47,
@@ -13626,6 +15087,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 27,
+      "cumulative_wins": 5,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -13653,6 +15117,7 @@ const nflschedules =  {
       "adj_moneyline": -298,
       "location": "Home",
       "result": 6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 32,
       "total": 58,
@@ -13665,6 +15130,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 77,
+      "cumulative_wins": 6,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -13692,6 +15160,7 @@ const nflschedules =  {
       "adj_moneyline": 130,
       "location": "Home",
       "result": 8,
+      "result_for_team": -8,
       "absolute_result": 8,
       "score": 12,
       "total": 32,
@@ -13702,7 +15171,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "closed",
-      "surface": "astroturf"
+      "surface": "astroturf",
+      "cumulative_wins": 6,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0
     },
     {
       "opponent": "San Francisco 49ers",
@@ -13729,6 +15201,7 @@ const nflschedules =  {
       "adj_moneyline": 105,
       "location": "Home",
       "result": 12,
+      "result_for_team": 12,
       "absolute_result": 12,
       "score": 29,
       "total": 46,
@@ -13741,6 +15214,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 73,
+      "cumulative_wins": 7,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -13768,6 +15244,7 @@ const nflschedules =  {
       "adj_moneyline": -170,
       "location": "Home",
       "result": -17,
+      "result_for_team": 17,
       "absolute_result": 17,
       "score": 20,
       "total": 23,
@@ -13780,6 +15257,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 54,
+      "cumulative_wins": 8,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 15
     },
     {
@@ -13807,6 +15287,7 @@ const nflschedules =  {
       "adj_moneyline": 102,
       "location": "Home",
       "result": 12,
+      "result_for_team": -12,
       "absolute_result": 12,
       "score": 20,
       "total": 52,
@@ -13819,12 +15300,15 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 34,
+      "cumulative_wins": 8,
+      "cumulative_losses": 9,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 8,
+      "losses": 9,
       "ties": 0
     }
   ],
@@ -13854,6 +15338,7 @@ const nflschedules =  {
       "adj_moneyline": -115,
       "location": "Home",
       "result": -22,
+      "result_for_team": 22,
       "absolute_result": 22,
       "score": 28,
       "total": 34,
@@ -13866,6 +15351,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 64,
+      "cumulative_wins": 1,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -13893,6 +15381,7 @@ const nflschedules =  {
       "adj_moneyline": 180,
       "location": "Home",
       "result": 6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 23,
       "total": 40,
@@ -13903,7 +15392,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Houston Texans",
@@ -13930,6 +15422,7 @@ const nflschedules =  {
       "adj_moneyline": 114,
       "location": "Home",
       "result": 27,
+      "result_for_team": 27,
       "absolute_result": 27,
       "score": 34,
       "total": 41,
@@ -13940,7 +15433,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 3,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Green Bay Packers",
@@ -13967,6 +15463,7 @@ const nflschedules =  {
       "adj_moneyline": 114,
       "location": "Home",
       "result": -2,
+      "result_for_team": 2,
       "absolute_result": 2,
       "score": 31,
       "total": 60,
@@ -13979,6 +15476,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 71,
+      "cumulative_wins": 4,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 15
     },
     {
@@ -14006,6 +15506,7 @@ const nflschedules =  {
       "adj_moneyline": -142,
       "location": "Neutral",
       "result": 6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 23,
       "total": 40,
@@ -14018,11 +15519,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 59,
+      "cumulative_wins": 5,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
       "opponent": "BYE",
-      "week": 6
+      "week": 6,
+      "cumulative_wins": 5,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Detroit Lions",
@@ -14049,6 +15556,7 @@ const nflschedules =  {
       "adj_moneyline": -118,
       "location": "Home",
       "result": -2,
+      "result_for_team": -2,
       "absolute_result": 2,
       "score": 29,
       "total": 60,
@@ -14059,7 +15567,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 5,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Los Angeles Rams",
@@ -14086,6 +15597,7 @@ const nflschedules =  {
       "adj_moneyline": -155,
       "location": "Home",
       "result": 10,
+      "result_for_team": -10,
       "absolute_result": 10,
       "score": 20,
       "total": 50,
@@ -14096,7 +15608,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 5,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Indianapolis Colts",
@@ -14123,6 +15638,7 @@ const nflschedules =  {
       "adj_moneyline": -298,
       "location": "Home",
       "result": 8,
+      "result_for_team": 8,
       "absolute_result": 8,
       "score": 21,
       "total": 34,
@@ -14133,7 +15649,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 6,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Jacksonville Jaguars",
@@ -14160,6 +15679,7 @@ const nflschedules =  {
       "adj_moneyline": -345,
       "location": "Home",
       "result": -5,
+      "result_for_team": 5,
       "absolute_result": 5,
       "score": 12,
       "total": 19,
@@ -14172,6 +15692,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 79,
+      "cumulative_wins": 7,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -14199,6 +15722,7 @@ const nflschedules =  {
       "adj_moneyline": -290,
       "location": "Home",
       "result": -10,
+      "result_for_team": 10,
       "absolute_result": 10,
       "score": 23,
       "total": 36,
@@ -14211,6 +15735,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 66,
+      "cumulative_wins": 8,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -14238,6 +15765,7 @@ const nflschedules =  {
       "adj_moneyline": -175,
       "location": "Home",
       "result": -3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 30,
       "total": 57,
@@ -14250,6 +15778,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 47,
+      "cumulative_wins": 9,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -14277,6 +15808,7 @@ const nflschedules =  {
       "adj_moneyline": -185,
       "location": "Home",
       "result": 1,
+      "result_for_team": 1,
       "absolute_result": 1,
       "score": 23,
       "total": 45,
@@ -14287,7 +15819,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 10,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Atlanta Falcons",
@@ -14314,6 +15849,7 @@ const nflschedules =  {
       "adj_moneyline": -250,
       "location": "Home",
       "result": 21,
+      "result_for_team": 21,
       "absolute_result": 21,
       "score": 42,
       "total": 63,
@@ -14324,7 +15860,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 11,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Chicago Bears",
@@ -14351,6 +15890,7 @@ const nflschedules =  {
       "adj_moneyline": -325,
       "location": "Home",
       "result": 18,
+      "result_for_team": 18,
       "absolute_result": 18,
       "score": 30,
       "total": 42,
@@ -14361,7 +15901,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 12,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Seattle Seahawks",
@@ -14388,6 +15931,7 @@ const nflschedules =  {
       "adj_moneyline": -148,
       "location": "Home",
       "result": -3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 27,
       "total": 51,
@@ -14400,6 +15944,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 48,
+      "cumulative_wins": 13,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -14427,6 +15974,7 @@ const nflschedules =  {
       "adj_moneyline": -108,
       "location": "Home",
       "result": 2,
+      "result_for_team": 2,
       "absolute_result": 2,
       "score": 27,
       "total": 52,
@@ -14437,7 +15985,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 14,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Detroit Lions",
@@ -14464,6 +16015,7 @@ const nflschedules =  {
       "adj_moneyline": 124,
       "location": "Home",
       "result": 22,
+      "result_for_team": -22,
       "absolute_result": 22,
       "score": 9,
       "total": 40,
@@ -14474,7 +16026,10 @@ const nflschedules =  {
       "over_odds": -118,
       "under_odds": -102,
       "roof": "dome",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 14,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Los Angeles Rams",
@@ -14501,6 +16056,7 @@ const nflschedules =  {
       "adj_moneyline": -142,
       "location": "Neutral",
       "result": 18,
+      "result_for_team": -18,
       "absolute_result": 18,
       "score": 9,
       "total": 36,
@@ -14511,12 +16067,15 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 14,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 14,
+      "losses": 4,
       "ties": 0
     }
   ],
@@ -14546,6 +16105,7 @@ const nflschedules =  {
       "adj_moneyline": 295,
       "location": "Home",
       "result": -6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 16,
       "total": 26,
@@ -14558,6 +16118,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 66,
+      "cumulative_wins": 1,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -14585,6 +16148,7 @@ const nflschedules =  {
       "adj_moneyline": 142,
       "location": "Home",
       "result": -3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 20,
       "total": 43,
@@ -14597,6 +16161,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 77,
+      "cumulative_wins": 1,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -14624,6 +16191,7 @@ const nflschedules =  {
       "adj_moneyline": 230,
       "location": "Home",
       "result": 21,
+      "result_for_team": -21,
       "absolute_result": 21,
       "score": 3,
       "total": 27,
@@ -14636,6 +16204,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 75,
+      "cumulative_wins": 1,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -14663,6 +16234,7 @@ const nflschedules =  {
       "adj_moneyline": 410,
       "location": "Home",
       "result": 17,
+      "result_for_team": -17,
       "absolute_result": 17,
       "score": 13,
       "total": 43,
@@ -14675,6 +16247,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 71,
+      "cumulative_wins": 1,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -14702,6 +16277,7 @@ const nflschedules =  {
       "adj_moneyline": 110,
       "location": "Home",
       "result": -5,
+      "result_for_team": -5,
       "absolute_result": 5,
       "score": 10,
       "total": 25,
@@ -14714,6 +16290,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 65,
+      "cumulative_wins": 1,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 2
     },
     {
@@ -14741,6 +16320,7 @@ const nflschedules =  {
       "adj_moneyline": 215,
       "location": "Home",
       "result": -20,
+      "result_for_team": -20,
       "absolute_result": 20,
       "score": 21,
       "total": 62,
@@ -14753,6 +16333,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 53,
+      "cumulative_wins": 1,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -14780,6 +16363,7 @@ const nflschedules =  {
       "adj_moneyline": 240,
       "location": "Neutral",
       "result": 16,
+      "result_for_team": -16,
       "absolute_result": 16,
       "score": 16,
       "total": 48,
@@ -14792,6 +16376,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 63,
+      "cumulative_wins": 1,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -14819,6 +16406,7 @@ const nflschedules =  {
       "adj_moneyline": 245,
       "location": "Home",
       "result": 3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 25,
       "total": 47,
@@ -14831,6 +16419,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 53,
+      "cumulative_wins": 2,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -14858,6 +16449,7 @@ const nflschedules =  {
       "adj_moneyline": 136,
       "location": "Home",
       "result": 3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 17,
       "total": 37,
@@ -14870,6 +16462,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 75,
+      "cumulative_wins": 2,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -14897,6 +16492,7 @@ const nflschedules =  {
       "adj_moneyline": 260,
       "location": "Home",
       "result": -16,
+      "result_for_team": 16,
       "absolute_result": 16,
       "score": 19,
       "total": 22,
@@ -14909,6 +16505,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 60,
+      "cumulative_wins": 3,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -14936,6 +16535,7 @@ const nflschedules =  {
       "adj_moneyline": 164,
       "location": "Home",
       "result": -6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 22,
       "total": 50,
@@ -14948,6 +16548,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 59,
+      "cumulative_wins": 3,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -14975,6 +16578,7 @@ const nflschedules =  {
       "adj_moneyline": 285,
       "location": "Home",
       "result": 19,
+      "result_for_team": -19,
       "absolute_result": 19,
       "score": 15,
       "total": 49,
@@ -14987,6 +16591,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 77,
+      "cumulative_wins": 3,
+      "cumulative_losses": 9,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -15014,6 +16621,7 @@ const nflschedules =  {
       "adj_moneyline": 114,
       "location": "Home",
       "result": -1,
+      "result_for_team": -1,
       "absolute_result": 1,
       "score": 24,
       "total": 49,
@@ -15026,11 +16634,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 36,
+      "cumulative_wins": 3,
+      "cumulative_losses": 10,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
       "opponent": "BYE",
-      "week": 14
+      "week": 14,
+      "cumulative_wins": 3,
+      "cumulative_losses": 10,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Arizona Cardinals",
@@ -15057,6 +16671,7 @@ const nflschedules =  {
       "adj_moneyline": 210,
       "location": "Home",
       "result": 13,
+      "result_for_team": -13,
       "absolute_result": 13,
       "score": 17,
       "total": 47,
@@ -15067,7 +16682,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 3,
+      "cumulative_losses": 11,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Buffalo Bills",
@@ -15094,6 +16712,7 @@ const nflschedules =  {
       "adj_moneyline": 700,
       "location": "Home",
       "result": 3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 21,
       "total": 45,
@@ -15106,6 +16725,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "a_turf",
       "temp": 14,
+      "cumulative_wins": 3,
+      "cumulative_losses": 12,
+      "cumulative_ties": 0,
       "wind": 2
     },
     {
@@ -15133,6 +16755,7 @@ const nflschedules =  {
       "adj_moneyline": 245,
       "location": "Home",
       "result": -33,
+      "result_for_team": -33,
       "absolute_result": 33,
       "score": 7,
       "total": 47,
@@ -15145,6 +16768,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 40,
+      "cumulative_wins": 3,
+      "cumulative_losses": 13,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -15172,6 +16798,7 @@ const nflschedules =  {
       "adj_moneyline": 140,
       "location": "Home",
       "result": 7,
+      "result_for_team": 7,
       "absolute_result": 7,
       "score": 23,
       "total": 39,
@@ -15184,12 +16811,15 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 33,
+      "cumulative_wins": 4,
+      "cumulative_losses": 13,
+      "cumulative_ties": 0,
       "wind": 14
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 4,
+      "losses": 13,
       "ties": 0
     }
   ],
@@ -15219,6 +16849,7 @@ const nflschedules =  {
       "adj_moneyline": -192,
       "location": "Home",
       "result": 37,
+      "result_for_team": 37,
       "absolute_result": 37,
       "score": 47,
       "total": 57,
@@ -15229,7 +16860,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 1,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Dallas Cowboys",
@@ -15256,6 +16890,7 @@ const nflschedules =  {
       "adj_moneyline": 235,
       "location": "Home",
       "result": -25,
+      "result_for_team": 25,
       "absolute_result": 25,
       "score": 44,
       "total": 63,
@@ -15266,7 +16901,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Philadelphia Eagles",
@@ -15293,6 +16931,7 @@ const nflschedules =  {
       "adj_moneyline": -142,
       "location": "Home",
       "result": -3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 12,
       "total": 27,
@@ -15303,7 +16942,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Atlanta Falcons",
@@ -15330,6 +16972,7 @@ const nflschedules =  {
       "adj_moneyline": 120,
       "location": "Home",
       "result": 2,
+      "result_for_team": -2,
       "absolute_result": 2,
       "score": 24,
       "total": 50,
@@ -15340,7 +16983,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Kansas City Chiefs",
@@ -15367,6 +17013,7 @@ const nflschedules =  {
       "adj_moneyline": 190,
       "location": "Home",
       "result": 13,
+      "result_for_team": -13,
       "absolute_result": 13,
       "score": 13,
       "total": 39,
@@ -15379,6 +17026,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 70,
+      "cumulative_wins": 2,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 1
     },
     {
@@ -15406,6 +17056,7 @@ const nflschedules =  {
       "adj_moneyline": 145,
       "location": "Home",
       "result": -24,
+      "result_for_team": -24,
       "absolute_result": 24,
       "score": 27,
       "total": 78,
@@ -15416,7 +17067,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Denver Broncos",
@@ -15443,6 +17097,7 @@ const nflschedules =  {
       "adj_moneyline": 124,
       "location": "Home",
       "result": -23,
+      "result_for_team": -23,
       "absolute_result": 23,
       "score": 10,
       "total": 43,
@@ -15453,7 +17108,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Los Angeles Chargers",
@@ -15480,6 +17138,7 @@ const nflschedules =  {
       "adj_moneyline": 250,
       "location": "Home",
       "result": 18,
+      "result_for_team": -18,
       "absolute_result": 18,
       "score": 8,
       "total": 34,
@@ -15490,7 +17149,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Carolina Panthers",
@@ -15517,6 +17179,7 @@ const nflschedules =  {
       "adj_moneyline": -345,
       "location": "Home",
       "result": 1,
+      "result_for_team": -1,
       "absolute_result": 1,
       "score": 22,
       "total": 45,
@@ -15529,6 +17192,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 66,
+      "cumulative_wins": 2,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -15556,6 +17222,7 @@ const nflschedules =  {
       "adj_moneyline": 160,
       "location": "Home",
       "result": 3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 20,
       "total": 37,
@@ -15566,7 +17233,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 3,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cleveland Browns",
@@ -15593,6 +17263,7 @@ const nflschedules =  {
       "adj_moneyline": -105,
       "location": "Home",
       "result": 21,
+      "result_for_team": 21,
       "absolute_result": 21,
       "score": 35,
       "total": 49,
@@ -15603,11 +17274,17 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 4,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "BYE",
-      "week": 12
+      "week": 12,
+      "cumulative_wins": 4,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Los Angeles Rams",
@@ -15634,6 +17311,7 @@ const nflschedules =  {
       "adj_moneyline": 120,
       "location": "Home",
       "result": -7,
+      "result_for_team": -7,
       "absolute_result": 7,
       "score": 14,
       "total": 35,
@@ -15644,7 +17322,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 4,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New York Giants",
@@ -15671,6 +17352,7 @@ const nflschedules =  {
       "adj_moneyline": -245,
       "location": "Home",
       "result": -3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 14,
       "total": 25,
@@ -15683,6 +17365,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 54,
+      "cumulative_wins": 5,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 13
     },
     {
@@ -15710,6 +17395,7 @@ const nflschedules =  {
       "adj_moneyline": 295,
       "location": "Home",
       "result": -1,
+      "result_for_team": -1,
       "absolute_result": 1,
       "score": 19,
       "total": 39,
@@ -15720,7 +17406,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 5,
+      "cumulative_losses": 9,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Green Bay Packers",
@@ -15747,6 +17436,7 @@ const nflschedules =  {
       "adj_moneyline": 625,
       "location": "Home",
       "result": 34,
+      "result_for_team": -34,
       "absolute_result": 34,
       "score": 0,
       "total": 34,
@@ -15759,6 +17449,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 34,
+      "cumulative_wins": 5,
+      "cumulative_losses": 10,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -15786,6 +17479,7 @@ const nflschedules =  {
       "adj_moneyline": 105,
       "location": "Home",
       "result": -15,
+      "result_for_team": -15,
       "absolute_result": 15,
       "score": 10,
       "total": 35,
@@ -15796,7 +17490,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 5,
+      "cumulative_losses": 11,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Tampa Bay Buccaneers",
@@ -15823,6 +17520,7 @@ const nflschedules =  {
       "adj_moneyline": 675,
       "location": "Home",
       "result": 8,
+      "result_for_team": -8,
       "absolute_result": 8,
       "score": 19,
       "total": 46,
@@ -15835,12 +17533,15 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 68,
+      "cumulative_wins": 5,
+      "cumulative_losses": 12,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 5,
+      "losses": 12,
       "ties": 0
     }
   ],
@@ -15870,6 +17571,7 @@ const nflschedules =  {
       "adj_moneyline": -105,
       "location": "Home",
       "result": -22,
+      "result_for_team": -22,
       "absolute_result": 22,
       "score": 6,
       "total": 34,
@@ -15882,6 +17584,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 64,
+      "cumulative_wins": 0,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -15909,6 +17614,7 @@ const nflschedules =  {
       "adj_moneyline": 105,
       "location": "Home",
       "result": 3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 18,
       "total": 39,
@@ -15921,6 +17627,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 82,
+      "cumulative_wins": 0,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 11
     },
     {
@@ -15948,6 +17657,7 @@ const nflschedules =  {
       "adj_moneyline": 220,
       "location": "Home",
       "result": -6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 21,
       "total": 36,
@@ -15960,6 +17670,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 76,
+      "cumulative_wins": 1,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -15987,6 +17700,7 @@ const nflschedules =  {
       "adj_moneyline": 205,
       "location": "Home",
       "result": -5,
+      "result_for_team": -5,
       "absolute_result": 5,
       "score": 15,
       "total": 35,
@@ -15999,6 +17713,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 74,
+      "cumulative_wins": 1,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 3
     },
     {
@@ -16026,6 +17743,7 @@ const nflschedules =  {
       "adj_moneyline": 250,
       "location": "Home",
       "result": -9,
+      "result_for_team": 9,
       "absolute_result": 9,
       "score": 29,
       "total": 49,
@@ -16038,6 +17756,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 61,
+      "cumulative_wins": 2,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 3
     },
     {
@@ -16065,6 +17786,7 @@ const nflschedules =  {
       "adj_moneyline": 190,
       "location": "Home",
       "result": -10,
+      "result_for_team": -10,
       "absolute_result": 10,
       "score": 7,
       "total": 24,
@@ -16077,6 +17799,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 63,
+      "cumulative_wins": 2,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 2
     },
     {
@@ -16104,6 +17829,7 @@ const nflschedules =  {
       "adj_moneyline": 140,
       "location": "Home",
       "result": -25,
+      "result_for_team": -25,
       "absolute_result": 25,
       "score": 3,
       "total": 31,
@@ -16116,6 +17842,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 71,
+      "cumulative_wins": 2,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -16143,6 +17872,7 @@ const nflschedules =  {
       "adj_moneyline": 220,
       "location": "Home",
       "result": 8,
+      "result_for_team": -8,
       "absolute_result": 8,
       "score": 18,
       "total": 44,
@@ -16155,6 +17885,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 54,
+      "cumulative_wins": 2,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -16182,6 +17915,7 @@ const nflschedules =  {
       "adj_moneyline": 180,
       "location": "Home",
       "result": -5,
+      "result_for_team": -5,
       "absolute_result": 5,
       "score": 22,
       "total": 49,
@@ -16194,6 +17928,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 52,
+      "cumulative_wins": 2,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -16221,6 +17958,7 @@ const nflschedules =  {
       "adj_moneyline": -298,
       "location": "Neutral",
       "result": 3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 17,
       "total": 37,
@@ -16231,11 +17969,17 @@ const nflschedules =  {
       "over_odds": -105,
       "under_odds": -115,
       "roof": "outdoors",
-      "surface": ""
+      "surface": "",
+      "cumulative_wins": 2,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0
     },
     {
       "opponent": "BYE",
-      "week": 11
+      "week": 11,
+      "cumulative_wins": 2,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Tampa Bay Buccaneers",
@@ -16262,6 +18006,7 @@ const nflschedules =  {
       "adj_moneyline": 240,
       "location": "Home",
       "result": -23,
+      "result_for_team": -23,
       "absolute_result": 23,
       "score": 7,
       "total": 37,
@@ -16274,6 +18019,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 50,
+      "cumulative_wins": 2,
+      "cumulative_losses": 9,
+      "cumulative_ties": 0,
       "wind": 13
     },
     {
@@ -16301,6 +18049,7 @@ const nflschedules =  {
       "adj_moneyline": 185,
       "location": "Home",
       "result": 7,
+      "result_for_team": -7,
       "absolute_result": 7,
       "score": 20,
       "total": 47,
@@ -16311,7 +18060,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 10,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New Orleans Saints",
@@ -16338,6 +18090,7 @@ const nflschedules =  {
       "adj_moneyline": 200,
       "location": "Home",
       "result": -3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 11,
       "total": 25,
@@ -16350,6 +18103,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 54,
+      "cumulative_wins": 2,
+      "cumulative_losses": 11,
+      "cumulative_ties": 0,
       "wind": 13
     },
     {
@@ -16377,6 +18133,7 @@ const nflschedules =  {
       "adj_moneyline": 1000,
       "location": "Home",
       "result": -21,
+      "result_for_team": -21,
       "absolute_result": 21,
       "score": 14,
       "total": 49,
@@ -16389,6 +18146,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 36,
+      "cumulative_wins": 2,
+      "cumulative_losses": 12,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -16416,6 +18176,7 @@ const nflschedules =  {
       "adj_moneyline": 410,
       "location": "Home",
       "result": 27,
+      "result_for_team": -27,
       "absolute_result": 27,
       "score": 7,
       "total": 41,
@@ -16426,7 +18187,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 13,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Indianapolis Colts",
@@ -16453,6 +18217,7 @@ const nflschedules =  {
       "adj_moneyline": 320,
       "location": "Home",
       "result": 12,
+      "result_for_team": 12,
       "absolute_result": 12,
       "score": 45,
       "total": 78,
@@ -16465,6 +18230,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 54,
+      "cumulative_wins": 3,
+      "cumulative_losses": 13,
+      "cumulative_ties": 0,
       "wind": 0
     },
     {
@@ -16492,6 +18260,7 @@ const nflschedules =  {
       "adj_moneyline": 130,
       "location": "Home",
       "result": 7,
+      "result_for_team": -7,
       "absolute_result": 7,
       "score": 13,
       "total": 33,
@@ -16504,12 +18273,15 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 31,
+      "cumulative_wins": 3,
+      "cumulative_losses": 14,
+      "cumulative_ties": 0,
       "wind": 19
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 3,
+      "losses": 14,
       "ties": 0
     }
   ],
@@ -16539,6 +18311,7 @@ const nflschedules =  {
       "adj_moneyline": 150,
       "location": "Home",
       "result": 13,
+      "result_for_team": -13,
       "absolute_result": 13,
       "score": 19,
       "total": 51,
@@ -16551,6 +18324,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 76,
+      "cumulative_wins": 0,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -16578,6 +18354,7 @@ const nflschedules =  {
       "adj_moneyline": -180,
       "location": "Home",
       "result": -7,
+      "result_for_team": 7,
       "absolute_result": 7,
       "score": 24,
       "total": 41,
@@ -16590,6 +18367,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 80,
+      "cumulative_wins": 1,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 13
     },
     {
@@ -16617,6 +18397,7 @@ const nflschedules =  {
       "adj_moneyline": -285,
       "location": "Home",
       "result": 21,
+      "result_for_team": 21,
       "absolute_result": 21,
       "score": 24,
       "total": 27,
@@ -16629,6 +18410,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 75,
+      "cumulative_wins": 2,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -16656,6 +18440,7 @@ const nflschedules =  {
       "adj_moneyline": -425,
       "location": "Home",
       "result": -1,
+      "result_for_team": -1,
       "absolute_result": 1,
       "score": 9,
       "total": 19,
@@ -16668,6 +18453,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 67,
+      "cumulative_wins": 2,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -16695,6 +18483,7 @@ const nflschedules =  {
       "adj_moneyline": 120,
       "location": "Neutral",
       "result": 6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 17,
       "total": 40,
@@ -16707,6 +18496,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 59,
+      "cumulative_wins": 2,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -16734,6 +18526,7 @@ const nflschedules =  {
       "adj_moneyline": 102,
       "location": "Home",
       "result": -3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 20,
       "total": 43,
@@ -16746,6 +18539,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 49,
+      "cumulative_wins": 2,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 14
     },
     {
@@ -16773,6 +18569,7 @@ const nflschedules =  {
       "adj_moneyline": -166,
       "location": "Home",
       "result": 22,
+      "result_for_team": -22,
       "absolute_result": 22,
       "score": 15,
       "total": 52,
@@ -16785,6 +18582,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 60,
+      "cumulative_wins": 2,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -16812,6 +18612,7 @@ const nflschedules =  {
       "adj_moneyline": -305,
       "location": "Home",
       "result": 3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 22,
       "total": 47,
@@ -16824,6 +18625,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 53,
+      "cumulative_wins": 2,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -16851,6 +18655,7 @@ const nflschedules =  {
       "adj_moneyline": -148,
       "location": "Home",
       "result": 8,
+      "result_for_team": 8,
       "absolute_result": 8,
       "score": 21,
       "total": 34,
@@ -16863,6 +18668,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 71,
+      "cumulative_wins": 3,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -16890,6 +18698,7 @@ const nflschedules =  {
       "adj_moneyline": -130,
       "location": "Home",
       "result": 25,
+      "result_for_team": -25,
       "absolute_result": 25,
       "score": 6,
       "total": 37,
@@ -16900,7 +18709,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 3,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Indianapolis Colts",
@@ -16927,6 +18739,7 @@ const nflschedules =  {
       "adj_moneyline": -205,
       "location": "Home",
       "result": -1,
+      "result_for_team": -1,
       "absolute_result": 1,
       "score": 27,
       "total": 55,
@@ -16939,11 +18752,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 62,
+      "cumulative_wins": 3,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
       "opponent": "BYE",
-      "week": 12
+      "week": 12,
+      "cumulative_wins": 3,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Seattle Seahawks",
@@ -16970,6 +18789,7 @@ const nflschedules =  {
       "adj_moneyline": -115,
       "location": "Home",
       "result": -5,
+      "result_for_team": -5,
       "absolute_result": 5,
       "score": 21,
       "total": 47,
@@ -16982,6 +18802,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 37,
+      "cumulative_wins": 3,
+      "cumulative_losses": 9,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -17009,6 +18832,7 @@ const nflschedules =  {
       "adj_moneyline": 240,
       "location": "Home",
       "result": 6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 26,
       "total": 58,
@@ -17021,6 +18845,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 77,
+      "cumulative_wins": 3,
+      "cumulative_losses": 10,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -17048,6 +18875,7 @@ const nflschedules =  {
       "adj_moneyline": -175,
       "location": "Home",
       "result": -7,
+      "result_for_team": 7,
       "absolute_result": 7,
       "score": 32,
       "total": 57,
@@ -17058,7 +18886,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "outdoors",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 4,
+      "cumulative_losses": 10,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Los Angeles Rams",
@@ -17085,6 +18916,7 @@ const nflschedules =  {
       "adj_moneyline": 136,
       "location": "Home",
       "result": -10,
+      "result_for_team": -10,
       "absolute_result": 10,
       "score": 9,
       "total": 28,
@@ -17097,6 +18929,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 23,
+      "cumulative_wins": 4,
+      "cumulative_losses": 11,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -17124,6 +18959,7 @@ const nflschedules =  {
       "adj_moneyline": 390,
       "location": "Home",
       "result": 26,
+      "result_for_team": -26,
       "absolute_result": 26,
       "score": 14,
       "total": 54,
@@ -17136,6 +18972,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "a_turf",
       "temp": 54,
+      "cumulative_wins": 4,
+      "cumulative_losses": 12,
+      "cumulative_ties": 0,
       "wind": 15
     },
     {
@@ -17163,6 +19002,7 @@ const nflschedules =  {
       "adj_moneyline": -122,
       "location": "Home",
       "result": 12,
+      "result_for_team": 12,
       "absolute_result": 12,
       "score": 32,
       "total": 52,
@@ -17175,12 +19015,15 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 34,
+      "cumulative_wins": 5,
+      "cumulative_losses": 12,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 5,
+      "losses": 12,
       "ties": 0
     }
   ],
@@ -17210,6 +19053,7 @@ const nflschedules =  {
       "adj_moneyline": -130,
       "location": "Neutral",
       "result": 5,
+      "result_for_team": 5,
       "absolute_result": 5,
       "score": 34,
       "total": 63,
@@ -17220,7 +19064,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "outdoors",
-      "surface": ""
+      "surface": "",
+      "cumulative_wins": 1,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Atlanta Falcons",
@@ -17247,6 +19094,7 @@ const nflschedules =  {
       "adj_moneyline": -265,
       "location": "Home",
       "result": -1,
+      "result_for_team": -1,
       "absolute_result": 1,
       "score": 21,
       "total": 43,
@@ -17259,6 +19107,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 71,
+      "cumulative_wins": 1,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -17286,6 +19137,7 @@ const nflschedules =  {
       "adj_moneyline": 120,
       "location": "Home",
       "result": -3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 15,
       "total": 27,
@@ -17296,7 +19148,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Tampa Bay Buccaneers",
@@ -17323,6 +19178,7 @@ const nflschedules =  {
       "adj_moneyline": -115,
       "location": "Home",
       "result": 17,
+      "result_for_team": -17,
       "absolute_result": 17,
       "score": 16,
       "total": 49,
@@ -17335,11 +19191,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 88,
+      "cumulative_wins": 2,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
       "opponent": "BYE",
-      "week": 5
+      "week": 5,
+      "cumulative_wins": 2,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cleveland Browns",
@@ -17366,6 +19228,7 @@ const nflschedules =  {
       "adj_moneyline": -425,
       "location": "Home",
       "result": 4,
+      "result_for_team": 4,
       "absolute_result": 4,
       "score": 20,
       "total": 36,
@@ -17378,6 +19241,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 82,
+      "cumulative_wins": 3,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -17405,6 +19271,7 @@ const nflschedules =  {
       "adj_moneyline": -166,
       "location": "Home",
       "result": -25,
+      "result_for_team": 25,
       "absolute_result": 25,
       "score": 28,
       "total": 31,
@@ -17417,6 +19284,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 71,
+      "cumulative_wins": 4,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -17444,6 +19314,7 @@ const nflschedules =  {
       "adj_moneyline": 124,
       "location": "Home",
       "result": -20,
+      "result_for_team": 20,
       "absolute_result": 20,
       "score": 37,
       "total": 54,
@@ -17456,6 +19327,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 59,
+      "cumulative_wins": 5,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -17483,6 +19357,7 @@ const nflschedules =  {
       "adj_moneyline": -340,
       "location": "Home",
       "result": 5,
+      "result_for_team": 5,
       "absolute_result": 5,
       "score": 28,
       "total": 51,
@@ -17495,6 +19370,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 57,
+      "cumulative_wins": 6,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -17522,6 +19400,7 @@ const nflschedules =  {
       "adj_moneyline": -360,
       "location": "Home",
       "result": -28,
+      "result_for_team": 28,
       "absolute_result": 28,
       "score": 34,
       "total": 40,
@@ -17532,7 +19411,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 7,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Washington Commanders",
@@ -17559,6 +19441,7 @@ const nflschedules =  {
       "adj_moneyline": -230,
       "location": "Home",
       "result": 8,
+      "result_for_team": 8,
       "absolute_result": 8,
       "score": 26,
       "total": 44,
@@ -17571,6 +19454,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 46,
+      "cumulative_wins": 8,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -17598,6 +19484,7 @@ const nflschedules =  {
       "adj_moneyline": -170,
       "location": "Home",
       "result": -17,
+      "result_for_team": 17,
       "absolute_result": 17,
       "score": 37,
       "total": 57,
@@ -17608,7 +19495,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 9,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Baltimore Ravens",
@@ -17635,6 +19525,7 @@ const nflschedules =  {
       "adj_moneyline": 136,
       "location": "Home",
       "result": -5,
+      "result_for_team": 5,
       "absolute_result": 5,
       "score": 24,
       "total": 43,
@@ -17647,6 +19538,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 41,
+      "cumulative_wins": 10,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -17674,6 +19568,7 @@ const nflschedules =  {
       "adj_moneyline": -950,
       "location": "Home",
       "result": 6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 22,
       "total": 38,
@@ -17686,6 +19581,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 55,
+      "cumulative_wins": 11,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 16
     },
     {
@@ -17713,6 +19611,7 @@ const nflschedules =  {
       "adj_moneyline": -265,
       "location": "Home",
       "result": 14,
+      "result_for_team": 14,
       "absolute_result": 14,
       "score": 27,
       "total": 40,
@@ -17725,6 +19624,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 37,
+      "cumulative_wins": 12,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -17752,6 +19654,7 @@ const nflschedules =  {
       "adj_moneyline": -218,
       "location": "Home",
       "result": 3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 33,
       "total": 69,
@@ -17764,6 +19667,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 32,
+      "cumulative_wins": 12,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -17791,6 +19697,7 @@ const nflschedules =  {
       "adj_moneyline": -325,
       "location": "Home",
       "result": 34,
+      "result_for_team": 34,
       "absolute_result": 34,
       "score": 41,
       "total": 48,
@@ -17803,6 +19710,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 62,
+      "cumulative_wins": 13,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -17830,6 +19740,7 @@ const nflschedules =  {
       "adj_moneyline": -155,
       "location": "Home",
       "result": 7,
+      "result_for_team": 7,
       "absolute_result": 7,
       "score": 20,
       "total": 33,
@@ -17842,6 +19753,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 31,
+      "cumulative_wins": 14,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 19
     },
     {
@@ -17869,6 +19783,7 @@ const nflschedules =  {
       "adj_moneyline": -250,
       "location": "Home",
       "result": 12,
+      "result_for_team": 12,
       "absolute_result": 12,
       "score": 22,
       "total": 32,
@@ -17881,6 +19796,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 40,
+      "cumulative_wins": 15,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -17908,6 +19826,7 @@ const nflschedules =  {
       "adj_moneyline": -325,
       "location": "Home",
       "result": 6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 28,
       "total": 50,
@@ -17920,6 +19839,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 34,
+      "cumulative_wins": 16,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -17947,6 +19869,7 @@ const nflschedules =  {
       "adj_moneyline": -250,
       "location": "Home",
       "result": 32,
+      "result_for_team": 32,
       "absolute_result": 32,
       "score": 55,
       "total": 78,
@@ -17959,6 +19882,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 40,
+      "cumulative_wins": 17,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 11
     },
     {
@@ -17986,6 +19912,7 @@ const nflschedules =  {
       "adj_moneyline": 100,
       "location": "Neutral",
       "result": 18,
+      "result_for_team": 18,
       "absolute_result": 18,
       "score": 40,
       "total": 62,
@@ -17996,12 +19923,15 @@ const nflschedules =  {
       "over_odds": -115,
       "under_odds": -105,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 18,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 18,
+      "losses": 3,
       "ties": 0
     }
   ],
@@ -18031,6 +19961,7 @@ const nflschedules =  {
       "adj_moneyline": 160,
       "location": "Home",
       "result": -8,
+      "result_for_team": 8,
       "absolute_result": 8,
       "score": 18,
       "total": 28,
@@ -18041,7 +19972,10 @@ const nflschedules =  {
       "over_odds": -105,
       "under_odds": -115,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 1,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Denver Broncos",
@@ -18068,6 +20002,7 @@ const nflschedules =  {
       "adj_moneyline": -155,
       "location": "Home",
       "result": -7,
+      "result_for_team": 7,
       "absolute_result": 7,
       "score": 13,
       "total": 19,
@@ -18080,6 +20015,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 83,
+      "cumulative_wins": 2,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -18107,6 +20045,7 @@ const nflschedules =  {
       "adj_moneyline": -148,
       "location": "Home",
       "result": 10,
+      "result_for_team": 10,
       "absolute_result": 10,
       "score": 20,
       "total": 30,
@@ -18119,6 +20058,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 72,
+      "cumulative_wins": 3,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 2
     },
     {
@@ -18146,6 +20088,7 @@ const nflschedules =  {
       "adj_moneyline": -130,
       "location": "Home",
       "result": 3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 24,
       "total": 51,
@@ -18156,7 +20099,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 3,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Dallas Cowboys",
@@ -18183,6 +20129,7 @@ const nflschedules =  {
       "adj_moneyline": -135,
       "location": "Home",
       "result": -3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 17,
       "total": 37,
@@ -18195,6 +20142,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 67,
+      "cumulative_wins": 3,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -18222,6 +20172,7 @@ const nflschedules =  {
       "adj_moneyline": -180,
       "location": "Home",
       "result": -19,
+      "result_for_team": 19,
       "absolute_result": 19,
       "score": 32,
       "total": 45,
@@ -18232,7 +20183,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 4,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New York Jets",
@@ -18259,6 +20213,7 @@ const nflschedules =  {
       "adj_moneyline": 140,
       "location": "Home",
       "result": 22,
+      "result_for_team": 22,
       "absolute_result": 22,
       "score": 37,
       "total": 52,
@@ -18271,6 +20226,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 60,
+      "cumulative_wins": 5,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -18298,6 +20256,7 @@ const nflschedules =  {
       "adj_moneyline": -270,
       "location": "Home",
       "result": 8,
+      "result_for_team": 8,
       "absolute_result": 8,
       "score": 26,
       "total": 44,
@@ -18310,11 +20269,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 54,
+      "cumulative_wins": 6,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
       "opponent": "BYE",
-      "week": 9
+      "week": 9,
+      "cumulative_wins": 6,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Washington Commanders",
@@ -18341,6 +20306,7 @@ const nflschedules =  {
       "adj_moneyline": 102,
       "location": "Home",
       "result": -1,
+      "result_for_team": 1,
       "absolute_result": 1,
       "score": 28,
       "total": 55,
@@ -18353,6 +20319,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 57,
+      "cumulative_wins": 7,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -18380,6 +20349,7 @@ const nflschedules =  {
       "adj_moneyline": 145,
       "location": "Home",
       "result": 2,
+      "result_for_team": 2,
       "absolute_result": 2,
       "score": 18,
       "total": 34,
@@ -18392,6 +20362,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 52,
+      "cumulative_wins": 8,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -18419,6 +20392,7 @@ const nflschedules =  {
       "adj_moneyline": -205,
       "location": "Home",
       "result": 5,
+      "result_for_team": -5,
       "absolute_result": 5,
       "score": 19,
       "total": 43,
@@ -18431,6 +20405,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 36,
+      "cumulative_wins": 8,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 13
     },
     {
@@ -18458,6 +20435,7 @@ const nflschedules =  {
       "adj_moneyline": 130,
       "location": "Home",
       "result": -6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 44,
       "total": 82,
@@ -18470,6 +20448,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 32,
+      "cumulative_wins": 9,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -18497,6 +20478,7 @@ const nflschedules =  {
       "adj_moneyline": -258,
       "location": "Home",
       "result": 13,
+      "result_for_team": 13,
       "absolute_result": 13,
       "score": 27,
       "total": 41,
@@ -18509,6 +20491,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 49,
+      "cumulative_wins": 10,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -18536,6 +20521,7 @@ const nflschedules =  {
       "adj_moneyline": 215,
       "location": "Home",
       "result": 14,
+      "result_for_team": -14,
       "absolute_result": 14,
       "score": 13,
       "total": 40,
@@ -18548,6 +20534,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 37,
+      "cumulative_wins": 10,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -18575,6 +20564,7 @@ const nflschedules =  {
       "adj_moneyline": 275,
       "location": "Home",
       "result": 17,
+      "result_for_team": -17,
       "absolute_result": 17,
       "score": 17,
       "total": 51,
@@ -18587,6 +20577,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 35,
+      "cumulative_wins": 10,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 15
     },
     {
@@ -18614,6 +20607,7 @@ const nflschedules =  {
       "adj_moneyline": 136,
       "location": "Home",
       "result": -19,
+      "result_for_team": -19,
       "absolute_result": 19,
       "score": 10,
       "total": 39,
@@ -18626,6 +20620,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 39,
+      "cumulative_wins": 10,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 2
     },
     {
@@ -18653,6 +20650,7 @@ const nflschedules =  {
       "adj_moneyline": 124,
       "location": "Home",
       "result": -2,
+      "result_for_team": -2,
       "absolute_result": 2,
       "score": 17,
       "total": 36,
@@ -18665,6 +20663,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 19,
+      "cumulative_wins": 10,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -18692,6 +20693,7 @@ const nflschedules =  {
       "adj_moneyline": 390,
       "location": "Home",
       "result": 14,
+      "result_for_team": -14,
       "absolute_result": 14,
       "score": 14,
       "total": 42,
@@ -18704,12 +20706,15 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 32,
+      "cumulative_wins": 10,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 10,
+      "losses": 8,
       "ties": 0
     }
   ],
@@ -18739,6 +20744,7 @@ const nflschedules =  {
       "adj_moneyline": -180,
       "location": "Home",
       "result": 13,
+      "result_for_team": 13,
       "absolute_result": 13,
       "score": 32,
       "total": 51,
@@ -18751,6 +20757,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 76,
+      "cumulative_wins": 1,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -18778,6 +20787,7 @@ const nflschedules =  {
       "adj_moneyline": -218,
       "location": "Home",
       "result": 6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 17,
       "total": 40,
@@ -18788,7 +20798,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 1,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Los Angeles Rams",
@@ -18815,6 +20828,7 @@ const nflschedules =  {
       "adj_moneyline": -258,
       "location": "Home",
       "result": 3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 24,
       "total": 51,
@@ -18825,7 +20839,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 1,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New England Patriots",
@@ -18852,6 +20869,7 @@ const nflschedules =  {
       "adj_moneyline": -550,
       "location": "Home",
       "result": 17,
+      "result_for_team": 17,
       "absolute_result": 17,
       "score": 30,
       "total": 43,
@@ -18864,6 +20882,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 71,
+      "cumulative_wins": 2,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -18891,6 +20912,7 @@ const nflschedules =  {
       "adj_moneyline": -325,
       "location": "Home",
       "result": -1,
+      "result_for_team": -1,
       "absolute_result": 1,
       "score": 23,
       "total": 47,
@@ -18903,6 +20925,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 89,
+      "cumulative_wins": 2,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 3
     },
     {
@@ -18930,6 +20955,7 @@ const nflschedules =  {
       "adj_moneyline": -198,
       "location": "Home",
       "result": -12,
+      "result_for_team": 12,
       "absolute_result": 12,
       "score": 36,
       "total": 60,
@@ -18942,6 +20968,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 59,
+      "cumulative_wins": 3,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -18969,6 +20998,7 @@ const nflschedules =  {
       "adj_moneyline": -142,
       "location": "Home",
       "result": -10,
+      "result_for_team": -10,
       "absolute_result": 10,
       "score": 18,
       "total": 46,
@@ -18981,6 +21011,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 78,
+      "cumulative_wins": 3,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 3
     },
     {
@@ -19008,6 +21041,7 @@ const nflschedules =  {
       "adj_moneyline": -238,
       "location": "Home",
       "result": 6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 30,
       "total": 54,
@@ -19020,11 +21054,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 69,
+      "cumulative_wins": 4,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
       "opponent": "BYE",
-      "week": 9
+      "week": 9,
+      "cumulative_wins": 4,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Tampa Bay Buccaneers",
@@ -19051,6 +21091,7 @@ const nflschedules =  {
       "adj_moneyline": -298,
       "location": "Home",
       "result": -3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 23,
       "total": 43,
@@ -19063,6 +21104,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 85,
+      "cumulative_wins": 5,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -19090,6 +21134,7 @@ const nflschedules =  {
       "adj_moneyline": -265,
       "location": "Home",
       "result": -3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 17,
       "total": 37,
@@ -19102,6 +21147,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 59,
+      "cumulative_wins": 5,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -19129,6 +21177,7 @@ const nflschedules =  {
       "adj_moneyline": 235,
       "location": "Home",
       "result": 28,
+      "result_for_team": -28,
       "absolute_result": 28,
       "score": 10,
       "total": 48,
@@ -19141,6 +21190,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 43,
+      "cumulative_wins": 5,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 11
     },
     {
@@ -19168,6 +21220,7 @@ const nflschedules =  {
       "adj_moneyline": 270,
       "location": "Home",
       "result": 25,
+      "result_for_team": -25,
       "absolute_result": 25,
       "score": 10,
       "total": 45,
@@ -19180,6 +21233,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "a_turf",
       "temp": 28,
+      "cumulative_wins": 5,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 11
     },
     {
@@ -19207,6 +21263,7 @@ const nflschedules =  {
       "adj_moneyline": -162,
       "location": "Home",
       "result": 25,
+      "result_for_team": 25,
       "absolute_result": 25,
       "score": 38,
       "total": 51,
@@ -19219,6 +21276,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 65,
+      "cumulative_wins": 6,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -19246,6 +21306,7 @@ const nflschedules =  {
       "adj_moneyline": -155,
       "location": "Home",
       "result": -6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 6,
       "total": 18,
@@ -19258,6 +21319,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 53,
+      "cumulative_wins": 6,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -19285,6 +21349,7 @@ const nflschedules =  {
       "adj_moneyline": -125,
       "location": "Home",
       "result": 12,
+      "result_for_team": -12,
       "absolute_result": 12,
       "score": 17,
       "total": 46,
@@ -19297,6 +21362,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 73,
+      "cumulative_wins": 6,
+      "cumulative_losses": 9,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -19324,6 +21392,7 @@ const nflschedules =  {
       "adj_moneyline": 190,
       "location": "Home",
       "result": -6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 34,
       "total": 74,
@@ -19334,7 +21403,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "outdoors",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 6,
+      "cumulative_losses": 10,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Arizona Cardinals",
@@ -19361,6 +21433,7 @@ const nflschedules =  {
       "adj_moneyline": 160,
       "location": "Home",
       "result": 23,
+      "result_for_team": -23,
       "absolute_result": 23,
       "score": 24,
       "total": 71,
@@ -19371,12 +21444,15 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 6,
+      "cumulative_losses": 11,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 6,
+      "losses": 11,
       "ties": 0
     }
   ],
@@ -19406,6 +21482,7 @@ const nflschedules =  {
       "adj_moneyline": -278,
       "location": "Home",
       "result": 6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 26,
       "total": 46,
@@ -19418,6 +21495,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 65,
+      "cumulative_wins": 1,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -19445,6 +21525,7 @@ const nflschedules =  {
       "adj_moneyline": -170,
       "location": "Home",
       "result": -3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 23,
       "total": 43,
@@ -19457,6 +21538,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 77,
+      "cumulative_wins": 2,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -19484,6 +21568,7 @@ const nflschedules =  {
       "adj_moneyline": -205,
       "location": "Home",
       "result": 21,
+      "result_for_team": 21,
       "absolute_result": 21,
       "score": 24,
       "total": 27,
@@ -19496,6 +21581,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 64,
+      "cumulative_wins": 3,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 2
     },
     {
@@ -19523,6 +21611,7 @@ const nflschedules =  {
       "adj_moneyline": 154,
       "location": "Home",
       "result": 13,
+      "result_for_team": -13,
       "absolute_result": 13,
       "score": 29,
       "total": 71,
@@ -19533,7 +21622,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 3,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New York Giants",
@@ -19560,6 +21652,7 @@ const nflschedules =  {
       "adj_moneyline": -310,
       "location": "Home",
       "result": -9,
+      "result_for_team": -9,
       "absolute_result": 9,
       "score": 20,
       "total": 49,
@@ -19572,6 +21665,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 61,
+      "cumulative_wins": 3,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 3
     },
     {
@@ -19599,6 +21695,7 @@ const nflschedules =  {
       "adj_moneyline": 164,
       "location": "Home",
       "result": -12,
+      "result_for_team": -12,
       "absolute_result": 12,
       "score": 24,
       "total": 60,
@@ -19611,6 +21708,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 59,
+      "cumulative_wins": 3,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -19638,6 +21738,7 @@ const nflschedules =  {
       "adj_moneyline": 136,
       "location": "Home",
       "result": -20,
+      "result_for_team": 20,
       "absolute_result": 20,
       "score": 34,
       "total": 48,
@@ -19648,7 +21749,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 4,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Buffalo Bills",
@@ -19675,6 +21779,7 @@ const nflschedules =  {
       "adj_moneyline": 142,
       "location": "Home",
       "result": -21,
+      "result_for_team": -21,
       "absolute_result": 21,
       "score": 10,
       "total": 41,
@@ -19687,6 +21792,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 55,
+      "cumulative_wins": 4,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 14
     },
     {
@@ -19714,6 +21822,7 @@ const nflschedules =  {
       "adj_moneyline": 105,
       "location": "Home",
       "result": -6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 20,
       "total": 46,
@@ -19726,11 +21835,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 52,
+      "cumulative_wins": 4,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
       "opponent": "BYE",
-      "week": 10
+      "week": 10,
+      "cumulative_wins": 4,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "San Francisco 49ers",
@@ -19757,6 +21872,7 @@ const nflschedules =  {
       "adj_moneyline": 215,
       "location": "Home",
       "result": -3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 20,
       "total": 37,
@@ -19769,6 +21885,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 59,
+      "cumulative_wins": 5,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -19796,6 +21915,7 @@ const nflschedules =  {
       "adj_moneyline": -105,
       "location": "Home",
       "result": 10,
+      "result_for_team": 10,
       "absolute_result": 10,
       "score": 16,
       "total": 22,
@@ -19808,6 +21928,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 45,
+      "cumulative_wins": 6,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -19835,6 +21958,7 @@ const nflschedules =  {
       "adj_moneyline": -105,
       "location": "Home",
       "result": -5,
+      "result_for_team": 5,
       "absolute_result": 5,
       "score": 26,
       "total": 47,
@@ -19847,6 +21971,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 37,
+      "cumulative_wins": 7,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -19874,6 +22001,7 @@ const nflschedules =  {
       "adj_moneyline": 145,
       "location": "Home",
       "result": -12,
+      "result_for_team": 12,
       "absolute_result": 12,
       "score": 30,
       "total": 48,
@@ -19884,7 +22012,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 8,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Green Bay Packers",
@@ -19911,6 +22042,7 @@ const nflschedules =  {
       "adj_moneyline": 136,
       "location": "Home",
       "result": -17,
+      "result_for_team": -17,
       "absolute_result": 17,
       "score": 13,
       "total": 43,
@@ -19923,6 +22055,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 43,
+      "cumulative_wins": 8,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 3
     },
     {
@@ -19950,6 +22085,7 @@ const nflschedules =  {
       "adj_moneyline": 124,
       "location": "Home",
       "result": -3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 24,
       "total": 51,
@@ -19962,6 +22098,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 48,
+      "cumulative_wins": 8,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -19989,6 +22128,7 @@ const nflschedules =  {
       "adj_moneyline": -192,
       "location": "Home",
       "result": -3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 6,
       "total": 9,
@@ -20001,6 +22141,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 47,
+      "cumulative_wins": 9,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -20028,6 +22171,7 @@ const nflschedules =  {
       "adj_moneyline": -360,
       "location": "Home",
       "result": -5,
+      "result_for_team": 5,
       "absolute_result": 5,
       "score": 30,
       "total": 55,
@@ -20038,12 +22182,15 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 10,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 10,
+      "losses": 7,
       "ties": 0
     }
   ],
@@ -20073,6 +22220,7 @@ const nflschedules =  {
       "adj_moneyline": -198,
       "location": "Home",
       "result": 17,
+      "result_for_team": 17,
       "absolute_result": 17,
       "score": 37,
       "total": 57,
@@ -20085,6 +22233,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 93,
+      "cumulative_wins": 1,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -20112,6 +22263,7 @@ const nflschedules =  {
       "adj_moneyline": 295,
       "location": "Home",
       "result": -4,
+      "result_for_team": 4,
       "absolute_result": 4,
       "score": 20,
       "total": 36,
@@ -20122,7 +22274,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 0,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Denver Broncos",
@@ -20149,6 +22304,7 @@ const nflschedules =  {
       "adj_moneyline": -245,
       "location": "Home",
       "result": -19,
+      "result_for_team": -19,
       "absolute_result": 19,
       "score": 7,
       "total": 33,
@@ -20161,6 +22317,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 85,
+      "cumulative_wins": 2,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -20188,6 +22347,7 @@ const nflschedules =  {
       "adj_moneyline": -105,
       "location": "Home",
       "result": 17,
+      "result_for_team": 17,
       "absolute_result": 17,
       "score": 33,
       "total": 49,
@@ -20200,6 +22360,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 88,
+      "cumulative_wins": 3,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -20227,6 +22390,7 @@ const nflschedules =  {
       "adj_moneyline": 120,
       "location": "Home",
       "result": 6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 30,
       "total": 66,
@@ -20237,7 +22401,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 3,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New Orleans Saints",
@@ -20264,6 +22431,7 @@ const nflschedules =  {
       "adj_moneyline": -175,
       "location": "Home",
       "result": -24,
+      "result_for_team": 24,
       "absolute_result": 24,
       "score": 51,
       "total": 78,
@@ -20274,7 +22442,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 4,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Baltimore Ravens",
@@ -20301,6 +22472,7 @@ const nflschedules =  {
       "adj_moneyline": 185,
       "location": "Home",
       "result": -10,
+      "result_for_team": -10,
       "absolute_result": 10,
       "score": 31,
       "total": 72,
@@ -20313,6 +22485,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 80,
+      "cumulative_wins": 4,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -20340,6 +22515,7 @@ const nflschedules =  {
       "adj_moneyline": 102,
       "location": "Home",
       "result": -5,
+      "result_for_team": -5,
       "absolute_result": 5,
       "score": 26,
       "total": 57,
@@ -20352,6 +22528,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 79,
+      "cumulative_wins": 4,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -20379,6 +22558,7 @@ const nflschedules =  {
       "adj_moneyline": 330,
       "location": "Home",
       "result": 6,
+      "result_for_team": -6,
       "absolute_result": 6,
       "score": 24,
       "total": 54,
@@ -20391,6 +22571,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 63,
+      "cumulative_wins": 4,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -20418,6 +22601,7 @@ const nflschedules =  {
       "adj_moneyline": 240,
       "location": "Home",
       "result": -3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 20,
       "total": 43,
@@ -20430,11 +22614,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 85,
+      "cumulative_wins": 4,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
       "opponent": "BYE",
-      "week": 11
+      "week": 11,
+      "cumulative_wins": 4,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New York Giants",
@@ -20461,6 +22651,7 @@ const nflschedules =  {
       "adj_moneyline": -298,
       "location": "Home",
       "result": -23,
+      "result_for_team": 23,
       "absolute_result": 23,
       "score": 30,
       "total": 37,
@@ -20473,6 +22664,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 50,
+      "cumulative_wins": 5,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 13
     },
     {
@@ -20500,6 +22694,7 @@ const nflschedules =  {
       "adj_moneyline": -290,
       "location": "Home",
       "result": -3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 26,
       "total": 49,
@@ -20512,6 +22707,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 51,
+      "cumulative_wins": 6,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -20539,6 +22737,7 @@ const nflschedules =  {
       "adj_moneyline": -325,
       "location": "Home",
       "result": 15,
+      "result_for_team": 15,
       "absolute_result": 15,
       "score": 28,
       "total": 41,
@@ -20551,6 +22750,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 71,
+      "cumulative_wins": 7,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 4
     },
     {
@@ -20578,6 +22780,7 @@ const nflschedules =  {
       "adj_moneyline": 136,
       "location": "Home",
       "result": -23,
+      "result_for_team": 23,
       "absolute_result": 23,
       "score": 40,
       "total": 57,
@@ -20588,7 +22791,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 8,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Dallas Cowboys",
@@ -20615,6 +22821,7 @@ const nflschedules =  {
       "adj_moneyline": -218,
       "location": "Home",
       "result": 2,
+      "result_for_team": -2,
       "absolute_result": 2,
       "score": 24,
       "total": 50,
@@ -20625,7 +22832,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "closed",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 8,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Carolina Panthers",
@@ -20652,6 +22862,7 @@ const nflschedules =  {
       "adj_moneyline": -500,
       "location": "Home",
       "result": 34,
+      "result_for_team": 34,
       "absolute_result": 34,
       "score": 48,
       "total": 62,
@@ -20664,6 +22875,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 76,
+      "cumulative_wins": 9,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -20691,6 +22905,7 @@ const nflschedules =  {
       "adj_moneyline": -1050,
       "location": "Home",
       "result": 8,
+      "result_for_team": 8,
       "absolute_result": 8,
       "score": 27,
       "total": 46,
@@ -20703,6 +22918,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 68,
+      "cumulative_wins": 10,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -20730,6 +22948,7 @@ const nflschedules =  {
       "adj_moneyline": -162,
       "location": "Home",
       "result": -3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 20,
       "total": 43,
@@ -20742,12 +22961,15 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 58,
+      "cumulative_wins": 10,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 2
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 10,
+      "losses": 8,
       "ties": 0
     }
   ],
@@ -20777,6 +22999,7 @@ const nflschedules =  {
       "adj_moneyline": 164,
       "location": "Home",
       "result": 7,
+      "result_for_team": -7,
       "absolute_result": 7,
       "score": 17,
       "total": 41,
@@ -20789,6 +23012,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 67,
+      "cumulative_wins": 0,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -20816,6 +23042,7 @@ const nflschedules =  {
       "adj_moneyline": 150,
       "location": "Home",
       "result": -7,
+      "result_for_team": -7,
       "absolute_result": 7,
       "score": 17,
       "total": 41,
@@ -20828,6 +23055,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 80,
+      "cumulative_wins": 0,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 13
     },
     {
@@ -20855,6 +23085,7 @@ const nflschedules =  {
       "adj_moneyline": -162,
       "location": "Home",
       "result": -16,
+      "result_for_team": -16,
       "absolute_result": 16,
       "score": 14,
       "total": 44,
@@ -20867,6 +23098,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 87,
+      "cumulative_wins": 0,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -20894,6 +23128,7 @@ const nflschedules =  {
       "adj_moneyline": 114,
       "location": "Home",
       "result": -19,
+      "result_for_team": 19,
       "absolute_result": 19,
       "score": 31,
       "total": 43,
@@ -20906,11 +23141,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 86,
+      "cumulative_wins": 1,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
       "opponent": "BYE",
-      "week": 5
+      "week": 5,
+      "cumulative_wins": 1,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Indianapolis Colts",
@@ -20937,6 +23178,7 @@ const nflschedules =  {
       "adj_moneyline": -135,
       "location": "Home",
       "result": -3,
+      "result_for_team": -3,
       "absolute_result": 3,
       "score": 17,
       "total": 37,
@@ -20949,6 +23191,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 80,
+      "cumulative_wins": 1,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -20976,6 +23221,7 @@ const nflschedules =  {
       "adj_moneyline": 400,
       "location": "Home",
       "result": 24,
+      "result_for_team": -24,
       "absolute_result": 24,
       "score": 10,
       "total": 44,
@@ -20988,6 +23234,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "a_turf",
       "temp": 66,
+      "cumulative_wins": 1,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -21015,6 +23264,7 @@ const nflschedules =  {
       "adj_moneyline": 550,
       "location": "Home",
       "result": 38,
+      "result_for_team": -38,
       "absolute_result": 38,
       "score": 14,
       "total": 66,
@@ -21025,7 +23275,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 1,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New England Patriots",
@@ -21052,6 +23305,7 @@ const nflschedules =  {
       "adj_moneyline": -162,
       "location": "Home",
       "result": 3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 20,
       "total": 37,
@@ -21064,6 +23318,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 75,
+      "cumulative_wins": 2,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -21091,6 +23348,7 @@ const nflschedules =  {
       "adj_moneyline": 300,
       "location": "Home",
       "result": 10,
+      "result_for_team": -10,
       "absolute_result": 10,
       "score": 17,
       "total": 44,
@@ -21101,7 +23359,10 @@ const nflschedules =  {
       "over_odds": -110,
       "under_odds": -110,
       "roof": "dome",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 2,
+      "cumulative_losses": 7,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Minnesota Vikings",
@@ -21128,6 +23389,7 @@ const nflschedules =  {
       "adj_moneyline": 235,
       "location": "Home",
       "result": -10,
+      "result_for_team": -10,
       "absolute_result": 10,
       "score": 13,
       "total": 36,
@@ -21140,6 +23402,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 66,
+      "cumulative_wins": 2,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0,
       "wind": 7
     },
     {
@@ -21167,6 +23432,7 @@ const nflschedules =  {
       "adj_moneyline": 295,
       "location": "Home",
       "result": -5,
+      "result_for_team": 5,
       "absolute_result": 5,
       "score": 32,
       "total": 59,
@@ -21177,7 +23443,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "closed",
-      "surface": "astroturf"
+      "surface": "astroturf",
+      "cumulative_wins": 3,
+      "cumulative_losses": 8,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Washington Commanders",
@@ -21204,6 +23473,7 @@ const nflschedules =  {
       "adj_moneyline": 205,
       "location": "Home",
       "result": 23,
+      "result_for_team": -23,
       "absolute_result": 23,
       "score": 19,
       "total": 61,
@@ -21216,6 +23486,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 42,
+      "cumulative_wins": 3,
+      "cumulative_losses": 9,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -21243,6 +23516,7 @@ const nflschedules =  {
       "adj_moneyline": -170,
       "location": "Home",
       "result": -4,
+      "result_for_team": -4,
       "absolute_result": 4,
       "score": 6,
       "total": 16,
@@ -21255,6 +23529,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 53,
+      "cumulative_wins": 3,
+      "cumulative_losses": 10,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -21282,6 +23559,7 @@ const nflschedules =  {
       "adj_moneyline": 205,
       "location": "Home",
       "result": -10,
+      "result_for_team": -10,
       "absolute_result": 10,
       "score": 27,
       "total": 64,
@@ -21294,6 +23572,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 52,
+      "cumulative_wins": 3,
+      "cumulative_losses": 11,
+      "cumulative_ties": 0,
       "wind": 12
     },
     {
@@ -21321,6 +23602,7 @@ const nflschedules =  {
       "adj_moneyline": 164,
       "location": "Home",
       "result": 8,
+      "result_for_team": -8,
       "absolute_result": 8,
       "score": 30,
       "total": 68,
@@ -21331,7 +23613,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "closed",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 3,
+      "cumulative_losses": 12,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Jacksonville Jaguars",
@@ -21358,6 +23643,7 @@ const nflschedules =  {
       "adj_moneyline": -108,
       "location": "Home",
       "result": 7,
+      "result_for_team": -7,
       "absolute_result": 7,
       "score": 13,
       "total": 33,
@@ -21370,6 +23656,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 72,
+      "cumulative_wins": 3,
+      "cumulative_losses": 13,
+      "cumulative_ties": 0,
       "wind": 16
     },
     {
@@ -21397,6 +23686,7 @@ const nflschedules =  {
       "adj_moneyline": -142,
       "location": "Home",
       "result": -9,
+      "result_for_team": -9,
       "absolute_result": 9,
       "score": 14,
       "total": 37,
@@ -21409,12 +23699,15 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 35,
+      "cumulative_wins": 3,
+      "cumulative_losses": 14,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 3,
+      "losses": 14,
       "ties": 0
     }
   ],
@@ -21444,6 +23737,7 @@ const nflschedules =  {
       "adj_moneyline": 164,
       "location": "Home",
       "result": 17,
+      "result_for_team": -17,
       "absolute_result": 17,
       "score": 20,
       "total": 57,
@@ -21456,6 +23750,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 93,
+      "cumulative_wins": 0,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -21483,6 +23780,7 @@ const nflschedules =  {
       "adj_moneyline": -125,
       "location": "Home",
       "result": 3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 21,
       "total": 39,
@@ -21495,6 +23793,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 82,
+      "cumulative_wins": 1,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 11
     },
     {
@@ -21522,6 +23823,7 @@ const nflschedules =  {
       "adj_moneyline": 280,
       "location": "Home",
       "result": -5,
+      "result_for_team": 5,
       "absolute_result": 5,
       "score": 38,
       "total": 71,
@@ -21534,6 +23836,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 69,
+      "cumulative_wins": 2,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -21561,6 +23866,7 @@ const nflschedules =  {
       "adj_moneyline": 150,
       "location": "Home",
       "result": -28,
+      "result_for_team": 28,
       "absolute_result": 28,
       "score": 42,
       "total": 56,
@@ -21571,7 +23877,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "closed",
-      "surface": "grass"
+      "surface": "grass",
+      "cumulative_wins": 3,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Cleveland Browns",
@@ -21598,6 +23907,7 @@ const nflschedules =  {
       "adj_moneyline": -155,
       "location": "Home",
       "result": 21,
+      "result_for_team": 21,
       "absolute_result": 21,
       "score": 34,
       "total": 47,
@@ -21610,6 +23920,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 73,
+      "cumulative_wins": 4,
+      "cumulative_losses": 1,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -21637,6 +23950,7 @@ const nflschedules =  {
       "adj_moneyline": 230,
       "location": "Home",
       "result": 7,
+      "result_for_team": -7,
       "absolute_result": 7,
       "score": 23,
       "total": 53,
@@ -21649,6 +23963,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 75,
+      "cumulative_wins": 4,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -21676,6 +23993,7 @@ const nflschedules =  {
       "adj_moneyline": -535,
       "location": "Home",
       "result": 33,
+      "result_for_team": 33,
       "absolute_result": 33,
       "score": 40,
       "total": 47,
@@ -21688,6 +24006,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 76,
+      "cumulative_wins": 5,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 2
     },
     {
@@ -21715,6 +24036,7 @@ const nflschedules =  {
       "adj_moneyline": -122,
       "location": "Home",
       "result": 3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 18,
       "total": 33,
@@ -21727,6 +24049,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 58,
+      "cumulative_wins": 6,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 2
     },
     {
@@ -21754,6 +24079,7 @@ const nflschedules =  {
       "adj_moneyline": -218,
       "location": "Home",
       "result": -5,
+      "result_for_team": 5,
       "absolute_result": 5,
       "score": 27,
       "total": 49,
@@ -21766,6 +24092,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "fieldturf",
       "temp": 52,
+      "cumulative_wins": 7,
+      "cumulative_losses": 2,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
@@ -21793,6 +24122,7 @@ const nflschedules =  {
       "adj_moneyline": -122,
       "location": "Home",
       "result": -1,
+      "result_for_team": -1,
       "absolute_result": 1,
       "score": 27,
       "total": 55,
@@ -21805,6 +24135,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 57,
+      "cumulative_wins": 7,
+      "cumulative_losses": 3,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -21832,6 +24165,7 @@ const nflschedules =  {
       "adj_moneyline": 190,
       "location": "Home",
       "result": 8,
+      "result_for_team": -8,
       "absolute_result": 8,
       "score": 18,
       "total": 44,
@@ -21844,6 +24178,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 46,
+      "cumulative_wins": 7,
+      "cumulative_losses": 4,
+      "cumulative_ties": 0,
       "wind": 9
     },
     {
@@ -21871,6 +24208,7 @@ const nflschedules =  {
       "adj_moneyline": -625,
       "location": "Home",
       "result": -8,
+      "result_for_team": -8,
       "absolute_result": 8,
       "score": 26,
       "total": 60,
@@ -21883,6 +24221,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 55,
+      "cumulative_wins": 7,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 5
     },
     {
@@ -21910,6 +24251,7 @@ const nflschedules =  {
       "adj_moneyline": -250,
       "location": "Home",
       "result": 23,
+      "result_for_team": 23,
       "absolute_result": 23,
       "score": 42,
       "total": 61,
@@ -21922,11 +24264,17 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 42,
+      "cumulative_wins": 8,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 6
     },
     {
       "opponent": "BYE",
-      "week": 14
+      "week": 14,
+      "cumulative_wins": 8,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "New Orleans Saints",
@@ -21953,6 +24301,7 @@ const nflschedules =  {
       "adj_moneyline": -375,
       "location": "Home",
       "result": -1,
+      "result_for_team": 1,
       "absolute_result": 1,
       "score": 20,
       "total": 39,
@@ -21963,7 +24312,10 @@ const nflschedules =  {
       "over_odds": -112,
       "under_odds": -108,
       "roof": "dome",
-      "surface": "sportturf"
+      "surface": "sportturf",
+      "cumulative_wins": 9,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Philadelphia Eagles",
@@ -21990,6 +24342,7 @@ const nflschedules =  {
       "adj_moneyline": 180,
       "location": "Home",
       "result": 3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 36,
       "total": 69,
@@ -22002,6 +24355,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 32,
+      "cumulative_wins": 10,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 8
     },
     {
@@ -22029,6 +24385,7 @@ const nflschedules =  {
       "adj_moneyline": -192,
       "location": "Home",
       "result": 6,
+      "result_for_team": 6,
       "absolute_result": 6,
       "score": 30,
       "total": 54,
@@ -22041,6 +24398,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 58,
+      "cumulative_wins": 11,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 10
     },
     {
@@ -22068,6 +24428,7 @@ const nflschedules =  {
       "adj_moneyline": -310,
       "location": "Home",
       "result": -4,
+      "result_for_team": 4,
       "absolute_result": 4,
       "score": 23,
       "total": 42,
@@ -22078,7 +24439,10 @@ const nflschedules =  {
       "over_odds": -102,
       "under_odds": -118,
       "roof": "closed",
-      "surface": "matrixturf"
+      "surface": "matrixturf",
+      "cumulative_wins": 12,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Tampa Bay Buccaneers",
@@ -22105,6 +24469,7 @@ const nflschedules =  {
       "adj_moneyline": 136,
       "location": "Home",
       "result": -3,
+      "result_for_team": 3,
       "absolute_result": 3,
       "score": 23,
       "total": 43,
@@ -22117,6 +24482,9 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 58,
+      "cumulative_wins": 13,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0,
       "wind": 2
     },
     {
@@ -22144,6 +24512,7 @@ const nflschedules =  {
       "adj_moneyline": 390,
       "location": "Home",
       "result": -14,
+      "result_for_team": 14,
       "absolute_result": 14,
       "score": 45,
       "total": 76,
@@ -22154,7 +24523,10 @@ const nflschedules =  {
       "over_odds": -108,
       "under_odds": -112,
       "roof": "dome",
-      "surface": "fieldturf"
+      "surface": "fieldturf",
+      "cumulative_wins": 14,
+      "cumulative_losses": 5,
+      "cumulative_ties": 0
     },
     {
       "opponent": "Philadelphia Eagles",
@@ -22181,6 +24553,7 @@ const nflschedules =  {
       "adj_moneyline": 205,
       "location": "Home",
       "result": 32,
+      "result_for_team": -32,
       "absolute_result": 32,
       "score": 23,
       "total": 78,
@@ -22193,12 +24566,15 @@ const nflschedules =  {
       "roof": "outdoors",
       "surface": "grass",
       "temp": 40,
+      "cumulative_wins": 14,
+      "cumulative_losses": 6,
+      "cumulative_ties": 0,
       "wind": 11
     },
     {
       "opponent": "Cumulative Record",
-      "wins": 0,
-      "losses": 0,
+      "wins": 14,
+      "losses": 6,
       "ties": 0
     }
   ]

@@ -473,8 +473,18 @@ view(team_schedules)
 # Convert to JSON-like structure
 team_schedules_json <- jsonlite::toJSON(team_schedules, pretty = TRUE, auto_unbox = TRUE) # nolint: line_length_linter
 
+# Determine output directory
+output_dir <- if (dir.exists("scripts/web_app")) {
+  "scripts/web_app"
+} else if (dir.exists("../web_app")) {
+  "../web_app"
+} else {
+  "."
+}
+output_path <- file.path(output_dir, "cfb-schedules.js")
+
 # Write to file
-writeLines(paste("const cfbschedules = ", team_schedules_json, ";"), "cfb-schedules.js") # nolint: line_length_linter
+writeLines(paste("const cfbschedules = ", team_schedules_json, ";"), output_path) # nolint: line_length_linter
 
 # View the resulting JavaScript
-cat(paste("const cfbschedules = ", team_schedules_json, ";"))
+cat(paste("const cfbschedules = ", team_schedules_json, ";\nSaved to", output_path))

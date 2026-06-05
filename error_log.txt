@@ -1,2 +1,2 @@
-Error: Main execution failed: unused argument (capture.output(str(schedule_data)))
+Error: Main execution failed: Failed to create final team schedules structure. Check error_log.txt for details.
 

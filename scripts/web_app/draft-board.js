@@ -592,7 +592,7 @@ function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwnersOr
 
             if (pick.player_id) {
                 const playerData = nflPlayers[pick.player_id] || {};
-                
+
             // Create a text node for player name/position/team
             const displayText = document.createTextNode(
                 `${pick.playerName}${playerData.position ? 
@@ -630,6 +630,18 @@ function renderDraftBoard(draftBoardData, numTeams, nflPlayers, originalOwnersOr
                 playerSelected.appendChild(adpLine);
                 }
             }
+
+            // Add season-long projection data if available
+            if (playerData.fantasy_points || playerData.projected_points) {
+                const projectionValue = playerData.fantasy_points || playerData.projected_points;
+                if (projectionValue) {
+                    const projectionLine = document.createElement('div');
+                    projectionLine.classList.add('player-projection');
+                    projectionLine.textContent = `Projected: ${parseFloat(projectionValue).toFixed(1)} pts`;
+                    playerSelected.appendChild(projectionLine);
+                }
+            }
+
             } else {
             playerSelected.textContent = 'Not Selected';
             }

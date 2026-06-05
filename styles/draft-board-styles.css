@@ -330,6 +330,12 @@ section {
   margin-top: 4px;
 }
 
+.player-projection {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 2px;
+}
+
 /* Pick Owner Banner */
 .pick-owner {
     position: absolute; /* Position absolutely within the card */
