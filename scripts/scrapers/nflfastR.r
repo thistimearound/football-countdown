@@ -33,7 +33,7 @@ tryCatch({
 
   # Fetch and clean schedule data
   schedule_data <- tryCatch({
-    load_schedules(seasons = 2024) %>%
+    load_schedules(seasons = 2026) %>%
       mutate(across(everything(), ~ ifelse(grepl("Invalid Number", .), NA, .)))
   }, error = function(e) {
     log_error(paste("Failed to load or clean schedules:", e$message))
