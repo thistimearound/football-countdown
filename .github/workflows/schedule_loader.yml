@@ -30,17 +30,10 @@ jobs:
 
     - name: Install R Packages
       env:
-        GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         R_LIBS_USER: ${{ runner.temp }}/RLibrary
       run: |
         mkdir -p "${{ runner.temp }}/RLibrary"
-        Rscript -e 'install.packages("remotes", lib = Sys.getenv("R_LIBS_USER"))'
-        Rscript -e 'remotes::install_github("nflverse/nfl4th", lib = Sys.getenv("R_LIBS_USER"))'
-        Rscript -e 'remotes::install_github("nflverse/nflfastR", lib = Sys.getenv("R_LIBS_USER"))'
-        Rscript -e 'remotes::install_github("nflverse/nflplotR", lib = Sys.getenv("R_LIBS_USER"))'
-        Rscript -e 'remotes::install_github("nflverse/nflreadr", lib = Sys.getenv("R_LIBS_USER"))'
-        Rscript -e 'remotes::install_github("nflverse/nflseedR", lib = Sys.getenv("R_LIBS_USER"))'
-        Rscript -e 'install.packages(c("nflverse", "tidyverse", "lubridate", "jsonlite", "dplyr"), lib = Sys.getenv("R_LIBS_USER"))'
+        Rscript -e 'install.packages(c("remotes", "nfl4th", "nflfastR", "nflplotR", "nflreadr", "nflseedR", "nflverse", "tidyverse", "lubridate", "jsonlite", "dplyr"), repos = c("https://nflverse.r-universe.dev", getOption("repos")), lib = Sys.getenv("R_LIBS_USER"))'
         
     - name: Check Installed Packages
       env:
