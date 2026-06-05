@@ -30,7 +30,7 @@ jobs:
 
     - name: Install R Packages
       env:
-        GITHUB_PAT: ${{ secrets.GH_PAT }}
+        GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         R_LIBS_USER: ${{ runner.temp }}/RLibrary
       run: |
         mkdir -p "${{ runner.temp }}/RLibrary"
