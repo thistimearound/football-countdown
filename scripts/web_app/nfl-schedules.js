@@ -1,4 +1,4 @@
-// Last updated: 2026-06-07 22:09:51.110862 
+// Last updated: 2026-06-08 16:57:41.455853 
 const nflschedules =  {
   "arizona-cardinals": [
     {
@@ -8237,9 +8237,9 @@ const nflschedules =  {
       "datetime": "2026-09-20 16:25:00",
       "game_type": "REG",
       "away_team": "MIA",
-      "away_moneyline": 425,
+      "away_moneyline": 440,
       "home_team": "SF",
-      "home_moneyline": -575,
+      "home_moneyline": -600,
       "spread_line": 10.5,
       "away_spread_odds": -110,
       "home_spread_odds": -110,
@@ -8247,7 +8247,7 @@ const nflschedules =  {
       "home_or_away": "@",
       "stadium": "Levi's Stadium",
       "adj_spread_odds": -110,
-      "adj_moneyline": 425,
+      "adj_moneyline": 440,
       "location": "Home",
       "tie": 0,
       "total_line": 46.5,
@@ -11755,9 +11755,9 @@ const nflschedules =  {
       "datetime": "2026-09-20 16:25:00",
       "game_type": "REG",
       "away_team": "MIA",
-      "away_moneyline": 425,
+      "away_moneyline": 440,
       "home_team": "SF",
-      "home_moneyline": -575,
+      "home_moneyline": -600,
       "spread_line": -10.5,
       "away_spread_odds": -110,
       "home_spread_odds": -110,
@@ -11765,7 +11765,7 @@ const nflschedules =  {
       "home_or_away": "vs",
       "stadium": "Levi's Stadium",
       "adj_spread_odds": -110,
-      "adj_moneyline": -575,
+      "adj_moneyline": -600,
       "location": "Home",
       "tie": 0,
       "total_line": 46.5,
