@@ -1,4 +1,4 @@
-// Last updated: 2026-07-05 22:06:29.94294 
+// Last updated: 2026-07-06 16:36:57.647518 
 const nflschedules =  {
   "arizona-cardinals": [
     {
